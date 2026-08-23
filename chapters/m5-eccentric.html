@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-338e747e692ed79eab7b3c8d5f37e88d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acfee7d1355c64e308770aacac493d55.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-62bb378a73e808bd0b1af4a4c0e1430e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ef5900e898c14f90370c898422362296.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -303,7 +306,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月24日</p>
+      <p class="date-modified">2026年8月23日</p>
     </div>
   </div>
     
@@ -387,53 +390,29 @@ M=Ne
 
 </main> <!-- /main -->
 <script>
-
 (() => {
-
   const stage = document.querySelector('[data-beam-stage]');
-
   if (!stage) return;
-
   const slider = stage.querySelector('input[type="range"]');
-
   const beam = stage.querySelector('[data-beam-path]');
-
   const load = stage.querySelector('[data-load-arrow]');
-
   const cracks = [...stage.querySelectorAll('[data-crack]')];
-
   const readout = stage.querySelector('[data-beam-readout]');
-
   const update = () => {
-
     const value = Number(slider.value);
-
     const sag = value * 0.55;
-
     beam.setAttribute('d', `M40 82 Q300 ${82 + sag} 560 82`);
-
     load.setAttribute('y2', String(38 + value * .2));
-
     cracks.forEach((crack, index) => {
-
       const threshold = 22 + index * 10;
-
       crack.style.opacity = value >= threshold ? Math.min(1, (value - threshold) / 18) : 0;
-
     });
-
     readout.textContent = value < 22 ? '弹性响应' : value < 62 ? '带裂缝工作' : '接近破坏';
-
   };
-
   slider.addEventListener('input', update);
-
   update();
-
 })();
-
 </script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
