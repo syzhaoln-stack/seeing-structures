@@ -1,0 +1,74 @@
+---
+title: "看见结构"
+subtitle: "从变形、选择到验证"
+description: "一部可以操作、质疑和重做的结构设计原理"
+page-layout: full
+toc: false
+---
+
+::: {.hero-lab}
+<div class="hero-eyebrow">STRUCTURE / CHOICE / EVIDENCE</div>
+
+## 一根梁并没有静止
+
+看起来纹丝不动的梁，正在压缩、伸长、开裂和重新分配内力。拖动荷载，先看见它，再决定怎样设计它。
+
+<div class="beam-stage" data-beam-stage>
+<svg viewBox="0 0 600 165" role="img" aria-label="随荷载弯曲并逐渐开裂的梁">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f5a623"/></marker>
+  </defs>
+  <path d="M40 82 Q300 82 560 82" data-beam-path fill="none" stroke="#e7eef0" stroke-width="18" stroke-linecap="round"/>
+  <line x1="300" y1="10" x2="300" y2="38" data-load-arrow stroke="#f5a623" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M240 92 l-7 14 9 10 -6 15" data-crack fill="none" stroke="#ff5656" stroke-width="3" opacity="0"/>
+  <path d="M280 94 l-5 11 8 10 -5 18" data-crack fill="none" stroke="#ff5656" stroke-width="3" opacity="0"/>
+  <path d="M320 94 l5 12 -7 10 6 17" data-crack fill="none" stroke="#ff5656" stroke-width="3" opacity="0"/>
+  <path d="M360 92 l7 14 -8 10 5 15" data-crack fill="none" stroke="#ff5656" stroke-width="3" opacity="0"/>
+  <path d="M35 100 L15 130 L55 130 Z" fill="#9db7ff"/>
+  <circle cx="560" cy="126" r="8" fill="#9db7ff"/><path d="M540 118 L580 118 L560 98 Z" fill="#9db7ff"/>
+</svg>
+<div class="beam-controls">
+  <label for="hero-load">施加荷载 <input id="hero-load" type="range" min="0" max="100" value="10"></label>
+  <output class="beam-readout" data-beam-readout>弹性响应</output>
+</div>
+</div>
+:::
+
+::: {.thesis-grid}
+::: {.thesis-card}
+**没有变形，就没有抗力**
+
+先把微小、隐蔽的结构响应变成可观察对象，再引入符号和公式。
+:::
+
+::: {.thesis-card}
+**设计不是求唯一答案**
+
+梁高、材料、截面、配筋和体系都是选择；计算只是比较选择的工具。
+:::
+
+::: {.thesis-card}
+**错误是待验证的假设**
+
+先让朴素直觉出现，再通过实验、模型和反例把它变成工程判断。
+:::
+
+::: {.thesis-card}
+**AI扩展可能，学生承担结论**
+
+AI可以试算和画图，但每一个结论都必须留下公式、单位、趋势和独立证据。
+:::
+:::
+
+## 这本书怎样工作
+
+你不会先遇到几十个符号。每一章从一个能看见或能想象的结构问题开始：先判断，随后操作模型，观察结果，再建立解释。公式只在它能够解决眼前问题时出现。
+
+::: {.cycle-strip}
+<span class="hot">先判断</span><span>动手改变</span><span>观察响应</span><span>建立模型</span><span>校核证据</span><span>迁移到桥</span>
+:::
+
+本书有两条同时存在的路径：第一次学习时沿章节前进；需要查用时从附录的知识地图直接进入公式、交互和验证清单。新手不必被参考资料压住，熟练者也不必被迫重复所有引导。
+
+[开始：为什么还需要设计？](chapters/m0-design.qmd){.btn .btn-primary .btn-lg}
+

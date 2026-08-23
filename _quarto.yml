@@ -1,0 +1,81 @@
+project:
+  type: book
+  output-dir: _site
+  resources:
+    - interactive/**
+    - assets/**
+
+lang: zh
+title: "看见结构"
+author: "赵诗宇"
+date-modified: last-modified
+
+book:
+  title: "看见结构"
+  subtitle: "从变形、选择到验证"
+  author: "赵诗宇"
+  page-navigation: true
+  search:
+    location: sidebar
+    type: textbox
+  repo-actions: none
+  chapters:
+    - href: index.qmd
+      text: "首页｜看见结构"
+    - href: preface.qmd
+      text: "写在前面｜拒绝知识堆积"
+    - part: "从计算走向设计"
+      chapters:
+        - href: chapters/m0-design.qmd
+          text: "M0｜为什么还需要设计"
+        - href: chapters/m1-reliability.qmd
+          text: "M1｜安全不是一个数"
+    - part: "让构件变得可见"
+      chapters:
+        - href: chapters/m2-materials.qmd
+          text: "M2｜材料为什么能合作"
+        - href: chapters/m3-bending.qmd
+          text: "M3｜一根梁经历了什么"
+        - href: chapters/m4-service.qmd
+          text: "M4｜不倒塌也可能不能用"
+    - part: "改变力的路径"
+      chapters:
+        - href: chapters/m5-eccentric.qmd
+          text: "M5｜压力偏一点"
+        - href: chapters/m6-prestress.qmd
+          text: "M6｜在荷载前改变结构"
+    - part: "AI时代的工程责任"
+      chapters:
+        - href: chapters/m7-ai-review.qmd
+          text: "M7｜AI不能替你负责"
+    - part: "继续使用这本书"
+      chapters:
+        - href: appendices/learning-map.qmd
+          text: "学习地图｜先看见，再计算"
+        - href: appendices/sources.qmd
+          text: "来源与边界｜身份公开"
+        - href: appendices/teacher-guide.qmd
+          text: "教师指南｜把课堂还给判断"
+  page-footer:
+    left: "看见结构 · 课程原生交互书"
+    right: "每一个结论都应留下证据"
+
+format:
+  html:
+    favicon: assets/favicon.svg
+    theme:
+      light: [cosmo, assets/theme.scss]
+    css: assets/styles.css
+    include-after-body: assets/after-body.html
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    code-fold: true
+    code-summary: "查看模型代码"
+    smooth-scroll: true
+    anchor-sections: true
+    fig-align: center
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

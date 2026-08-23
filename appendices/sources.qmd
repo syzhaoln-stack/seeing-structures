@@ -1,0 +1,41 @@
+# 来源与边界｜哪些是原文，哪些是重构
+
+## 本书的内容身份
+
+本书是基于赵诗宇老师课程规划、课堂录音转写、既有讲稿与交互演示重新组织的原创课程书。正文不是《结构设计原理（第5版）》的逐章改写，也不复刻其表述、例题、图表或版式。
+
+原教材仅作为课程通常覆盖范围的参照。读者如需规范公式、材料参数、设计限值和法定要求，应查阅自己课程指定版本与现行适用规范。
+
+::: {.source-note}
+网页中的“教师补充”“课堂证据”“桥梁迁移窗”“模型边界”和“交互实验”均属于本课程重构内容。来源身份通过版式与标签公开，不把新增观点伪装成原教材原文。
+:::
+
+## 本地课程材料
+
+写作时综合使用了以下类型的本地材料，但没有把原始录音、逐字转写、学生姓名或课堂隐私发布到网站：
+
+- 2025—2026学年课程规划、56课时教学进度和评价方案；
+- 2025年结构设计原理课堂录音的轻度整理稿；
+- “结构设计的自由度困局”“双筋截面”等既有讲稿；
+- 钢筋混凝土、偏心受压与预应力的既有交互原型。
+
+## 动态讲解样本
+
+下列视频用于研究“怎样降低瞬时认知负荷”，不构成本书文字或图形的复制来源：
+
+- [Understanding Shear Force and Bending Moment Diagrams — The Efficient Engineer](https://www.youtube.com/watch?v=C-FEVzI8oe8)：借鉴外荷载、截面切口与内力图同步出现的叙事顺序。
+- [Understanding Stresses in Beams — The Efficient Engineer](https://www.youtube.com/watch?v=f08Y39UiC-o)：借鉴从弯曲变形推导正应力、再连接剪应力的连续变化；其公开勘误也用于M7的审查案例。
+- [Understanding the Deflection of Beams — The Efficient Engineer](https://www.youtube.com/watch?v=MvBqCeZllpQ)：借鉴曲率、转角、挠度分层显示，避免同时堆叠五种解法。
+- [Why Concrete Needs Reinforcement — Practical Engineering](https://www.youtube.com/watch?v=cZINeaDjisY)：借鉴通过加载与破坏试验建立“混凝土弱于受拉”的体验证据。
+- [What is Prestressed Concrete? — Practical Engineering](https://www.youtube.com/watch?v=P13Mau2VUWw)：借鉴先施加压缩、再叠加使用荷载的时间顺序。
+
+这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。
+
+## 交互模型的共同边界
+
+本书交互首先服务于概念判断，普遍采用简化几何、理想支承、确定性输入、线弹性或概念化材料状态。每个实验都应显示自己的假定与不适用范围。若交互结果与规范设计冲突，以经过确认的规范、项目条件和专业复核为准。
+
+## 版本与纠错
+
+所有正文与交互均应通过版本记录公开修改。发现错误时，请提供页面、输入参数、预期趋势和复现步骤。好的教材不是没有错误，而是允许错误被定位、讨论和修正。
+

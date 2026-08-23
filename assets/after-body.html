@@ -1,0 +1,24 @@
+<script>
+(() => {
+  const stage = document.querySelector('[data-beam-stage]');
+  if (!stage) return;
+  const slider = stage.querySelector('input[type="range"]');
+  const beam = stage.querySelector('[data-beam-path]');
+  const load = stage.querySelector('[data-load-arrow]');
+  const cracks = [...stage.querySelectorAll('[data-crack]')];
+  const readout = stage.querySelector('[data-beam-readout]');
+  const update = () => {
+    const value = Number(slider.value);
+    const sag = value * 0.55;
+    beam.setAttribute('d', `M40 82 Q300 ${82 + sag} 560 82`);
+    load.setAttribute('y2', String(38 + value * .2));
+    cracks.forEach((crack, index) => {
+      const threshold = 22 + index * 10;
+      crack.style.opacity = value >= threshold ? Math.min(1, (value - threshold) / 18) : 0;
+    });
+    readout.textContent = value < 22 ? '弹性响应' : value < 62 ? '带裂缝工作' : '接近破坏';
+  };
+  slider.addEventListener('input', update);
+  update();
+})();
+</script>
