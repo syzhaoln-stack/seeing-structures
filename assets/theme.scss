@@ -1,0 +1,19 @@
+/*-- scss:defaults --*/
+$body-bg: #f4f7f7;
+$body-color: #182329;
+$link-color: #2457d6;
+$primary: #2457d6;
+$font-family-sans-serif: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+$font-family-monospace: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+$headings-font-family: "Noto Serif CJK SC", "Source Han Serif SC", "STSong", serif;
+$border-radius: 0.25rem;
+$code-bg: #e9eeef;
+$code-color: #182329;
+
+/*-- scss:rules --*/
+.sidebar-title {
+  font-family: $headings-font-family;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
