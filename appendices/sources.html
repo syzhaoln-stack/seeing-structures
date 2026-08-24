@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -406,9 +435,11 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.youtube.com/watch?v=1YTKedLQOa0">Understanding Torsion — The Efficient Engineer</a>：用于从截面转动、切应变走向切应力与抗扭刚度。</li>
 <li><a href="https://www.youtube.com/watch?v=_DH3546mSCM">Understanding Stress Transformation and Mohr’s Circle — The Efficient Engineer</a>：用于把同一点不同截面的应力变化图形化。</li>
 <li><a href="https://www.youtube.com/watch?v=21G7LA2DcGQ">Understanding Buckling — The Efficient Engineer</a>：用于区分材料压碎、弹性屈曲和实际缺陷柱。</li>
+<li><a href="https://www.youtube.com/watch?v=LT4A3XM1ZU8">Bivariate probability density</a> 与 <a href="https://www.youtube.com/watch?v=2Yt4o7gAuWw">Joint normal distribution</a> — B. Bhattacharya 结构可靠度课程：用于把 <span class="math inline">\(R,S\)</span> 的一维边缘分布纠正为二维联合密度，并显式呈现相关系数。</li>
+<li><a href="https://www.youtube.com/watch?v=VMO1BlZtjlg">Reliability formulation</a> — Jack Baker / Stanford：用于连接随机变量、极限状态函数与失效事件。</li>
 </ul>
 <p>这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。</p>
-<p>英文视频下的中文分段文字是本书作者基于视频主题重新撰写的学习导航与概括，不是逐句字幕翻译。未经权利人明确许可，本书不下载、重发或整段翻译视频字幕。完整选片、平台与观看任务见<a href="../appendices/video-atlas.html">视频图谱</a>。</p>
+<p>英文视频下的中文分段文字是本书作者基于视频主题重新撰写的学习导航与概括，不是逐句字幕翻译。未经权利人明确许可，本书不下载、重发或整段翻译视频字幕。现在每个核心主题页固定配置三段播放器，分别承担直觉、推导/中文和实验/工程角色；额外两段默认折叠以控制瞬时认知负荷。完整选片、平台与观看任务见<a href="../appendices/video-atlas.html">视频图谱</a>。</p>
 </section>
 <section id="组织方式样本" class="level2">
 <h2 class="anchored" data-anchor-id="组织方式样本">组织方式样本</h2>
