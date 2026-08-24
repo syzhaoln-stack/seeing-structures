@@ -8,7 +8,7 @@
 
 <meta name="author" content="赵诗宇">
 
-<title>M5｜压力偏一点，世界就变了 – 看见结构</title>
+<title>X1｜剪、扭与力流 – 看见结构</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/m6-prestress.html" rel="next">
-<link href="../chapters/m4-service.html" rel="prev">
+<link href="../extensions/x2-steel-composite.html" rel="next">
+<link href="../chapters/m7-ai-review.html" rel="prev">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -120,7 +120,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/m5-eccentric.html">改变力的路径</a></li><li class="breadcrumb-item"><a href="../chapters/m5-eccentric.html"><span class="chapter-title">M5｜压力偏一点</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../extensions/x1-shear-torsion.html">把缺失的构件补回来</a></li><li class="breadcrumb-item"><a href="../extensions/x1-shear-torsion.html"><span class="chapter-title">X1｜剪、扭与力流</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
@@ -257,7 +257,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/m5-eccentric.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">M5｜压力偏一点</span></a>
+  <a href="../chapters/m5-eccentric.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">M5｜压力偏一点</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -294,7 +294,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../extensions/x1-shear-torsion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">X1｜剪、扭与力流</span></a>
+  <a href="../extensions/x1-shear-torsion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">X1｜剪、扭与力流</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -350,26 +350,20 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜先看截面有没有拉区</a></li>
-  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜大偏心和小偏心是连续谱</a>
-  <ul class="collapse">
-  <li><a href="#nm相关曲线是一张能力地图" id="toc-nm相关曲线是一张能力地图" class="nav-link" data-scroll-target="#nm相关曲线是一张能力地图">N–M相关曲线是一张能力地图</a></li>
-  </ul></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜把需求点放进N–M地图</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜二阶效应让变形反过来增加弯矩</a>
-  <ul class="collapse">
-  <li><a href="#对称配筋不只是为了公式好算" id="toc-对称配筋不只是为了公式好算" class="nav-link" data-scroll-target="#对称配筋不只是为了公式好算">对称配筋不只是为了公式好算</a></li>
-  </ul></li>
-  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜比较两类N–M需求点</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜裂缝在暴露主拉应力</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜平截面失效处，改用力路思考</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜深梁为什么不是“很高的普通梁”</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜牛腿、盖梁、孔洞与锚固区</a></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜弯、剪、扭共同作用</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/m5-eccentric.html">改变力的路径</a></li><li class="breadcrumb-item"><a href="../chapters/m5-eccentric.html"><span class="chapter-title">M5｜压力偏一点</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../extensions/x1-shear-torsion.html">把缺失的构件补回来</a></li><li class="breadcrumb-item"><a href="../extensions/x1-shear-torsion.html"><span class="chapter-title">X1｜剪、扭与力流</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">M5｜压力偏一点，世界就变了</span></h1>
+<h1 class="title"><span class="chapter-title">X1｜剪、扭与力流</span></h1>
 </div>
 
 
@@ -398,96 +392,77 @@ window.Quarto = {
 </header>
 
 
-<div class="cycle-strip">
-<p><span class="hot">作用位置</span><span>应变梯度</span><span>截面分区</span><span>N–M组合</span><span>二阶效应</span><span>构造选择</span></p>
-</div>
 <nav class="learning-layers" aria-label="本章学习层次">
-<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+<a href="#concept"><span>01</span><strong>概念</strong><small>只保留必要变量</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>建立因果与直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察一个完整过程</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实工程</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与边界</small></a>
 </nav>
-<p>轴心受压是一个重要基准，却不是多数真实柱的完整状态。施工偏差、节点弯矩、水平荷载和初始弯曲都会让压力偏离截面形心。偏心距 <span class="math inline">\(e\)</span> 把轴力与弯矩连接起来：</p>
-<p><span class="math display">\[
-M=Ne
-\]</span></p>
-<p>这条式子很短，却打开了受压构件最重要的设计空间。</p>
-<div class="question-band">
-<p>同一根柱承受相同弯矩。若同时施加越来越大的轴向压力，截面一定会更危险吗？先写出你的判断，再去拖动交互图中的轴力。</p>
-</div>
+<p>弯曲设计常把注意力吸到跨中，但许多突然、脆性的破坏发生在支座、集中荷载、孔洞、牛腿和锚固区。这里不再从一串抗剪公式开始，而从裂缝指向与力怎样绕开不连续区开始。</p>
 <section id="concept" class="level2">
-<h2 class="anchored" data-anchor-id="concept">概念｜先看截面有没有拉区</h2>
-<p>在弹性阶段，轴力造成近似均匀应变，弯矩造成线性应变梯度，两者叠加后可能出现三种直观状态：</p>
+<h2 class="anchored" data-anchor-id="concept">概念｜裂缝在暴露主拉应力</h2>
+<p>弯矩为主的区域，受拉边缘裂缝大致垂直于构件轴线；剪力显著时，弯曲裂缝会向荷载或支座方向倾斜。开裂后的钢筋混凝土梁可用桁架/力场理解：</p>
 <ul>
-<li>全截面受压；</li>
-<li>一侧压、一侧拉；</li>
-<li>接近纯弯。</li>
+<li>混凝土斜压杆传递压缩；</li>
+<li>箍筋跨过斜裂缝承担拉力；</li>
+<li>纵向钢筋与受压区形成弦杆；</li>
+<li>节点区让这些合力汇合并转向。</li>
 </ul>
-<p>因此，“受压构件”不等于“截面每一点都受压”。判断材料状态的第一步应当是画应变图，而不是先寻找题型名称。</p>
+<p>扭转开裂后可用空间薄壁桁架理解：闭合箍筋、纵筋与混凝土斜压杆共同形成闭合力流。没有闭合路径，局部配几根“看起来很多”的钢筋也不等于抗扭体系成立。</p>
 </section>
 <section id="insight" class="level2">
-<h2 class="anchored" data-anchor-id="insight">洞察｜大偏心和小偏心是连续谱</h2>
-<p>当中性轴较浅，受拉钢筋有机会先达到屈服，截面表现更接近受弯构件；当中性轴较深，受压区占主导，受拉一侧钢筋可能尚未屈服，混凝土压区已经控制破坏。</p>
-<p>“大偏心”“小偏心”是帮助计算分支的语言，不是两种互不相干的构件。真正连续变化的是应变分布、中性轴位置与材料状态。</p>
-<section id="nm相关曲线是一张能力地图" class="level3">
-<h3 class="anchored" data-anchor-id="nm相关曲线是一张能力地图">N–M相关曲线是一张能力地图</h3>
-<p>对给定截面、材料与配筋，可以改变中性轴位置，逐点满足应变协调与内力平衡，得到一组 <span class="math inline">\((N,M)\)</span> 抗力点。连接这些点，就形成轴力—弯矩相关曲线。</p>
-<p>曲线内部通常表示截面能力尚有余量，曲线外部表示该组合超出截面能力。它比一个单独的“最大轴力”或“最大弯矩”更接近真实设计，因为轴力和弯矩会彼此影响。</p>
-</section>
+<h2 class="anchored" data-anchor-id="insight">洞察｜平截面失效处，改用力路思考</h2>
+<p>支座与集中荷载之间很近、梁高很大或几何突然变化时，应变分布不再近似线性。这类 D 区（不连续区）适合用压杆—拉杆模型：先画荷载到支座的压缩通道，再用拉杆闭合水平分量，最后检查节点、锚固和横向劈裂。</p>
+<p>压杆—拉杆图不是从软件彩虹中描线，也不是唯一答案。一个有效模型应满足平衡、与裂缝/边界相容、节点可构造，并避免过度曲折的力路。</p>
 </section>
 <section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">样例｜把需求点放进N–M地图</h2>
-<iframe class="interaction-frame" src="../interactive/eccentric-nm.html" title="偏心受压与N-M相关图交互实验" loading="lazy">
+<h2 class="anchored" data-anchor-id="example">样例｜深梁为什么不是“很高的普通梁”</h2>
+<p>简支深梁顶部集中受压时，荷载可通过斜向混凝土压杆直接拱向支座；底部纵向钢筋像拉杆一样抵抗压杆的水平分量。此时：</p>
+<ol type="1">
+<li>跨中线性弯曲应力图不再描述主要传力机制；</li>
+<li>支座与加载板是高压节点，局部承压和横向劈裂要检查；</li>
+<li>拉杆必须穿过节点并有足够锚固；</li>
+<li>分布钢筋用于约束裂缝、提供次要力路和延性。</li>
+</ol>
+<div class="video-pair">
+<div class="video-lesson">
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/GHMCG4fUUpM" title="Shear failure of a reinforced concrete beam" loading="lazy" allowfullscreen="">
 </iframe>
-<p class="interaction-caption">
-先改变偏心距，看应变图和合力位置；再把需求点放进 N–M 地图。注意：概念曲线不是规范设计曲线。
+</div>
+<h3 class="anchored">
+实体证据：无抗剪钢筋梁
+</h3>
+<p>
+先关闭声音预测裂缝：它会从哪里出现、向哪里发展？再播放并记录“首裂—斜裂缝贯通—承载突降”。不要把单个试验当成设计公式，但要记住剪切破坏缺少预警。
+</p>
+</div>
+<div class="video-lesson">
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/hjeK_ljW9dM" title="Bending Failure of Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
+</iframe>
+</div>
+<h3 class="anchored">
+实体证据：慢动作梁试验
+</h3>
+<p>
+观察裂缝不是随机噪声：竖向弯曲裂缝与斜裂缝分别在提示不同应力场。暂停在破坏前一刻，画出你认为存在的压杆、拉杆和节点。
+</p>
+</div>
+</div>
+<p class="attribution">
+来源：Think Up / Materials Lab On-line；Tyler Ley。播放器仅嵌入原视频。
 </p>
 </section>
 <section id="application" class="level2">
-<h2 class="anchored" data-anchor-id="application">实际应用｜二阶效应让变形反过来增加弯矩</h2>
-<p>柱一旦发生侧向挠曲，轴力会对变形后的几何位置产生附加弯矩，常写成 <span class="math inline">\(P\Delta\)</span> 效应。于是出现反馈链：</p>
-<p><span class="math display">\[
-\text{弯矩}\rightarrow\text{侧移}\rightarrow\text{附加弯矩}\rightarrow\text{更大侧移}
-\]</span></p>
-<p>短柱中这条反馈可能很弱，长细柱中却可能控制设计。是否考虑二阶效应，不应靠“这是柱题”来决定，而应看长细比、轴压水平、侧移约束与整体体系。</p>
-<div class="student-evidence">
-<p>“轴力增加一定更不利”是一个值得保留再修正的直觉。在接近纯弯的某些区间，适度压力可能让原本受拉的混凝土进入受压状态，截面抗弯能力可能先增加；再继续增加轴力，压区耗尽，能力才下降。相关曲线正是用来替代单调直觉的证据。</p>
-</div>
-<section id="对称配筋不只是为了公式好算" class="level3">
-<h3 class="anchored" data-anchor-id="对称配筋不只是为了公式好算">对称配筋不只是为了公式好算</h3>
-<p>桥墩和框架柱可能承受弯矩反号、施工阶段变化、地震往复作用。对称配筋可以让截面面对不同弯曲方向时保持较一致的能力，也有利于构造标准化。但它可能不是材料用量最小的方案。</p>
-<article class="real-case">
-<div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/mA0HXqBz-lY" title="ACI：偏心受压混凝土柱研究" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</div>
-<div class="real-case-body">
-<p><span class="real-case-kicker">REAL RESEARCH · ECCENTRIC COLUMNS</span></p>
-<section id="偏心距不是题目里的一行小字" class="level3">
-<h3 class="anchored" data-anchor-id="偏心距不是题目里的一行小字">偏心距不是题目里的一行小字</h3>
-<p>American Concrete Institute 发布的渥太华大学研究展示不同偏心加载下的混凝土柱试验。观看时只跟踪三件事：加载线、侧向变形、最终破坏区；然后把观察放回 N–M 图，而不是急着抄试验数字。</p>
-<p>这些试件还包含CFRP等特定加固变量，不能直接代替普通钢筋混凝土柱模型。</p>
-<p class="attribution">
-视频：<a href="https://www.youtube.com/watch?v=mA0HXqBz-lY">CFRP Reinforced Concrete Columns under Eccentric Loading</a>，American Concrete Institute。
-</p>
-</section>
-</div>
-</article>
-<div class="verify-panel">
-<p><strong>四重校核：N–M结果可信吗？</strong></p>
-<ol type="1">
-<li>单位：轴力与弯矩的数量级是否与截面尺寸匹配？</li>
-<li>端点：<span class="math inline">\(M=0\)</span> 附近能否回到轴心受压基准？<span class="math inline">\(N\approx0\)</span> 时能否回到受弯基准？</li>
-<li>趋势：需求点沿固定偏心距移动时，是否是一条 <span class="math inline">\(M=Ne\)</span> 的射线？</li>
-<li>独立复核：选曲线上一个点，把材料合力重新求和得到 <span class="math inline">\(N\)</span> 与 <span class="math inline">\(M\)</span>。</li>
-</ol>
-</div>
-<div class="bridge-window">
-<p><strong>桥梁迁移窗</strong></p>
-<p>桥墩既承受上部结构竖向反力，也承受制动力、风、地震和不均匀温度产生的弯矩。单柱、双柱墩和薄壁墩的选择，会同时改变 N–M需求、长细效应、景观与施工。</p>
-</div>
-</section>
+<h2 class="anchored" data-anchor-id="application">实际应用｜牛腿、盖梁、孔洞与锚固区</h2>
+<p>压杆—拉杆模型常用于桥墩盖梁、短牛腿、深梁、梁腹板大孔洞、桩帽和预应力锚固区。实际设计应完成：荷载路径、节点尺寸、压杆有效强度、拉杆面积、锚固长度、横向约束与构造钢筋的闭环。</p>
+<p>牛腿的关键不是“把顶部钢筋加密”，而是主拉杆的位置与锚固能否真正闭合斜压杆的水平分量。预应力锚头后的局部高压也会横向扩散并诱发劈裂拉力。</p>
 </section>
 <section id="extension" class="level2">
-<h2 class="anchored" data-anchor-id="extension">拓展｜比较两类N–M需求点</h2>
-<p>给定一个矩形柱截面，构造两个落在概念 N–M 曲线内部的需求点：一个高轴力低弯矩，一个低轴力高弯矩。分别画出你预期的应变图，并指出哪一种更依赖混凝土压区、哪一种更依赖受拉钢筋。</p>
+<h2 class="anchored" data-anchor-id="extension">拓展｜弯、剪、扭共同作用</h2>
+<p>真实箱梁与边梁往往同时承受 <span class="math inline">\(M\)</span>、<span class="math inline">\(V\)</span>、<span class="math inline">\(T\)</span>。设计时需要考虑相互作用：同一套纵筋、箍筋与混凝土压区可能同时被多个作用占用。最危险的误区是分别按三个单项设计再简单相加，却不检查力流是否能在空间中闭合。</p>
+<p>可进一步观看 <a href="https://www.youtube.com/watch?v=MNwQYq67xW0">Oxford University OU：混凝土构件扭转讲座</a> 与 <a href="https://www.youtube.com/watch?v=z8_2rw29Rok">PC 梁扭转试验</a>。长视频建议只围绕“平衡扭转/协调扭转、裂缝形态、配筋闭合”三个问题做笔记。</p>
+<div class="verify-panel">
+<p>审查 D 区模型时，用手指从每个外力沿压杆或拉杆走到支座；任何中途消失的力、无法锚固的拉杆或尺寸为零的节点，都是模型尚未闭合的证据。</p>
+</div>
 
 
 </section>
@@ -924,13 +899,13 @@ M=Ne
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/m4-service.html" class="pagination-link" aria-label="M4｜不倒塌也可能不能用">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">M4｜不倒塌也可能不能用</span></span>
+      <a href="../chapters/m7-ai-review.html" class="pagination-link" aria-label="M7｜AI不能替你负责">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">M7｜AI不能替你负责</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/m6-prestress.html" class="pagination-link" aria-label="M6｜在荷载前改变结构">
-        <span class="nav-page-text"><span class="chapter-title">M6｜在荷载前改变结构</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../extensions/x2-steel-composite.html" class="pagination-link" aria-label="X2｜钢与组合结构">
+        <span class="nav-page-text"><span class="chapter-title">X2｜钢与组合结构</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

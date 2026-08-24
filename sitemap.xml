@@ -2,54 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/index.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/preface.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/foundations/f0-language.html</loc>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/foundations/f1-axial-torsion.html</loc>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/foundations/f2-beam-forces.html</loc>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/foundations/f3-beam-stress.html</loc>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/foundations/f4-deflection.html</loc>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/foundations/f5-stress-stability.html</loc>
+    <lastmod>2026-08-24T04:02:55.989Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m0-design.html</loc>
-    <lastmod>2026-08-24T02:34:25.107Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m1-reliability.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m2-materials.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m3-bending.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m4-service.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m5-eccentric.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m6-prestress.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/chapters/m7-ai-review.html</loc>
-    <lastmod>2026-08-24T02:34:25.108Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/extensions/x1-shear-torsion.html</loc>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/extensions/x2-steel-composite.html</loc>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/extensions/x3-masonry.html</loc>
+    <lastmod>2026-08-24T04:02:55.988Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/appendices/learning-map.html</loc>
-    <lastmod>2026-08-24T02:34:25.107Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://syzhaoln-stack.github.io/seeing-structures/appendices/video-atlas.html</loc>
+    <lastmod>2026-08-24T04:02:55.987Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/appendices/sources.html</loc>
-    <lastmod>2026-08-24T02:34:25.107Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.987Z</lastmod>
   </url>
   <url>
     <loc>https://syzhaoln-stack.github.io/seeing-structures/appendices/teacher-guide.html</loc>
-    <lastmod>2026-08-24T02:34:25.107Z</lastmod>
+    <lastmod>2026-08-24T04:02:55.987Z</lastmod>
   </url>
 </urlset>

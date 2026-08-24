@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "看见结构",
     "section": "",
-    "text": "这本书怎样工作\n你不会先遇到几十个符号。每一章从一个能看见或能想象的结构问题开始：先判断，随后操作模型，观察结果，再建立解释。公式只在它能够解决眼前问题时出现。\n每个模块都有五个固定入口。第一次学习按顺序走，复习或备课时可以直接跳到需要的一层：\n本书有两条同时存在的路径：第一次学习时沿章节前进；需要查用时从附录的知识地图直接进入公式、交互和验证清单。新手不必被参考资料压住，熟练者也不必被迫重复所有引导。\n开始：为什么还需要设计？",
+    "text": "这本书怎样工作\n你不会先遇到几十个符号。每一章从一个能看见或能想象的结构问题开始：先判断，随后操作模型，观察结果，再建立解释。公式只在它能够解决眼前问题时出现。\n每个模块都有五个固定入口。第一次学习按顺序走，复习或备课时可以直接跳到需要的一层：\n本书有两条同时存在的路径：材料力学基础不稳时，从 F0 沿“外力—内力—应力—变形—失稳”进入；已经掌握这些语言时，从 M0 直接进入结构设计。需要查用时，可从学习地图或视频图谱按困惑定位。新手不必被参考资料压住，熟练者也不必被迫重复所有引导。\n从材料力学开始\n直接进入结构设计",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>首页｜看见结构</span>"
     ]
@@ -70,6 +70,358 @@
     ]
   },
   {
+    "objectID": "foundations/f0-language.html",
+    "href": "foundations/f0-language.html",
+    "title": "F0｜把结构切开看",
+    "section": "",
+    "text": "概念｜六步读懂一个受力问题\n材料力学与结构设计之间并没有一道墙。前者训练我们把看不见的内力、应力和变形画出来，后者要求我们在材料非线性、构造和规范约束下作选择。本章只建立一套以后反复使用的语言。\n应力不是新的外力，而是内力在截面上的分布。正应力垂直于截面，切应力沿截面。应变不是位移本身，而是局部长度或角度的相对改变。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>F0｜把结构切开看</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f0-language.html#concept",
+    "href": "foundations/f0-language.html#concept",
+    "title": "F0｜把结构切开看",
+    "section": "",
+    "text": "选对象：整座桥、一个构件，还是切口一侧？\n画边界：对象与环境在哪里分开？\n替代接触：把支座、连接、分布作用换成力与力矩。\n列平衡：先判断能否仅靠静力平衡求解。\n切开构件：用轴力 \\(N\\)、剪力 \\(V\\)、弯矩 \\(M\\)、扭矩 \\(T\\) 表示切口两侧的相互作用。\n连接变形：平衡只告诉我们“必须传多少”，几何关系和材料关系才告诉我们“怎样变形、怎样分配”。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>F0｜把结构切开看</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f0-language.html#insight",
+    "href": "foundations/f0-language.html#insight",
+    "title": "F0｜把结构切开看",
+    "section": "洞察｜三类关系贯穿全书",
+    "text": "洞察｜三类关系贯穿全书\n几乎所有构件分析都在反复闭合三个环节：\n\n平衡：外力与内力是否相容；\n几何/协调：变形后各部分是否仍能连接；\n材料关系：应力与应变怎样对应。\n\n材料力学常把材料理想为连续、均匀、线弹性；结构设计则进一步处理开裂、屈服、徐变、收缩、黏结滑移与构造限制。复杂度增加了，骨架没有变。\n\n最常见的错误不是不会解方程，而是自由体没选清楚便开始代数。每次计算前用一句完整的话说明：“我保留的是……，切掉的部分用……替代。”",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>F0｜把结构切开看</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f0-language.html#example",
+    "href": "foundations/f0-language.html#example",
+    "title": "F0｜把结构切开看",
+    "section": "样例｜同一根悬臂，三种尺度",
+    "text": "样例｜同一根悬臂，三种尺度\n在端部受竖向力 \\(P\\) 的悬臂梁上：\n\n看整根梁：固定端反力为 \\(P\\)，反力矩为 \\(PL\\)；\n在距自由端 \\(x\\) 处切开：切口必须提供剪力 \\(P\\) 和弯矩 \\(Px\\)；\n看切口上一点：弯矩主要表现为沿高度改变符号的正应力，剪力表现为非均匀切应力。\n\n这不是三套知识，而是“外部作用—截面合力—局部分布”三个放大倍数。\n\n\n\n\n\n\n中文分段导看（原创意译与概括）\n\n\n\n\n\n\n\n\n约略时段\n看什么\n中文要点\n\n\n\n\n00:00–02:10\n外力怎样进入物体\n应力描述材料内部抵抗外载的分布，不等于外力除以任意面积。\n\n\n02:10–04:20\n正应力与切应力\n区分“垂直截面”与“沿截面”，先看方向再选公式。\n\n\n04:20–07:50\n应变与材料曲线\n同样的应力，不同材料可能产生完全不同的应变与永久变形。\n\n\n07:50–结尾\n斜截面\n同一点换一个观察平面，正应力和切应力分量会改变。\n\n\n\n一句话总结： 外力可见，内部的应力与应变不可见；材料力学的任务是建立两者之间可检验的联系。\n术语： stress 应力；strain 应变；normal stress 正应力；shear stress 切应力；yielding 屈服。\n\n视频：The Efficient Engineer。分段时间为学习导航，并非字幕逐字翻译。可在播放器中启用英文字幕。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>F0｜把结构切开看</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f0-language.html#application",
+    "href": "foundations/f0-language.html#application",
+    "title": "F0｜把结构切开看",
+    "section": "实际应用｜从雨棚节点到整座桥",
+    "text": "实际应用｜从雨棚节点到整座桥\n雨棚拉杆的轴力、梁柱节点的剪力、箱梁的扭矩、桥墩的轴力与弯矩，本质上都是结构体系把荷载送往地基时留下的“中转记录”。真实设计必须再问：\n\n这条力路是否连续？\n连接能否把合力真正传过去？\n刚度变化会不会把力推向意外位置？\n施工阶段是否出现另一条控制力路？\n\n曼彻斯特大学的 Seeing and Touching Structural Concepts 把平衡、弯曲、剪扭、力路与失稳分别用模型演示。建议先观察模型，再回到公式解释观察，而不是反过来。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>F0｜把结构切开看</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f0-language.html#extension",
+    "href": "foundations/f0-language.html#extension",
+    "title": "F0｜把结构切开看",
+    "section": "拓展｜什么时候平衡不够",
+    "text": "拓展｜什么时候平衡不够\n一根两端固定、受温度变化的杆，即使没有外加轴向力也可能产生内力。仅列平衡无法求出它，因为未知反力多于独立平衡方程。此时必须加入温度应变、弹性变形与端部位移约束。\n这给出以后识别超静定问题的最小判断：未知作用不仅要平衡，还必须让结构变形得“接得上”。\n\n本章公式默认小变形、连续介质和准静力过程。冲击、疲劳、断裂、明显塑性和几何大变形需要额外模型；不能因为画出了内力图，就假装所有失效模式都被覆盖。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>F0｜把结构切开看</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f1-axial-torsion.html",
+    "href": "foundations/f1-axial-torsion.html",
+    "title": "F1｜拉、压与扭转",
+    "section": "",
+    "text": "概念｜先问作用，再问分布\n拉压与扭转看似是最简单的两章，却第一次把“截面合力—应力分布—变形—设计条件”连成完整闭环。真正值得迁移的不是四个公式，而是判断公式为何能用。\n轴力通过截面形心、杆件平直且远离加载端时，均匀正应力近似为：\n\\[\\sigma=\\frac{N}{A},\\qquad \\varepsilon=\\frac{\\Delta L}{L},\\qquad \\sigma=E\\varepsilon\\]\n因此等截面线弹性杆的伸长为 \\(Delta L=NL/(EA)\\)。若轴力、面积或材料沿杆长变化，应写成积分，而不是强行套一个平均值。\n圆轴在 Saint-Venant 扭转下：\n\\[\\tau(r)=\\frac{Tr}{J},\\qquad \\frac{\\mathrm d\\varphi}{\\mathrm dx}=\\frac{T}{GJ}\\]\n切应力从轴心的零线性增长到外缘最大值。这里的 \\(J\\) 是极惯性矩，不是梁弯曲使用的面积惯性矩 \\(I\\)。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>F1｜拉、压与扭转</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f1-axial-torsion.html#insight",
+    "href": "foundations/f1-axial-torsion.html#insight",
+    "title": "F1｜拉、压与扭转",
+    "section": "洞察｜均匀不是事实，而是一个有边界的模型",
+    "text": "洞察｜均匀不是事实，而是一个有边界的模型\n拉杆端部夹具附近、截面突变处、孔洞边缘都会出现应力集中；离开局部扰动足够远后，合力相同的不同加载方式才逐渐呈现近似相同的应力分布。这个 Saint-Venant 直觉解释了为什么一维杆模型既有用又不能无限外推。\n扭转对截面形状更敏感。圆截面可以保持截面平面；非圆截面会翘曲。薄壁开口截面的抗扭刚度通常很低，闭口箱形截面则能形成连续剪流。这直接连接到桥梁为什么常用箱梁。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>F1｜拉、压与扭转</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f1-axial-torsion.html#example",
+    "href": "foundations/f1-axial-torsion.html#example",
+    "title": "F1｜拉、压与扭转",
+    "section": "样例｜同样的材料，换直径会怎样",
+    "text": "样例｜同样的材料，换直径会怎样\n实心圆轴直径从 \\(d\\) 增加到 \\(2d\\)：面积增为 4 倍，轴向正应力降为 \\(1/4\\)；极惯性矩与 \\(d^4\\) 成正比，最大扭转切应力与 \\(T/d^3\\) 成反比，因此降为 \\(1/8\\)，单位长度扭转角降为 \\(1/16\\)。\n这个趋势比一次具体计算更重要：改变尺寸对强度与刚度的影响并不同步，设计不能只盯住一个指标。\n\n\n\n\n\n\n中文分段导看（原创意译与概括）\n\n\n\n\n\n\n\n\n约略时段\n观察任务\n中文要点\n\n\n\n\n00:00–02:20\n扭矩与截面转动\n扭矩需要由截面上的切应力合成抵抗。\n\n\n02:20–05:30\n圆轴应力分布\n距轴心越远，切应力越大；外层材料在抗扭中更“值钱”。\n\n\n05:30–08:00\n扭转角\n\\(GJ\\) 是抗扭刚度，强度满足并不保证转角可接受。\n\n\n08:00–结尾\n薄壁与非圆截面\n截面翘曲与剪流使“任意截面都套圆轴公式”失效。\n\n\n\n一句话总结： 扭转不是一个孤立公式，而是截面形状组织剪流的能力。\n\n视频：The Efficient Engineer。中文文字为本书导看与总结，不是字幕复制。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>F1｜拉、压与扭转</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f1-axial-torsion.html#application",
+    "href": "foundations/f1-axial-torsion.html#application",
+    "title": "F1｜拉、压与扭转",
+    "section": "实际应用｜拉索、锚具与箱梁",
+    "text": "实际应用｜拉索、锚具与箱梁\n\n拉索以轴向受拉为主，但锚具附近必须处理局部承压、劈裂和应力扩散；\n桥梁偏心车道荷载会让主梁体系承受扭转；曲线梁即使竖向加载，也可能产生显著扭矩；\n钢箱梁闭合薄壁能高效传递剪流，但横隔板、焊缝、局部屈曲与疲劳细节成为新的控制问题。\n\n可配合观看天津大学材料力学公开视频合辑中的“轴向拉压”“扭转实验”和“扭转强度/刚度”小节：材料力学，共82段。它更适合系统补课；本页视频更适合十分钟建立图像。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>F1｜拉、压与扭转</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f1-axial-torsion.html#extension",
+    "href": "foundations/f1-axial-torsion.html#extension",
+    "title": "F1｜拉、压与扭转",
+    "section": "拓展｜从扭矩走到钢筋混凝土扭转",
+    "text": "拓展｜从扭矩走到钢筋混凝土扭转\n钢筋混凝土开裂后，扭矩不再靠完整实体的弹性切应力分布传递，而可理解为空间薄壁桁架：闭合箍筋承担横向拉力，纵筋承担纵向拉力，斜向混凝土压杆闭合力流。这个模型将在 X1 重新出现。\n\n看到 \\(T/J\\) 时先做四项检查：截面是否为圆形或适用的薄壁模型？单位是否一致？最大值应在哪里？把直径增大时，程序结果是否符合 \\(d^{-3}\\) 或 \\(d^{-4}\\) 的趋势？",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>F1｜拉、压与扭转</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f2-beam-forces.html",
+    "href": "foundations/f2-beam-forces.html",
+    "title": "F2｜梁的内力是一部连续剧",
+    "section": "",
+    "text": "概念｜切一刀，保留一边\n剪力图和弯矩图不是计算后的装饰，而是梁上每一个截面正在传递什么的连续地图。只要建立“荷载改变剪力、剪力改变弯矩”的因果链，孤立背图就失去必要。\n对平面受力细长梁，在任意位置切开并保留一侧，切口通常由轴力 \\(N(x)\\)、剪力 \\(V(x)\\) 与弯矩 \\(M(x)\\) 保持平衡。采用本书约定的符号后，分布荷载、剪力、弯矩之间满足：\n\\[\\frac{\\mathrm dV}{\\mathrm dx}=-q(x),\\qquad \\frac{\\mathrm dM}{\\mathrm dx}=V(x)\\]\n因此：",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>F2｜梁的内力是一部连续剧</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f2-beam-forces.html#concept",
+    "href": "foundations/f2-beam-forces.html#concept",
+    "title": "F2｜梁的内力是一部连续剧",
+    "section": "",
+    "text": "没有分布荷载的区段，剪力图水平，弯矩图为直线；\n均布荷载区段，剪力图为斜线，弯矩图为抛物线；\n集中力让剪力图跳跃；集中力矩让弯矩图跳跃；\n弯矩极值常出现在剪力为零或发生突变的位置。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>F2｜梁的内力是一部连续剧</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f2-beam-forces.html#insight",
+    "href": "foundations/f2-beam-forces.html#insight",
+    "title": "F2｜梁的内力是一部连续剧",
+    "section": "洞察｜内力图是局部平衡的积分记录",
+    "text": "洞察｜内力图是局部平衡的积分记录\n先求支反力、再在每段切开当然可行；但微分关系能让你不用重新计算便判断图形的斜率、曲率与跳跃。读图时反向思考也成立：弯矩图的斜率给出剪力，剪力图的斜率给出荷载。\n真正降低认知负荷的方法是每次只追踪一个变化：先标突变，再定区段斜率，最后用边界值闭合，而不是一开始同时写所有分段方程。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>F2｜梁的内力是一部连续剧</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f2-beam-forces.html#example",
+    "href": "foundations/f2-beam-forces.html#example",
+    "title": "F2｜梁的内力是一部连续剧",
+    "section": "样例｜简支梁上的移动集中力",
+    "text": "样例｜简支梁上的移动集中力\n跨长 \\(L\\) 的简支梁承受位于左端 \\(a\\) 处的集中力 \\(P\\)，右侧距离 \\(b=L-a\\)：\n\\[R_A=\\frac{Pb}{L},\\qquad R_B=\\frac{Pa}{L}\\]\n集中力左侧剪力为 \\(R_A\\)，右侧跳降 \\(P\\) 后为 \\(-R_B\\)。弯矩从两端的零线性增长/下降，在荷载处达到最大值 \\(M_{max}=Pab/L\\)。\n当荷载移动时，最大弯矩的位置跟着移动；但某一指定截面的最大效应要用影响线思考。这是从“单个荷载工况”走向桥梁设计的第一步。\n\n\n\n只改变一个变量：先固定荷载大小移动位置，再固定位置改变大小。用图形验证“集中力使剪力跳跃、剪力积分形成弯矩变化”。\n\n\n\n\n\n\n\n中文分段导看（原创意译与概括）\n\n\n\n\n\n\n\n\n约略时段\n暂停并做什么\n中文要点\n\n\n\n\n00:00–03:10\n指认支座和荷载\n支座符号代表被约束的自由度，不是固定背诵的反力图标。\n\n\n03:10–06:30\n画整梁自由体\n反力必须先由整体平衡确定。\n\n\n06:30–10:30\n在任意位置切开\n剪力与弯矩是切口上分布应力的合力与合力矩。\n\n\n10:30–13:40\n比较相邻截面\n荷载、剪力、弯矩的变化率彼此连接。\n\n\n13:40–结尾\n对照图形与梁\n图上峰值是需要优先检查的截面，但不自动等于唯一危险点。\n\n\n\n一句话总结： 内力图是沿梁移动切口、反复执行局部平衡得到的连续记录。\n\n视频：The Efficient Engineer；中文字幕可由播放器自动生成，本表是教师导看。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>F2｜梁的内力是一部连续剧</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f2-beam-forces.html#application",
+    "href": "foundations/f2-beam-forces.html#application",
+    "title": "F2｜梁的内力是一部连续剧",
+    "section": "实际应用｜桥梁的恒载与移动荷载",
+    "text": "实际应用｜桥梁的恒载与移动荷载\n桥面铺装、自重和附属设施近似形成固定分布荷载；车辆是位置不断改变的集中或分布轮载。结构分析软件会输出大量包络图，但工程师仍需用三条趋势复核：\n\n支反力总和能否回到总竖向荷载；\n跨中正弯矩与支点附近剪力是否符合体系直觉；\n荷载位置微调时，内力包络是否连续而非无理由跳变。\n\n中文系统课可选择 天津大学材料力学：弯曲内力至实验段；若只想快速补齐画图步骤，可看 建筑力学：梁弯曲系列。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>F2｜梁的内力是一部连续剧</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f2-beam-forces.html#extension",
+    "href": "foundations/f2-beam-forces.html#extension",
+    "title": "F2｜梁的内力是一部连续剧",
+    "section": "拓展｜静定图形会骗人吗",
+    "text": "拓展｜静定图形会骗人吗\n连续梁、刚架和施工阶段改变支承时，内力不仅取决于荷载和平衡，也取决于各构件刚度与变形协调。此时“把一跨当简支梁”只能作为趋势检查，不能代替分析。\n\n本章主要讨论静定平面梁和准静力荷载。空间梁、曲梁、深梁、剪切变形显著的短梁以及动力响应，需要更完整模型。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>F2｜梁的内力是一部连续剧</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f3-beam-stress.html",
+    "href": "foundations/f3-beam-stress.html",
+    "title": "F3｜截面形状为什么重要",
+    "section": "",
+    "text": "概念｜弯曲正应力与横向切应力\n内力图告诉我们哪个截面承担多少弯矩和剪力；截面应力分析则回答：这些合力怎样分布到材料中。工字形、T形和箱形不是图纸习惯，而是把材料放到更有效的位置。\n在小变形、线弹性、平截面假定和对称弯曲条件下：\n\\[\\sigma_x(y)=-\\frac{My}{I}\\]\n中性轴处弯曲正应力为零，离中性轴越远，绝对值越大。边缘最大值可写为 \\(sigma_{max}=M/W\\)，其中 \\(W=I/c\\) 是截面抵抗矩。\n横向剪力产生的切应力常写为：\n\\[\\tau=\\frac{VQ}{Ib}\\]\n\\(Q\\) 是所考察水平线一侧面积对中性轴的一次矩，\\(b\\) 是该处实际宽度。矩形截面的切应力在中性轴最大、上下边缘为零；工字形截面的大部分剪力由腹板传递。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>F3｜截面形状为什么重要</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f3-beam-stress.html#insight",
+    "href": "foundations/f3-beam-stress.html#insight",
+    "title": "F3｜截面形状为什么重要",
+    "section": "洞察｜材料离中性轴越远，抗弯越高效",
+    "text": "洞察｜材料离中性轴越远，抗弯越高效\n面积惯性矩含有距离平方项。把材料从中性轴附近移到上下缘，在面积几乎不变时可以显著提高 \\(I\\) 与 \\(W\\)。于是：\n\n工字钢用翼缘高效承担弯曲正应力，用腹板连接翼缘并传递剪力；\n钢筋混凝土 T 梁把桥面板作为受压翼缘，但翼缘有效范围有限；\n箱梁把材料布置在周边，同时获得抗弯与抗扭效率。\n\n高效并不等于无代价：薄翼缘和腹板会局部屈曲，连接与焊缝会疲劳，截面越高还会占用净空。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>F3｜截面形状为什么重要</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f3-beam-stress.html#example",
+    "href": "foundations/f3-beam-stress.html#example",
+    "title": "F3｜截面形状为什么重要",
+    "section": "样例｜实心矩形与工字形的比较方式",
+    "text": "样例｜实心矩形与工字形的比较方式\n比较两种梁时，不要只说“工字形更强”。至少固定一个公平条件：相同材料用量、相同外包高度、相同质量或相同造价。然后依次比较：\n\n面积 \\(A\\) 与自重；\n惯性矩 \\(I\\) 与截面抵抗矩 \\(W\\)；\n最大弯曲应力与挠度趋势；\n腹板剪应力、局部稳定和制造细节。\n\n\n\n\n\n\n\n中文分段导看（原创意译与概括）\n\n\n\n\n\n\n\n\n约略时段\n观察任务\n中文要点\n\n\n\n\n00:00–03:20\n看梁弯成圆弧\n一侧缩短、一侧伸长，中间存在纵向应变为零的层。\n\n\n03:20–07:40\n从应变走到应力\n平截面提供几何关系，胡克定律提供材料关系，积分平衡连接到弯矩。\n\n\n07:40–11:00\n移动材料位置\n\\(I\\) 衡量面积相对中性轴的分散程度，不是材料常数。\n\n\n11:00–结尾\n看切应力\n\\(VQ/(Ib)\\) 的分布与弯曲正应力完全不同，不能只检查上下边缘。\n\n\n\n一句话总结： 截面设计是在组织应力分布；形状改变了材料参与抗弯、抗剪和抗扭的效率。\n\n视频：The Efficient Engineer。建议在 03:20 暂停，自己画一遍应变图再继续。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>F3｜截面形状为什么重要</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f3-beam-stress.html#application",
+    "href": "foundations/f3-beam-stress.html#application",
+    "title": "F3｜截面形状为什么重要",
+    "section": "实际应用｜用海绵验证平截面假定",
+    "text": "实际应用｜用海绵验证平截面假定\n曼彻斯特大学的 Bending 模型 用画有横纵线的柔软梁展示弯曲：横线弯曲后仍近似保持直线并与纵轴近似垂直，上下纤维分别缩短和伸长。你可以用海绵、橡皮或带网格纸条复现实验。\n观察次序应是：先看线怎么动，再命名中性轴和曲率，最后才写 \\(sigma=My/I\\)。模型支持假定，但不证明钢筋混凝土开裂后所有截面仍完全满足它。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>F3｜截面形状为什么重要</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f3-beam-stress.html#extension",
+    "href": "foundations/f3-beam-stress.html#extension",
+    "title": "F3｜截面形状为什么重要",
+    "section": "拓展｜哪些地方不能再用梁公式",
+    "text": "拓展｜哪些地方不能再用梁公式\n集中荷载和支座附近的应力场不是简单线性分布；梁高与跨度同量级的深梁会形成拱—拉杆作用；孔洞、牛腿、锚固区和节点必须沿力流分析。此时截面公式仍可提供边界合力，但局部设计应转向应力场、有限元或压杆—拉杆模型。\n\n做完截面计算后，必须能回答三件事：中性轴在哪里？最大正应力在哪里？最大切应力在哪里？如果三个答案来自同一个“危险点”，通常说明你把不同分布混在了一起。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>F3｜截面形状为什么重要</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f4-deflection.html",
+    "href": "foundations/f4-deflection.html",
+    "title": "F4｜从曲率走到挠度",
+    "section": "",
+    "text": "概念｜弯矩先改变曲率\n梁满足强度并不代表它好用。过大的挠度会损坏隔墙、改变排水、引起不适或让使用者失去信任。位移分析不是“算完强度后的附加题”，而是正常使用设计的主线。\nEuler–Bernoulli 梁的小挠度关系可写成：\n\\[\\kappa\\approx\\frac{\\mathrm d^2v}{\\mathrm dx^2}=\\frac{M(x)}{EI}\\]\n弯矩除以抗弯刚度 \\(EI\\) 得到曲率；对曲率积分一次得到转角，再积分一次得到挠度。积分常数由支承和连续条件确定。\n计算方法可以有积分法、叠加法、共轭梁法、单位荷载法或数值法，但都不能绕过四件事：内力、刚度、边界条件、协调条件。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>F4｜从曲率走到挠度</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f4-deflection.html#insight",
+    "href": "foundations/f4-deflection.html#insight",
+    "title": "F4｜从曲率走到挠度",
+    "section": "洞察｜挠度是沿全梁累积的结果",
+    "text": "洞察｜挠度是沿全梁累积的结果\n最大弯矩处不一定是最大挠度处。某一点位移来自整条梁上曲率的累积，因此局部降低刚度可能影响远处位移。对相似简支梁，典型挠度尺度为：\n\\[v\\sim\\frac{qL^4}{EI}\\]\n跨度以四次方进入，解释了为什么“只把梁做得长一点”会迅速带来刚度问题；梁高通过 \\(I\\) 的高次关系又格外有效。\n钢筋混凝土更复杂：开裂使有效刚度降低，徐变让长期挠度增长，收缩、温度和施工阶段也会留下初始曲率。用毛截面 \\(EI\\) 一算到底往往过于乐观。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>F4｜从曲率走到挠度</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f4-deflection.html#example",
+    "href": "foundations/f4-deflection.html#example",
+    "title": "F4｜从曲率走到挠度",
+    "section": "样例｜悬臂梁的尺度判断",
+    "text": "样例｜悬臂梁的尺度判断\n端部集中力 \\(P\\) 作用下，等截面悬臂自由端挠度为：\n\\[v_L=\\frac{PL^3}{3EI}\\]\n若跨度加倍而其他不变，挠度增为 8 倍；若矩形截面高度加倍，\\(I=bh^3/12\\) 增为 8 倍，挠度降为 \\(1/8\\)。这组互逆趋势可用于校核任何计算程序。\n\n\n\n\n\n\n中文分段导看（原创意译与概括）\n\n\n\n\n\n\n\n\n约略时段\n重点\n中文要点\n\n\n\n\n00:00–04:00\n曲率与弯矩\n先建立局部关系 \\(M/EI\\)，不要直接跳到挠度公式表。\n\n\n04:00–08:30\n转角与挠度\n曲率、转角、挠度依次是导数/积分关系，各自物理含义不同。\n\n\n08:30–13:40\n边界条件\n支点位移和固定端转角把积分常数变成结构信息。\n\n\n13:40–18:10\n叠加与查表\n线弹性条件下可叠加基本工况，但刚度或边界改变时要重新判断。\n\n\n18:10–结尾\n能量法概念\n位移也可由应变能对荷载的敏感性求得，为超静定与有限元铺路。\n\n\n\n一句话总结： 弯矩产生曲率，曲率沿长度累积成转角和位移；边界条件决定这条曲线如何落地。\n\n视频：The Efficient Engineer。时间段为约略导航，建议播放后用一张纸画出四张对应图。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>F4｜从曲率走到挠度</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f4-deflection.html#application",
+    "href": "foundations/f4-deflection.html#application",
+    "title": "F4｜从曲率走到挠度",
+    "section": "实际应用｜服务性问题的证据链",
+    "text": "实际应用｜服务性问题的证据链\n伦敦千禧桥的开桥振动提醒我们：结构远未达到强度极限，也可能因人—结构相互作用而无法正常使用。对普通梁桥，服务性证据至少包括短期挠度、长期效应、裂缝、振动和构造/非结构构件容许变形。\n曼彻斯特结构概念库把 spans and deflections 与弯曲分开列出，值得保留这种区分：知道哪里弯矩大，不等于已经知道使用体验。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>F4｜从曲率走到挠度</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f4-deflection.html#extension",
+    "href": "foundations/f4-deflection.html#extension",
+    "title": "F4｜从曲率走到挠度",
+    "section": "拓展｜能量为何能求位移",
+    "text": "拓展｜能量为何能求位移\n线弹性梁的弯曲应变能为：\n\\[U=\\int_0^L\\frac{M^2(x)}{2EI}\\,\\mathrm dx\\]\n在相应条件下，对某个荷载求偏导可得到该荷载方向位移（Castigliano 思想）。它把“整条梁曲率累积”的概念压缩成能量积分，并自然扩展到桁架、刚架与多种内力共同作用。\n\n\\(v\\sim qL^4/EI\\) 是趋势尺度，不是所有边界条件下的精确公式。深梁、层间滑移、剪切变形、几何非线性和动力问题需要修正或另一种梁/结构模型。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>F4｜从曲率走到挠度</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f5-stress-stability.html",
+    "href": "foundations/f5-stress-stability.html",
+    "title": "F5｜应力状态与失稳",
+    "section": "",
+    "text": "概念｜同一点，不同截面\n材料可能因为某一点的组合应力达到失效条件而破坏；细长构件也可能在材料远未屈服时突然失去原有平衡形态。把“材料失效”与“结构失稳”分开，是进入柱、钢结构和有限元分析前的关键门槛。\n平面应力状态由 \\(sigma_x\\)、\\(sigma_y\\)、$ au_{xy}$ 描述。旋转观察平面后，各分量改变，但主应力与最大切应力可由变换关系或 Mohr 圆得到：\n\\[\\sigma_{1,2}=\\frac{\\sigma_x+\\sigma_y}{2}\\pm\n\\sqrt{\\left(\\frac{\\sigma_x-\\sigma_y}{2}\\right)^2+\\tau_{xy}^2}\\]\n主平面上切应力为零。延性金属常使用 von Mises 或 Tresca 等屈服准则；脆性材料需要更关注主拉/压应力与不对称强度。准则必须与材料和失效机制匹配。\n理想两端铰接、线弹性直杆的 Euler 临界力为：\n\\[P_{cr}=\\frac{\\pi^2EI}{(KL)^2}\\]\n\\(KL\\) 是有效长度。该式描述稳定分岔，不是材料压碎强度公式。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>F5｜应力状态与失稳</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f5-stress-stability.html#insight",
+    "href": "foundations/f5-stress-stability.html#insight",
+    "title": "F5｜应力状态与失稳",
+    "section": "洞察｜失稳是刚度与几何的竞争",
+    "text": "洞察｜失稳是刚度与几何的竞争\n细长压杆稍有侧向挠曲，轴力就产生附加弯矩 \\(P\\Delta\\)，附加弯矩又放大挠曲。临界状态附近，这个反馈不再被弯曲刚度压住。长度平方出现在分母，端部约束通过有效长度进入，最弱弯曲轴通常先控制。\n真实柱总有初弯曲、残余应力、荷载偏心和材料非线性，因此不能把 Euler 式当成任意柱的设计承载力。它最有价值的用途是建立趋势和识别控制变量。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>F5｜应力状态与失稳</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f5-stress-stability.html#example",
+    "href": "foundations/f5-stress-stability.html#example",
+    "title": "F5｜应力状态与失稳",
+    "section": "样例｜一根柱该按强度还是稳定控制",
+    "text": "样例｜一根柱该按强度还是稳定控制\n先计算或估计两个量：\n\n材料压缩/屈服尺度 \\(P_y\\sim f_yA\\)；\n弹性屈曲尺度 \\(P_{cr}=\\pi^2EI/(KL)^2\\)。\n\n短粗柱通常接近材料强度控制；细长柱更可能稳定控制；中等长细比区域则需要规范曲线把初始缺陷、残余应力和非弹性行为纳入。这个比较比盲目选择“压杆公式”可靠。\n\n\n\n\n\n\n\n中文导看：应力变换\n\n\n00:00–02:30 区分“换截面”与“换材料点”；02:30–05:20 看圆心和半径如何编码平均正应力与应力差；05:20–结尾 用圆上极值读主应力和最大切应力。\n\n\n总结： Mohr 圆是应力变换的图形化索引，不是另一个独立物理定律。\n\n\n\n\n\n\n\n\n中文导看：压杆失稳\n\n\n00:00–03:20 区分压碎与屈曲；03:20–07:20 观察长度、刚度和端部约束；07:20–11:20 连接长细比与临界应力；11:20–结尾 注意缺陷、非弹性和其他屈曲模式。\n\n\n总结： 细长构件的承载力可能由保持形状的能力决定，而不是由材料强度直接决定。\n\n\n\n\n两段视频均来自 The Efficient Engineer；中文为原创分段导看，不是逐字字幕。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>F5｜应力状态与失稳</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f5-stress-stability.html#application",
+    "href": "foundations/f5-stress-stability.html#application",
+    "title": "F5｜应力状态与失稳",
+    "section": "实际应用｜柱、桁架压杆与薄板",
+    "text": "实际应用｜柱、桁架压杆与薄板\n钢柱会整体弯曲屈曲，工字截面还可能扭转或弯扭屈曲；薄翼缘与腹板会局部屈曲。钢筋混凝土偏心受压柱要考虑二阶效应；桁架中细长压杆的截面常明显大于同轴力拉杆，原因也不是“受压材料更弱”这么简单。\n中文长课可按需跳看 天津大学材料力学：应力状态、强度理论、组合变形、稳定 的第45—58段和压杆实验。观看实验时只记录“临界前—临界附近—临界后”三阶段，不必一次抄完整推导。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>F5｜应力状态与失稳</span>"
+    ]
+  },
+  {
+    "objectID": "foundations/f5-stress-stability.html#extension",
+    "href": "foundations/f5-stress-stability.html#extension",
+    "title": "F5｜应力状态与失稳",
+    "section": "拓展｜有限元结果里最危险的彩虹",
+    "text": "拓展｜有限元结果里最危险的彩虹\n有限元云图能同时显示很多应力分量与屈曲模态，但颜色峰值可能来自网格奇异、边界理想化或错误的结果类型。审查顺序应是：平衡与反力 → 变形形态 → 单位与数量级 → 网格/边界敏感性 → 选择与材料相符的失效指标。\n\n看到很大的 von Mises 应力时，先问材料是否适合用该指标；看到特征屈曲系数时，先问模型有没有初始缺陷和几何非线性。软件给出的“第一模态”不是项目自动获得的安全储备。",
+    "crumbs": [
+      "从材料力学搭一座桥",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>F5｜应力状态与失稳</span>"
+    ]
+  },
+  {
     "objectID": "chapters/m0-design.html",
     "href": "chapters/m0-design.html",
     "title": "M0｜为什么还需要设计",
@@ -77,7 +429,7 @@
     "text": "概念｜从唯一解回到设计空间\n假设一根梁的截面尺寸、材料强度、计算弯矩和保护层全部已经确定，题目只问需要多少钢筋。你可能会得到一个精确到平方毫米的答案。但严格地说，这更接近给定条件下的计算，而不是完整的设计。\n设计发生在条件尚未全部锁死的时候。梁可以高一点，也可以宽一点；可以用更高强度的材料，也可以改变截面形状；可以增加钢筋，也可以先减轻自重；甚至可以增加支点、改变传力路径。答案不再唯一，工程师必须在安全、使用、耐久、空间、施工、经济和外观之间作出选择。\n材料力学中的典型分析题，往往给出结构、材料和作用，要求计算应力或变形。输入明确，输出相对唯一。结构设计则从目标和约束出发，反向寻找材料、尺寸、构造和体系。\n可以把两者写成两条方向相反的链：\n\\[\n\\text{分析：结构方案} \\longrightarrow \\text{内力、应力与变形}\n\\]\n\\[\n\\text{设计：功能与约束} \\longrightarrow \\text{寻找并比较结构方案}\n\\]\n设计当然离不开分析。每提出一个方案，都必须通过分析判断它能否工作。但分析结果只是决策的证据之一，不会自动告诉我们哪个方案最好。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
     ]
   },
   {
@@ -88,7 +440,7 @@
     "text": "洞察｜可行解是一片区域\n分析题把变量锁定以后，答案像一个点；设计把尺寸、材料、构造和体系重新开放，答案就变成一片受约束的区域。真正的判断不是“哪个数字最精确”，而是“哪些方案可行、代价分别落在哪里”。\n\n\n\n先固定荷载，分别改变梁高、梁宽和配筋。观察承载指标、自重和材料用量是否朝同一方向变化。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
     ]
   },
   {
@@ -99,7 +451,7 @@
     "text": "样例｜一个结果为什么可能“算对但设计错”\n假设程序算出所需钢筋面积为 \\(A_s=2450\\text{ mm}^2\\)。数字本身可能正确，但工程工作还没有结束：\n\n钢筋能否在截面中排得下？\n间距是否允许混凝土正常浇筑？\n梁高是否侵占桥下净空？\n自重增加以后，原来的弯矩是否仍然成立？\n使用阶段裂缝和挠度是否满足要求？\n是否存在材料用量更少、施工更简单的方案？\n\n计算题常常把这些问题放到题目外面，学生于是误以为“得到 \\(A_s\\)”就是设计完成。真实设计更像一个循环：方案改变会改变自重，自重改变会改变内力，内力又会要求重新设计。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
     ]
   },
   {
@@ -110,7 +462,7 @@
     "text": "实际应用｜AI时代，人的工作向哪里移动\nAI可以迅速列出十组配筋方案，也可以把参数扫描画成漂亮图形。人的工作因此不是消失，而是向更高层移动：\n\n判断真正的目标是什么；\n识别哪些条件能够改变、哪些不能；\n选择值得探索的设计变量；\n解释参数变化为什么产生这样的结果；\n发现模型没有考虑的施工、耐久和体系影响；\n对最终结论承担责任。\n\n\n学生的第一反应常常是“钢筋不够就再加一点”。这不是应被嘲笑的错误，而是一个可以继续追问的起点：加在哪里？为什么有效？加到什么时候不再经济？会不会从延性破坏变成脆性破坏？还有没有不增加钢筋的办法？\n\n\n\n\n\n\n\nREAL CASE · MILLAU VIADUCT\n\n米约高架桥：梁高不是孤立变量\n这张实桥照片先让我们看到问题尺度：深谷、长引桥、高墩、风环境、施工可达性和景观同时存在。请不要先赞叹“轻巧”，而要指出照片中至少四个会限制方案选择的条件。\n照片能证明结构与场地的关系，却不能证明截面安全或方案最优；后者仍需要荷载、风、施工阶段和维护证据。\n\n照片：FaceMePLS，CC BY 2.0，经 Wikimedia Commons。\n\n\n\n\n\n\n本课程的共同设计闭环\n本书后面的每一章都回到同一条闭环：\n\\[\n\\text{功能与约束}\n\\rightarrow \\text{作用与组合}\n\\rightarrow \\text{结构分析}\n\\rightarrow \\text{构件模型}\n\\rightarrow \\text{极限状态}\n\\rightarrow \\text{构造}\n\\rightarrow \\text{验证}\n\\rightarrow \\text{方案比较}\n\\]\n你不需要第一次就记住全部环节。现在只需建立一个习惯：当题目要求你“求某个数”时，多问一句——这个数算出来以后，我还能改变什么？\n\n桥梁迁移窗\n整桥分析给构件设计提供 \\(M、V、N、T\\) 和位移等输入；构件设计产生梁高、自重、刚度、配筋和施工要求。这些结果会反过来改变整桥模型。桥梁不是“先分析完，再设计一次”，而是在体系与构件之间反复迭代。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
     ]
   },
   {
@@ -121,7 +473,7 @@
     "text": "拓展｜本章留下的证据\n选择交互实验中的两组方案，写下：\n\n两组方案都满足什么基本要求？\n你更倾向哪一组？\n你的判断依赖哪些交互中没有呈现的信息？\n如果AI替你选择方案，你会要求它补充什么证据？",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M0｜为什么还需要设计</span>"
     ]
   },
   {
@@ -132,7 +484,7 @@
     "text": "概念｜作用、抗力与失效域\n宿舍网络平时很快，不代表它永远不会卡顿。服务能力会波动，使用需求也会波动。当某一时刻的需求超过服务，系统就失效了。\n结构也是一样。作用效应 \\(S\\) 不是一个永远固定的数字，材料、尺寸和施工质量决定的抗力 \\(R\\) 也存在离散性。最基本的极限状态可以写成：\n\\[\ng(R,S)=R-S\n\\]\n当 \\(g&gt;0\\)，抗力大于作用效应；当 \\(g=0\\)，到达失效边界；当 \\(g&lt;0\\)，进入失效域。\n一种常见但容易误导的画法，是把作用和抗力的两个概率密度函数画在同一横轴上，然后把两条曲线的重叠面积称为失效概率。它能提醒我们“作用与抗力会波动”，却没有直接表达同一次状态中 \\(R\\) 和 \\(S\\) 的配对关系。\n更清楚的方式是把每次状态画成平面中的一个点 \\((S,R)\\)。直线 \\(R=S\\) 把平面分成安全域和失效域。现在，提高抗力均值、降低作用均值、减小两者离散程度，分别会怎样改变落入失效域的点数，就可以直接观察。\n先只改变一个参数。观察“均值更安全”和“波动更稳定”是不是同一件事。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
     ]
   },
   {
@@ -143,7 +495,7 @@
     "text": "洞察｜可靠不是绝对不会失败\n失效概率写作：\n\\[\nP_f=P(R-S&lt;0)\n\\]\n它表达的是在所采用模型、统计信息和时间尺度下进入失效域的概率。把可靠度理解成“保证绝对不出事”，会带来两个问题：一是无法解释极端事件，二是容易在一次未失效之后错误地证明某种违规行为安全。\n超载以后桥没有立即垮塌，只能说明这一次状态没有进入观察到的失效结果，不能说明可靠水平没有下降。反过来，一次失效也需要区分作用是否超出设防范围、模型是否遗漏机制、材料施工是否偏离设计，以及维护决策是否失效。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
     ]
   },
   {
@@ -154,7 +506,7 @@
     "text": "样例｜从随机世界到设计值\n工程设计不能在每道题中完整求解联合概率分布，因此规范通过标准值、分项系数、组合规则和可靠指标，把概率思想转化为可操作的设计表达。\n这一步必须同时避免两种误解：\n\n分项系数不是随意“乘大一点”，而是把不确定性、目标可靠水平和模型偏差压缩进设计规则；\n设计值也不是自然界真正只会出现的一个数，它是服务于特定极限状态和组合的决策输入。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
     ]
   },
   {
@@ -165,7 +517,7 @@
     "text": "实际应用｜承载能力与正常使用\n同一根梁可以“不倒”却“不好用”。承载能力极限状态关注破坏、倾覆、失稳等安全问题；正常使用极限状态关注裂缝、挠度、振动和耐久等功能问题。\n\n一座人行桥承载力充足，但行人经过时振动明显、让人不愿使用。它是否“安全”？是否“设计成功”？请分别从极限状态和公共体验回答。\n\n这两个问题不能被一个“安全系数”全部吞掉。工程师需要先明确当前组合和验算目标，再选择作用代表值、材料指标和分析模型。\n\n最不利组合不是“所有最大值同时出现”\n作用组合的核心不是把每个作用都取到最大，而是寻找对目标响应最不利、同时具有合理共同出现可能性的状态。对跨中正弯矩最不利的位置，不一定对支点负弯矩最不利；对主梁最不利的车辆布置，也不一定对桥墩轴力最不利。\n因此，组合之前必须先问：我们正在最大化或控制哪一个响应？\n\n四重校核：一个可靠度网页可信吗？\n\n单位：\\(R\\) 与 \\(S\\) 是否为同类量？\n已知情形：当抗力均值远大于作用且离散很小时，失效点是否接近零？\n趋势：抗力均值增大时，失效概率能否反而上升？若出现，程序哪里可能错？\n独立证据：用足够多的随机样本或解析正态差分结果复核一次。\n\n\n\n桥梁迁移窗\n移动荷载让“最不利位置”成为桥梁特有的重要问题；温度、沉降和施工阶段又会改变作用共同出现的方式。结构设计原理提供作用—效应—抗力语言，桥梁工程把它扩展到整桥空间和时间。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
     ]
   },
   {
@@ -176,7 +528,7 @@
     "text": "拓展｜用不同手段获得相近可靠水平\n在交互实验中分别构造两种失效概率相近的方案：\n\n方案A主要通过提高抗力均值实现；\n方案B主要通过降低离散程度实现。\n\n解释这两种方案在材料、施工、质量控制和成本上的工程含义为何不同。",
     "crumbs": [
       "从计算走向设计",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M1｜安全不是一个数</span>"
     ]
   },
   {
@@ -187,7 +539,7 @@
     "text": "概念｜从看得见的泡沫到看不见的混凝土\n教室里的梁看起来没有动。正因为变形太小，我们容易产生一种错觉：结构仿佛凭空提供了抗力。\n事实上，混凝土受压区必须缩短，钢筋必须伸长，材料内部才会产生应力；这些应力在截面上汇聚成内力，才能与外部弯矩平衡。没有变形，就没有应变；没有应变，就没有材料应力；没有应力，也就没有抗力。\n泡沫条弯曲时，上缘缩短、下缘伸长，中间存在纵向应变为零的位置。把沿高度的纵向应变画出来，得到近似线性分布。这就是平截面假定最直观的入口：截面弯曲以后仍近似保持平面。\n\\[\n\\varepsilon(y)=\\kappa y\n\\]\n其中 \\(\\kappa\\) 是曲率，\\(y\\) 是到中性轴的距离。这个式子不是说材料应力一定线性，也不是说混凝土永远不开裂；它只描述几何上的应变协调。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
     ]
   },
   {
@@ -198,7 +550,7 @@
     "text": "两种材料为什么能够共同工作\n混凝土抗压能力较强、抗拉能力较弱；钢筋能够可靠承受拉力。把钢筋放入混凝土，并不自动形成共同工作。至少需要三个条件：\n\n两种材料之间有足够黏结，能够传递界面剪应力；\n钢筋和混凝土在相同位置具有相容变形；\n保护层和构造能够维持耐久、防火与施工质量。\n\n\n\n\n移动钢筋位置并改变曲率。比较钢筋应变、力臂与裂缝风险，不要只寻找“越靠下越好”。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
     ]
   },
   {
@@ -209,7 +561,7 @@
     "text": "洞察｜中性轴不是永远在截面中央\n均质、线弹性矩形截面在纯弯条件下，中性轴位于形心附近。但钢筋混凝土开裂以后，受拉混凝土逐渐退出主要抗拉工作，截面刚度分布改变，中性轴会向受压区移动。\n这说明材料力学知识没有失效，而是适用对象发生了变化。几何关系和平衡方法仍然有效；应力—应变关系、有效截面和材料参与方式需要重写。\n\n学生经常把“平截面假定”误读成“应力沿高度线性”。应变能否线性分布取决于几何假定，应力则还要经过材料本构关系。混凝土进入非线性以后，即使应变仍近似线性，应力也可以明显非线性。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
     ]
   },
   {
@@ -220,7 +572,7 @@
     "text": "样例｜从应变图到内力\n截面分析可以沿三层图前进：\n\n应变图： 由截面几何和变形协调得到；\n应力图： 由材料本构关系把应变转换为应力；\n内力图： 对应力在截面上积分，得到轴力和弯矩。\n\n\\[\nN=\\int_A \\sigma\\,\\mathrm dA, \\qquad\nM=\\int_A \\sigma y\\,\\mathrm dA\n\\]\n几乎所有受弯、偏压和预应力截面问题，都可以回到这三层图。复杂公式不是独立出现的题型，而是同一个过程在不同材料状态和边界条件下的展开。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
     ]
   },
   {
@@ -231,7 +583,7 @@
     "text": "实际应用｜从轴向构件迁移到桥梁\n轴心受拉或受压时，截面上的应变关系比受弯简单。它适合帮助我们确认两个基本动作：材料怎样根据应变产生应力，截面内力怎样与外力平衡。\n当力的作用线偏离截面形心，轴力问题会立即携带弯矩：\n\\[\nM=Ne\n\\]\n这条简单关系将把本章与后面的偏心受压连接起来。\n\n\n\n\n\n\nREAL TEST · CONCRETE + REINFORCEMENT\n\n先预测破坏，再观看加载\nPractical Engineering 用实体试件比较无筋、普通配筋与预应力混凝土。观看前先暂停并画出你预测的第一条裂缝；观看后只记录“裂缝从哪里开始、加入钢筋后破坏路径怎样改变”。\n视频展示的是特定小试件，不能直接推出工程梁承载力；它提供的是材料分工的现象证据。\n\n视频：Why Concrete Needs Reinforcement，Practical Engineering。\n\n\n\n\n\n交互模型采用矩形截面、线性应变和简化材料响应，用来观察变量关系。它没有包含黏结滑移、混凝土拉伸软化、钢筋屈服后强化及三维效应，不能直接用于正式设计。\n\n\n桥梁迁移窗\n主梁通常以弯剪为主，墩柱和塔柱常出现压弯组合，吊杆与拉索以受拉为主。不同构件看似外形差异很大，却共享“变形协调—材料本构—内力平衡”这一套语言。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
     ]
   },
   {
@@ -242,7 +594,7 @@
     "text": "拓展｜改变钢筋位置并留下证据\n在交互模型中选择三个钢筋位置，记录相同曲率下的钢筋应变和力臂。回答：\n\n为什么钢筋接近受拉边缘通常更有效？\n为什么仍然不能把钢筋无限贴近边缘？\n哪些构造、施工和耐久约束没有进入这个力学模型？",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>M2｜材料为什么能合作</span>"
     ]
   },
   {
@@ -253,7 +605,7 @@
     "text": "概念｜梁不是从完好跳到破坏\n钢筋混凝土梁不是在某个瞬间从“完好”跳到“破坏”。随着弯矩增加，它会经历刚度变化、裂缝出现、中性轴移动、钢筋应力增长和受压混凝土非线性发展。理解这条连续路径，比背诵不同阶段的公式更重要。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
     ]
   },
   {
@@ -264,7 +616,7 @@
     "text": "第一阶段：看似完整的梁\n荷载较小时，受拉混凝土尚未达到抗拉极限，整个截面共同工作。应变近似线性，材料响应接近弹性，弯矩—曲率关系斜率较大，表示构件刚度较高。\n但“没有肉眼可见裂缝”不等于没有拉应变。受拉区已经在伸长，只是应力尚未超过混凝土抗拉能力。\n\n\n第二阶段：带裂缝工作是正常状态\n混凝土抗拉强度远低于抗压强度。随着弯矩增加，受拉边缘首先达到抗拉极限并出现裂缝。裂缝截面处，受拉混凝土承担的拉力显著下降，钢筋承担主要拉力；裂缝之间仍可通过黏结参与部分受拉。\n开裂导致有效刚度下降，同样增加一点弯矩，会产生比开裂前更明显的曲率和挠度。普通钢筋混凝土构件在正常使用阶段带裂缝工作并不罕见，真正需要控制的是裂缝宽度、分布和耐久影响。\n\n\n第三阶段：延性来自可观察的预警\n继续加载，受拉钢筋达到屈服。屈服以后，变形可以显著增加，而承载力增长有限。最终受压区混凝土达到极限压应变并压碎。\n适筋梁中“钢筋先屈服、混凝土后压碎”的路径能提供较明显的变形和裂缝预警，也为内力重分布留下空间。若钢筋配置过多，受压混凝土可能在钢筋充分屈服前压碎，破坏更突然；若钢筋过少，开裂后钢筋可能迅速屈服甚至断裂。\n\n\n\n缓慢增加弯矩。关注裂缝、刚度、中性轴和材料状态怎样一起变化，而不是只看最终承载指标。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
     ]
   },
   {
@@ -275,7 +627,7 @@
     "text": "洞察｜为什么要把复杂应力图等效\n极限状态下，受压混凝土的应力分布是非线性的。若每次设计都完整积分真实本构，手算会非常繁琐。工程计算用等效矩形压应力图替代真实分布，要求等效后的合力大小和作用位置能够代表原来的压区作用。\n对简化矩形截面，可以把受压区混凝土合力写成：\n\\[\nC=\\alpha_1 f_{cd} b x\n\\]\n受拉钢筋达到设计强度时：\n\\[\nT=f_{sd}A_s\n\\]\n轴向力为零时满足 \\(C=T\\)。对受拉钢筋合力点取矩，可得到截面抗弯承载力的基本形式：\n\\[\nM_u=C\\left(h_0-\\frac{x}{2}\\right)\n\\]\n这些式子背后的核心不是“记住三个公式”，而是三件事：压区合力、拉区合力、两者力臂。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
     ]
   },
   {
@@ -286,7 +638,7 @@
     "text": "样例｜设计与复核不是同一道题\n截面设计通常给出目标弯矩、材料和初步尺寸，求配筋并完成构造校核；截面复核则给出已经存在的截面与配筋，求承载能力或判断是否满足。\n设计阶段存在可调变量。若受压区过深、延性条件不满足，可以：\n\n增加梁高或有效高度；\n增加截面宽度；\n调整材料；\n配置受压钢筋形成双筋截面；\n改变截面形状或结构体系。\n\n只说“换一个公式继续算”，会遮蔽这些更重要的设计动作。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
     ]
   },
   {
@@ -297,7 +649,7 @@
     "text": "实际应用｜T形截面与双筋截面\nT形截面利用翼缘扩大受压区，腹板维持整体和承担剪力。双筋截面则在受压区配置钢筋，可能用于截面尺寸受限、弯矩较大、承受反向弯矩或构造需要的情况。\n它们都仍然遵循同一套分析：画应变图，确定材料状态，求内力合力，满足平衡，再检查假定是否成立。题型变了，骨架没有变。\n\n学生容易把“钢筋越多，承载力越高”直接推成“钢筋越多，设计越好”。前半句在一定范围内可能成立，后半句忽略了延性、拥挤、施工、裂缝、自重和经济性。设计语言必须包含“增加到什么程度、付出什么代价”。\n\n\n四重校核：配筋计算完成了吗？\n\n单位：弯矩、强度、尺寸是否使用一致单位？\n算例：能否复现一个公开、过程完整的基准截面？\n趋势：增加梁高时所需配筋通常怎样变化？若程序给出相反趋势，为什么？\n独立复核：把程序输出代回内力平衡，并检查实际配筋能否排布。\n\n\n\n桥梁迁移窗\n预制T梁、现浇箱梁顶板和组合梁桥面板都会出现类似T形受压区。整桥分析提供控制弯矩，截面设计给出梁高与配筋；梁高和自重又会改变桥梁体系选择与施工设备需求。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
     ]
   },
   {
@@ -308,7 +660,7 @@
     "text": "拓展｜两种可行梁的方案比较\n用同一个目标弯矩构造两种满足承载力的方案：\n\n方案A梁较浅、钢筋较多；\n方案B梁较高、钢筋较少。\n\n除承载力外，至少比较自重、净空、挠度、施工排筋和经济性中的三项，并说明你缺少哪些数据才无法最终决定。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>M3｜一根梁经历了什么</span>"
     ]
   },
   {
@@ -319,7 +671,7 @@
     "text": "概念｜剪力不是一条斜线\n承载能力回答“会不会达到危险状态”，正常使用回答“人能不能安心使用、构件能不能长期工作”。一座桥即使暂时不会倒塌，也可能因为挠度过大、裂缝过宽、振动明显或钢筋锈蚀而失去功能。\n弯矩使梁产生曲率，剪力则要求截面相邻部分之间持续传递纵向力。无腹筋梁开裂后，剪切可以通过未开裂受压区、骨料咬合、纵筋销栓作用和拱作用等机制共同传递。把抗剪承载力写成一个公式，并不意味着梁里只有一种抗剪机制。\n斜裂缝之所以值得重视，是因为它把“纵向弯曲问题”转化成了“斜向拉压传力问题”。箍筋穿过可能出现的斜裂缝，承担拉力并约束裂缝开展；受压区和混凝土斜压带提供另一条力流。桁架类比的价值，是把看不见的力流变成可追踪的拉杆与压杆。\n但类比不是事实本身。真实构件的裂缝角度、受压带宽度、黏结退化和尺寸效应都不会完全服从一幅固定桁架图。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
     ]
   },
   {
@@ -330,7 +682,7 @@
     "text": "洞察｜从弯矩到挠度，要经过三次翻译\n对小变形梁，弯矩与曲率之间近似满足：\n\\[\n\\kappa(x)=\\frac{M(x)}{EI}\n\\]\n曲率沿长度积分得到转角，转角再积分得到挠度。支座边界条件决定积分常数。因此，弯矩图不是挠曲线，挠曲线也不能通过把弯矩图“上下翻转”直接得到。\n钢筋混凝土梁开裂后，\\(EI\\) 不再是沿梁长不变的常数。裂缝截面刚度较低，裂缝之间受拉混凝土仍通过黏结参与工作。工程计算用等效刚度表示这种连续变化，但模型边界必须说清楚。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
     ]
   },
   {
@@ -341,7 +693,7 @@
     "text": "样例｜移动荷载下的四幅同步图\n\n\n\n移动集中荷载并改变配箍与刚度。四幅表示共用同一组变量：外部荷载一变，支反力、V/M图、裂缝提示和挠曲线同时更新。\n\n\nThe Efficient Engineer 的剪力—弯矩讲解采用“外荷载 → 支反力 → 任意截面切口 → 内力图”的连续叙事；其梁挠度讲解把 \\(M/EI\\)、转角与挠度分层。这里借用的是信息展开顺序，并把被动观看改成可暂停、可反向操作的实验。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
     ]
   },
   {
@@ -352,7 +704,7 @@
     "text": "实际应用｜裂缝、挠度与耐久共同控制\n裂缝由变形不协调产生。钢筋应变、钢筋直径与间距、保护层厚度、黏结性能、有效受拉混凝土面积和荷载持续时间都会影响裂缝间距与宽度。\n“多放钢筋”并不是无条件正确。总钢筋面积相近时，较多的小直径钢筋往往能改善裂缝分布；但钢筋过密会妨碍混凝土浇筑和振捣，反而制造耐久缺陷。设计必须同时看计算与施工。\n\n耐久性是时间加入计算\n保护层不是没有受力的“多余混凝土”。它隔离水、氧、氯离子与二氧化碳，为钢筋提供防火保护，也参与黏结锚固。保护层过小会缩短侵蚀路径，过大又可能加剧表面裂缝宽度。耐久性设计永远依赖暴露环境、材料质量、施工偏差与维护条件。\n\n\n\n\n\n\nREAL CASE · SERVICEABILITY\n\n伦敦千禧桥：没有倒塌，也必须关闭\n开桥时出现的明显侧向摆动没有立即造成倒塌，却已经让行人难以接受并迫使桥梁关闭改造。先看照片判断它的体系为何对侧向体验敏感，再观看下方档案影像确认“使用者实际感受到什么”。\n照片和新闻画面不能单独证明振动机理；人群—结构耦合、频率、阻尼与改造效果需要测试和分析。\n\n照片：Arpingstone，公有领域，经 Wikimedia Commons。\n\n\n\n\n\n\n\n\n\n\n档案影像：2000: ‘Wobbly’ Millennium Bridge Closed Days After Opening，Frontline by ITN。\n\n\n\n\n本章交互只演示线弹性简支梁的 V/M 图与挠曲线趋势；裂缝和配箍显示是概念提示，不是规范承载力计算。真实设计需使用适用规范，考虑开裂刚度、长期效应、重复荷载、尺寸效应与构造要求。\n\n\n四重校核：正常使用判断可信吗？\n\n单位：挠度限值是长度、比值还是角度？裂缝宽度是否误用成毫米以外的单位？\n算例：简支梁跨中集中力的最大挠度能否回到经典解？\n趋势：\\(EI\\) 增大时挠度应如何变化？荷载靠近支座时最大弯矩怎样变化？\n独立复核：用能量法、积分法或另一个软件复核一个工况。\n\n\n\n桥梁迁移窗\n车辆荷载移动时，控制截面和控制效应会改变；桥面铺装、伸缩缝和轨道平顺性又会放大对挠度与裂缝的敏感性。抗剪、抗弯、疲劳和耐久并不是四张互不相干的验算表。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
     ]
   },
   {
@@ -363,7 +715,7 @@
     "text": "拓展｜解释移动荷载的三个控制位置\n选择同一根简支梁的两个移动荷载位置，截取交互图中的 V/M 图和挠曲线。用三句话解释：哪里最容易出现弯曲裂缝，哪里更需要关注斜裂缝，为什么最大挠度位置不必与荷载位置完全相同。",
     "crumbs": [
       "让构件变得可见",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>M4｜不倒塌也可能不能用</span>"
     ]
   },
   {
@@ -374,7 +726,7 @@
     "text": "概念｜先看截面有没有拉区\n轴心受压是一个重要基准，却不是多数真实柱的完整状态。施工偏差、节点弯矩、水平荷载和初始弯曲都会让压力偏离截面形心。偏心距 \\(e\\) 把轴力与弯矩连接起来：\n\\[\nM=Ne\n\\]\n这条式子很短，却打开了受压构件最重要的设计空间。\n在弹性阶段，轴力造成近似均匀应变，弯矩造成线性应变梯度，两者叠加后可能出现三种直观状态：\n因此，“受压构件”不等于“截面每一点都受压”。判断材料状态的第一步应当是画应变图，而不是先寻找题型名称。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
     ]
   },
   {
@@ -385,7 +737,7 @@
     "text": "全截面受压；\n一侧压、一侧拉；\n接近纯弯。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
     ]
   },
   {
@@ -396,7 +748,7 @@
     "text": "洞察｜大偏心和小偏心是连续谱\n当中性轴较浅，受拉钢筋有机会先达到屈服，截面表现更接近受弯构件；当中性轴较深，受压区占主导，受拉一侧钢筋可能尚未屈服，混凝土压区已经控制破坏。\n“大偏心”“小偏心”是帮助计算分支的语言，不是两种互不相干的构件。真正连续变化的是应变分布、中性轴位置与材料状态。\n\nN–M相关曲线是一张能力地图\n对给定截面、材料与配筋，可以改变中性轴位置，逐点满足应变协调与内力平衡，得到一组 \\((N,M)\\) 抗力点。连接这些点，就形成轴力—弯矩相关曲线。\n曲线内部通常表示截面能力尚有余量，曲线外部表示该组合超出截面能力。它比一个单独的“最大轴力”或“最大弯矩”更接近真实设计，因为轴力和弯矩会彼此影响。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
     ]
   },
   {
@@ -407,7 +759,7 @@
     "text": "样例｜把需求点放进N–M地图\n\n\n\n先改变偏心距，看应变图和合力位置；再把需求点放进 N–M 地图。注意：概念曲线不是规范设计曲线。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
     ]
   },
   {
@@ -418,7 +770,7 @@
     "text": "实际应用｜二阶效应让变形反过来增加弯矩\n柱一旦发生侧向挠曲，轴力会对变形后的几何位置产生附加弯矩，常写成 \\(P\\Delta\\) 效应。于是出现反馈链：\n\\[\n\\text{弯矩}\\rightarrow\\text{侧移}\\rightarrow\\text{附加弯矩}\\rightarrow\\text{更大侧移}\n\\]\n短柱中这条反馈可能很弱，长细柱中却可能控制设计。是否考虑二阶效应，不应靠“这是柱题”来决定，而应看长细比、轴压水平、侧移约束与整体体系。\n\n“轴力增加一定更不利”是一个值得保留再修正的直觉。在接近纯弯的某些区间，适度压力可能让原本受拉的混凝土进入受压状态，截面抗弯能力可能先增加；再继续增加轴力，压区耗尽，能力才下降。相关曲线正是用来替代单调直觉的证据。\n\n\n对称配筋不只是为了公式好算\n桥墩和框架柱可能承受弯矩反号、施工阶段变化、地震往复作用。对称配筋可以让截面面对不同弯曲方向时保持较一致的能力，也有利于构造标准化。但它可能不是材料用量最小的方案。\n\n\n\n\n\n\nREAL RESEARCH · ECCENTRIC COLUMNS\n\n偏心距不是题目里的一行小字\nAmerican Concrete Institute 发布的渥太华大学研究展示不同偏心加载下的混凝土柱试验。观看时只跟踪三件事：加载线、侧向变形、最终破坏区；然后把观察放回 N–M 图，而不是急着抄试验数字。\n这些试件还包含CFRP等特定加固变量，不能直接代替普通钢筋混凝土柱模型。\n\n视频：CFRP Reinforced Concrete Columns under Eccentric Loading，American Concrete Institute。\n\n\n\n\n\n四重校核：N–M结果可信吗？\n\n单位：轴力与弯矩的数量级是否与截面尺寸匹配？\n端点：\\(M=0\\) 附近能否回到轴心受压基准？\\(N\\approx0\\) 时能否回到受弯基准？\n趋势：需求点沿固定偏心距移动时，是否是一条 \\(M=Ne\\) 的射线？\n独立复核：选曲线上一个点，把材料合力重新求和得到 \\(N\\) 与 \\(M\\)。\n\n\n\n桥梁迁移窗\n桥墩既承受上部结构竖向反力，也承受制动力、风、地震和不均匀温度产生的弯矩。单柱、双柱墩和薄壁墩的选择，会同时改变 N–M需求、长细效应、景观与施工。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
     ]
   },
   {
@@ -429,7 +781,7 @@
     "text": "拓展｜比较两类N–M需求点\n给定一个矩形柱截面，构造两个落在概念 N–M 曲线内部的需求点：一个高轴力低弯矩，一个低轴力高弯矩。分别画出你预期的应变图，并指出哪一种更依赖混凝土压区、哪一种更依赖受拉钢筋。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>M5｜压力偏一点</span>"
     ]
   },
   {
@@ -440,7 +792,7 @@
     "text": "概念｜把预应力拆成轴力与偏心弯矩\n普通钢筋混凝土是在荷载作用后，让钢筋接管开裂后的拉力。预应力更主动：在使用荷载到来之前，先给混凝土施加压应力，并通过钢束线形制造与外荷载相反的弯矩。\n它不是“更高级的混凝土”，而是一种改变初始状态和力流路径的设计方法。\n有效预应力 \\(P_e\\) 作用在距截面形心 \\(e_p\\) 的位置时，可以等效为：\n在弹性应力层面，截面上下缘应力可由轴压、预应力弯矩和外荷载弯矩叠加。符号必须与坐标约定一致，比背诵“上加下减”更可靠。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
     ]
   },
   {
@@ -451,7 +803,7 @@
     "text": "作用在形心的轴向压力 \\(P_e\\)；\n一个偏心弯矩 \\(P_e e_p\\)。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
     ]
   },
   {
@@ -462,7 +814,7 @@
     "text": "洞察｜预应力改变的是初始状态\n预应力没有等到外荷载产生拉应力以后再“补救”，而是先建立一组反向应力和变形。结构进入运营阶段时，携带着张拉、传力和损失留下的历史。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
     ]
   },
   {
@@ -473,7 +825,7 @@
     "text": "样例｜沿时间轴叠加四个阶段\n\n\n\n依次推进张拉、传力、损失和使用荷载。每一阶段都保留上一阶段的状态，因此你看到的是路径，而不是四张互不关联的验算表。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
     ]
   },
   {
@@ -484,7 +836,7 @@
     "text": "实际应用｜先张、后张与长期损失\n先张法先张拉钢筋，再浇筑混凝土；混凝土达到要求后放张，预应力依靠钢筋与混凝土的黏结沿传递长度逐渐建立。后张法先形成混凝土构件和孔道，再张拉钢束并锚固；有黏结体系还需要压浆。\n两者的施工顺序、锚固区受力、质量控制和适用场景不同。把它们只记成两个名词，会漏掉最关键的“传力机制”。\n\n预应力损失不是统一打折\n从张拉控制应力到长期有效预应力，可能经历：\n\n锚具变形和钢筋回缩；\n孔道摩阻；\n混凝土弹性压缩；\n钢筋松弛；\n混凝土收缩与徐变。\n\n这些损失发生的时间、空间分布和相互作用不同。工程模型可以把它们汇总为有效预应力，但设计者必须知道这个汇总掩盖了什么。\n\n\n预应力优先改善使用性能\n预应力常能推迟开裂、减小使用阶段挠度、提高抗疲劳与耐久表现，并帮助获得更大跨径或更轻截面。但它并不自动消除极限状态、剪切、锚固区、施工阶段稳定或长期上拱问题。\n\nPractical Engineering 的预应力视频用实体构件把“预先压缩”和“抵消使用荷载挠度”联系起来。这里进一步把过程拆成可回退的时间轴，并明确区分初始预应力、各类损失和有效预应力，避免把最终状态当成瞬间生成。\n\n\n\n\n\n\n\nREAL CONSTRUCTION · PRESTRESSED BRIDGES\n\n从台座、梁场到桥位\nTxDOT 的工程视频把“预应力”从截面公式还原为制造与施工过程。观看时建立阶段清单：张拉在哪里发生、力怎样进入混凝土、构件何时起吊、边界条件何时改变。\n施工宣传片可以证明工序真实存在，却不能替代钢束应力、损失和各阶段验算记录。\n\n视频：Pre-Stressed Concrete in Texas Bridge Construction，Texas Department of Transportation。\n\n\n\n\n\n交互采用均匀矩形截面、线弹性叠加和汇总损失率，仅用于建立符号、趋势和阶段意识。真实预应力设计还需考虑钢束曲线、摩阻分布、传递长度、锚固区、徐变收缩耦合、施工顺序及规范限值。\n\n\n四重校核：预应力模型可信吗？\n\n单位：\\(P/A\\) 与 \\(Pe/W\\) 是否都得到应力量纲？\n边界：当 \\(e_p=0\\) 时，偏心弯矩必须消失；当损失率为100%时，有效预应力必须为零。\n趋势：钢束下移时，在统一符号约定下，上、下缘应力怎样变化？\n独立复核：分别计算轴压、预应力弯矩、恒载和活载贡献，再与叠加结果比较。\n\n\n\n桥梁迁移窗\n预制梁在张拉台座、起吊、运输、架设、桥面连续和长期运营阶段拥有不同边界条件。运营阶段成立，不代表起吊阶段安全；长期上拱可接受，也不代表桥面铺装阶段不需要调整。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
     ]
   },
   {
@@ -495,7 +847,7 @@
     "text": "拓展｜设计一条接近平直的状态路径\n在交互中设计一组参数，使梁在“传力后”出现轻微上拱、在“使用荷载后”接近平直。记录你的 \\(P\\)、\\(e_p\\)、损失率和荷载，并解释为什么这不是唯一方案。",
     "crumbs": [
       "改变力的路径",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M6｜在荷载前改变结构</span>"
     ]
   },
   {
@@ -506,7 +858,7 @@
     "text": "概念｜先写“模型合同”，再让AI计算\nAI可以快速写计算程序、解释公式、生成参数组合、绘制图形和比较方案。这些能力值得进入结构设计课堂。真正危险的不是使用AI，而是把流畅输出误当成可靠证据。\n工程责任仍然落在提出问题、选择模型、检查边界和签署结论的人身上。\n一个可审查的结构模型至少要说明：\n没有模型合同，AI会主动补齐缺失条件；补齐得越流畅，越不容易被发现。",
     "crumbs": [
       "AI时代的工程责任",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
     ]
   },
   {
@@ -517,7 +869,7 @@
     "text": "项目\n必须说清楚的内容\n\n\n\n\n对象\n构件、截面还是整体体系\n\n\n输入\n几何、材料、荷载、边界与单位\n\n\n假定\n小变形、平截面、线弹性、黏结完整等\n\n\n输出\n承载力、应力、裂缝、挠度或方案比较\n\n\n不适用\n哪些破坏模式、施工阶段或环境未考虑\n\n\n验证\n基准算例、极限情况、趋势和独立工具",
     "crumbs": [
       "AI时代的工程责任",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
     ]
   },
   {
@@ -528,7 +880,7 @@
     "text": "洞察｜把“求答案”改成“建立证据链”\n推荐把AI使用分成四个角色：\n\n生成者：列出多种截面、配筋或体系方案；\n解释者：把某个计算步骤翻译成受力与变形语言；\n反对者：主动寻找符号、单位、边界和构造反例；\n记录者：保存输入、假定、版本、输出和人工决定。\n\n同一个对话里的AI不能算真正独立复核。独立意味着改变方法、工具、数据来源或检查者。",
     "crumbs": [
       "AI时代的工程责任",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
     ]
   },
   {
@@ -539,7 +891,7 @@
     "text": "样例｜审查一份故意带错的梁计算\n\n\n\n审查一份故意带错的梁计算。系统不给总分排名，只显示证据链中仍未关闭的缺口。",
     "crumbs": [
       "AI时代的工程责任",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
     ]
   },
   {
@@ -550,7 +902,7 @@
     "text": "实际应用｜四重校核不是仪式\n\n1. 单位校核\n单位错误常产生看似精确的巨大偏差。输入层保留单位，内部统一单位，输出再显式标注。不要让“默认单位”只存在于作者脑中。\n\n\n2. 已知算例\n基准算例能检查一条计算路径，但不能覆盖所有分支。至少选择一个公开、过程完整、输入明确的例子，并说明与你模型假定的差别。\n\n\n3. 趋势与极限\n把荷载趋近于零、偏心距设为零、刚度成倍增加、损失率推到边界。正确模型不仅要在一个点上给对答案，还要在变化过程中保持合理。\n\n\n4. 独立复核\n用手算、电子表格、另一段独立代码或另一个人复核关键结果。若两者不一致，先找输入与假定差异，不要急着多数表决。\n\n\n视频也需要被审查\n画面精美、频道知名、观看量高都不等于每一帧正确。The Efficient Engineer 在 Understanding Stresses in Beams 的视频说明中主动列出弯矩箭头方向和剪应力图的勘误。这个例子比“权威不会出错”更有教学价值：公开纠错不会削弱知识，反而让知识具备可追踪性。\n\n学生发现AI或教师的错误，不是课堂秩序被破坏，而是工程判断正在发生。评价应奖励指出矛盾、给出复现步骤和提出修正，而不是奖励最快报出一个数字。\n\n\n\n一份可提交的AI使用记录\n每次AI辅助作业至少附上：\n\n原始问题与后来补充的条件；\n最终采用的模型假定；\nAI生成但被否决的方案及理由；\n一项失败的验证及如何修正；\n最终结果的独立复核；\n仍未解决的不确定性。\n\n这不是为了监管学生是否“偷用AI”，而是把工程判断从不可见变成可评价的学习成果。\n\n交付前最后六问\n\n结论适用于哪个对象和阶段？\n最敏感的三个输入是什么？\n哪个假定一旦不成立，结论会反转？\n是否检查了单位、端点和趋势？\n独立复核真的独立吗？\n下一位读者能否复现你的判断？",
     "crumbs": [
       "AI时代的工程责任",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
     ]
   },
   {
@@ -561,7 +913,194 @@
     "text": "拓展｜结课证据不是一道更大的题\n选择一座小桥或一个典型构件，提交三个满足基本约束但价值取向不同的方案。每个方案都要展示荷载路径、一个控制截面、一个使用性能问题和一个施工约束。使用AI扩大方案搜索，并用四重校核淘汰至少一个看似优秀的方案。\n最终成果不是“唯一正确答案”，而是一条别人可以质疑、复核和继续改进的证据链。",
     "crumbs": [
       "AI时代的工程责任",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>M7｜AI不能替你负责</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x1-shear-torsion.html",
+    "href": "extensions/x1-shear-torsion.html",
+    "title": "X1｜剪、扭与力流",
+    "section": "",
+    "text": "概念｜裂缝在暴露主拉应力\n弯曲设计常把注意力吸到跨中，但许多突然、脆性的破坏发生在支座、集中荷载、孔洞、牛腿和锚固区。这里不再从一串抗剪公式开始，而从裂缝指向与力怎样绕开不连续区开始。\n弯矩为主的区域，受拉边缘裂缝大致垂直于构件轴线；剪力显著时，弯曲裂缝会向荷载或支座方向倾斜。开裂后的钢筋混凝土梁可用桁架/力场理解：\n扭转开裂后可用空间薄壁桁架理解：闭合箍筋、纵筋与混凝土斜压杆共同形成闭合力流。没有闭合路径，局部配几根“看起来很多”的钢筋也不等于抗扭体系成立。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>X1｜剪、扭与力流</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x1-shear-torsion.html#concept",
+    "href": "extensions/x1-shear-torsion.html#concept",
+    "title": "X1｜剪、扭与力流",
+    "section": "",
+    "text": "混凝土斜压杆传递压缩；\n箍筋跨过斜裂缝承担拉力；\n纵向钢筋与受压区形成弦杆；\n节点区让这些合力汇合并转向。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>X1｜剪、扭与力流</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x1-shear-torsion.html#insight",
+    "href": "extensions/x1-shear-torsion.html#insight",
+    "title": "X1｜剪、扭与力流",
+    "section": "洞察｜平截面失效处，改用力路思考",
+    "text": "洞察｜平截面失效处，改用力路思考\n支座与集中荷载之间很近、梁高很大或几何突然变化时，应变分布不再近似线性。这类 D 区（不连续区）适合用压杆—拉杆模型：先画荷载到支座的压缩通道，再用拉杆闭合水平分量，最后检查节点、锚固和横向劈裂。\n压杆—拉杆图不是从软件彩虹中描线，也不是唯一答案。一个有效模型应满足平衡、与裂缝/边界相容、节点可构造，并避免过度曲折的力路。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>X1｜剪、扭与力流</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x1-shear-torsion.html#example",
+    "href": "extensions/x1-shear-torsion.html#example",
+    "title": "X1｜剪、扭与力流",
+    "section": "样例｜深梁为什么不是“很高的普通梁”",
+    "text": "样例｜深梁为什么不是“很高的普通梁”\n简支深梁顶部集中受压时，荷载可通过斜向混凝土压杆直接拱向支座；底部纵向钢筋像拉杆一样抵抗压杆的水平分量。此时：\n\n跨中线性弯曲应力图不再描述主要传力机制；\n支座与加载板是高压节点，局部承压和横向劈裂要检查；\n拉杆必须穿过节点并有足够锚固；\n分布钢筋用于约束裂缝、提供次要力路和延性。\n\n\n\n\n\n\n\n\n实体证据：无抗剪钢筋梁\n\n\n先关闭声音预测裂缝：它会从哪里出现、向哪里发展？再播放并记录“首裂—斜裂缝贯通—承载突降”。不要把单个试验当成设计公式，但要记住剪切破坏缺少预警。\n\n\n\n\n\n\n\n\n实体证据：慢动作梁试验\n\n\n观察裂缝不是随机噪声：竖向弯曲裂缝与斜裂缝分别在提示不同应力场。暂停在破坏前一刻，画出你认为存在的压杆、拉杆和节点。\n\n\n\n\n来源：Think Up / Materials Lab On-line；Tyler Ley。播放器仅嵌入原视频。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>X1｜剪、扭与力流</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x1-shear-torsion.html#application",
+    "href": "extensions/x1-shear-torsion.html#application",
+    "title": "X1｜剪、扭与力流",
+    "section": "实际应用｜牛腿、盖梁、孔洞与锚固区",
+    "text": "实际应用｜牛腿、盖梁、孔洞与锚固区\n压杆—拉杆模型常用于桥墩盖梁、短牛腿、深梁、梁腹板大孔洞、桩帽和预应力锚固区。实际设计应完成：荷载路径、节点尺寸、压杆有效强度、拉杆面积、锚固长度、横向约束与构造钢筋的闭环。\n牛腿的关键不是“把顶部钢筋加密”，而是主拉杆的位置与锚固能否真正闭合斜压杆的水平分量。预应力锚头后的局部高压也会横向扩散并诱发劈裂拉力。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>X1｜剪、扭与力流</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x1-shear-torsion.html#extension",
+    "href": "extensions/x1-shear-torsion.html#extension",
+    "title": "X1｜剪、扭与力流",
+    "section": "拓展｜弯、剪、扭共同作用",
+    "text": "拓展｜弯、剪、扭共同作用\n真实箱梁与边梁往往同时承受 \\(M\\)、\\(V\\)、\\(T\\)。设计时需要考虑相互作用：同一套纵筋、箍筋与混凝土压区可能同时被多个作用占用。最危险的误区是分别按三个单项设计再简单相加，却不检查力流是否能在空间中闭合。\n可进一步观看 Oxford University OU：混凝土构件扭转讲座 与 PC 梁扭转试验。长视频建议只围绕“平衡扭转/协调扭转、裂缝形态、配筋闭合”三个问题做笔记。\n\n审查 D 区模型时，用手指从每个外力沿压杆或拉杆走到支座；任何中途消失的力、无法锚固的拉杆或尺寸为零的节点，都是模型尚未闭合的证据。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>X1｜剪、扭与力流</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x2-steel-composite.html",
+    "href": "extensions/x2-steel-composite.html",
+    "title": "X2｜钢与组合结构",
+    "section": "",
+    "text": "概念｜钢结构的四个控制层次\n钢材强度高、均匀性好、延性明确，但薄板与细长构件容易失稳，连接和疲劳细节会控制设计。钢—混凝土组合结构进一步要求两种材料不仅“挨在一起”，还要通过界面传力共同变形。\n只做第 1 层，会系统性高估薄壁与细长钢构件。只算杆件不算连接，则力路停在图纸节点处。\n组合梁中，混凝土板主要承担正弯矩区压缩，钢梁承担拉力；剪力连接件在界面传递纵向剪力并限制滑移。完全组合与部分组合的差别，实质上是界面能传多少、两者能共同弯到什么程度。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>X2｜钢与组合结构</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x2-steel-composite.html#concept",
+    "href": "extensions/x2-steel-composite.html#concept",
+    "title": "X2｜钢与组合结构",
+    "section": "",
+    "text": "截面强度：拉压、弯曲、剪切及其组合是否达到屈服/断裂条件；\n构件稳定：轴压屈曲、梁侧扭屈曲、弯扭屈曲；\n板件稳定：翼缘、腹板的局部屈曲与加劲；\n连接与整体：螺栓、焊缝、节点转动能力、支撑体系、疲劳与施工顺序。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>X2｜钢与组合结构</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x2-steel-composite.html#insight",
+    "href": "extensions/x2-steel-composite.html#insight",
+    "title": "X2｜钢与组合结构",
+    "section": "洞察｜高强材料把问题推向稳定和细节",
+    "text": "洞察｜高强材料把问题推向稳定和细节\n钢材强度提高后，构件可以更薄、更细；但几何缺陷、残余应力、局部屈曲和疲劳并不会按材料强度同比改善。结构效率的上升会把控制条件从“材料不够强”推向“形状能否保持、细节能否持续传力”。\n组合结构也不是简单相加。没有足够剪力连接时，钢梁和混凝土板各自滑移，组合截面惯性矩不能完全发挥；施工阶段混凝土尚未硬化，钢梁可能单独承担湿混凝土和施工荷载。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>X2｜钢与组合结构</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x2-steel-composite.html#example",
+    "href": "extensions/x2-steel-composite.html#example",
+    "title": "X2｜钢与组合结构",
+    "section": "样例｜板梁为什么需要加劲肋",
+    "text": "样例｜板梁为什么需要加劲肋\n增大钢板梁腹板高度可提高弯曲效率并减少材料，但高而薄的腹板会在剪切或弯曲压应力下屈曲。横向/纵向加劲肋把大板分成较小面板，改变屈曲模式并为集中力提供传力路径。\n因此“把腹板做薄一点省钢”必须与屈曲后强度、加劲肋用钢与焊接成本、疲劳细节和制造误差一起比较。\n\n\n\n\n\n\n\n两分钟看腹板局部屈曲\n\n\n观察屈曲波形从哪里出现，以及整体梁尚未“压坏”时局部板件怎样先失去平面形状。将波形位置与弯矩、剪力和边界约束对应。\n\n\n\n\n\n\n\n\n连接导看\n\n\n长视频不必顺序抄写。只追踪三件事：螺栓/焊缝如何把力送过连接；连接的可能失效面在哪里；施工与检查要求怎样反过来改变节点方案。\n\n\n\n\n来源：Think Up / Materials Lab On-line；AISC Education。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>X2｜钢与组合结构</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x2-steel-composite.html#application",
+    "href": "extensions/x2-steel-composite.html#application",
+    "title": "X2｜钢与组合结构",
+    "section": "实际应用｜钢箱梁与钢—混凝土组合梁",
+    "text": "实际应用｜钢箱梁与钢—混凝土组合梁\n钢箱梁适合需要高抗扭刚度、曲线布置或大跨施工的桥梁。顶推、吊装和合龙阶段的支承条件与成桥不同，必须逐阶段检查整体/局部稳定。组合梁桥面板通过栓钉等连接件与钢梁共同工作；负弯矩区混凝土开裂、钢筋参与和钢梁受压翼缘稳定需要单独考虑。\n界面传力的入门例题可观看 Jeff Hanson：组合梁弯曲；工程现场可观看 Shear Studs Changed Everything。后者用于识别栓钉位置和施工流程，不作为设计规则来源。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>X2｜钢与组合结构</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x2-steel-composite.html#extension",
+    "href": "extensions/x2-steel-composite.html#extension",
+    "title": "X2｜钢与组合结构",
+    "section": "拓展｜钢管混凝土为什么互相约束",
+    "text": "拓展｜钢管混凝土为什么互相约束\n钢管混凝土柱中，钢管提供纵向承载并约束核心混凝土，混凝土延缓钢管向内局部屈曲；但界面黏结、收缩、荷载分配、节点和耐火性能决定这种协同能否兑现。不能把钢管承载力与混凝土承载力永远无条件相加。\n\n本章给出设计地图，不给出规范化承载力公式。钢结构和组合结构的稳定系数、板件分类、连接承载力、疲劳等级与抗震细节必须依据项目适用规范和真实边界条件确定。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>X2｜钢与组合结构</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x3-masonry.html",
+    "href": "extensions/x3-masonry.html",
+    "title": "X3｜砌体：离散材料的整体",
+    "section": "",
+    "text": "概念｜先看压力能否留在截面内\n砌体不是“低强度混凝土”。块体、砂浆与界面共同工作，材料离散、抗拉弱、施工差异显著。它能高效承压，也容易在偏心、侧向荷载、开洞和不均匀沉降下开裂或失去整体性。\n墙、柱受轴力 \\(N\\) 与弯矩 \\(M\\) 时，偏心距 \\(e=M/N\\)。在线弹性全截面受压的简化阶段：\n\\[\\sigma=\\frac{N}{A}\\pm\\frac{M}{W}\\]\n若合力偏心过大，截面一侧会出现拉应力。普通无筋砌体抗拉能力低，开裂后接触压区缩小，应力重新分布，稳定和局部压碎风险上升。因此“轴力没有超过抗压承载力”远远不够。\n砌体设计同时关心：块体与砂浆强度、砌筑质量、墙体高厚比、偏心、局部承压、开洞、圈梁/构造柱或配筋、楼盖连接与整体空间作用。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>X3｜砌体：离散材料的整体</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x3-masonry.html#insight",
+    "href": "extensions/x3-masonry.html#insight",
+    "title": "X3｜砌体：离散材料的整体",
+    "section": "洞察｜整体性来自连接，不来自材料名称",
+    "text": "洞察｜整体性来自连接，不来自材料名称\n每块砖都能承压，不代表整面墙能抵抗面外作用。楼盖与墙、相交墙、墙与基础之间的拉结决定侧向荷载是否有连续路径。洞口切断压缩路径，细长墙段放大稳定风险，湿度和温度变形又可能制造并非荷载直接造成的裂缝。\n这与钢筋混凝土的共同点是都要看力流；不同点是砌体的接缝和低抗拉性从一开始就不能被平均掉。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>X3｜砌体：离散材料的整体</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x3-masonry.html#example",
+    "href": "extensions/x3-masonry.html#example",
+    "title": "X3｜砌体：离散材料的整体",
+    "section": "样例｜墙上开一个门洞发生了什么",
+    "text": "样例｜墙上开一个门洞发生了什么\n开洞前，竖向压力可在墙内大致向下扩散；开洞后，洞口上方荷载必须通过过梁或拱效应绕到两侧墙肢。洞角出现应力集中，侧墙肢同时承受压力、弯矩和可能的剪力。\n分析步骤是：确定洞上荷载范围 → 选择过梁/拱的力路 → 检查支承长度与局部承压 → 检查墙肢偏心受压和稳定 → 提供整体拉结。只计算一根过梁而忽略其两端把力送到哪里，链条仍不完整。\n\n\n\n\n\n\n49秒观察任务\n第一遍只看整体倒塌方向；第二遍看墙脚、墙顶和侧边是否有可靠约束；第三遍思考如果加圈梁、构造柱、配筋或可靠楼盖拉结，力路会改变在哪里。\n总结： 砌体墙的面外安全不仅是“砖够不够强”，而是墙体能否作为被可靠连接和约束的整体工作。\n\n视频：TDMRC Media，振动台无约束砌体墙倒塌演示。短片用于观察失效形态，不代表所有砌体体系。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>X3｜砌体：离散材料的整体</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x3-masonry.html#application",
+    "href": "extensions/x3-masonry.html#application",
+    "title": "X3｜砌体：离散材料的整体",
+    "section": "实际应用｜承重墙、挡墙与历史结构",
+    "text": "实际应用｜承重墙、挡墙与历史结构\n承重砌体建筑需要把楼面竖向荷载和风/地震作用送到基础；挡墙还承受侧向土压力并依赖墙身自重、基础和排水；历史砖石拱桥则主要通过压缩线传力，但填料、拱上结构、裂缝和基础移动会改变推力线。\n工程调查应记录真实材料、砌筑方式、墙厚、洞口、变形、裂缝走向、潮湿盐害和连接细节。把未知古旧砌体直接套成某个现代强度等级，会制造虚假精确。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>X3｜砌体：离散材料的整体</span>"
+    ]
+  },
+  {
+    "objectID": "extensions/x3-masonry.html#extension",
+    "href": "extensions/x3-masonry.html#extension",
+    "title": "X3｜砌体：离散材料的整体",
+    "section": "拓展｜为什么抗震需要延性与整体约束",
+    "text": "拓展｜为什么抗震需要延性与整体约束\n地震反复改变作用方向，墙体会经历面内剪切、摇摆、压趾压碎和面外失稳。配筋砌体、圈梁构造柱或约束砌体通过拉结、约束与可控耗能改善整体性，但细节必须成体系：孤立增加某一处强度可能把破坏推向更脆弱位置。\n\n现场看到一条裂缝时，不先给它贴“强度不足”标签。先记录方向、宽度变化、贯通范围、时间与环境，再区分荷载、沉降、温湿变形、材料劣化和连接失效等可能机制。",
+    "crumbs": [
+      "把缺失的构件补回来",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>X3｜砌体：离散材料的整体</span>"
     ]
   },
   {
@@ -569,10 +1108,32 @@
     "href": "appendices/learning-map.html",
     "title": "学习地图｜先看见，再计算",
     "section": "",
-    "text": "三条阅读路径\n这本书不按公式数量组织，而按学生需要逐步建立的判断组织。\n第一次接触：只读每章开头问题、操作交互、完成“本章留下的证据”。先形成因果骨架。\n准备考试：在第一次路径上增加公式推导、规范条件和手算基准。每个公式都要能回答“从哪来、何时失效”。\n做课程设计：从M0开始反复循环，在M1—M6之间按控制问题跳转，最终用M7形成证据链。",
+    "text": "两条入口，一条主线\n如果材料力学基础薄弱，从 F0 依次读到 F5；如果已经能独立画自由体、内力图并解释应力/变形，可从 M0 开始，在遇到障碍时回查 F 章。X1—X3 用于补齐剪扭/不连续区、钢与组合结构、砌体，不要求第一次线性读完。\n这本书不按公式数量组织，而按学生需要逐步建立的判断组织。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>学习地图｜先看见，再计算</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>学习地图｜先看见，再计算</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/learning-map.html#两条入口一条主线",
+    "href": "appendices/learning-map.html#两条入口一条主线",
+    "title": "学习地图｜先看见，再计算",
+    "section": "",
+    "text": "你现在卡在哪里\n先读\n再去\n\n\n\n\n不会从实际结构画计算简图\nF0\nM0、M1\n\n\n内力图与应力图混在一起\nF2、F3\nM3、X1\n\n\n强度会算但不知道为何挠度大\nF4\nM4、M6\n\n\n柱子只会套偏压公式\nF5\nM5、X2\n\n\n支座、孔洞、牛腿看不懂\nX1\nM3、M6\n\n\n钢结构只算截面强度\nF5、X2\nM7\n\n\n想按问题找视频\n视频图谱\n回到对应正文做预测与迁移\n\n\n\n\n\n\n\n\n\n\n\n\n\n模块\n核心问题\n可见证据\n迁移方向\n\n\n\n\nM0 设计\n为什么不只有一个答案？\n方案云、约束与取舍\n桥型与跨径选择\n\n\nM1 可靠\n安全如何面对不确定性？\nR–S分布、失效域、极限状态\n荷载组合与冗余\n\n\nM2 材料\n抗力从哪里来？\n变形—应变—应力—内力\n组合材料与界面\n\n\nM3 受弯\n梁怎样从开裂走向破坏？\n裂缝、刚度、中性轴、屈服\nT梁与箱梁截面\n\n\nM4 使用\n不倒塌就够了吗？\nV/M图、挠度、裂缝、耐久\n移动荷载与桥面功能\n\n\nM5 偏压\n轴力与弯矩怎样共同作用？\n应变图、N–M能力地图\n桥墩与二阶效应\n\n\nM6 预应力\n能否预先改变结构状态？\n张拉—传力—损失—运营路径\n预制与施工阶段\n\n\nM7 AI审查\n谁对计算结论负责？\n模型合同、反例、独立复核\n方案生成与工程签署",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>学习地图｜先看见，再计算</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/learning-map.html#三条阅读路径",
+    "href": "appendices/learning-map.html#三条阅读路径",
+    "title": "学习地图｜先看见，再计算",
+    "section": "三条阅读路径",
+    "text": "三条阅读路径\n第一次接触：只读每章开头问题、操作交互、完成“本章留下的证据”。先形成因果骨架。\n准备考试：在第一次路径上增加公式推导、规范条件和手算基准。每个公式都要能回答“从哪来、何时失效”。\n做课程设计：从M0开始反复循环，在M1—M6之间按控制问题跳转，最终用M7形成证据链。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>学习地图｜先看见，再计算</span>"
     ]
   },
   {
@@ -583,7 +1144,106 @@
     "text": "不会时回到哪里\n\n不懂公式符号：回到M2的四层翻译。\n不知道该用哪条公式：先画变形和应变图，再判断材料状态。\n数字算出来却不放心：回到M7的四重校核。\n方案只有一个：回到M0，放松一个变量或重新说明约束。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>学习地图｜先看见，再计算</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>学习地图｜先看见，再计算</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html",
+    "href": "appendices/video-atlas.html",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "",
+    "text": "1｜外力、内力、应力与材料\n这不是“更多视频”清单，而是一张按学习障碍检索的地图。每次只选一段，带着右栏问题观看；看完用自己的图或三句话复述。连续刷十段视频通常只会制造熟悉感，不会形成可迁移的判断。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#外力内力应力与材料",
+    "href": "appendices/video-atlas.html#外力内力应力与材料",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "",
+    "text": "困惑\n视频\n平台 / 时长\n观看后要能回答\n\n\n\n\n应力和外力是什么关系\nAn Introduction to Stress and Strain\nYouTube · The Efficient Engineer · 约10分\n为什么同一外力在不同截面上会得到不同应力分量？\n\n\n材料曲线上的“强”和“韧”\nMaterial Strength, Ductility and Toughness\nYouTube · 频道材料力学播放列表\n屈服强度、极限强度、延性、韧性分别回答什么问题？\n\n\n想看真实拉伸/压缩试验\n天津大学材料力学：金属拉伸、压缩实验\nBilibili · 合集第6—8段\n工程应力—应变曲线上哪些事件能在试件上看到？\n\n\n想按孙训方教材做题\n孙训方第5/6版课后习题讲解\nBilibili · 长合集\n解题前能否先说清自由体、内力和适用假定？",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#轴向扭转与组合变形",
+    "href": "appendices/video-atlas.html#轴向扭转与组合变形",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "2｜轴向、扭转与组合变形",
+    "text": "2｜轴向、扭转与组合变形\n\n\n\n困惑\n视频\n平台 / 时长\n观看任务\n\n\n\n\n圆轴扭转公式没有图像\nUnderstanding Torsion\nYouTube · The Efficient Engineer · 约10分\n画出切应力沿半径的分布和单位长度扭转角的控制量。\n\n\n扭矩图不会画\n工程力学：扭矩与扭矩图\nBilibili · 北京化工大学课程\n每一段扭矩为何是该段一侧外力矩的代数和？\n\n\n想看实验而非公式\n天津大学：扭转实验\nBilibili · 合集第13/79段\n脆性与塑性试件的断口为什么不同？\n\n\n不会把拉压弯扭放在一起\n天津大学：扭弯组合变形\nBilibili · 第49—52段\n各内力先产生哪些应力分量，最后在哪一点组合？",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#梁的内力应力与变形",
+    "href": "appendices/video-atlas.html#梁的内力应力与变形",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "3｜梁的内力、应力与变形",
+    "text": "3｜梁的内力、应力与变形\n\n\n\n困惑\n视频\n平台 / 时长\n观看任务\n\n\n\n\n剪力图、弯矩图只会背\nUnderstanding Shear Force and Bending Moment Diagrams\nYouTube · The Efficient Engineer · 16分\n从自由体到切口，再到图形变化率，复述完整因果链。\n\n\n想用中文快速补基础\n建筑力学：梁的弯曲系列\nBilibili · 分段课程\n任选一题，不看答案先标出图形跳跃和斜率。\n\n\n弯曲公式不理解\nUnderstanding Stresses in Beams\nYouTube · The Efficient Engineer · 约15分\n区分平截面假定、材料关系和截面平衡各自做了什么。\n\n\n挠度方法太多\nUnderstanding the Deflection of Beams\nYouTube · The Efficient Engineer · 约22分\n画出 \\(q,V,M,\\kappa,\\theta,v\\) 的关系链，不抄公式表。\n\n\n需要中文系统课\n天津大学：弯曲内力、应力、变形\nBilibili · 第17—44段\n每次只看一个子主题，并完成一张“假定—公式—边界”卡。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#应力状态失效准则与稳定",
+    "href": "appendices/video-atlas.html#应力状态失效准则与稳定",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "4｜应力状态、失效准则与稳定",
+    "text": "4｜应力状态、失效准则与稳定\n\n\n\n困惑\n视频\n平台 / 时长\n观看任务\n\n\n\n\nMohr 圆只是画圆\nStress Transformation and Mohr’s Circle\nYouTube · The Efficient Engineer · 约7分\n圆心、半径、圆上两点分别对应什么物理量？\n\n\n不知道选哪个强度理论\nFailure Theories\nYouTube · 频道材料力学播放列表\n延性/脆性材料和不同应力状态下，失效指标为何不同？\n\n\n压杆稳定只有 Euler 式\nUnderstanding Buckling\nYouTube · The Efficient Engineer · 约15分\n材料强度控制与稳定控制如何用两个尺度先比较？\n\n\n想看临界状态实验\n天津大学：压杆稳定试验\nBilibili · 第82—83段\n记录初弯曲、侧向变形增长和卸载后的状态。\n\n\n想系统学应力状态\n北京航空航天大学材料力学\nBilibili · 应力状态/强度/稳定分段\n看完一段只做一道反例：在哪个假定改变后原结论失效？",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#钢筋混凝土从材料合作到破坏",
+    "href": "appendices/video-atlas.html#钢筋混凝土从材料合作到破坏",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "5｜钢筋混凝土：从材料合作到破坏",
+    "text": "5｜钢筋混凝土：从材料合作到破坏\n\n\n\n主题\n视频\n来源\n中文摘要\n\n\n\n\n为什么要配筋\nWhy Concrete Needs Reinforcement\nPractical Engineering\n用实体比较展示混凝土抗压高、抗拉弱以及钢筋跨越裂缝后如何维持力路。\n\n\n无箍筋梁剪切破坏\nShear failure: no shear links\nThink Up / Materials Lab\n斜裂缝迅速贯通，提醒设计者延性弯曲机制并不会自动覆盖剪切。\n\n\n梁弯曲破坏\nBending Failure of Reinforced Concrete Beam\nTyler Ley\n裂缝方向和发展顺序是内部应力场变化的可见证据。\n\n\n偏心受压柱\nRC Columns under Eccentric Loading\nAmerican Concrete Institute\n偏心把轴力问题变为轴力—弯矩耦合，二阶效应和延性细节随之出现。\n\n\n混凝土扭转\nStructural Design to Eurocodes — Torsion\nOxford University OU\n区分平衡扭转与协调扭转，并用空间力流理解闭合箍筋和纵筋。\n\n\n深梁/压杆—拉杆\nPracticing Engineer’s Guide to STM\nSKG Associates，介绍 ACI 318 方法\n从边界荷载画压杆、拉杆和节点；重点是平衡、锚固与节点可构造性。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#预应力钢结构与组合结构",
+    "href": "appendices/video-atlas.html#预应力钢结构与组合结构",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "6｜预应力、钢结构与组合结构",
+    "text": "6｜预应力、钢结构与组合结构\n\n\n\n主题\n视频\n来源\n中文摘要\n\n\n\n\n预应力基本思想\nWhat is Prestressed Concrete?\nPractical Engineering\n在使用荷载到来前主动建立压应力，以改变开裂和变形历史。\n\n\n预应力梁破坏\nPrestressed beam failure\nThink Up / Materials Lab\n观察裂缝、钢绞线作用和最终破坏，区分正常使用与极限状态。\n\n\n预制预应力桥施工\nPre-Stressed Concrete in Texas Bridge Construction\nTexas DOT\n工厂预制、运输、吊装和桥面体系说明施工阶段本身就是设计工况。\n\n\n板梁腹板屈曲\nLocal web buckling of a plate girder\nThink Up / Materials Lab\n钢材未整体屈服前，薄腹板可先失去平面形态。\n\n\n翼缘局部屈曲\nLocal flange buckling\nThink Up / Materials Lab\n比较受压翼缘宽厚比、边界约束与屈曲波形。\n\n\n高强螺栓基础\nHigh Strength Bolting: The Basics\nAISC Education\n按力路、失效面、安装和检验四条线索选择性观看。\n\n\n组合梁例题\nComposite Beam Bending\nJeff Hanson\n用变换截面/协调变形理解两种材料如何共同承担弯曲。\n\n\n栓钉现场\nShear Studs Changed Everything\nAFT Construction\n识别栓钉与压型钢板现场位置；施工画面不替代连接件设计。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#真实工程与失效案例",
+    "href": "appendices/video-atlas.html#真实工程与失效案例",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "7｜真实工程与失效案例",
+    "text": "7｜真实工程与失效案例\n\n\n\n案例\n视频/页面\n只追问一个问题\n\n\n\n\n伦敦千禧桥\n开桥档案\n为什么“强度够”仍可能立即停用？\n\n\n加速桥梁施工\nFHWA Accelerated Bridge Construction\n临时支承和吊装如何改变结构体系？\n\n\n米约高架桥\nMillau Viaduct case image and credits\n超高桥墩、连续桥面和施工方法如何互相约束？\n\n\n无约束砌体墙\nShaking table collapse\n墙体的面外力路在哪里中断？\n\n\n可触摸结构概念\nManchester Structural Concepts\n模型中的变形怎样成为公式假定的证据？",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/video-atlas.html#把视频变成学习证据",
+    "href": "appendices/video-atlas.html#把视频变成学习证据",
+    "title": "视频图谱｜按困惑找讲解",
+    "section": "把视频变成学习证据",
+    "text": "把视频变成学习证据\n推荐使用“预测—观看—解释—迁移”四格记录：\n\n预测：播放前画出你认为会出现的变形或裂缝；\n观看：只记录与预测不同的两处；\n解释：用平衡、几何、材料关系分别解释一次；\n迁移：换支承、荷载、截面或材料，预测趋势会怎样变。\n\n视频链接可能因平台政策变化而失效。发现失效或来源身份不清时，请在仓库提交 issue；宁可移除链接，也不把转载冒充原始发布者。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>视频图谱｜按困惑找讲解</span>"
     ]
   },
   {
@@ -591,10 +1251,10 @@
     "href": "appendices/sources.html",
     "title": "来源与边界｜哪些是原文，哪些是重构",
     "section": "",
-    "text": "本书的内容身份\n本书是基于赵诗宇老师课程规划、课堂录音转写、既有讲稿与交互演示重新组织的原创课程书。正文不是《结构设计原理（第5版）》的逐章改写，也不复刻其表述、例题、图表或版式。\n原教材仅作为课程通常覆盖范围的参照。读者如需规范公式、材料参数、设计限值和法定要求，应查阅自己课程指定版本与现行适用规范。",
+    "text": "本书的内容身份\n本书是基于赵诗宇老师课程规划、课堂录音转写、既有讲稿与交互演示重新组织的原创课程书。正文不是《结构设计原理（第5版）》或《材料力学（Ⅰ，第6版）》的逐章改写，也不复刻其表述、例题、图表或版式。\n原教材仅作为课程通常覆盖范围的参照。读者如需规范公式、材料参数、设计限值和法定要求，应查阅自己课程指定版本与现行适用规范。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -605,7 +1265,18 @@
     "text": "网页中的“教师补充”“课堂证据”“桥梁迁移窗”“模型边界”和“交互实验”均属于本课程重构内容。来源身份通过版式与标签公开，不把新增观点伪装成原教材原文。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/sources.html#两本教材怎样进入本书",
+    "href": "appendices/sources.html#两本教材怎样进入本书",
+    "title": "来源与边界｜哪些是原文，哪些是重构",
+    "section": "两本教材怎样进入本书",
+    "text": "两本教材怎样进入本书\n本地提供的《材料力学（Ⅰ，第6版）》（孙训方等）为扫描版。其目录覆盖绪论、轴向拉压、扭转、弯曲内力、弯曲位移、超静定、应力状态与强度理论、组合变形/连接以及压杆稳定；《结构设计原理（第5版）》覆盖可靠度、钢筋混凝土受弯/剪扭/受压受拉/正常使用、局部承压与深梁、预应力、砌体、钢结构和钢—混凝土组合结构。\n本书没有照搬这两个目录，而把必要内容去重后放进一条学习主线：\n\n边界与外力 → 截面内力 → 应力/应变 → 变形与稳定 → 材料合作 → 构件失效 → 体系与施工 → 设计选择与验证。\n\n教材中的规范公式、系数表、原例题、原图和原文均不发布。新增的 F0—F5 与 X1—X3 是原创教学重构；若需要完成正式设计，必须回到课程指定教材和现行规范核对参数、构造及适用条件。",
+    "crumbs": [
+      "继续使用这本书",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -616,7 +1287,7 @@
     "text": "本地课程材料\n写作时综合使用了以下类型的本地材料，但没有把原始录音、逐字转写、学生姓名或课堂隐私发布到网站：\n\n2025—2026学年课程规划、56课时教学进度和评价方案；\n2025年结构设计原理课堂录音的轻度整理稿；\n“结构设计的自由度困局”“双筋截面”等既有讲稿；\n钢筋混凝土、偏心受压与预应力的既有交互原型。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -624,10 +1295,10 @@
     "href": "appendices/sources.html#动态讲解样本",
     "title": "来源与边界｜哪些是原文，哪些是重构",
     "section": "动态讲解样本",
-    "text": "动态讲解样本\n下列视频用于研究“怎样降低瞬时认知负荷”，不构成本书文字或图形的复制来源：\n\nUnderstanding Shear Force and Bending Moment Diagrams — The Efficient Engineer：借鉴外荷载、截面切口与内力图同步出现的叙事顺序。\nUnderstanding Stresses in Beams — The Efficient Engineer：借鉴从弯曲变形推导正应力、再连接剪应力的连续变化；其公开勘误也用于M7的审查案例。\nUnderstanding the Deflection of Beams — The Efficient Engineer：借鉴曲率、转角、挠度分层显示，避免同时堆叠五种解法。\nWhy Concrete Needs Reinforcement — Practical Engineering：借鉴通过加载与破坏试验建立“混凝土弱于受拉”的体验证据。\nWhat is Prestressed Concrete? — Practical Engineering：借鉴先施加压缩、再叠加使用荷载的时间顺序。\n\n这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。",
+    "text": "动态讲解样本\n下列视频用于研究“怎样降低瞬时认知负荷”，不构成本书文字或图形的复制来源：\n\nUnderstanding Shear Force and Bending Moment Diagrams — The Efficient Engineer：借鉴外荷载、截面切口与内力图同步出现的叙事顺序。\nUnderstanding Stresses in Beams — The Efficient Engineer：借鉴从弯曲变形推导正应力、再连接剪应力的连续变化；其公开勘误也用于M7的审查案例。\nUnderstanding the Deflection of Beams — The Efficient Engineer：借鉴曲率、转角、挠度分层显示，避免同时堆叠五种解法。\nWhy Concrete Needs Reinforcement — Practical Engineering：借鉴通过加载与破坏试验建立“混凝土弱于受拉”的体验证据。\nWhat is Prestressed Concrete? — Practical Engineering：借鉴先施加压缩、再叠加使用荷载的时间顺序。\nAn Introduction to Stress and Strain — The Efficient Engineer：用于把外力、内力分布和材料曲线分层出现。\nUnderstanding Torsion — The Efficient Engineer：用于从截面转动、切应变走向切应力与抗扭刚度。\nUnderstanding Stress Transformation and Mohr’s Circle — The Efficient Engineer：用于把同一点不同截面的应力变化图形化。\nUnderstanding Buckling — The Efficient Engineer：用于区分材料压碎、弹性屈曲和实际缺陷柱。\n\n这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。\n英文视频下的中文分段文字是本书作者基于视频主题重新撰写的学习导航与概括，不是逐句字幕翻译。未经权利人明确许可，本书不下载、重发或整段翻译视频字幕。完整选片、平台与观看任务见视频图谱。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -638,7 +1309,7 @@
     "text": "组织方式样本\n\nSeeing and Touching Structural Concepts — The University of Manchester：借鉴同一结构主题下“Definitions and Concepts → Model Demonstrations → Practical Examples → References”的分层入口，以及用可触摸模型先检查梁弯曲假定、再进入工程实例的顺序。本书不复制其文字、图片或旧网页样式，而是在此骨架上增加“洞察”和“拓展”，形成“概念—洞察—样例—实际应用—拓展”五层结构。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -646,10 +1317,10 @@
     "href": "appendices/sources.html#真实案例媒体",
     "title": "来源与边界｜哪些是原文，哪些是重构",
     "section": "真实案例媒体",
-    "text": "真实案例媒体\n\n米约高架桥照片：FaceMePLS，CC BY 2.0，Wikimedia Commons文件页。\n伦敦千禧桥照片：Arpingstone，公有领域，Wikimedia Commons文件页。\n钢筋混凝土实体比较：Why Concrete Needs Reinforcement，Practical Engineering。\n千禧桥开桥档案：2000: ‘Wobbly’ Millennium Bridge Closed Days After Opening，Frontline by ITN。\n偏心受压柱研究：CFRP Reinforced Concrete Columns under Eccentric Loading，American Concrete Institute。\n预应力桥梁施工：Pre-Stressed Concrete in Texas Bridge Construction，Texas Department of Transportation。\n\n外部图片保留原文件页、作者和许可；YouTube仅使用官方嵌入播放器，不下载或重新发布视频。真实画面用于提出观察问题，不把单个试验、新闻片段或工程宣传片当成完整设计证据。",
+    "text": "真实案例媒体\n\n米约高架桥照片：FaceMePLS，CC BY 2.0，Wikimedia Commons文件页。\n伦敦千禧桥照片：Arpingstone，公有领域，Wikimedia Commons文件页。\n钢筋混凝土实体比较：Why Concrete Needs Reinforcement，Practical Engineering。\n千禧桥开桥档案：2000: ‘Wobbly’ Millennium Bridge Closed Days After Opening，Frontline by ITN。\n偏心受压柱研究：CFRP Reinforced Concrete Columns under Eccentric Loading，American Concrete Institute。\n预应力桥梁施工：Pre-Stressed Concrete in Texas Bridge Construction，Texas Department of Transportation。\n无箍筋梁剪切试验：Shear failure: no shear links，Think Up / Materials Lab On-line。\n梁弯曲破坏：Bending Failure of Reinforced Concrete Beam，Tyler Ley。\n板梁局部屈曲：Local web buckling 与 Local flange buckling，Think Up / Materials Lab On-line。\n钢结构螺栓焊接讲解：Bolting & Welding Primer，AISC Education。\n无约束砌体墙振动台演示：Collapse Test of Unconfined Masonry Wall，TDMRC Media。\n\n外部图片保留原文件页、作者和许可；YouTube仅使用官方嵌入播放器，不下载或重新发布视频。真实画面用于提出观察问题，不把单个试验、新闻片段或工程宣传片当成完整设计证据。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -660,7 +1331,7 @@
     "text": "交互模型的共同边界\n本书交互首先服务于概念判断，普遍采用简化几何、理想支承、确定性输入、线弹性或概念化材料状态。每个实验都应显示自己的假定与不适用范围。若交互结果与规范设计冲突，以经过确认的规范、项目条件和专业复核为准。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -671,7 +1342,7 @@
     "text": "版本与纠错\n所有正文与交互均应通过版本记录公开修改。发现错误时，请提供页面、输入参数、预期趋势和复现步骤。好的教材不是没有错误，而是允许错误被定位、讨论和修正。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>来源与边界｜身份公开</span>"
     ]
   },
   {
@@ -682,7 +1353,7 @@
     "text": "一次课的最小结构\n建议把每个知识单元压缩成四段，而不是从定义连续讲到例题结尾：",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   },
   {
@@ -693,7 +1364,7 @@
     "text": "先判断（3—5分钟）：展示现象，只要求写下预测与理由；\n再操作（8—12分钟）：学生改变一个变量，记录反直觉结果；\n后建模（15—25分钟）：用公式解释刚才的变化，并说清模型边界；\n留证据（10—20分钟）：提交比较、复核或错误报告，不按速度排名。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   },
   {
@@ -704,7 +1375,7 @@
     "text": "五层内容怎样使用\n“概念—洞察—样例—实际应用—拓展”不是要求教师连续讲完的五段课件，而是五种可独立进入的认知任务：概念负责预训练，洞察负责重组直觉，样例提供完整示范，实际应用增加情境变化，拓展再逐步撤去支架。新手按顺序进入；已有基础的学生可以从样例或应用开始，避免专家反转效应。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   },
   {
@@ -715,7 +1386,7 @@
     "text": "降低认知负荷的具体规则\n\n一屏只推进一条因果链，相关变化同步出现；\n图、符号和文字放在彼此附近，避免来回搜索；\n动画必须能暂停、回退和手动拖动；\n同一个颜色保持同一个物理语义：红色受拉、蓝色受压、琥珀色警告、绿色已验证；\n先给完整示范，再逐步撤去步骤提示；\n不把朗读屏幕文字和密集动画同时播放；\n每完成一个局部模型，立刻指出它不能解释什么。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   },
   {
@@ -726,7 +1397,7 @@
     "text": "评价什么\n建议把一次任务分成四类证据：\n\n\n\n证据\n可观察行为\n不应被替代为\n\n\n\n\n现象解释\n能从变形追到内力\n背诵定义\n\n\n方案比较\n能说出约束与代价\n只交一个答案\n\n\n模型验证\n能复现、查趋势、找反例\n截图证明“软件跑通”\n\n\n反思修正\n能解释一次错误怎样改变判断\n隐藏失败过程",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   },
   {
@@ -737,7 +1408,7 @@
     "text": "课堂上如何使用AI\n让不同小组分别扮演“方案生成者”“模型审查者”“施工质疑者”和“证据记录者”。所有小组共享问题，但得到不同职责。这样AI增加的是可比较方案与可检验主张，而不是把全班压缩成同一份标准答案。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   },
   {
@@ -748,7 +1419,7 @@
     "text": "教师补充与基础正文的区分\n新增课堂材料建议固定使用以下标签：\n\n你先判断：激活原有直觉；\n课堂证据：记录学生常见推理及其修正；\n桥梁迁移窗：从构件迁移到系统；\n模型边界：主动说明简化与风险；\n四重校核：形成可复现证据。\n\n不要只用不同颜色区分来源；标签文字必须能在黑白打印、读屏和色觉差异条件下独立成立。",
     "crumbs": [
       "继续使用这本书",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>教师指南｜把课堂还给判断</span>"
     ]
   }
 ]

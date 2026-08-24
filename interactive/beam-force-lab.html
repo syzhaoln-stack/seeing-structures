@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>移动荷载—剪力—弯矩实验</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    .diagram-title{font:800 12px system-ui,sans-serif;fill:#182329}.area-v{fill:rgba(36,87,214,.16);stroke:#2457d6;stroke-width:2}.area-m{fill:rgba(216,59,59,.14);stroke:#d83b3b;stroke-width:2}.load{stroke:#b86f00;stroke-width:4}.beam{stroke:#182329;stroke-width:8;stroke-linecap:round}.support{fill:#9db7ff;stroke:#2457d6;stroke-width:1.5}.jump{stroke:#2457d6;stroke-width:2;stroke-dasharray:4 3}.guide{stroke:#b86f00;stroke-width:1.5;stroke-dasharray:5 4;opacity:.7}
+  </style>
+</head>
+<body>
+<main>
+<section class="lab">
+  <header><div><h1>移动一辆“单轮车”</h1><p>同一集中力改变位置时，支反力、剪力跳跃和弯矩峰值同步变化。</p></div><span class="tag">F2 · FORCE MAP</span></header>
+  <div class="grid">
+    <aside class="controls">
+      <div class="control"><label for="p">集中力 P <output id="pv" class="value">80 kN</output></label><input id="p" type="range" min="20" max="160" step="5" value="80"></div>
+      <div class="control"><label for="a">荷载位置 a/L <output id="av" class="value">0.40</output></label><input id="a" type="range" min="10" max="90" step="1" value="40"></div>
+      <div class="equation" id="eq">R_A=P(1-a/L)<br>R_B=P(a/L)</div>
+      <div class="readouts">
+        <div class="readout"><b id="ra">48 kN</b><span>左支反力 R_A</span></div>
+        <div class="readout"><b id="rb">32 kN</b><span>右支反力 R_B</span></div>
+        <div class="readout warn"><b id="mm">19.2 kN·L</b><span>荷载处最大弯矩</span></div>
+        <div class="readout good"><b id="where">x/L = 0.40</b><span>弯矩峰值位置</span></div>
+      </div>
+      <p class="note">挑战：先把荷载移到跨中，再向左移动。预测 R_A、R_B 和弯矩峰值分别怎样变化，之后再看图。</p>
+    </aside>
+    <div class="view">
+      <svg viewBox="0 0 720 510" role="img" aria-labelledby="svgtitle svgdesc">
+        <title id="svgtitle">简支梁移动集中力内力图</title><desc id="svgdesc">上方为简支梁和荷载，中间为剪力图，下方为弯矩图。</desc>
+        <g transform="translate(0,5)">
+          <text x="24" y="20" class="diagram-title">结构与外力</text>
+          <line x1="70" y1="100" x2="650" y2="100" class="beam"/>
+          <path d="M70 107 l-16 25 h32 z" class="support"/><circle cx="650" cy="126" r="7" class="support"/><path d="M630 118 h40 l-20-18 z" class="support"/>
+          <line id="load" x1="302" y1="42" x2="302" y2="88" class="load animate"/><path id="arrow" d="M294 75 L302 90 L310 75 Z" fill="#b86f00" class="animate"/>
+          <text id="loadLabel" x="310" y="55" class="strong-label animate">P=80 kN</text>
+          <line id="guide" x1="302" y1="92" x2="302" y2="486" class="guide animate"/>
+          <text x="64" y="150" class="label">A</text><text x="644" y="150" class="label">B</text>
+        </g>
+        <g transform="translate(0,170)">
+          <text x="24" y="10" class="diagram-title">剪力图 V(x)</text><line x1="70" y1="85" x2="650" y2="85" class="axis"/>
+          <path id="vArea" class="area-v animate" d="M70 85 L70 45 L302 45 L302 112 L650 112 L650 85 Z"/>
+          <line id="vJump" x1="302" y1="45" x2="302" y2="112" class="jump animate"/>
+          <text id="vPlus" x="78" y="39" class="label">+48</text><text id="vMinus" x="610" y="130" class="label">−32</text>
+        </g>
+        <g transform="translate(0,330)">
+          <text x="24" y="10" class="diagram-title">弯矩图 M(x)</text><line x1="70" y1="55" x2="650" y2="55" class="axis"/>
+          <path id="mArea" class="area-m animate" d="M70 55 L302 125 L650 55 Z"/>
+          <circle id="mDot" cx="302" cy="125" r="5" fill="#d83b3b" class="animate"/>
+          <text id="mLabel" x="310" y="139" class="label animate">Mmax=19.2 kN·L</text>
+        </g>
+      </svg>
+      <div class="legend"><span><i class="dot" style="background:#2457d6"></i>剪力图</span><span><i class="dot" style="background:#d83b3b"></i>弯矩图</span><span><i class="dot" style="background:#b86f00"></i>同一荷载截面</span></div>
+    </div>
+  </div>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id), p=$('p'), a=$('a');
+function fmt(n){return Math.round(n*10)/10}
+function update(){
+  const P=+p.value, r=+a.value/100, RA=P*(1-r), RB=P*r;
+  const x=70+580*r, top=45, base=85, scale=67/P;
+  const yPlus=base-RA*scale, yMinus=base+RB*scale;
+  const m=P*r*(1-r), mScale=72/(P*.25), yPeak=55+m*mScale;
+  $('pv').textContent=P+' kN'; $('av').textContent=r.toFixed(2);
+  $('ra').textContent=fmt(RA)+' kN'; $('rb').textContent=fmt(RB)+' kN';
+  $('mm').textContent=fmt(m)+' kN·L'; $('where').textContent='x/L = '+r.toFixed(2);
+  $('load').setAttribute('x1',x); $('load').setAttribute('x2',x); $('arrow').setAttribute('d',`M${x-8} 75 L${x} 90 L${x+8} 75 Z`);
+  $('loadLabel').setAttribute('x',Math.min(x+8,590)); $('loadLabel').textContent='P='+P+' kN';
+  $('guide').setAttribute('x1',x); $('guide').setAttribute('x2',x);
+  $('vArea').setAttribute('d',`M70 85 L70 ${yPlus} L${x} ${yPlus} L${x} ${yMinus} L650 ${yMinus} L650 85 Z`);
+  ['x1','x2'].forEach(k=>$('vJump').setAttribute(k,x)); $('vJump').setAttribute('y1',yPlus); $('vJump').setAttribute('y2',yMinus);
+  $('vPlus').textContent='+'+fmt(RA); $('vPlus').setAttribute('y',Math.max(22,yPlus-6)); $('vMinus').textContent='−'+fmt(RB); $('vMinus').setAttribute('y',Math.min(145,yMinus+18));
+  $('mArea').setAttribute('d',`M70 55 L${x} ${yPeak} L650 55 Z`); $('mDot').setAttribute('cx',x); $('mDot').setAttribute('cy',yPeak);
+  $('mLabel').setAttribute('x',Math.min(x+8,550)); $('mLabel').setAttribute('y',Math.min(yPeak+18,148)); $('mLabel').textContent='Mmax='+fmt(m)+' kN·L';
+}
+p.addEventListener('input',update); a.addEventListener('input',update); update();
+</script>
+</body></html>
