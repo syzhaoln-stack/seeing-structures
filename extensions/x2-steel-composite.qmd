@@ -42,6 +42,13 @@
 
 <p class="attribution">来源：Think Up / Materials Lab On-line；AISC Education。</p>
 
+<details class="video-clips">
+<summary>第三段｜把钢梁与混凝土板的协调变形算出来</summary>
+<div class="video-clip-grid one">
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/FB1TP5YC8Wo?start=42" title="Composite Beam Bending Example" loading="lazy" allowfullscreen></iframe></div><h3>3｜组合梁弯曲例题</h3><p>先确认界面不滑移的协调假定，再看变换截面如何把两种材料放进同一个应变分布。</p><p class="attribution">Jeff Hanson · 约00:42起</p></article>
+</div>
+</details>
+
 ## 实际应用｜钢箱梁与钢—混凝土组合梁 {#application}
 
 钢箱梁适合需要高抗扭刚度、曲线布置或大跨施工的桥梁。顶推、吊装和合龙阶段的支承条件与成桥不同，必须逐阶段检查整体/局部稳定。组合梁桥面板通过栓钉等连接件与钢梁共同工作；负弯矩区混凝土开裂、钢筋参与和钢梁受压翼缘稳定需要单独考虑。

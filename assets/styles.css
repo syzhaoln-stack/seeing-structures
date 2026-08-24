@@ -71,6 +71,7 @@ p, li { line-height: 1.9; }
 
 .interaction-frame { width: 100%; min-height: 590px; margin: 1.25rem 0 2rem; border: 1px solid var(--line); background: white; box-shadow: var(--shadow); }
 .interaction-frame[src*="beam-force-lab"] { min-height: 720px; }
+.interaction-frame[src*="reliability"] { min-height: 920px; }
 .interaction-caption { margin-top: -.8rem; color: var(--muted); font-size: .87rem; }
 
 .cycle-strip { display: grid; grid-template-columns: repeat(6, 1fr); margin: 1.8rem 0; border: 1px solid var(--line); background: var(--paper); }
@@ -107,6 +108,17 @@ h2[id="extension"]::before { content: "05 · EXTENSION"; }
 .video-pair .video-lesson { margin: 0; }
 .video-pair h3 { font-size: 1rem; margin: .8rem 0 .35rem; }
 .video-pair p { font-size: .84rem; line-height: 1.7; }
+.video-clips { margin: 1.6rem 0; border: 1px solid var(--line); background: rgba(255,255,255,.9); box-shadow: var(--shadow); }
+.video-clips > summary { cursor: pointer; padding: .95rem 1rem; color: var(--graphite); font-weight: 800; }
+.video-clips[open] > summary { border-bottom: 1px solid var(--line); }
+.video-clip-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); }
+.video-clip-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.video-clip-grid.one { grid-template-columns: minmax(0, 1fr); }
+.video-clip { min-width: 0; padding: .85rem; background: var(--paper); }
+.video-clip h3 { margin: .7rem 0 .3rem; font-size: .96rem; }
+.video-clip p { margin: .3rem 0; font-size: .8rem; line-height: 1.65; }
+.video-clip .attribution { color: var(--muted); font-size: .68rem; }
+.video-clips > p { padding: 0 1rem 1rem; }
 .real-case-body { padding: 1rem 1.1rem 1.1rem; }
 .real-case-kicker { display: block; margin-bottom: .35rem; color: var(--tension); font: 800 .68rem/1.2 "JetBrains Mono", "Cascadia Code", monospace; letter-spacing: .12em; }
 .real-case h3 { margin: 0 0 .55rem; font-size: 1.15rem; }
@@ -123,6 +135,7 @@ span.math.display { display: block; max-width: 100%; overflow-x: auto; overflow-
   .cycle-strip { grid-template-columns: repeat(3, 1fr); }
   .interaction-frame { min-height: 680px; }
   .interaction-frame[src*="beam-force-lab"] { min-height: 1080px; }
+  .interaction-frame[src*="reliability"] { min-height: 1360px; }
   .beam-controls { grid-template-columns: 1fr; }
   .beam-readout { text-align: left; }
   .learning-layers { grid-template-columns: 1fr; }
@@ -131,6 +144,8 @@ span.math.display { display: block; max-width: 100%; overflow-x: auto; overflow-
   .learning-layers span, .learning-layers strong, .learning-layers small { display: block; margin: 0; }
   .real-case-grid { grid-template-columns: 1fr; }
   .video-pair { grid-template-columns: 1fr; }
+  .video-clip-grid { grid-template-columns: 1fr; }
+  .video-clip-grid.two { grid-template-columns: 1fr; }
   .real-case-media img { min-height: 200px; max-height: 310px; }
 }
 

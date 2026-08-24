@@ -28,13 +28,74 @@ $$
 
 ## 概念｜作用、抗力与失效域 {#concept}
 
-一种常见但容易误导的画法，是把作用和抗力的两个概率密度函数画在同一横轴上，然后把两条曲线的重叠面积称为失效概率。它能提醒我们“作用与抗力会波动”，却没有直接表达同一次状态中 $R$ 和 $S$ 的配对关系。
+一种常见但容易误导的画法，是把作用和抗力的两个一维概率密度函数画在同一横轴上，然后把两条曲线的重叠面积称为失效概率。它能提醒我们“作用与抗力会波动”，却没有直接表达同一次状态中 $R$ 和 $S$ 的配对关系；**两条一维曲线的重叠面积也不等于 $P(R\le S)$。**
 
-更清楚的方式是把每次状态画成平面中的一个点 $(S,R)$。直线 $R=S$ 把平面分成安全域和失效域。现在，提高抗力均值、降低作用均值、减小两者离散程度，分别会怎样改变落入失效域的点数，就可以直接观察。
+更清楚的方式是把每次状态画成平面中的一个点 $(S,R)$。如果进一步假定 $R$ 与 $S$ 联合服从二维正态分布，这些点的概率密度会形成一个可倾斜的椭圆“山丘”。直线 $R=S$ 把平面分成安全域和失效域，**失效概率是二维联合密度在 $R\le S$ 半平面上的积分。**
+
+相关系数 $\rho$ 决定密度椭圆的倾斜。在线性极限状态 $g=R-S$ 下：
+
+$$
+\mu_g=\mu_R-\mu_S,\qquad
+\sigma_g=\sqrt{\sigma_R^2+\sigma_S^2-2\rho\sigma_R\sigma_S}
+$$
+
+若 $R,S$ 联合正态，则 $g$ 仍为正态变量：
+
+$$
+\beta=\frac{\mu_g}{\sigma_g},\qquad P_f=\Phi(-\beta)
+$$
+
+独立是 $\rho=0$ 的特殊情形；这时才可把组合标准差写成 $\sqrt{\sigma_R^2+\sigma_S^2}$。注意：分别正态并不自动保证联合正态，本页明确采用联合正态模型。
+
+<details>
+<summary>展开：二维联合正态密度写成什么</summary>
+
+令 $z_R=(r-\mu_R)/\sigma_R$、$z_S=(s-\mu_S)/\sigma_S$，则
+
+$$
+f_{R,S}(r,s)=\frac{1}{2\pi\sigma_R\sigma_S\sqrt{1-\rho^2}}
+\exp\left[-\frac{z_R^2-2\rho z_Rz_S+z_S^2}{2(1-\rho^2)}\right]
+$$
+
+失效概率不是图上的几何面积，而是密度在失效半平面上的积分：
+
+$$
+P_f=\iint_{r\le s} f_{R,S}(r,s)\,\mathrm dr\,\mathrm ds
+$$
+
+交互中的红蓝深浅表示密度；红色区域本身有多大没有概率意义，只有对密度积分才有意义。
+</details>
 
 <iframe class="interaction-frame" src="../interactive/reliability.html" title="作用与抗力可靠度交互实验" loading="lazy"></iframe>
 
 <p class="interaction-caption">先只改变一个参数。观察“均值更安全”和“波动更稳定”是不是同一件事。</p>
+
+<details class="video-clips" open>
+<summary>本主题的三段视频｜先看分布，再看二维相关，最后回到结构可靠度</summary>
+
+<div class="video-clip-grid">
+<article class="video-clip">
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/LT4A3XM1ZU8?start=8" title="Structural Reliability Bivariate Probability Density" loading="lazy" allowfullscreen></iframe></div>
+<h3>1｜为什么必须画二维联合密度</h3>
+<p>把一次状态理解为 $(S,R)$ 的一对取值，区分联合概率与两条一维边缘分布。</p>
+<p class="attribution">B. Bhattacharya 结构可靠度课程 · 约00:08起</p>
+</article>
+<article class="video-clip">
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/2Yt4o7gAuWw?start=20" title="Structural Reliability Joint Normal Distribution" loading="lazy" allowfullscreen></iframe></div>
+<h3>2｜相关性怎样旋转密度椭圆</h3>
+<p>观察 $\rho$ 改变等密度线方向，并连接到 $R-S$ 沿失效边界法向的离散。</p>
+<p class="attribution">B. Bhattacharya 结构可靠度课程 · 约00:20起</p>
+</article>
+<article class="video-clip">
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/VMO1BlZtjlg?start=18" title="Structural Reliability Formulation" loading="lazy" allowfullscreen></iframe></div>
+<h3>3｜概率为什么进入结构设计</h3>
+<p>只看“随机变量—极限状态—失效事件”这条线；公式细节留到交互完成之后。</p>
+<p class="attribution">Stanford · Jack Baker · 约00:18起</p>
+</article>
+</div>
+
+**中文总结：** 一维正态解释单个变量怎样波动；二维联合正态解释 $R$ 与 $S$ 怎样成对出现；可靠度则把联合概率质量与 $R=S$ 失效边界联系起来。三个视频是递进关系，不是同一内容的重复播放。
+</details>
 
 ## 洞察｜可靠不是绝对不会失败 {#insight}
 
@@ -96,4 +157,6 @@ $$
 - 方案B主要通过降低离散程度实现。
 
 解释这两种方案在材料、施工、质量控制和成本上的工程含义为何不同。
+
+然后固定四个边缘参数，只把 $\rho$ 依次改为 $-0.7$、$0$、$+0.7$。记录密度椭圆方向、$\sigma_g$、$\beta$ 与 $P_f$ 的变化，并尝试给“作用较大时抗力也同时较大/较小”各找一个真实或反例场景。相关性必须有物理来源，不能为了得到更好看的可靠指标任意填写。
 

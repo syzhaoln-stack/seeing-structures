@@ -6,6 +6,42 @@
 英文视频在相关正文页配有原创中文分段导看、术语和总结。这里不提供未经许可的完整字幕翻译；若视频自身提供字幕，可在播放器中选择英文字幕或平台自动翻译。只有来源明确允许再利用时，未来版本才会加入完整双语字幕。
 :::
 
+## 正文里的“三段式”观看路径
+
+每个核心主题至少配置 2—3 段，角色固定为“建立直觉—补足推导—观察实验/工程”。正文中的播放器已经定位到建议起始时间；额外视频默认折叠，避免同时出现过多运动画面。
+
+| 正文 | 第1段：直觉 | 第2段：推导/中文 | 第3段：实验/工程 |
+|---|---|---|---|
+| [F0 把结构切开看](../foundations/f0-language.qmd) | 应力与应变动画 | Purdue 自由体 | 北化中文应力短讲 |
+| [F1 拉、压与扭转](../foundations/f1-axial-torsion.qmd) | 扭转动画 | 轴向伸长例题 | 北化轴力图 |
+| [F2 梁的内力](../foundations/f2-beam-forces.qmd) | 剪力弯矩动态图 | 完整分段例题 | 北化中文推导 |
+| [F3 梁的应力](../foundations/f3-beam-stress.qmd) | 梁应力动画 | Jeff Hanson 推导 | BYU 中性轴短讲 |
+| [F4 梁的挠度](../foundations/f4-deflection.qmd) | 曲率—挠度动画 | 北化中文微分关系 | 双积分完整算例 |
+| [F5 应力状态与失稳](../foundations/f5-stress-stability.qmd) | Mohr 圆 | 屈曲动画 | 失效理论比较 |
+| [M0 为什么还需要设计](../chapters/m0-design.qmd) | 建筑力路 | 节点传力 | 米约高架桥方案/施工 |
+| [M1 可靠度](../chapters/m1-reliability.qmd) | 二维联合密度 | 联合正态与相关 | Stanford 可靠度表达 |
+| [M2 材料合作](../chapters/m2-materials.qmd) | 混凝土为何配筋 | 钢材拉伸试验 | ACI 黏结研究 |
+| [M3 受弯全过程](../chapters/m3-bending.qmd) | 弹性阶段 | 适筋梁破坏 | 超筋梁破坏 |
+| [M4 正常使用](../chapters/m4-service.qmd) | 新闻现象 | UNSW 同步模型 | 千禧桥修复 |
+| [M5 偏心受压](../chapters/m5-eccentric.qmd) | ACI 偏心柱试验 | 构件 $P\delta$ | 体系 $P\Delta$ |
+| [M6 预应力](../chapters/m6-prestress.qmd) | 先压后载动画 | TxDOT 制造/架设 | 预应力梁破坏 |
+| [M7 AI 审查](../chapters/m7-ai-review.qmd) | FEM 原理 | 常见建模错误 | Vanderbilt 验证/确认 |
+| [X1 剪、扭与力流](../extensions/x1-shear-torsion.qmd) | 无箍筋剪切 | 弯曲裂缝比较 | PC 梁扭转试验 |
+| [X2 钢与组合结构](../extensions/x2-steel-composite.qmd) | 腹板局部屈曲 | AISC 连接 | 组合梁/栓钉现场 |
+| [X3 砌体](../extensions/x3-masonry.qmd) | 振动台倒塌 | NPTEL 体系导论 | NPTEL 强度行为 |
+
+::: {.student-evidence}
+三段不是三份作业。第一次只看第1段并作预测；无法解释时再开第2段；需要验证机制或迁移到工程时才看第3段。对已经掌握公式的学生，可以跳过第2段，避免“专家逆转效应”。
+:::
+
+## 0｜可靠度：从二维密度到失效概率
+
+| 递进 | 视频 | 观看任务 |
+|---|---|---|
+| 联合概率 | [Bivariate probability density](https://www.youtube.com/watch?v=LT4A3XM1ZU8) — B. Bhattacharya · 4:18 | 为什么一次状态必须由 $(S,R)$ 两个数共同描述？ |
+| 联合正态 | [Joint normal distribution](https://www.youtube.com/watch?v=2Yt4o7gAuWw) — B. Bhattacharya · 14:33 | $\rho$ 怎样改变椭圆方向与跨越 $R=S$ 的概率质量？ |
+| 结构表达 | [Reliability formulation](https://www.youtube.com/watch?v=VMO1BlZtjlg) — Jack Baker / Stanford · 7:09 | 随机变量、极限状态和失效事件如何闭合？ |
+
 ## 1｜外力、内力、应力与材料
 
 | 困惑 | 视频 | 平台 / 时长 | 观看后要能回答 |

@@ -102,6 +102,15 @@ Practical Engineering 用实体试件比较无筋、普通配筋与预应力混�
 主梁通常以弯剪为主，墩柱和塔柱常出现压弯组合，吊杆与拉索以受拉为主。不同构件看似外形差异很大，却共享“变形协调—材料本构—内力平衡”这一套语言。
 :::
 
+<details class="video-clips">
+<summary>再看两段｜材料曲线与黏结如何让“合作”成立</summary>
+<div class="video-clip-grid two">
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/FpO2KImasNo?start=8" title="Tensile Testing" loading="lazy" allowfullscreen></iframe></div><h3>2｜把应力—应变曲线放回试验机</h3><p>只看加载、伸长、颈缩与断裂怎样对应曲线事件；区分“强度高”和“延性好”。</p><p class="attribution">Instron · 约00:08起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/UcPm61zRATk?start=120" title="Advances on Bond of Embedded Steel Reinforcement" loading="lazy" allowfullscreen></iframe></div><h3>3｜没有黏结，截面不能协调变形</h3><p>从约02:00观察钢筋肋、滑移与锚固问题；不要求第一次观看规范模型细节。</p><p class="attribution">American Concrete Institute · 约02:00起</p></article>
+</div>
+<p><strong>观看顺序：</strong> 先看本章已有的混凝土梁实体比较，再看钢材自身行为，最后看钢筋—混凝土界面。</p>
+</details>
+
 ## 拓展｜改变钢筋位置并留下证据 {#extension}
 
 在交互模型中选择三个钢筋位置，记录相同曲率下的钢筋应变和力臂。回答：

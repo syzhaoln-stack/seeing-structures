@@ -1,7 +1,78 @@
-<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>可靠度</title><link rel="stylesheet" href="common.css"></head><body><main><section class="lab"><header><div><span class="tag">LAB 02 · RELIABILITY</span><h1>安全不是两个定值相减</h1><p>把抗力 R 与作用效应 S 看成分布；重叠区域提示失效可能，而非宣布某次必然失效。</p></div></header><div class="grid"><div class="controls">
-<div class="control"><label for="mr">平均抗力 μR <output id="mrv" class="value"></output></label><input id="mr" type="range" min="80" max="180" value="130"></div><div class="control"><label for="sr">抗力离散 σR <output id="srv" class="value"></output></label><input id="sr" type="range" min="4" max="30" value="14"></div><div class="control"><label for="ms">平均效应 μS <output id="msv" class="value"></output></label><input id="ms" type="range" min="40" max="150" value="85"></div><div class="control"><label for="ss">效应离散 σS <output id="ssv" class="value"></output></label><input id="ss" type="range" min="4" max="30" value="12"></div>
-<div class="readouts"><div class="readout" id="betabox"><b id="beta"></b><span>可靠指标 β（概念）</span></div><div class="readout warn"><b id="pf"></b><span>P(R−S≤0)</span></div><div class="readout"><b id="margin"></b><span>平均安全裕度</span></div><div class="readout"><b id="spread"></b><span>组合标准差</span></div></div><p class="note">假定 R、S 相互独立且服从正态分布。真实工程中的尾部、相关性与模型不确定性可能改变结论。</p></div>
-<div class="view"><svg viewBox="0 0 700 420" role="img" aria-labelledby="t d"><title id="t">抗力与作用效应概率分布</title><desc id="d">蓝色为抗力分布，红色为效应分布，阴影为概念重叠区域。</desc><g transform="translate(35 25)"><line class="axis" x1="35" x2="625" y1="340" y2="340"/><line class="axis" x1="35" x2="35" y1="340" y2="25"/><g id="ticks"></g><path id="area" fill="#b86f00" opacity=".18"/><path id="rpath" class="blue animate" stroke-width="4"/><path id="spath" class="red animate" stroke-width="4"/><line id="fail" x1="0" x2="0" y1="45" y2="340" stroke="#b86f00" stroke-dasharray="5 5"/><text id="failLabel" class="strong-label" y="38" text-anchor="middle">R = S 边界</text><text class="strong-label" x="505" y="72" fill="#2457d6">抗力 R</text><text class="strong-label" x="125" y="72" fill="#d83b3b">效应 S</text><text class="label" x="520" y="380">同一量纲的效应值</text></g></svg><p id="narration" class="note" aria-live="polite"></p></div></div></section></main><script>
-const $=s=>document.querySelector(s),els=['mr','sr','ms','ss'].map(x=>$('#'+x));function erf(x){const s=x<0?-1:1,a=Math.abs(x),t=1/(1+.3275911*a),a1=.254829592,a2=-.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429;const y=1-(((((a5*t+a4)*t+a3)*t+a2)*t+a1)*t)*Math.exp(-a*a);return s*y}function cdf(x){return .5*(1+erf(x/Math.sqrt(2)))}function update(){const [mr,sr,ms,ss]=els.map(x=>+x.value);$('#mrv').value=mr;$('#srv').value=sr;$('#msv').value=ms;$('#ssv').value=ss;const sd=Math.hypot(sr,ss),beta=(mr-ms)/sd,pf=cdf(-beta);$('#beta').textContent=beta.toFixed(2);$('#pf').textContent=pf<.0001?pf.toExponential(2):(pf*100).toFixed(2)+'%';$('#margin').textContent=(mr-ms).toFixed(0);$('#spread').textContent=sd.toFixed(1);$('#betabox').className='readout '+(beta>=3?'good':beta<2?'warn':'');
-const min=20,max=210,X=v=>35+(v-min)/(max-min)*590,Y=(v,m,s)=>340-285*Math.exp(-.5*Math.pow((v-m)/s,2));function path(m,s){let d='';for(let i=0;i<=160;i++){const v=min+(max-min)*i/160;d+=(i?'L':'M')+X(v).toFixed(1)+' '+Y(v,m,s).toFixed(1)}return d}$('#rpath').setAttribute('d',path(mr,sr));$('#spath').setAttribute('d',path(ms,ss));let d='M'+X(min)+' 340';for(let i=0;i<=160;i++){const v=min+(max-min)*i/160,y=Math.max(Y(v,mr,sr),Y(v,ms,ss));d+='L'+X(v).toFixed(1)+' '+y.toFixed(1)}d+='L'+X(max)+' 340Z';$('#area').setAttribute('d',d);const boundary=X((mr+ms)/2);$('#fail').setAttribute('x1',boundary);$('#fail').setAttribute('x2',boundary);$('#failLabel').setAttribute('x',boundary);$('#narration').textContent=beta<2?'两条分布明显接近。先查控制变量、尾部分布和模型误差，不要把百分数当成完整风险结论。':beta<3?'平均值看似分开，但离散性仍贡献明显重叠。':'在当前正态、独立假定下分离度较高；假定本身仍需证据。'}els.forEach(x=>x.addEventListener('input',update));update();
-</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>抗力—作用联合概率密度</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    .density-wrap{position:relative;max-width:760px;margin:auto}.density-wrap canvas{display:block;width:100%;height:auto;background:#fff;border:1px solid #dce4e6}.density-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:9px}.density-legend span{font-size:12px;color:var(--muted)}.swatch{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:-1px}.safe-swatch{background:rgba(36,87,214,.55)}.fail-swatch{background:rgba(216,59,59,.55)}.line-swatch{height:3px;background:#182329;vertical-align:3px}.advanced{margin:3px 0 14px;border:1px solid var(--line);background:#fff}.advanced summary{cursor:pointer;padding:8px 10px;font-weight:700}.advanced .control{padding:0 10px 8px;margin:0}.formula-note{font:700 12px/1.55 ui-monospace,"Cascadia Code",monospace;background:#eef2f3;padding:8px 10px;margin:8px 0}.micro{font-size:11px;color:var(--muted);line-height:1.55}@media(max-width:700px){.density-legend{grid-template-columns:1fr}.view{padding:10px}.density-wrap canvas{min-height:280px}}
+  </style>
+</head>
+<body>
+<main>
+<section class="lab">
+  <header>
+    <div><span class="tag">M1 · JOINT DENSITY</span><h1>一次状态，是平面中的一个点</h1><p>横轴是作用效应 S，纵轴是抗力 R；联合密度落到 R≤S 一侧的概率质量才是失效概率。</p></div>
+  </header>
+  <div class="grid">
+    <aside class="controls">
+      <div class="control"><label for="mr"><span>平均抗力 μ<sub>R</sub></span><output id="mrv" class="value"></output></label><input id="mr" type="range" min="70" max="180" value="130"></div>
+      <div class="control"><label for="ms"><span>平均效应 μ<sub>S</sub></span><output id="msv" class="value"></output></label><input id="ms" type="range" min="40" max="155" value="85"></div>
+      <div class="control"><label for="sr"><span>抗力离散 σ<sub>R</sub></span><output id="srv" class="value"></output></label><input id="sr" type="range" min="4" max="30" value="14"></div>
+      <div class="control"><label for="ss"><span>效应离散 σ<sub>S</sub></span><output id="ssv" class="value"></output></label><input id="ss" type="range" min="4" max="30" value="12"></div>
+      <details class="advanced">
+        <summary>进阶：R 与 S 是否相关？</summary>
+        <div class="control"><label for="rho">相关系数 ρ <output id="rhov" class="value"></output></label><input id="rho" type="range" min="-80" max="80" value="0"><p class="micro">ρ=0 表示在线性意义下不相关；在联合正态假定下也意味着独立。正相关会使 R−S 的离散减小，负相关则增大。</p></div>
+      </details>
+      <div class="readouts">
+        <div class="readout" id="betabox"><b id="beta"></b><span>可靠指标 β</span></div>
+        <div class="readout warn"><b id="pf"></b><span>P(R−S≤0)</span></div>
+        <div class="readout"><b id="margin"></b><span>平均安全裕度 μg</span></div>
+        <div class="readout"><b id="spread"></b><span>裕度标准差 σg</span></div>
+      </div>
+      <div class="formula-note">g=R−S<br>σg²=σR²+σS²−2ρσRσS<br>β=μg/σg</div>
+      <p class="note">这里只演示“R、S 联合正态且极限状态为线性差值”的情形。真实尾部、非正态变量、模型偏差与非线性极限状态会改变结果。</p>
+    </aside>
+    <section class="view">
+      <div class="density-wrap">
+        <canvas id="density" width="720" height="520" role="img" aria-label="作用效应S与抗力R的二维联合正态密度，R等于S对角线下方为失效域"></canvas>
+        <div class="density-legend" aria-hidden="true">
+          <span><i class="swatch safe-swatch"></i>安全域中的概率密度</span>
+          <span><i class="swatch fail-swatch"></i>失效域中的概率密度</span>
+          <span><i class="swatch line-swatch"></i>极限状态 R=S</span>
+        </div>
+      </div>
+      <p id="narration" class="note" aria-live="polite"></p>
+    </section>
+  </div>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s), inputs=['mr','ms','sr','ss','rho'].map(id=>$('#'+id));
+function erf(x){const sign=x<0?-1:1,a=Math.abs(x),t=1/(1+.3275911*a),c=[.254829592,-.284496736,1.421413741,-1.453152027,1.061405429];const y=1-(((((c[4]*t+c[3])*t+c[2])*t+c[1])*t+c[0])*t)*Math.exp(-a*a);return sign*y}
+function cdf(x){return .5*(1+erf(x/Math.sqrt(2)))}
+const canvas=$('#density'),ctx=canvas.getContext('2d'),W=720,H=520,pad={l:70,r:28,t:30,b:62},min=20,max=210;
+const X=s=>pad.l+(s-min)/(max-min)*(W-pad.l-pad.r), Y=r=>H-pad.b-(r-min)/(max-min)*(H-pad.t-pad.b);
+function joint(s,r,ms,mr,ss,sr,rho){const zs=(s-ms)/ss,zr=(r-mr)/sr,q=(zs*zs-2*rho*zs*zr+zr*zr)/(2*(1-rho*rho));return Math.exp(-q)/(2*Math.PI*ss*sr*Math.sqrt(1-rho*rho))}
+function ellipse(ms,mr,ss,sr,rho,k){ctx.beginPath();for(let i=0;i<=120;i++){const t=2*Math.PI*i/120,c=Math.cos(t),s=Math.sin(t),sv=ms+k*ss*c,rv=mr+k*sr*(rho*c+Math.sqrt(1-rho*rho)*s);if(i===0)ctx.moveTo(X(sv),Y(rv));else ctx.lineTo(X(sv),Y(rv))}ctx.stroke()}
+function draw(ms,mr,ss,sr,rho){
+  ctx.clearRect(0,0,W,H);ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle='#e1e7e9';ctx.lineWidth=1;ctx.font='12px system-ui';ctx.fillStyle='#5b6970';ctx.textAlign='center';ctx.textBaseline='top';
+  for(let v=40;v<=200;v+=20){ctx.beginPath();ctx.moveTo(X(v),pad.t);ctx.lineTo(X(v),H-pad.b);ctx.stroke();ctx.fillText(v,X(v),H-pad.b+9)}
+  ctx.textAlign='right';ctx.textBaseline='middle';for(let v=40;v<=200;v+=20){ctx.beginPath();ctx.moveTo(pad.l,Y(v));ctx.lineTo(W-pad.r,Y(v));ctx.stroke();ctx.fillText(v,pad.l-9,Y(v))}
+  ctx.fillStyle='rgba(216,59,59,.075)';ctx.beginPath();ctx.moveTo(X(min),Y(min));ctx.lineTo(X(max),Y(min));ctx.lineTo(X(max),Y(max));ctx.closePath();ctx.fill();
+  const cols=72,rows=72,ds=(max-min)/cols,dr=(max-min)/rows,maxf=joint(ms,mr,ms,mr,ss,sr,rho);
+  for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){const s=min+(i+.5)*ds,r=min+(j+.5)*dr,f=joint(s,r,ms,mr,ss,sr,rho)/maxf;if(f<.008)continue;const alpha=.04+.66*Math.pow(f,.68),fail=r<=s;ctx.fillStyle=fail?`rgba(216,59,59,${alpha})`:`rgba(36,87,214,${alpha})`;ctx.fillRect(X(s-ds/2),Y(r+dr/2),X(s+ds/2)-X(s-ds/2)+1,Y(r-dr/2)-Y(r+dr/2)+1)}
+  ctx.strokeStyle='rgba(24,35,41,.55)';ctx.lineWidth=1.5;ellipse(ms,mr,ss,sr,rho,1);ctx.setLineDash([5,4]);ellipse(ms,mr,ss,sr,rho,2);ctx.setLineDash([]);
+  ctx.strokeStyle='#182329';ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(X(min),Y(min));ctx.lineTo(X(max),Y(max));ctx.stroke();
+  ctx.fillStyle='#182329';ctx.font='700 12px system-ui';ctx.textAlign='left';ctx.textBaseline='bottom';ctx.fillText('R = S',X(160)+8,Y(160)-6);
+  ctx.fillStyle='#fff';ctx.strokeStyle='#182329';ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(ms),Y(mr),5,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.fillStyle='#182329';ctx.font='700 14px system-ui';ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText('作用效应 S',pad.l+(W-pad.l-pad.r)/2,H-30);ctx.save();ctx.translate(22,pad.t+(H-pad.t-pad.b)/2);ctx.rotate(-Math.PI/2);ctx.fillText('抗力 R',0,0);ctx.restore();
+  ctx.fillStyle='#a52d2d';ctx.font='700 13px system-ui';ctx.textAlign='right';ctx.textBaseline='bottom';ctx.fillText('失效域 R≤S',W-pad.r-8,H-pad.b-10);ctx.fillStyle='#2457d6';ctx.textAlign='left';ctx.textBaseline='top';ctx.fillText('安全域 R>S',pad.l+10,pad.t+10);
+}
+function update(){const mr=+$('#mr').value,ms=+$('#ms').value,sr=+$('#sr').value,ss=+$('#ss').value,rho=+$('#rho').value/100;$('#mrv').value=mr;$('#msv').value=ms;$('#srv').value=sr;$('#ssv').value=ss;$('#rhov').value=rho.toFixed(2);const mug=mr-ms,sdg=Math.sqrt(sr*sr+ss*ss-2*rho*sr*ss),beta=mug/sdg,pf=cdf(-beta);$('#beta').textContent=beta.toFixed(2);$('#pf').textContent=pf<.0001?pf.toExponential(2):(pf*100).toFixed(2)+'%';$('#margin').textContent=mug.toFixed(0);$('#spread').textContent=sdg.toFixed(1);$('#betabox').className='readout '+(beta>=3?'good':beta<2?'warn':'');draw(ms,mr,ss,sr,rho);const corr=rho>.15?'正相关使密度椭圆沿右上方向倾斜，并减小差值 R−S 的离散。':rho<-.15?'负相关使高作用更常与低抗力配对、低作用与高抗力配对；差值 R−S 的离散增大。':'当前接近不相关，椭圆倾斜很小。';$('#narration').textContent=`${corr} 红色密度越多跨入 R≤S 一侧，失效概率越大；不要把整块红色几何面积误认为概率。`}
+inputs.forEach(el=>el.addEventListener('input',update));update();
+</script>
+</body>
+</html>

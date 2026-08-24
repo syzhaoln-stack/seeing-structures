@@ -50,6 +50,14 @@ $$v_L=\frac{PL^3}{3EI}$$
 <p class="attribution">视频：The Efficient Engineer。时间段为约略导航，建议播放后用一张纸画出四张对应图。</p>
 </div>
 
+<details class="video-clips">
+<summary>再看两段｜中文微分关系与完整积分算例</summary>
+<div class="video-clip-grid two">
+<article class="video-clip"><div class="video-embed"><iframe src="https://player.bilibili.com/player.html?bvid=BV1nAL6zqEcT&autoplay=0" title="工程力学：挠曲线近似微分方程" loading="lazy" allowfullscreen></iframe></div><h3>2｜中文短讲：曲率到挠曲线</h3><p>只记录 $M/EI$、转角与挠度的导数关系；正负号必须回到坐标约定解释。</p><p class="attribution">Bilibili · 北京化工大学官成宇</p></article>
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/nM4vrTT8fUc?start=35" title="Double Integration Method for Beam Deflections" loading="lazy" allowfullscreen></iframe></div><h3>3｜完整算例：边界条件落地</h3><p>在求积分常数前暂停，先独立写出支点位移与固定端转角条件。</p><p class="attribution">structurefree · 约00:35起</p></article>
+</div>
+</details>
+
 ## 实际应用｜服务性问题的证据链 {#application}
 
 伦敦千禧桥的开桥振动提醒我们：结构远未达到强度极限，也可能因人—结构相互作用而无法正常使用。对普通梁桥，服务性证据至少包括短期挠度、长期效应、裂缝、振动和构造/非结构构件容许变形。

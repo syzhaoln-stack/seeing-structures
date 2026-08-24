@@ -38,6 +38,14 @@ $$\sigma=\frac{N}{A}\pm\frac{M}{W}$$
 <p class="attribution">视频：TDMRC Media，振动台无约束砌体墙倒塌演示。短片用于观察失效形态，不代表所有砌体体系。</p>
 </div>
 
+<details class="video-clips">
+<summary>再看两段｜从材料离散性到砌体强度</summary>
+<div class="video-clip-grid two">
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/E-rfU6n2rCw?start=90" title="Introductory Design of Masonry Structures" loading="lazy" allowfullscreen></iframe></div><h3>2｜先认识砌体不是连续材料</h3><p>从约01:30区分块体、砂浆、界面与砌筑方式；第一次不追完整设计公式。</p><p class="attribution">NPTEL / IIT Madras · 约01:30起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/Z5z46jjKtqo?start=45" title="Strength and Behaviour of Masonry" loading="lazy" allowfullscreen></iframe></div><h3>3｜强度来自组合而非单块砖</h3><p>比较块材强度、砂浆、界面和施工质量如何共同改变墙体压缩与开裂。</p><p class="attribution">NPTEL / IIT Madras · 约00:45起</p></article>
+</div>
+</details>
+
 ## 实际应用｜承重墙、挡墙与历史结构 {#application}
 
 承重砌体建筑需要把楼面竖向荷载和风/地震作用送到基础；挡墙还承受侧向土压力并依赖墙身自重、基础和排水；历史砖石拱桥则主要通过压缩线传力，但填料、拱上结构、裂缝和基础移动会改变推力线。

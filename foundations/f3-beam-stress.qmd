@@ -54,6 +54,14 @@ $Q$ 是所考察水平线一侧面积对中性轴的一次矩，$b$ 是该处实
 <p class="attribution">视频：The Efficient Engineer。建议在 03:20 暂停，自己画一遍应变图再继续。</p>
 </div>
 
+<details class="video-clips">
+<summary>再看两段｜一段推导，一段大学短讲</summary>
+<div class="video-clip-grid two">
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/f2huGCidqMo?start=42" title="Beam Bending and the Flexure Formula" loading="lazy" allowfullscreen></iframe></div><h3>2｜把 $My/I$ 拆成三类关系</h3><p>标注哪一步来自平截面几何、哪一步来自材料关系、哪一步来自截面平衡。</p><p class="attribution">Jeff Hanson · 约00:42起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/HHdfcThvIDM?start=28" title="Normal Stress in Beam Bending" loading="lazy" allowfullscreen></iframe></div><h3>3｜十一分钟强化中性轴</h3><p>重点看应变线性分布怎样映射成正应力；材料非线性时要指出哪一步先失效。</p><p class="attribution">Michael A. Scott · BYU · 约00:28起</p></article>
+</div>
+</details>
+
 ## 实际应用｜用海绵验证平截面假定 {#application}
 
 曼彻斯特大学的 [Bending 模型](https://epsassets.manchester.ac.uk/structural-concepts/Statics/bending/bending_con.php) 用画有横纵线的柔软梁展示弯曲：横线弯曲后仍近似保持直线并与纵轴近似垂直，上下纤维分别缩短和伸长。你可以用海绵、橡皮或带网格纸条复现实验。

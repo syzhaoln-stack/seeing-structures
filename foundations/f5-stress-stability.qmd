@@ -51,6 +51,13 @@ $KL$ 是有效长度。该式描述稳定分岔，不是材料压碎强度公式
 
 <p class="attribution">两段视频均来自 The Efficient Engineer；中文为原创分段导看，不是逐字字幕。</p>
 
+<details class="video-clips">
+<summary>第三段｜从应力状态走到材料失效准则</summary>
+<div class="video-clip-grid one">
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/xkbQnBAOFEg?start=35" title="Understanding Failure Theories" loading="lazy" allowfullscreen></iframe></div><h3>3｜Rankine、Tresca 与 von Mises</h3><p>不要记三张包络线；先按延性/脆性与应力状态选择机制，再看准则怎样压缩多轴应力。</p><p class="attribution">The Efficient Engineer · 约00:35起</p></article>
+</div>
+</details>
+
 ## 实际应用｜柱、桁架压杆与薄板 {#application}
 
 钢柱会整体弯曲屈曲，工字截面还可能扭转或弯扭屈曲；薄翼缘与腹板会局部屈曲。钢筋混凝土偏心受压柱要考虑二阶效应；桁架中细长压杆的截面常明显大于同轴力拉杆，原因也不是“受压材料更弱”这么简单。

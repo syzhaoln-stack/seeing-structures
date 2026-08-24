@@ -45,6 +45,13 @@
 
 <p class="attribution">来源：Think Up / Materials Lab On-line；Tyler Ley。播放器仅嵌入原视频。</p>
 
+<details class="video-clips">
+<summary>第三段｜让空间扭转裂缝与闭合配筋可见</summary>
+<div class="video-clip-grid one">
+<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/z8_2rw29Rok?start=5" title="Torsion Experiment of a PC Beam Specimen" loading="lazy" allowfullscreen></iframe></div><h3>3｜PC 梁扭转试验</h3><p>沿四个侧面追踪斜裂缝是否构成螺旋路径，再用闭合箍筋、纵筋和斜压杆解释空间平衡。</p><p class="attribution">Chyuan-Hwan Jeng · 约00:05起</p></article>
+</div>
+</details>
+
 ## 实际应用｜牛腿、盖梁、孔洞与锚固区 {#application}
 
 压杆—拉杆模型常用于桥墩盖梁、短牛腿、深梁、梁腹板大孔洞、桩帽和预应力锚固区。实际设计应完成：荷载路径、节点尺寸、压杆有效强度、拉杆面积、锚固长度、横向约束与构造钢筋的闭环。
