@@ -12,6 +12,8 @@ __pycache__/
 *.pyc
 *.pdf
 qa-*.png
+research/*.html
+research/*_files/
 sources/raw/
 sources/archive/
 *.log

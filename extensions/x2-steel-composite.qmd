@@ -29,12 +29,12 @@
 
 <div class="video-pair">
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/cM1mVXSFnq0" title="Local web buckling of a plate girder" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/cM1mVXSFnq0?start=38" title="Local web buckling of a plate girder" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=cM1mVXSFnq0&amp;t=38s">在原平台打开核心时刻 00:38</a></p></noscript></div>
 <h3>两分钟看腹板局部屈曲</h3>
 <p>观察屈曲波形从哪里出现，以及整体梁尚未“压坏”时局部板件怎样先失去平面形状。将波形位置与弯矩、剪力和边界约束对应。</p>
 </div>
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/dhAP3yDD_uo" title="AISC Bolting and Welding Primer" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/dhAP3yDD_uo?start=240" title="AISC Bolting and Welding Primer" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=dhAP3yDD_uo&amp;t=240s">在原平台打开核心时刻 04:00</a></p></noscript></div>
 <h3>连接导看</h3>
 <p>长视频不必顺序抄写。只追踪三件事：螺栓/焊缝如何把力送过连接；连接的可能失效面在哪里；施工与检查要求怎样反过来改变节点方案。</p>
 </div>
@@ -45,7 +45,7 @@
 <details class="video-clips">
 <summary>第三段｜把钢梁与混凝土板的协调变形算出来</summary>
 <div class="video-clip-grid one">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/FB1TP5YC8Wo?start=42" title="Composite Beam Bending Example" loading="lazy" allowfullscreen></iframe></div><h3>3｜组合梁弯曲例题</h3><p>先确认界面不滑移的协调假定，再看变换截面如何把两种材料放进同一个应变分布。</p><p class="attribution">Jeff Hanson · 约00:42起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/FB1TP5YC8Wo?start=132" title="Composite Beam Bending Example" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=FB1TP5YC8Wo&amp;t=132s">在原平台打开核心时刻 02:12</a></p></noscript></div><h3>3｜组合梁弯曲例题</h3><p>先确认界面不滑移的协调假定，再看变换截面如何把两种材料放进同一个应变分布。</p><p class="attribution">Jeff Hanson · 约02:12起</p></article>
 </div>
 </details>
 

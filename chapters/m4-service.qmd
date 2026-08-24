@@ -71,7 +71,7 @@ The Efficient Engineer 的剪力—弯矩讲解采用“外荷载 → 支反力 
 
 <p class="attribution">照片：Arpingstone，公有领域，经 <a href="https://commons.wikimedia.org/wiki/File:London.millennium.bridge.arp.750pix.jpg">Wikimedia Commons</a>。</p></div>
 </div>
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/Hz72lzDxMfc" title="ITN档案：千禧桥开放后因摆动关闭" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/Hz72lzDxMfc?start=12" title="ITN档案：千禧桥开放后因摆动关闭" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=Hz72lzDxMfc&amp;t=12s">在原平台打开核心时刻 00:12</a></p></noscript></div>
 <div class="real-case-body"><p class="attribution">档案影像：<a href="https://www.youtube.com/watch?v=Hz72lzDxMfc">2000: 'Wobbly' Millennium Bridge Closed Days After Opening</a>，Frontline by ITN。</p></div>
 </article>
 
@@ -97,8 +97,8 @@ The Efficient Engineer 的剪力—弯矩讲解采用“外荷载 → 支反力 
 <details class="video-clips">
 <summary>再看两段｜从“会晃”到人—结构相互作用与修复</summary>
 <div class="video-clip-grid two">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/2cuXbpXRvJ0?start=5" title="Millennium Bridge Physics Demonstration" loading="lazy" allowfullscreen></iframe></div><h3>2｜用物理模型看同步</h3><p>关注行人步态怎样被桥面侧向运动组织起来；不要把它简化成“人走得整齐”。</p><p class="attribution">UNSW Physics · 约00:05起</p></article>
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/t6O43mrc1kA?start=95" title="How Engineers Fixed the Wobbly Millennium Bridge" loading="lazy" allowfullscreen></iframe></div><h3>3｜修复是在改哪个动力参数</h3><p>从约01:35观察阻尼器与改造逻辑，区分提高强度、提高刚度和增加耗能。</p><p class="attribution">Quest TV · 约01:35起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/2cuXbpXRvJ0?start=0" title="Millennium Bridge Physics Demonstration" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=2cuXbpXRvJ0&amp;t=0s">在原平台打开核心时刻 00:00</a></p></noscript></div><h3>2｜用物理模型看同步</h3><p>关注行人步态怎样被桥面侧向运动组织起来；不要把它简化成“人走得整齐”。</p><p class="attribution">UNSW Physics · 从开头</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/t6O43mrc1kA?start=375" title="How Engineers Fixed the Wobbly Millennium Bridge" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=t6O43mrc1kA&amp;t=375s">在原平台打开核心时刻 06:15</a></p></noscript></div><h3>3｜修复是在改哪个动力参数</h3><p>从约06:15观察阻尼器与改造逻辑，区分提高强度、提高刚度和增加耗能。</p><p class="attribution">Quest TV · 约06:15起</p></article>
 </div>
 <p><strong>观看顺序：</strong> 新闻档案给出现象，物理模型解释机制，修复视频展示设计变量。</p>
 </details>

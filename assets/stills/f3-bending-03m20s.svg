@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">梁弯曲关键帧占位图</title>
+  <desc id="desc">用于验证相对资源路径的自制示意图，正式发布时替换为取得许可的三分二十秒关键帧。</desc>
+  <rect width="640" height="360" fill="#142128"/>
+  <g stroke="#34464f" stroke-width="1" opacity=".55">
+    <path d="M0 40H640M0 80H640M0 120H640M0 160H640M0 200H640M0 240H640M0 280H640M0 320H640"/>
+    <path d="M40 0V360M80 0V360M120 0V360M160 0V360M200 0V360M240 0V360M280 0V360M320 0V360M360 0V360M400 0V360M440 0V360M480 0V360M520 0V360M560 0V360M600 0V360"/>
+  </g>
+  <path d="M76 180H564" fill="none" stroke="#d9e2e5" stroke-width="10"/>
+  <path d="M112 180l-20 35h40zm416 0l-20 35h40z" fill="none" stroke="#84969e" stroke-width="4"/>
+  <path d="M320 70v76m-14-18 14 18 14-18" fill="none" stroke="#2457d6" stroke-width="7"/>
+  <path d="M258 180l22-46 16 46m18 0 24-64 18 64" fill="none" stroke="#d83b3b" stroke-width="5" stroke-dasharray="8 7"/>
+  <rect x="36" y="28" width="226" height="42" fill="#182329" stroke="#84969e"/>
+  <text x="54" y="55" fill="#f4f7f7" font-family="sans-serif" font-size="18" font-weight="700">03:20 · 授权关键帧待替换</text>
+  <text x="36" y="330" fill="#9eb0b8" font-family="sans-serif" font-size="14">自制占位图 · 不复制原视频画面</text>
+</svg>

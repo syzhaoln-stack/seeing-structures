@@ -27,7 +27,7 @@ $$\sigma=\frac{N}{A}\pm\frac{M}{W}$$
 分析步骤是：确定洞上荷载范围 → 选择过梁/拱的力路 → 检查支承长度与局部承压 → 检查墙肢偏心受压和稳定 → 提供整体拉结。只计算一根过梁而忽略其两端把力送到哪里，链条仍不完整。
 
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/ixXYLq_r8zc" title="Collapse Test of Unconfined Masonry Wall" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/ixXYLq_r8zc?start=25" title="Collapse Test of Unconfined Masonry Wall" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=ixXYLq_r8zc&amp;t=25s">在原平台打开核心时刻 00:25</a></p></noscript></div>
 
 ### 49秒观察任务
 
@@ -41,8 +41,8 @@ $$\sigma=\frac{N}{A}\pm\frac{M}{W}$$
 <details class="video-clips">
 <summary>再看两段｜从材料离散性到砌体强度</summary>
 <div class="video-clip-grid two">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/E-rfU6n2rCw?start=90" title="Introductory Design of Masonry Structures" loading="lazy" allowfullscreen></iframe></div><h3>2｜先认识砌体不是连续材料</h3><p>从约01:30区分块体、砂浆、界面与砌筑方式；第一次不追完整设计公式。</p><p class="attribution">NPTEL / IIT Madras · 约01:30起</p></article>
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/Z5z46jjKtqo?start=45" title="Strength and Behaviour of Masonry" loading="lazy" allowfullscreen></iframe></div><h3>3｜强度来自组合而非单块砖</h3><p>比较块材强度、砂浆、界面和施工质量如何共同改变墙体压缩与开裂。</p><p class="attribution">NPTEL / IIT Madras · 约00:45起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/E-rfU6n2rCw?start=300" title="Introductory Design of Masonry Structures" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=E-rfU6n2rCw&amp;t=300s">在原平台打开核心时刻 05:00</a></p></noscript></div><h3>2｜先认识砌体不是连续材料</h3><p>从约05:00区分块体、砂浆、界面与砌筑方式；第一次不追完整设计公式。</p><p class="attribution">NPTEL / IIT Madras · 约05:00起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/Z5z46jjKtqo?start=160" title="Strength and Behaviour of Masonry" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=Z5z46jjKtqo&amp;t=160s">在原平台打开核心时刻 02:40</a></p></noscript></div><h3>3｜强度来自组合而非单块砖</h3><p>比较块材强度、砂浆、界面和施工质量如何共同改变墙体压缩与开裂。</p><p class="attribution">NPTEL / IIT Madras · 约02:40起</p></article>
 </div>
 </details>
 

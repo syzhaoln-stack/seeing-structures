@@ -32,12 +32,12 @@
 
 <div class="video-pair">
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/GHMCG4fUUpM" title="Shear failure of a reinforced concrete beam" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/GHMCG4fUUpM?start=30" title="Shear failure of a reinforced concrete beam" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=GHMCG4fUUpM&amp;t=30s">在原平台打开核心时刻 00:30</a></p></noscript></div>
 <h3>实体证据：无抗剪钢筋梁</h3>
 <p>先关闭声音预测裂缝：它会从哪里出现、向哪里发展？再播放并记录“首裂—斜裂缝贯通—承载突降”。不要把单个试验当成设计公式，但要记住剪切破坏缺少预警。</p>
 </div>
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/hjeK_ljW9dM" title="Bending Failure of Reinforced Concrete Beam" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/hjeK_ljW9dM?start=25" title="Bending Failure of Reinforced Concrete Beam" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=hjeK_ljW9dM&amp;t=25s">在原平台打开核心时刻 00:25</a></p></noscript></div>
 <h3>实体证据：慢动作梁试验</h3>
 <p>观察裂缝不是随机噪声：竖向弯曲裂缝与斜裂缝分别在提示不同应力场。暂停在破坏前一刻，画出你认为存在的压杆、拉杆和节点。</p>
 </div>
@@ -48,7 +48,7 @@
 <details class="video-clips">
 <summary>第三段｜让空间扭转裂缝与闭合配筋可见</summary>
 <div class="video-clip-grid one">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/z8_2rw29Rok?start=5" title="Torsion Experiment of a PC Beam Specimen" loading="lazy" allowfullscreen></iframe></div><h3>3｜PC 梁扭转试验</h3><p>沿四个侧面追踪斜裂缝是否构成螺旋路径，再用闭合箍筋、纵筋和斜压杆解释空间平衡。</p><p class="attribution">Chyuan-Hwan Jeng · 约00:05起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/z8_2rw29Rok?start=0" title="Torsion Experiment of a PC Beam Specimen" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=z8_2rw29Rok&amp;t=0s">在原平台打开核心时刻 00:00</a></p></noscript></div><h3>3｜PC 梁扭转试验</h3><p>沿四个侧面追踪斜裂缝是否构成螺旋路径，再用闭合箍筋、纵筋和斜压杆解释空间平衡。</p><p class="attribution">Chyuan-Hwan Jeng · 从开头</p></article>
 </div>
 </details>
 

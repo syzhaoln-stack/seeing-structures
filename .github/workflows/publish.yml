@@ -17,6 +17,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Verify video evidence
+        run: |
+          python scripts/sync_video_times.py --check
+          python scripts/verify_video_evidence.py
+
       - name: Render and publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:

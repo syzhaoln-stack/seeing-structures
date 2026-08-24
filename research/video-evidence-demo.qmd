@@ -1,0 +1,184 @@
+---
+title: "视频证据卡｜独立原型"
+subtitle: "关键帧先行；只有运动承载证据时才播放"
+format:
+  html:
+    css:
+      - ../assets/styles.css
+      - ../assets/video-evidence.css
+    include-in-header:
+      text: |
+        <link rel="icon" href="../assets/favicon.svg">
+    include-after-body: ../includes/video-evidence-script.html
+    toc: true
+---
+
+这个页面只验证组件，不进入电子书目录，也没有修改任何章节。两张卡分别演示“需要运动”和“静态足够”。初始页面没有视频播放器；学生展开并主动点击后，才会载入指定片段。
+
+## 示例一｜裂缝发展必须看运动
+
+<div data-video-evidence>
+<script type="application/json">
+{
+  "id": "x1-shear-failure",
+  "kicker": "X1 · 剪切破坏 · 实体试验",
+  "title": "斜裂缝不是一个位置，而是一条发展的路径",
+  "thesis": "先用封面定位支座、加载区和腹部，再只看 49 秒裂缝发展。视频在这里不是装饰：关键证据是先后顺序。",
+  "still": {
+    "src": "https://i.ytimg.com/vi/GHMCG4fUUpM/hqdefault.jpg",
+    "alt": "钢筋混凝土梁抗剪破坏试验的原平台封面预览",
+    "time": "00:05",
+    "kind": "原平台封面预览",
+    "caption": "正式集成时应替换为有出处的 00:05 关键帧"
+  },
+  "guideTitle": "第一遍只跟踪三处",
+  "annotations": [
+    {
+      "x": 18,
+      "y": 76,
+      "label": "支座区",
+      "watch": "先确认反力进入梁的位置。",
+      "why": "这里剪力高，是斜裂缝路径的起点之一。",
+      "tone": "compression"
+    },
+    {
+      "x": 50,
+      "y": 28,
+      "label": "加载区",
+      "watch": "辨认外力进入梁的位置。",
+      "why": "支座与加载点之间形成压杆—拉杆传力区。",
+      "tone": "warning"
+    },
+    {
+      "x": 34,
+      "y": 57,
+      "label": "腹部斜裂缝区",
+      "watch": "跟踪裂缝是突然出现，还是逐渐转斜并贯通。",
+      "why": "裂缝方向暴露了主拉应力与内部力流。",
+      "tone": "tension"
+    }
+  ],
+  "decision": {
+    "mode": "motion",
+    "title": "保留 49 秒运动证据",
+    "reason": "一张图能告诉你裂缝在哪里，却不能告诉你裂缝从何处萌生、何时转斜、何时导致承载突降。"
+  },
+  "clip": {
+    "provider": "youtube",
+    "id": "GHMCG4fUUpM",
+    "start": 5,
+    "end": 54,
+    "title": "钢筋混凝土梁抗剪破坏试验片段",
+    "purpose": "看萌生 → 转斜 → 贯通",
+    "instruction": "先预测裂缝路径，再载入。播放器不会自动播放；播放到 00:54 即可停止。"
+  },
+  "segments": [
+    {
+      "time": "00:05–00:17",
+      "title": "建立边界与荷载",
+      "text": "只找支座和加载点，暂时不要给破坏命名。",
+      "prompt": "力从哪里进入，又必须从哪里离开？"
+    },
+    {
+      "time": "00:18–00:37",
+      "title": "追踪第一条主裂缝",
+      "text": "记录裂缝起点、倾角变化和延伸方向，不数所有细裂缝。",
+      "prompt": "裂缝方向与主拉应力方向有什么关系？"
+    },
+    {
+      "time": "00:38–00:54",
+      "title": "识别承载机制突变",
+      "text": "观察斜裂缝贯通前后的变形与承载变化，用压杆—拉杆重新解释力路。",
+      "prompt": "如果配置箍筋，哪条内部拉力路径会被补上？"
+    }
+  ],
+  "translationNote": "中文文字是本书根据试验画面编写的观察任务与结构解释，不是英文字幕翻译。",
+  "source": {
+    "creator": "Think Up / Materials Lab On-line",
+    "publisher": "YouTube",
+    "url": "https://www.youtube.com/watch?v=GHMCG4fUUpM&t=5s",
+    "linkLabel": "原视频 00:05 起 ↗",
+    "boundary": "视频与封面版权归原作者及发布平台；本卡仅嵌入原平台播放器并提供教学导看，不下载、剪辑或重新分发原视频。"
+  }
+}
+</script>
+<noscript>本卡需要 JavaScript 才能显示。可直接在 YouTube 搜索 “Shear failure of a reinforced concrete beam”。</noscript>
+</div>
+
+## 示例二｜一张图已经够用
+
+<div data-video-evidence>
+<script type="application/json">
+{
+  "id": "f3-linear-stress",
+  "kicker": "F3 · 梁弯曲 · 概念证据",
+  "title": "证明线性分布，不必先看完整十分钟",
+  "thesis": "把平截面、线性应变和线弹性材料关系放在同一张标注图上，学生已经能完成本页判断；视频降为可选拓展。",
+  "still": {
+    "alt": "梁弯曲应变与裂缝关键帧的示意占位图",
+    "time": "03:20",
+    "kind": "关键帧待截取",
+    "label": "替换为 03:20 授权关键帧",
+    "caption": "占位图明确截取目标，不冒充视频原画面"
+  },
+  "guideTitle": "一张图要说清三件事",
+  "annotations": [
+    {
+      "x": 50,
+      "y": 25,
+      "label": "受压边缘",
+      "watch": "标出压应变最大的位置。",
+      "why": "离中性轴越远，应变绝对值越大。",
+      "tone": "compression"
+    },
+    {
+      "x": 50,
+      "y": 58,
+      "label": "中性轴",
+      "watch": "找到纵向应变等于零的位置。",
+      "why": "线性分布的正负在这里转换。",
+      "tone": "verified"
+    },
+    {
+      "x": 39,
+      "y": 72,
+      "label": "受拉与开裂区",
+      "watch": "区分开裂前应力模型与开裂后混凝土退出受拉。",
+      "why": "这是材料力学公式进入钢筋混凝土设计时的模型边界。",
+      "tone": "tension"
+    }
+  ],
+  "decision": {
+    "mode": "still",
+    "title": "本页停在 03:20 即可",
+    "reason": "学习目标是辨认同一截面上的位置关系，不依赖时间演化；继续播放会加入推导步骤和术语，增加瞬时信息负担。"
+  },
+  "clip": {
+    "provider": "youtube",
+    "id": "f08Y39UiC-o",
+    "start": 200,
+    "url": "https://www.youtube.com/watch?v=f08Y39UiC-o&t=200s"
+  },
+  "segments": [
+    {
+      "time": "看图 20 秒",
+      "title": "从中性轴向两边读",
+      "text": "先说应变符号，再说大小，不要立刻代入公式。",
+      "prompt": "如果截面高度加倍，最外缘到中性轴的距离怎样变化？"
+    },
+    {
+      "time": "自讲 30 秒",
+      "title": "补齐三段证据链",
+      "text": "平截面几何给出线性应变；材料关系把应变变成应力；截面平衡把应力积分成弯矩。"
+    }
+  ],
+  "source": {
+    "creator": "The Efficient Engineer",
+    "publisher": "YouTube",
+    "url": "https://www.youtube.com/watch?v=f08Y39UiC-o&t=200s",
+    "linkLabel": "原视频 03:20 起 ↗",
+    "boundary": "正式发布前须确认关键帧使用条件并保留作者、平台、视频标题与时间点；当前占位图不复制任何原视频画面。"
+  }
+}
+</script>
+</div>

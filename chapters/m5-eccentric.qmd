@@ -71,7 +71,7 @@ $$
 桥墩和框架柱可能承受弯矩反号、施工阶段变化、地震往复作用。对称配筋可以让截面面对不同弯曲方向时保持较一致的能力，也有利于构造标准化。但它可能不是材料用量最小的方案。
 
 <article class="real-case">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/mA0HXqBz-lY" title="ACI：偏心受压混凝土柱研究" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/mA0HXqBz-lY?start=732" title="ACI：偏心受压混凝土柱研究" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=mA0HXqBz-lY&amp;t=732s">在原平台打开核心时刻 12:12</a></p></noscript></div>
 <div class="real-case-body"><span class="real-case-kicker">REAL RESEARCH · ECCENTRIC COLUMNS</span>
 
 ### 偏心距不是题目里的一行小字
@@ -101,8 +101,8 @@ American Concrete Institute 发布的渥太华大学研究展示不同偏心加�
 <details class="video-clips">
 <summary>再看两段｜把偏心距与二阶放大变成可见运动</summary>
 <div class="video-clip-grid two">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/F3CUiT8w6nE?start=35" title="P-Delta Effect in Structural Engineering" loading="lazy" allowfullscreen></iframe></div><h3>2｜轴力为何会放大侧移</h3><p>从约00:35区分初始弯矩与变形后新增的 $P\Delta$；暂停后自己画二阶自由体。</p><p class="attribution">DrOfEng · 约00:35起</p></article>
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/1N9JVzZkWLY?start=25" title="P-Delta Analysis on Buildings" loading="lazy" allowfullscreen></iframe></div><h3>3｜从单柱迁移到框架层间侧移</h3><p>观察整体 $P$–$\Delta$ 与构件 $P$–$\delta$ 的尺度差别，避免把两者混成一个系数。</p><p class="attribution">innotutorial · 约00:25起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/F3CUiT8w6nE?start=43" title="P-Delta Effect in Structural Engineering" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=F3CUiT8w6nE&amp;t=43s">在原平台打开核心时刻 00:43</a></p></noscript></div><h3>2｜轴力为何会放大侧移</h3><p>从约00:43区分初始弯矩与变形后新增的 $P\Delta$；暂停后自己画二阶自由体。</p><p class="attribution">DrOfEng · 约00:43起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/1N9JVzZkWLY?start=105" title="P-Delta Analysis on Buildings" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=1N9JVzZkWLY&amp;t=105s">在原平台打开核心时刻 01:45</a></p></noscript></div><h3>3｜从单柱迁移到框架层间侧移</h3><p>观察整体 $P$–$\Delta$ 与构件 $P$–$\delta$ 的尺度差别，避免把两者混成一个系数。</p><p class="attribution">innotutorial · 约01:45起</p></article>
 </div>
 <p><strong>观看顺序：</strong> 先看本章 ACI 偏心柱试验，再用两个动画分别解释构件与体系的二阶效应。</p>
 </details>

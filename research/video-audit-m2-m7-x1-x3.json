@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "scope": "Embedded external YouTube players in M2-M7 and X1-X3",
+  "generatedAt": "2026-08-24",
+  "items": [
+    {
+      "id": "cZINeaDjisY",
+      "page": "chapters/m2-materials.qmd",
+      "title": "Why Concrete Needs Reinforcement",
+      "source": "Practical Engineering",
+      "url": "https://www.youtube.com/watch?v=cZINeaDjisY",
+      "duration": 491,
+      "start": 135,
+      "end": 258,
+      "frameTime": 236,
+      "mode": "motion",
+      "clipStart": 154,
+      "clipEnd": 244,
+      "focus": "并排观察素混凝土梁的受拉脆断与配置受拉钢筋后裂缝逐步发展、破坏转为有预警的延性过程",
+      "labels": [
+        "受拉区",
+        "首条弯曲裂缝",
+        "钢筋承担拉力",
+        "延性预警"
+      ],
+      "narration": [
+        "弯曲使梁底受拉，素混凝土裂缝从受拉缘迅速向上贯通。",
+        "把钢筋放在受拉区后，开裂不再等同于立即失去承载力。",
+        "分散裂缝和逐步增大的挠度，是延性破坏给出的预警。"
+      ],
+      "task": "在素混凝土梁加载前暂停，预测首裂缝位置；再比较钢筋梁的裂缝数量、挠度和破坏速度。",
+      "basis": "官方英文字幕 + storyboard"
+    },
+    {
+      "id": "FpO2KImasNo",
+      "page": "chapters/m2-materials.qmd",
+      "title": "Tensile Testing",
+      "source": "Instron",
+      "url": "https://www.youtube.com/watch?v=FpO2KImasNo",
+      "duration": 88,
+      "start": 0,
+      "end": 77,
+      "frameTime": 15,
+      "mode": "stepper",
+      "focus": "把试样、夹具、加载与测量结果组织成拉伸试验的输入—过程—输出链",
+      "labels": [
+        "夹具与试样",
+        "轴向拉力",
+        "伸长/应变",
+        "弹性模量与抗拉强度"
+      ],
+      "narration": [
+        "试验机施加可测的轴向拉力，同时记录试样伸长。",
+        "不同材料和形状需要匹配夹具，避免把夹持失败误判为材料失败。",
+        "力和变形经几何归一化后，才形成可比较的应力—应变指标。"
+      ],
+      "task": "在属性清单出现前写出拉伸试验至少四个可测结果，并区分“破断力”和“抗拉强度”。",
+      "basis": "官方英文字幕 + storyboard"
+    },
+    {
+      "id": "UcPm61zRATk",
+      "page": "chapters/m2-materials.qmd",
+      "title": "Advances on Bond of Embedded Steel Reinforcement in the New Model Code 2020",
+      "source": "American Concrete Institute",
+      "url": "https://www.youtube.com/watch?v=UcPm61zRATk",
+      "duration": 1292,
+      "start": 590,
+      "end": 735,
+      "frameTime": 600,
+      "mode": "stepper",
+      "focus": "比较同为短锚固的横向钢筋处在不同浇筑高度时，施工过程如何改变拔出黏结条件",
+      "labels": [
+        "相同短锚固 5ϕ",
+        "浇筑方向 ↓",
+        "底部 / 中部 / 顶部钢筋",
+        "拔出试验"
+      ],
+      "narration": [
+        "三组试件保持短锚固思路相同，只改变横向钢筋相对浇筑方向的高度。",
+        "新拌混凝土沉降与泌水会改变钢筋下方的局部密实度，因此顶浇钢筋的黏结条件可能更差。",
+        "锚固能力不只由直径和长度决定；钢筋位置与浇筑历史也是设计和施工检查变量。"
+      ],
+      "task": "看结果曲线前，先按底部—中部—顶部给三组拔出黏结能力排序，并用沉降或泌水解释预测。",
+      "basis": "storyboard + 发布者说明；该视频无可用英文字幕"
+    },
+    {
+      "id": "SeoBurQejG8",
+      "page": "chapters/m3-bending.qmd",
+      "title": "Elastic Bending of an under reinforced concrete beam: Materials Lab on-line",
+      "source": "Think Up",
+      "url": "https://www.youtube.com/watch?v=SeoBurQejG8",
+      "duration": 91,
+      "start": 30,
+      "end": 82,
+      "frameTime": 50,
+      "mode": "motion",
+      "clipStart": 30,
+      "clipEnd": 82,
+      "focus": "观察四点弯曲中裂缝出现、卸载后闭合以及荷载—位移路径近似重合的弹性响应",
+      "labels": [
+        "四点弯曲",
+        "受拉裂缝",
+        "卸载回弹",
+        "钢筋未屈服"
+      ],
+      "narration": [
+        "开裂说明混凝土受拉能力已被超过，但钢筋仍可处于弹性阶段。",
+        "卸载后梁回到接近原位，裂缝随之闭合。",
+        "加载与卸载路径接近，表明本次循环没有显著永久变形。"
+      ],
+      "task": "在卸载前记录一条裂缝，预测卸载后它会完全闭合、部分闭合还是保持张开，并说明依据。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "0NCKo_CTiVw",
+      "page": "chapters/m3-bending.qmd",
+      "title": "Bending failure of an under reinforced concrete beam: Materials Lab on-line",
+      "source": "Think Up",
+      "url": "https://www.youtube.com/watch?v=0NCKo_CTiVw",
+      "duration": 109,
+      "start": 32,
+      "end": 101,
+      "frameTime": 67,
+      "mode": "motion",
+      "clipStart": 32,
+      "clipEnd": 101,
+      "focus": "由裂缝增多、挠度显著增长和受拉钢筋屈服识别适筋梁的延性破坏路径",
+      "labels": [
+        "分散弯曲裂缝",
+        "钢筋屈服",
+        "荷载平台",
+        "大变形预警"
+      ],
+      "narration": [
+        "裂缝首先让受拉钢筋接管拉力。",
+        "钢筋屈服后，位移仍能明显增加而荷载增长有限。",
+        "这种可见的大变形为破坏提供预警。"
+      ],
+      "task": "找到曲线开始出现平台的时刻，并把它与画面中裂缝张开和挠度增长对应起来。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "3xw9_33uNJA",
+      "page": "chapters/m3-bending.qmd",
+      "title": "Bending failure of an over reinforced concrete beam: Materials Lab on-line",
+      "source": "Think Up",
+      "url": "https://www.youtube.com/watch?v=3xw9_33uNJA",
+      "duration": 122,
+      "start": 33,
+      "end": 106,
+      "frameTime": 56,
+      "mode": "motion",
+      "clipStart": 33,
+      "clipEnd": 106,
+      "focus": "观察超筋梁在受拉钢筋尚未屈服前发生受压区混凝土突然压碎的脆性路径",
+      "labels": [
+        "受压区",
+        "混凝土压碎",
+        "钢筋未屈服",
+        "突然失效"
+      ],
+      "narration": [
+        "增加受拉钢筋会把截面可承担的拉力推高。",
+        "与之平衡的压缩合力随之增大，最终由梁顶混凝土先压碎。",
+        "曲线没有明显屈服平台，画面中的爆裂也几乎没有充分预警。"
+      ],
+      "task": "与上一条少筋/适筋梁并排观看，写出最先达到极限的材料和两者预警时间的差别。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "Hz72lzDxMfc",
+      "page": "chapters/m4-service.qmd",
+      "title": "2000: 'Wobbly' Millennium Bridge Closed Days After Opening",
+      "source": "Frontline by ITN",
+      "url": "https://www.youtube.com/watch?v=Hz72lzDxMfc",
+      "duration": 93,
+      "start": 12,
+      "end": 45,
+      "frameTime": 23,
+      "mode": "motion",
+      "clipStart": 12,
+      "clipEnd": 45,
+      "focus": "用开放首日的真实人群影像建立“未倒塌仍可能不可用”的正常使用问题",
+      "labels": [
+        "密集人群",
+        "横向摆动",
+        "开放即限流",
+        "安全≠可正常使用"
+      ],
+      "narration": [
+        "桥没有发生强度破坏，但横向运动已足以让管理者限流和关闭。",
+        "新闻当时把原因归于风和人群；后续分析需要把现象与机制分开。",
+        "正常使用极限状态直接影响公众信任和设施可用性。"
+      ],
+      "task": "只依据画面记录三个可观察事实，不先用“共振”解释；再列出还需要什么测量才能判断机制。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "2cuXbpXRvJ0",
+      "page": "chapters/m4-service.qmd",
+      "title": "Millenium bridge",
+      "source": "UNSW Physics",
+      "url": "https://www.youtube.com/watch?v=2cuXbpXRvJ0",
+      "duration": 84,
+      "start": 0,
+      "end": 76,
+      "frameTime": 43,
+      "mode": "motion",
+      "clipStart": 0,
+      "clipEnd": 76,
+      "focus": "观察桥面横向运动与行人步态相互强化的同步过程",
+      "labels": [
+        "桥面横向速度",
+        "行人侧向落脚",
+        "步态同步",
+        "正反馈"
+      ],
+      "narration": [
+        "桥先有小幅横向运动，行人为保持平衡调整落脚时刻。",
+        "相似的侧向运动会组织更多人的步态。",
+        "人群施力与桥面响应形成反馈，而不是简单的“大家预先走整齐”。"
+      ],
+      "task": "选择一名靠近栏杆的行人，连续跟踪其三次落脚与桥面方向，判断谁在影响谁。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "t6O43mrc1kA",
+      "page": "chapters/m4-service.qmd",
+      "title": "How Did Engineers Fix London's Wobbly Millennium Bridge? | Massive Engineering Mistakes",
+      "source": "Quest TV",
+      "url": "https://www.youtube.com/watch?v=t6O43mrc1kA",
+      "duration": 592,
+      "start": 375,
+      "end": 480,
+      "frameTime": 465,
+      "mode": "stepper",
+      "focus": "从现场构造和解释中区分粘滞阻尼器、调谐质量阻尼器与“单纯加固”",
+      "labels": [
+        "横向运动",
+        "粘滞阻尼器",
+        "调谐质量阻尼器",
+        "耗能而非增承载力"
+      ],
+      "narration": [
+        "改造目标不是把桥做得更强，而是削弱人—桥反馈中的振动响应。",
+        "粘滞阻尼器把相对运动转化为耗能。",
+        "调谐质量阻尼器用附加质量的反向响应降低特定频段振幅。"
+      ],
+      "task": "为画面中的每类装置写出它改变的是强度、刚度、质量还是阻尼，并说明最直接的证据。",
+      "basis": "storyboard + 发布者说明；无可用字幕"
+    },
+    {
+      "id": "mA0HXqBz-lY",
+      "page": "chapters/m5-eccentric.qmd",
+      "title": "CFRP Reinforced Concrete Columns under Eccentric Loading",
+      "source": "American Concrete Institute",
+      "url": "https://www.youtube.com/watch?v=mA0HXqBz-lY",
+      "duration": 1370,
+      "start": 732,
+      "end": 825,
+      "frameTime": 750,
+      "mode": "stepper",
+      "focus": "把偏心柱试验装置、混凝土压碎—压筋失稳的破坏序列与弯矩—侧移结果联系起来",
+      "labels": [
+        "偏心距 e",
+        "受压侧混凝土压碎",
+        "压筋局部失稳",
+        "M—中点侧移"
+      ],
+      "narration": [
+        "端部偏心把轴力同时转化为弯矩。",
+        "典型破坏从受压混凝土压碎开始，随后出现压侧 CFRP 筋失稳。",
+        "偏心距增大时，弯矩和侧移增长更快。"
+      ],
+      "task": "在破坏照片上标出受压侧与受拉侧，并按先后写出混凝土、压筋和拉筋的响应。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "F3CUiT8w6nE",
+      "page": "chapters/m5-eccentric.qmd",
+      "title": "What is P‑Delta Analysis? | P‑Delta Effect in Structural Engineering: Nonlinear Deflection Explained",
+      "source": "DrOfEng",
+      "url": "https://www.youtube.com/watch?v=F3CUiT8w6nE",
+      "duration": 416,
+      "start": 43,
+      "end": 103,
+      "frameTime": 92,
+      "mode": "stepper",
+      "focus": "在已侧移的悬臂柱上加入轴力，逐步生成二阶附加弯矩 PΔ",
+      "labels": [
+        "一阶侧移 ΔL",
+        "轴力 P",
+        "附加弯矩 PΔ",
+        "变形后平衡"
+      ],
+      "narration": [
+        "侧向荷载先造成一阶侧移。",
+        "轴力作用线与变形后柱轴产生偏心距 Δ。",
+        "因此必须在变形后几何上补入 PΔ，而不是只在初始几何上列平衡。"
+      ],
+      "task": "在 P 尚未出现时暂停，在变形后柱上补画轴力作用线和柱脚附加弯矩方向。",
+      "basis": "自动英文字幕 + storyboard"
+    },
+    {
+      "id": "1N9JVzZkWLY",
+      "page": "chapters/m5-eccentric.qmd",
+      "title": "What is P-Delta Analysis on buildings? Explained in depth.",
+      "source": "innotutorial",
+      "url": "https://www.youtube.com/watch?v=1N9JVzZkWLY",
+      "duration": 240,
+      "start": 105,
+      "end": 180,
+      "frameTime": 165,
+      "mode": "stepper",
+      "focus": "把单柱的 Pδ 迁移到多层框架总重力与层间侧移产生的整体 PΔ",
+      "labels": [
+        "层间侧移 Δ",
+        "楼层重力 P",
+        "一阶倾覆矩",
+        "二阶矩 PΔ"
+      ],
+      "narration": [
+        "侧向力使楼层产生水平位移。",
+        "竖向重力在这一位移上形成附加倾覆矩。",
+        "整体 P—Δ 与构件弯曲产生的局部 P—δ 应分尺度讨论。"
+      ],
+      "task": "在二阶矩公式出现前，分别圈出“高度 H”和“侧移 Δ”，说明它们对应的两个力矩为何不同。",
+      "basis": "自动英文字幕 + storyboard"
+    },
+    {
+      "id": "rs5eIaRix8I",
+      "page": "chapters/m6-prestress.qmd",
+      "title": "Pre-Stressed Concrete in Texas Bridge Construction",
+      "source": "TxDOT",
+      "url": "https://www.youtube.com/watch?v=rs5eIaRix8I",
+      "duration": 39,
+      "start": 7,
+      "end": 30,
+      "frameTime": 21,
+      "mode": "motion",
+      "clipStart": 7,
+      "clipEnd": 30,
+      "focus": "用短动画追踪张拉钢束、浇筑黏结、放张产生预压及预制梁架设的时间顺序",
+      "labels": [
+        "先张钢束",
+        "浇筑并黏结",
+        "放张→混凝土预压",
+        "预制桥梁"
+      ],
+      "narration": [
+        "先把钢束拉长并固定。",
+        "混凝土硬化并与钢束建立黏结后再放张。",
+        "钢束回缩趋势把梁体置于预压，随后构件才进入桥梁使用阶段。"
+      ],
+      "task": "把短片改写成四格时间线，并在每格标明钢束和混凝土分别受拉还是受压。",
+      "basis": "storyboard；视频只有音乐"
+    },
+    {
+      "id": "P13Mau2VUWw",
+      "page": "chapters/m6-prestress.qmd",
+      "title": "What is Prestressed Concrete?",
+      "source": "Practical Engineering",
+      "url": "https://www.youtube.com/watch?v=P13Mau2VUWw",
+      "duration": 526,
+      "start": 186,
+      "end": 249,
+      "frameTime": 213,
+      "mode": "stepper",
+      "focus": "用初始预压与使用荷载拉应力的叠加解释预应力主要改善开裂和挠度而非材料强度",
+      "labels": [
+        "初始压应力",
+        "使用荷载拉应力",
+        "应力抵消",
+        "正常使用改善"
+      ],
+      "narration": [
+        "预应力是在投入使用前主动引入压应力。",
+        "使用荷载造成的拉应力先用来消减已有压应力。",
+        "材料强度未必提高，但开裂与挠度出现得更晚。"
+      ],
+      "task": "分别画“只施加预应力”和“再加使用荷载”的梁底应力箭头，再画两者叠加后的结果。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "TrWBxJJ7loY",
+      "page": "chapters/m6-prestress.qmd",
+      "title": "Bending failure of a prestressed concrete beam: Materials Lab on-line",
+      "source": "Think Up",
+      "url": "https://www.youtube.com/watch?v=TrWBxJJ7loY",
+      "duration": 93,
+      "start": 30,
+      "end": 83,
+      "frameTime": 56,
+      "mode": "motion",
+      "clipStart": 30,
+      "clipEnd": 83,
+      "focus": "观察预压先延迟开裂，钢束屈服和开裂后梁又转入类似少筋梁的延性路径",
+      "labels": [
+        "梁底预压",
+        "延迟开裂",
+        "钢束屈服",
+        "开裂后延性平台"
+      ],
+      "narration": [
+        "加载初期的拉应力只是在消减梁底预压，因此梁更硬、裂缝更晚出现。",
+        "钢束屈服并开裂后，截面刚度明显下降。",
+        "最终路径仍可能表现出少筋梁式的延性，而非永不破坏。"
+      ],
+      "task": "指出曲线斜率第一次明显变化的时刻，并在画面中寻找对应的开裂或钢束屈服证据。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "GHjopp47vvQ",
+      "page": "chapters/m7-ai-review.qmd",
+      "title": "Understanding the Finite Element Method",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=GHjopp47vvQ",
+      "duration": 1116,
+      "start": 105,
+      "end": 218,
+      "frameTime": 190,
+      "mode": "motion",
+      "clipStart": 130,
+      "clipEnd": 210,
+      "focus": "把连续支架离散为节点与单元，并比较三角形、四边形、实体和线单元的不同近似",
+      "labels": [
+        "连续体",
+        "离散化",
+        "节点与单元",
+        "单元类型是建模假设"
+      ],
+      "narration": [
+        "真实结构的场变量是连续的。",
+        "有限元把连续域替换为有限个节点和单元，求得的是近似解。",
+        "单元形状和类型决定保留哪些变形模式，也决定误差。"
+      ],
+      "task": "在网格出现前先选择你会用的单元类型；继续观看后写出该选择舍弃了什么物理。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "10Ny96YAbBM",
+      "page": "chapters/m7-ai-review.qmd",
+      "title": "Tips For FEA Analysis",
+      "source": "Brendan Hasty",
+      "url": "https://www.youtube.com/watch?v=10Ny96YAbBM",
+      "duration": 530,
+      "start": 41,
+      "end": 143,
+      "frameTime": 130,
+      "mode": "stepper",
+      "focus": "按量级预估、几何材料、边界约束、连接与变形图建立有限元结果的第一轮独立检查",
+      "labels": [
+        "手算量级",
+        "几何/材料刚度",
+        "边界与连接",
+        "先看变形图"
+      ],
+      "narration": [
+        "建模前先估计结果量级，否则无法识别漂亮但错误的云图。",
+        "错误材料、过约束或漏连接都可能生成数值上收敛的答案。",
+        "变形图比应力云图更适合做第一轮故障排查。"
+      ],
+      "task": "为一个梁模型写四项“求解前预期”，并说明若变形图违背其中一项应先查哪里。",
+      "basis": "自动英文字幕 + storyboard"
+    },
+    {
+      "id": "kYTmc0645xk",
+      "page": "chapters/m7-ai-review.qmd",
+      "title": "Sankaran Mahadevan: Model Uncertainty Qualification, Verification and Validation - Research Focus 4",
+      "source": "Vanderbilt University",
+      "url": "https://www.youtube.com/watch?v=kYTmc0645xk",
+      "duration": 534,
+      "start": 78,
+      "end": 205,
+      "frameTime": 125,
+      "mode": "stepper",
+      "focus": "严格区分数值验证、物理确认和参数校准，并把三者迁移到 AI 生成的结构计算",
+      "labels": [
+        "Verification：方程解对了吗",
+        "Validation：模型像现实吗",
+        "Calibration：参数如何定",
+        "模型不确定性"
+      ],
+      "narration": [
+        "验证检查给定方程的数值求解误差，常用收敛和基准解。",
+        "确认检查数学模型是否代表现实，需要实验或观测。",
+        "校准用数据反推参数；校准成功不能自动证明模型有效。"
+      ],
+      "task": "把“网格收敛、与试验对比、反演材料参数”分别归入验证、确认或校准，并解释不能互相替代的原因。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "GHMCG4fUUpM",
+      "page": "extensions/x1-shear-torsion.qmd",
+      "title": "Shear failure of a reinforced concrete beam with no shear links: Materials Lab on-line",
+      "source": "Think Up",
+      "url": "https://www.youtube.com/watch?v=GHMCG4fUUpM",
+      "duration": 97,
+      "start": 30,
+      "end": 86,
+      "frameTime": 53,
+      "mode": "motion",
+      "clipStart": 30,
+      "clipEnd": 86,
+      "focus": "观察无箍筋梁在靠近支座处出现斜裂缝并突然发生脆性剪切破坏",
+      "labels": [
+        "高剪力区",
+        "斜裂缝",
+        "无剪力钢筋",
+        "突然失效"
+      ],
+      "narration": [
+        "四点弯曲的支座附近剪力较大。",
+        "主拉应力使裂缝转为斜向，并迅速切断压杆—拉杆路径。",
+        "没有箍筋跨越裂缝时，破坏几乎不给出充分变形预警。"
+      ],
+      "task": "在破坏前一秒暂停，预测裂缝将向荷载点还是支座延伸，并用剪力图解释。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "hjeK_ljW9dM",
+      "page": "extensions/x1-shear-torsion.qmd",
+      "title": "Bending Failure of Reinforced Concrete Beam",
+      "source": "Tyler Ley",
+      "url": "https://www.youtube.com/watch?v=hjeK_ljW9dM",
+      "duration": 152,
+      "start": 25,
+      "end": 96,
+      "frameTime": 64,
+      "mode": "motion",
+      "clipStart": 25,
+      "clipEnd": 96,
+      "focus": "以分散竖向裂缝和逐步增大挠度作为弯曲破坏对照，避免把所有梁裂缝都判成剪切",
+      "labels": [
+        "恒弯矩区",
+        "近竖向弯曲裂缝",
+        "裂缝分散发展",
+        "渐进挠度"
+      ],
+      "narration": [
+        "跨中弯矩主导区首先出现近竖向裂缝。",
+        "裂缝数量与宽度逐步增加，梁的变形也连续增长。",
+        "它与上一条靠支座、斜向、突然的剪切裂缝形成对照。"
+      ],
+      "task": "选取三条裂缝标出角度和位置，并据此判断它们由弯矩还是剪力主导。",
+      "basis": "storyboard；视频无字幕"
+    },
+    {
+      "id": "z8_2rw29Rok",
+      "page": "extensions/x1-shear-torsion.qmd",
+      "title": "Torsion Experiment of A PC Beam Specimen",
+      "source": "Chyuan-Hwan Jeng",
+      "url": "https://www.youtube.com/watch?v=z8_2rw29Rok",
+      "duration": 10,
+      "start": 0,
+      "end": 10,
+      "frameTime": 6,
+      "mode": "motion",
+      "clipStart": 0,
+      "clipEnd": 10,
+      "focus": "在极短试验片中观察预应力混凝土梁扭转变形和多侧面斜裂缝的连续性",
+      "labels": [
+        "扭矩 T",
+        "扭转角",
+        "多侧面斜裂缝",
+        "空间螺旋裂缝"
+      ],
+      "narration": [
+        "扭转载荷使截面发生相对转动。",
+        "单个侧面看到的斜裂缝只是空间裂缝路径的一部分。",
+        "闭合箍筋和纵筋必须共同形成空间抗扭体系。"
+      ],
+      "task": "连续跟踪同一条斜裂缝跨过两个可见侧面，判断它在空间中是独立裂缝还是螺旋路径。",
+      "basis": "storyboard；视频无字幕"
+    },
+    {
+      "id": "cM1mVXSFnq0",
+      "page": "extensions/x2-steel-composite.qmd",
+      "title": "Local web buckling of a plate girder in bending: Materials Lab on-line",
+      "source": "Think Up",
+      "url": "https://www.youtube.com/watch?v=cM1mVXSFnq0",
+      "duration": 127,
+      "start": 38,
+      "end": 103,
+      "frameTime": 78,
+      "mode": "motion",
+      "clipStart": 38,
+      "clipEnd": 103,
+      "focus": "观察板梁外侧高剪力区腹板局部屈曲、张力场形成以及刚度突降",
+      "labels": [
+        "外侧高剪力区",
+        "腹板局部屈曲",
+        "加劲肋分格",
+        "斜向张力场"
+      ],
+      "narration": [
+        "四点弯曲使中央区剪力为零，外侧区剪力近似常值。",
+        "薄腹板首先在加劲肋之间失稳，而非整根梁整体弯曲。",
+        "屈曲后的斜向张力场仍能继续传力，但刚度明显下降。"
+      ],
+      "task": "在腹板起皱前指出哪几个板格最危险，并用剪力分布解释中央板格为何没有同样屈曲。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "dhAP3yDD_uo",
+      "page": "extensions/x2-steel-composite.qmd",
+      "title": "Bolting & Welding Primer - Part 8",
+      "source": "AISC Education",
+      "url": "https://www.youtube.com/watch?v=dhAP3yDD_uo",
+      "duration": 1683,
+      "start": 240,
+      "end": 390,
+      "frameTime": 325,
+      "mode": "stepper",
+      "focus": "借真实多螺栓接头荷载—滑移曲线区分预拉力、摩擦传力、孔壁承压和后续延性",
+      "labels": [
+        "螺栓预拉力",
+        "夹紧与摩擦",
+        "接头滑移",
+        "孔壁承压/螺栓剪切"
+      ],
+      "narration": [
+        "拧紧使螺栓伸长并产生夹紧力。",
+        "初始荷载可由接触面摩擦传递；超过抗滑能力后接头发生滑移。",
+        "滑移后孔壁承压和螺栓剪切接管，接头仍可能保有较大延性。"
+      ],
+      "task": "在荷载—滑移曲线上划分摩擦、滑移、承压三个阶段，并为每段画出实际传力位置。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "FB1TP5YC8Wo",
+      "page": "extensions/x2-steel-composite.qmd",
+      "title": "Mechanics of Materials: Lesson 35 - Composite Beam Bending Example Problem",
+      "source": "Jeff Hanson",
+      "url": "https://www.youtube.com/watch?v=FB1TP5YC8Wo",
+      "duration": 1404,
+      "start": 132,
+      "end": 300,
+      "frameTime": 252,
+      "mode": "stepper",
+      "focus": "从完全组合假定出发，用模量比把双材料截面变换成单一材料等效截面",
+      "labels": [
+        "共同曲率/无相对滑移",
+        "模量比 n=E1/E2",
+        "变换宽度",
+        "重新求中性轴"
+      ],
+      "narration": [
+        "组合计算首先假定界面能传递剪力，使两种材料保持共同曲率。",
+        "模量比把一种材料的面积换算成参考材料的等效面积。",
+        "竖向几何位置不能改变；改变的是等效宽度，随后必须重新求中性轴。"
+      ],
+      "task": "在变换截面完成前预测哪些尺寸可以乘以 n、哪些不能，并用应变协调解释。",
+      "basis": "人工英文字幕 + storyboard"
+    },
+    {
+      "id": "ixXYLq_r8zc",
+      "page": "extensions/x3-masonry.qmd",
+      "title": "Shaking Table Test: Collapse Test of Unconfined Masonry Wall",
+      "source": "TDMRC Media",
+      "url": "https://www.youtube.com/watch?v=ixXYLq_r8zc",
+      "duration": 49,
+      "start": 25,
+      "end": 43,
+      "frameTime": 37,
+      "mode": "motion",
+      "clipStart": 25,
+      "clipEnd": 43,
+      "focus": "观察未约束砌体墙在振动台作用下发生面外失稳并整体倒塌",
+      "labels": [
+        "面外惯性力",
+        "墙顶/侧边缺少拉结",
+        "刚体摇摆",
+        "脆性倒塌"
+      ],
+      "narration": [
+        "墙片平面内看似完整，不代表面外方向有足够抗弯和稳定。",
+        "墙顶、墙侧连接不足时，惯性力不能传给正交墙或楼盖。",
+        "最终控制的是整体约束和力路，而不是单块砖抗压强度。"
+      ],
+      "task": "在倒塌前判断墙是面内剪切还是面外运动，并指出至少两处本可提供约束的连接。",
+      "basis": "storyboard；视频无字幕"
+    },
+    {
+      "id": "E-rfU6n2rCw",
+      "page": "extensions/x3-masonry.qmd",
+      "title": "#1 Introductory | Part I | Design of Masonry Structures",
+      "source": "NPTEL-NOC IITM",
+      "url": "https://www.youtube.com/watch?v=E-rfU6n2rCw",
+      "duration": 2954,
+      "start": 300,
+      "end": 535,
+      "frameTime": 460,
+      "mode": "stepper",
+      "focus": "用拱、塔和砌块实例理解砌体是块体—砂浆组合，擅长承压但整体形态必须让推力留在截面内",
+      "labels": [
+        "块体+砂浆组合",
+        "抗压强",
+        "抗拉弱",
+        "拱/塔的压缩力路"
+      ],
+      "narration": [
+        "砌体不是一种均质材料，而是块体、砂浆和界面的组合。",
+        "历史拱与厚重塔形利用了材料的抗压优势。",
+        "把大石材切成小块并加入砂浆后，整体强度受组合和接缝控制。"
+      ],
+      "task": "从画面选一个拱和一个塔，各画一条从荷载到基础的压缩力路，并标出可能产生拉力的位置。",
+      "basis": "官方字幕轨实际为马拉地语译文，时间与 storyboard 交叉核对"
+    },
+    {
+      "id": "Z5z46jjKtqo",
+      "page": "extensions/x3-masonry.qmd",
+      "title": "#11 Strength and Behaviour of Masonry | Part I | Design of Masonry Structures",
+      "source": "NPTEL-NOC IITM",
+      "url": "https://www.youtube.com/watch?v=Z5z46jjKtqo",
+      "duration": 1300,
+      "start": 160,
+      "end": 420,
+      "frameTime": 310,
+      "mode": "stepper",
+      "focus": "由块体与砂浆横向变形不协调解释受压砌体的多轴应力和组合强度",
+      "labels": [
+        "块体较硬",
+        "砂浆横向膨胀较大",
+        "界面约束",
+        "块体横向受拉/砂浆三轴受压"
+      ],
+      "narration": [
+        "单轴受压时，较软砂浆倾向产生更大的横向变形。",
+        "黏结界面迫使块体和砂浆协调，于是砂浆受到侧向约束。",
+        "同一作用同时使块体产生横向拉应力，因此砌体强度不能由单块砖强度直接替代。"
+      ],
+      "task": "在单元—砂浆示意图上补画界面剪力和横向应力，并解释为什么更强的砖不必然按比例提高墙体强度。",
+      "basis": "官方字幕轨实际为马拉地语译文，时间与 storyboard 交叉核对"
+    }
+  ]
+}

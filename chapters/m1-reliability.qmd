@@ -75,22 +75,22 @@ $$
 
 <div class="video-clip-grid">
 <article class="video-clip">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/LT4A3XM1ZU8?start=8" title="Structural Reliability Bivariate Probability Density" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/LT4A3XM1ZU8?start=45" title="Structural Reliability Bivariate Probability Density" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=LT4A3XM1ZU8&amp;t=45s">在原平台打开核心时刻 00:45</a></p></noscript></div>
 <h3>1｜为什么必须画二维联合密度</h3>
 <p>把一次状态理解为 $(S,R)$ 的一对取值，区分联合概率与两条一维边缘分布。</p>
-<p class="attribution">B. Bhattacharya 结构可靠度课程 · 约00:08起</p>
+<p class="attribution">B. Bhattacharya 结构可靠度课程 · 约00:45起</p>
 </article>
 <article class="video-clip">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/2Yt4o7gAuWw?start=20" title="Structural Reliability Joint Normal Distribution" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/2Yt4o7gAuWw?start=140" title="Structural Reliability Joint Normal Distribution" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=2Yt4o7gAuWw&amp;t=140s">在原平台打开核心时刻 02:20</a></p></noscript></div>
 <h3>2｜相关性怎样旋转密度椭圆</h3>
 <p>观察 $\rho$ 改变等密度线方向，并连接到 $R-S$ 沿失效边界法向的离散。</p>
-<p class="attribution">B. Bhattacharya 结构可靠度课程 · 约00:20起</p>
+<p class="attribution">B. Bhattacharya 结构可靠度课程 · 约02:20起</p>
 </article>
 <article class="video-clip">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/VMO1BlZtjlg?start=18" title="Structural Reliability Formulation" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/VMO1BlZtjlg?start=20" title="Structural Reliability Formulation" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=VMO1BlZtjlg&amp;t=20s">在原平台打开核心时刻 00:20</a></p></noscript></div>
 <h3>3｜概率为什么进入结构设计</h3>
 <p>只看“随机变量—极限状态—失效事件”这条线；公式细节留到交互完成之后。</p>
-<p class="attribution">Stanford · Jack Baker · 约00:18起</p>
+<p class="attribution">Stanford · Jack Baker · 约00:20起</p>
 </article>
 </div>
 

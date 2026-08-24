@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "scope": "Embedded external players in F0-F5 and M0-M1",
+  "items": [
+    {
+      "id": "aQf6Q8t1FQE",
+      "page": "foundations/f0-language.qmd",
+      "title": "An Introduction to Stress and Strain",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=aQf6Q8t1FQE",
+      "duration": 601,
+      "start": 34.2,
+      "end": 151.5,
+      "clipStart": 34.2,
+      "clipEnd": 110,
+      "frameTime": 85.4,
+      "mode": "motion",
+      "focus": "从想象截面显露分布内力，再把内力密度抽象为正应力",
+      "labels": [
+        "外载荷 F",
+        "想象截面",
+        "分布内力 ΔF",
+        "σ = F/A"
+      ],
+      "narration": [
+        "外载荷不会在截面处消失，材料内部必须产生与它平衡的作用。",
+        "切开只是分析动作：被删去一侧的作用改由截面内力表示。",
+        "内力不是几个离散箭头，而是遍布截面的分布量。",
+        "把分布内力除以面积，才得到可比较的应力。"
+      ],
+      "task": "在00:39切开而内力箭头尚未完整出现时暂停：先画出保留左段所需的截面作用，并说明为什么合力必须等于外力。"
+    },
+    {
+      "id": "qPaqDfRKBI4",
+      "page": "foundations/f0-language.qmd",
+      "title": "Statics - Free Body Diagram",
+      "source": "purdueMET",
+      "url": "https://www.youtube.com/watch?v=qPaqDfRKBI4",
+      "duration": 932,
+      "start": 298.9,
+      "end": 509.5,
+      "frameTime": 468.5,
+      "mode": "stepper",
+      "focus": "把跳板从真实支承中分离，并逐步替换为外载荷、支座反力与正号约定",
+      "labels": [
+        "研究对象：跳板",
+        "人重力 Fp",
+        "支座反力 FA、FB",
+        "+x、+y、+M"
+      ],
+      "narration": [
+        "自由体图的第一步是明确只研究哪一个物体。",
+        "删去支承后，支承对跳板的作用必须用反力补回。",
+        "未知反力方向可以先假设，负号会纠正方向。",
+        "列平衡方程之前必须先声明坐标与力矩正向。"
+      ],
+      "task": "在05:58出现支座替换前暂停：独立画跳板自由体图，并为每个反力写出它来自哪个被删去的接触。"
+    },
+    {
+      "id": "BV1gdQaYjE81",
+      "page": "foundations/f0-language.qmd",
+      "title": "工程力学 | 2.4. 应力 | 静力学+材料力学 | 北京化工大学 | 视频教程 | 王守新编 | 官成宇主讲",
+      "source": "官成宇",
+      "url": "https://www.bilibili.com/video/BV1gdQaYjE81",
+      "duration": 403,
+      "start": 316,
+      "end": 402.2,
+      "frameTime": 350,
+      "mode": "still",
+      "focus": "在微小截面上把内力分解为法向与切向分量，并取面积趋零的极限",
+      "labels": [
+        "微小面积 ΔA",
+        "法向分量 ΔN",
+        "切向分量 ΔQ",
+        "σ 与 τ"
+      ],
+      "narration": [
+        "同一个截面内力向量要先按截面法向和切向分解。",
+        "正应力描述垂直截面的内力密度。",
+        "切应力描述平行截面的内力密度。",
+        "ΔA趋近于零时，平均量才成为该点的应力。"
+      ],
+      "task": "遮住下方公式，只看05:16后的三维截面图：先把ΔFR分成ΔN、ΔQ，再判断两者分别除以哪个面积。"
+    },
+    {
+      "id": "1YTKedLQOa0",
+      "page": "foundations/f1-axial-torsion.qmd",
+      "title": "Understanding Torsion",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=1YTKedLQOa0",
+      "duration": 615,
+      "start": 212.2,
+      "end": 327.6,
+      "clipStart": 248,
+      "clipEnd": 327.6,
+      "frameTime": 321.5,
+      "mode": "motion",
+      "focus": "由表面小矩形的角度变化推出γ∝ρ，并看到τ沿半径线性增加、外缘最大",
+      "labels": [
+        "径向位置 ρ",
+        "剪应变 γ∝ρ",
+        "剪应力 τ∝ρ",
+        "外表面最大"
+      ],
+      "narration": [
+        "圆截面扭转时，各截面近似刚性转动，轴向线变成螺旋线。",
+        "离轴心越远，同一转角造成的弧长越大，因此剪应变随ρ线性增加。",
+        "线弹性阶段τ=Gγ，所以切应力也随ρ线性增加。",
+        "这解释了为什么靠近轴心的材料对抗扭贡献很小。"
+      ],
+      "task": "在04:45讲者提问“内部如何”时暂停：先画γ(ρ)和τ(ρ)两条分布线，再继续核对。"
+    },
+    {
+      "id": "EypXa4lMQhA",
+      "page": "foundations/f1-axial-torsion.qmd",
+      "title": "Mechanics of Materials: Lesson 17 - Axial Elongation Due to Axial Load Example",
+      "source": "Jeff Hanson",
+      "url": "https://www.youtube.com/watch?v=EypXa4lMQhA",
+      "duration": 708,
+      "start": 249.8,
+      "end": 644.8,
+      "frameTime": 394.8,
+      "mode": "stepper",
+      "focus": "先分段求内轴力与拉压符号，再逐段计算PL/AE并代数相加得到总变形",
+      "labels": [
+        "荷载变化处分段",
+        "Pi：拉正压负",
+        "Δi=PiLi/(AiEi)",
+        "Δ总=ΣΔi"
+      ],
+      "narration": [
+        "只要集中力发生变化，内轴力就可能换档，因此必须分段。",
+        "截面法先给出每段Pi，拉伸取正、压缩取负。",
+        "每一段各自使用长度、面积和材料模量。",
+        "总伸长是各段有符号变形的代数和，而不是绝对值相加。"
+      ],
+      "task": "在06:34开始写总变形式前暂停：制作“区段—Pi—拉压—Li—Δi符号”表，再与讲者的代数和核对。",
+      "rightsNote": "发布者视频说明禁止复用画面；仅保留官方播放器，不抽帧后自行托管。"
+    },
+    {
+      "id": "BV1joXWYqEHh",
+      "page": "foundations/f1-axial-torsion.qmd",
+      "title": "工程力学 | 3.2. 轴力 轴力图 | 静力学+材料力学 | 北京化工大学 | 视频教程 | 王守新编 | 官成宇主讲",
+      "source": "官成宇",
+      "url": "https://www.bilibili.com/video/BV1joXWYqEHh",
+      "duration": 1006,
+      "start": 737.1,
+      "end": 940.2,
+      "frameTime": 932,
+      "mode": "stepper",
+      "focus": "定义轴力图坐标和拉正压负规则，再把四段常轴力依次画成阶梯图",
+      "labels": [
+        "横轴：截面位置 x",
+        "N>0：拉",
+        "N<0：压",
+        "集中力处跳跃"
+      ],
+      "narration": [
+        "横坐标表示截面沿杆轴的位置，纵坐标表示该截面的轴力。",
+        "拉力画在基线上方，压力画在基线下方。",
+        "两相邻集中力之间没有新的轴向荷载，轴力保持常值。",
+        "跨过集中力时轴力发生跳跃，跳变量由该集中力决定。"
+      ],
+      "task": "在13:11例题开始绘图前遮住下半页：仅凭N1=20、N2=60、N3=-10、N4=15 kN画阶梯图，再于15:32核对。"
+    },
+    {
+      "id": "C-FEVzI8oe8",
+      "page": "foundations/f2-beam-forces.qmd",
+      "title": "Understanding Shear Force and Bending Moment Diagrams",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=C-FEVzI8oe8",
+      "duration": 983,
+      "start": 521.8,
+      "end": 748.5,
+      "clipStart": 521.8,
+      "clipEnd": 606,
+      "frameTime": 575,
+      "mode": "motion",
+      "focus": "用微段平衡建立荷载—剪力—弯矩的微分与面积关系，并识别跳跃和极值",
+      "labels": [
+        "dV/dx = -w",
+        "dM/dx = V",
+        "集中力使V跳跃",
+        "V=0处M取极值"
+      ],
+      "narration": [
+        "荷载图的纵坐标决定剪力图的斜率。",
+        "剪力图的纵坐标决定弯矩图的斜率。",
+        "积分后，图下面积等于下一级内力的增量。",
+        "集中量造成图线跳跃；V为零意味着M的斜率为零。"
+      ],
+      "task": "在08:51微段自由体出现时暂停：先独立预测均布荷载下V和M分别应是几次曲线，再观看推导。"
+    },
+    {
+      "id": "1425fNnS5SM",
+      "page": "foundations/f2-beam-forces.qmd",
+      "title": "Engineering Mechanics: Statics Lecture 19 | Shear and Bending Moment Diagrams",
+      "source": "Dr. Clayton Pettit",
+      "url": "https://www.youtube.com/watch?v=1425fNnS5SM",
+      "duration": 1735,
+      "start": 705.8,
+      "end": 1028,
+      "frameTime": 963.2,
+      "mode": "stepper",
+      "focus": "由集中力引起的剪力阶跃快速完成V图，再按两段M(x)画出三角形弯矩图",
+      "labels": [
+        "RA=2.5",
+        "V1=2.5",
+        "V2=-7.5",
+        "Mmax=7.5"
+      ],
+      "narration": [
+        "从左端零值开始，支座反力使剪力向上跳。",
+        "区段内没有分布荷载时，剪力保持常值。",
+        "跨过10单位集中力后，剪力向下跳10。",
+        "常剪力对应线性弯矩，两段直线在集中力位置相交并达到峰值。"
+      ],
+      "task": "在13:21开始推导弯矩前暂停：根据已完成的V图，先判断两段M图的斜率、端点值和峰值位置。"
+    },
+    {
+      "id": "BV1c8o7YiE5c",
+      "page": "foundations/f2-beam-forces.qmd",
+      "title": "工程力学 | 5.3. 剪力和弯矩方程 剪力图和弯矩图 | 静力学+材料力学 | 北京化工大学 | 视频教程 | 王守新编 | 官成宇主讲",
+      "source": "官成宇",
+      "url": "https://www.bilibili.com/video/BV1c8o7YiE5c",
+      "duration": 3175,
+      "start": 1100,
+      "end": 1350,
+      "frameTime": 1330,
+      "mode": "stepper",
+      "focus": "对简支梁均布荷载算例，用端点值、V=0位置和M极值逐步完成剪力图与抛物线弯矩图",
+      "labels": [
+        "V(x)：一次函数",
+        "M(x)：二次函数",
+        "V=0",
+        "Mmax=ql²/8"
+      ],
+      "narration": [
+        "均布荷载使剪力沿梁长线性变化。",
+        "剪力从正变负，因此零点位于跨中。",
+        "弯矩的导数是剪力，所以弯矩在跨中达到极值。",
+        "端部弯矩为零、跨中为ql²/8，这三个控制点确定抛物线。"
+      ],
+      "task": "在绘图前暂停：只用V端值、V=0位置、M两端为零和M'=V四项信息，先徒手画出两张图。"
+    },
+    {
+      "id": "f08Y39UiC-o",
+      "page": "foundations/f3-beam-stress.qmd",
+      "title": "Understanding Stresses in Beams",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=f08Y39UiC-o",
+      "duration": 888,
+      "start": 70,
+      "end": 359,
+      "clipStart": 270,
+      "clipEnd": 359,
+      "frameTime": 347,
+      "mode": "motion",
+      "focus": "纯弯几何→应变→本构→截面平衡→弯曲公式，并比较I/T截面",
+      "labels": [
+        "上缘受压",
+        "中性轴",
+        "下缘受拉",
+        "截面惯性矩 I"
+      ],
+      "narration": [
+        "纯弯时，上缘缩短、下缘伸长，中间出现零应变层。",
+        "几何关系给出应变梯度，Hooke定律映射为应力，截面力矩平衡得到σ=My/I。",
+        "I不是材料常数，而是材料相对中性轴的布置指标。"
+      ],
+      "task": "在04:46公式出现前暂停，用“几何—材料—平衡”三行自行重建推导。",
+      "errata": [
+        "07:38弯矩箭头方向错误",
+        "11:41剪应力分布图错误"
+      ]
+    },
+    {
+      "id": "f2huGCidqMo",
+      "page": "foundations/f3-beam-stress.qmd",
+      "title": "Mechanics of Materials: Lesson 26 - Beam Bending the Flexure Formula",
+      "source": "Jeff Hanson",
+      "url": "https://www.youtube.com/watch?v=f2huGCidqMo",
+      "duration": 1153,
+      "start": 994,
+      "end": 1143,
+      "frameTime": 1095,
+      "mode": "stepper",
+      "focus": "把非对称T形截面的中性轴和I代回Mc/I，比较上下缘应力并检查单位",
+      "labels": [
+        "中性轴 ȳ",
+        "c_top / c_bottom",
+        "平行轴定理 I",
+        "ksi 单位闭合"
+      ],
+      "narration": [
+        "同一M和I下，上下缘应力仍会因到中性轴距离不同而不相等。",
+        "演算分别计算受拉缘和受压缘，并完成ft·kip到in·kip的换算。",
+        "结果差异来自c，而不是上下缘材料不同。"
+      ],
+      "task": "在18:07计算受压缘前暂停，只比较c_top与c_bottom，先判断哪侧应力更大。",
+      "rightsNote": "发布者视频说明禁止复用画面；仅保留官方播放器，不抽帧后自行托管。"
+    },
+    {
+      "id": "HHdfcThvIDM",
+      "page": "foundations/f3-beam-stress.qmd",
+      "title": "BYU CE En 203 Scott : Normal Stress in Beam Bending",
+      "source": "Michael A. Scott",
+      "url": "https://www.youtube.com/watch?v=HHdfcThvIDM",
+      "duration": 676,
+      "start": 29,
+      "end": 345,
+      "frameTime": 318,
+      "mode": "stepper",
+      "focus": "把弯曲公式拆成运动学、材料本构与截面平衡",
+      "labels": [
+        "运动学 ε=-yκ",
+        "本构 σ=Eε",
+        "平衡 M=∫yσdA",
+        "σ=-My/I"
+      ],
+      "narration": [
+        "先从线性应变场出发，再用Hooke定律得到应力场。",
+        "对微元应力关于中性轴取矩，积分中的y²dA被识别为I。",
+        "弯曲公式是三类关系闭合的结果。"
+      ],
+      "task": "在05:18暂停，把画面上的关系分别标成“几何、材料、平衡”，并指出常E假设。",
+      "sourceNote": "来自Michael A. Scott个人频道；标题含BYU CE En 203，但不是BYU官方频道。"
+    },
+    {
+      "id": "MvBqCeZllpQ",
+      "page": "foundations/f4-deflection.qmd",
+      "title": "Understanding the Deflection of Beams",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=MvBqCeZllpQ",
+      "duration": 1334,
+      "start": 1045,
+      "end": 1209,
+      "clipStart": 1045,
+      "clipEnd": 1135,
+      "frameTime": 1098,
+      "mode": "motion",
+      "focus": "弯曲应变能与Castigliano定理，并扩展到虚拟力和虚拟弯矩",
+      "labels": [
+        "应变能 U",
+        "∂U/∂P",
+        "真实荷载",
+        "虚拟荷载"
+      ],
+      "narration": [
+        "忽略剪切变形时，弯曲应变能为U=∫M²/(2EI)dx。",
+        "对目标荷载求偏导，可得到其作用线方向的位移。",
+        "目标点没有真实荷载时，可加入虚拟力或虚拟弯矩，求导后再令其为零。"
+      ],
+      "task": "虚拟荷载出现前先回答：求位移放力，求转角放弯矩；再核对动画。"
+    },
+    {
+      "id": "BV1nAL6zqEcT",
+      "page": "foundations/f4-deflection.qmd",
+      "title": "工程力学 | 7.2. 挠曲线近似微分方程 | 静力学+材料力学 | 北京化工大学 | 视频教程 | 王守新编 | 官成宇主讲",
+      "source": "官成宇（标题标注北京化工大学）",
+      "url": "https://www.bilibili.com/video/BV1nAL6zqEcT",
+      "duration": 843,
+      "start": 615,
+      "end": 709,
+      "frameTime": 683,
+      "mode": "stepper",
+      "focus": "从精确曲率式过渡到小挠度近似w''=M/EI，并明确被舍去的项",
+      "labels": [
+        "1/ρ=M/EI",
+        "ds/dx",
+        "小斜率 w'²≪1",
+        "w''=M/EI"
+      ],
+      "narration": [
+        "精确曲率含弧长与斜率项，近似式不是直接假定出来的。",
+        "小斜率使(1+w'²)^(3/2)近似为1。",
+        "课件还明确提醒该模型忽略了剪切变形。"
+      ],
+      "task": "在11:01切换到近似式时，写出被省略的两项及各自对应的模型边界。",
+      "rightsNote": "Bilibili官方API返回no_reprint=1；仅保留原平台播放器，不抽帧后自行托管。"
+    },
+    {
+      "id": "nM4vrTT8fUc",
+      "page": "foundations/f4-deflection.qmd",
+      "title": "Example of Double Integration Method for Beam Deflections - Mechanics of Materials",
+      "source": "structurefree",
+      "url": "https://www.youtube.com/watch?v=nM4vrTT8fUc",
+      "duration": 738,
+      "start": 655,
+      "end": 713,
+      "frameTime": 706,
+      "mode": "stepper",
+      "focus": "把固定端边界条件代入两次积分后的转角式和挠度式，求C1、C2",
+      "labels": [
+        "固定端 x=0",
+        "v(0)=0",
+        "θ(0)=0",
+        "C1=C2=0"
+      ],
+      "narration": [
+        "两次积分产生两个常数，它们必须由结构边界决定。",
+        "悬臂固定端既无位移也无转角，因此两个积分常数均为零。",
+        "边界条件是把数学曲线落回真实支承的结构信息。"
+      ],
+      "task": "在11:18教师回答前暂停，独立写出两个边界条件，并判断各消去哪个常数。"
+    },
+    {
+      "id": "_DH3546mSCM",
+      "page": "foundations/f5-stress-stability.qmd",
+      "title": "Understanding Stress Transformation and Mohr's Circle",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=_DH3546mSCM",
+      "duration": 435,
+      "start": 214,
+      "end": 371,
+      "frameTime": 323,
+      "mode": "stepper",
+      "focus": "用x/y两个截面点构造Mohr圆，再读取主应力、最大切应力和双角关系",
+      "labels": [
+        "x 面应力点",
+        "y 面应力点",
+        "σ1 / σ2",
+        "2θ 双角"
+      ],
+      "narration": [
+        "x面与y面两个点的连线构成圆的直径。",
+        "圆与σ轴交点给主应力，圆半径给最大切应力。",
+        "Mohr圆上的转角是实体应力单元转角的两倍。"
+      ],
+      "task": "圆出现前，只给两个应力点，让学生先标出圆心、直径和可能的主应力位置。"
+    },
+    {
+      "id": "21G7LA2DcGQ",
+      "page": "foundations/f5-stress-stability.qmd",
+      "title": "Understanding Buckling",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=21G7LA2DcGQ",
+      "duration": 888,
+      "start": 382,
+      "end": 489,
+      "clipStart": 382,
+      "clipEnd": 471,
+      "frameTime": 470,
+      "mode": "motion",
+      "focus": "把Euler长度平方效应改写为临界应力—长细比图，区分压碎与屈曲控制",
+      "labels": [
+        "长细比 Le/r",
+        "Euler 曲线",
+        "屈服应力 σy",
+        "压碎区 / 屈曲区"
+      ],
+      "narration": [
+        "长度加倍会使Euler临界荷载降为四分之一。",
+        "细长杆进入弹性屈曲区，短粗杆则先达到材料屈服。",
+        "真实柱在过渡区还受到缺陷与非弹性的共同影响。"
+      ],
+      "task": "比较两根长度比为2:1的同截面柱，先预测Pcr比值，再判断哪根更接近屈曲控制。"
+    },
+    {
+      "id": "xkbQnBAOFEg",
+      "page": "foundations/f5-stress-stability.qmd",
+      "title": "Understanding Failure Theories (Tresca, von Mises etc...)",
+      "source": "The Efficient Engineer",
+      "url": "https://www.youtube.com/watch?v=xkbQnBAOFEg",
+      "duration": 977,
+      "start": 152,
+      "end": 334,
+      "clipStart": 244,
+      "clipEnd": 334,
+      "frameTime": 300,
+      "mode": "motion",
+      "focus": "用静水应力与偏应力分解解释延性屈服机制，并自然引出Tresca/von Mises",
+      "labels": [
+        "平均/静水应力",
+        "偏应力",
+        "Mohr 圆平移",
+        "圆半径与屈服"
+      ],
+      "narration": [
+        "三向等压主要改变体积，不产生剪切，因此通常不触发延性材料屈服。",
+        "Mohr圆水平平移代表静水分量改变，半径增大代表偏应力增强。",
+        "这解释了为什么Tresca与von Mises比Rankine更适合延性屈服。"
+      ],
+      "task": "给三个主应力同时加相同压力p，判断圆怎样移动、半径是否改变、屈服判断是否改变。"
+    },
+    {
+      "id": "-scQuGFCGyI",
+      "page": "chapters/m0-design.qmd",
+      "title": "How Load Travels Through a Building",
+      "source": "Blueprint to Reality",
+      "url": "https://www.youtube.com/watch?v=-scQuGFCGyI",
+      "duration": 284,
+      "start": 68,
+      "end": 202,
+      "frameTime": 108,
+      "mode": "stepper",
+      "focus": "屋面/楼板—梁—柱墙—基础—土体的连续力路，并区分水平力路",
+      "labels": ["荷载入口", "面荷载收集", "梁柱下传", "基础扩散到土体"],
+      "narration": [
+        "荷载不会消失，只会沿构件和连接向下游传递。",
+        "楼板先收集，梁再汇集，柱墙向下传，基础最终把作用扩散给地基。",
+        "水平作用另经楼盖与抗侧体系传递。",
+        "原片主要是文字滑页，建议重做为可逐步点击的力路图。"
+      ],
+      "task": "播放前画出屋面上一名学生的重量和一股风分别到达地基的两条路径，看片后只修改画错的节点。"
+    },
+    {
+      "id": "DaxCimFy92E",
+      "page": "chapters/m0-design.qmd",
+      "title": "Load Paths and Load Transfer in Structural Engineering Explained.",
+      "source": "Structural Basics",
+      "url": "https://www.youtube.com/watch?v=DaxCimFy92E",
+      "duration": 385,
+      "start": 256,
+      "end": 344,
+      "frameTime": 288,
+      "mode": "stepper",
+      "focus": "板面荷载经反力依次变为梁线荷载、节点集中力、柱与基础荷载",
+      "labels": ["5 kN/m² 面荷载", "12.5 kN/m 线荷载", "43.75 kN 节点反力", "下一构件的外荷载"],
+      "narration": [
+        "每一级构件的支反力，正是下一级构件的外荷载。",
+        "从二维受荷面积汇入一维梁，再汇入柱节点，数值和单位都要随对象改变。",
+        "本例没有计自重，不能直接当完整设计荷载。"
+      ],
+      "task": "每次讲者准备把荷载传给下一级构件时暂停，先写出下一荷载的单位、方向和作用位置。"
+    },
+    {
+      "id": "0dMf1dBp-b0",
+      "page": "chapters/m0-design.qmd",
+      "title": "How the World's Tallest Bridge Became an Engineering Marvel | Blueprint",
+      "source": "Blueprint",
+      "url": "https://www.youtube.com/watch?v=0dMf1dBp-b0",
+      "duration": 2766,
+      "start": 1910,
+      "end": 1965,
+      "frameTime": 1951,
+      "mode": "motion",
+      "focus": "米约高架桥顶推装置的抬升—前推—落下循环及多支点同步",
+      "labels": ["PTFE 低摩擦界面", "同步液压顶推", "每循环约 0.6 m", "临时墩减小顶推跨径"],
+      "narration": [
+        "高墩排除了常规吊装并放大顶推摩擦带来的横向风险。",
+        "装置先把桥面与墩顶分离再推进。",
+        "所有支点同步，避免把不协调位移转成墩身弯曲。",
+        "临时墩和GPS合龙建议作为第二拓展片段，不挤入这个55秒核心片段。"
+      ],
+      "task": "暂停在装置开始动作前，预测抬起—前推—落下三步顺序，并说明为什么各桥墩必须同步。"
+    },
+    {
+      "id": "LT4A3XM1ZU8",
+      "page": "chapters/m1-reliability.qmd",
+      "title": "STRUCTURAL RELIABILITY Lecture 06 module 04: bivariate probability density",
+      "source": "Structural Reliability lectures by B. Bhattacharya",
+      "url": "https://www.youtube.com/watch?v=LT4A3XM1ZU8",
+      "duration": 257,
+      "start": 45,
+      "end": 140,
+      "frameTime": 96,
+      "mode": "still",
+      "focus": "由二维联合密度切片并积分得到一维边缘密度",
+      "labels": ["联合密度 fX,Y", "固定 y=b", "沿 x 积分", "边缘密度 fY(b)"],
+      "narration": [
+        "一次状态是两个随机变量的成对取值。",
+        "联合密度下的总体体积为1。",
+        "边缘密度来自把另一个变量积分掉，不是三维图形的几何投影。"
+      ],
+      "task": "不使用投影一词，解释怎样从联合密度得到fY(b)。"
+    },
+    {
+      "id": "2Yt4o7gAuWw",
+      "page": "chapters/m1-reliability.qmd",
+      "title": "STRUCTURAL RELIABILITY Lecture 07 module 05: joint normal distribution",
+      "source": "Structural Reliability lectures by B. Bhattacharya",
+      "url": "https://www.youtube.com/watch?v=2Yt4o7gAuWw",
+      "duration": 873,
+      "start": 140,
+      "end": 315,
+      "frameTime": 194,
+      "mode": "still",
+      "focus": "二维正态的五个参数、协方差结构以及边缘正态不推出联合正态",
+      "labels": ["均值决定中心", "标准差决定展宽", "rho决定倾斜", "边缘正态不推出联合正态"],
+      "narration": [
+        "二维正态是联合密度的一种模型，不是所有可靠度问题的默认事实。",
+        "相关系数进入协方差矩阵并改变概率质量的方向。",
+        "分别正态不保证联合正态，必须显式陈述联合模型假设。"
+      ],
+      "task": "只改变rho，先画出预测的等密度椭圆方向，再到交互图验证。"
+    },
+    {
+      "id": "VMO1BlZtjlg",
+      "page": "chapters/m1-reliability.qmd",
+      "title": "Structural Reliability 10b - Reliability formulation",
+      "source": "Jack Baker / Baker Research Group",
+      "url": "https://www.youtube.com/watch?v=VMO1BlZtjlg",
+      "duration": 429,
+      "start": 20,
+      "end": 120,
+      "frameTime": 32,
+      "mode": "still",
+      "focus": "联合密度、极限状态、失效域与失效概率积分的对应关系",
+      "labels": ["随机向量 x", "联合密度 fX(x)", "极限状态 g(x)=0", "失效域 g(x)≤0"],
+      "narration": [
+        "随机变量描述不确定状态，联合密度给这些状态分配权重。",
+        "极限状态函数把状态空间切为安全与失效两部分。",
+        "失效概率是失效域内概率质量的积分，而不是着色区域的几何面积。"
+      ],
+      "task": "指着公式分别说出哪里定义不确定性、哪里定义失效、哪里完成概率求和。"
+    }
+  ]
+}

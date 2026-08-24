@@ -80,7 +80,7 @@ $$
 这条简单关系将把本章与后面的偏心受压连接起来。
 
 <article class="real-case">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/cZINeaDjisY" title="Practical Engineering：Why Concrete Needs Reinforcement" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/cZINeaDjisY?start=154" title="Practical Engineering：Why Concrete Needs Reinforcement" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=cZINeaDjisY&amp;t=154s">在原平台打开核心时刻 02:34</a></p></noscript></div>
 <div class="real-case-body"><span class="real-case-kicker">REAL TEST · CONCRETE + REINFORCEMENT</span>
 
 ### 先预测破坏，再观看加载
@@ -105,8 +105,8 @@ Practical Engineering 用实体试件比较无筋、普通配筋与预应力混�
 <details class="video-clips">
 <summary>再看两段｜材料曲线与黏结如何让“合作”成立</summary>
 <div class="video-clip-grid two">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/FpO2KImasNo?start=8" title="Tensile Testing" loading="lazy" allowfullscreen></iframe></div><h3>2｜把应力—应变曲线放回试验机</h3><p>只看加载、伸长、颈缩与断裂怎样对应曲线事件；区分“强度高”和“延性好”。</p><p class="attribution">Instron · 约00:08起</p></article>
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/UcPm61zRATk?start=120" title="Advances on Bond of Embedded Steel Reinforcement" loading="lazy" allowfullscreen></iframe></div><h3>3｜没有黏结，截面不能协调变形</h3><p>从约02:00观察钢筋肋、滑移与锚固问题；不要求第一次观看规范模型细节。</p><p class="attribution">American Concrete Institute · 约02:00起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/FpO2KImasNo?start=0" title="Tensile Testing" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=FpO2KImasNo&amp;t=0s">在原平台打开核心时刻 00:00</a></p></noscript></div><h3>2｜把应力—应变曲线放回试验机</h3><p>只看加载、伸长、颈缩与断裂怎样对应曲线事件；区分“强度高”和“延性好”。</p><p class="attribution">Instron · 从开头</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/UcPm61zRATk?start=590" title="Advances on Bond of Embedded Steel Reinforcement" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=UcPm61zRATk&amp;t=590s">在原平台打开核心时刻 09:50</a></p></noscript></div><h3>3｜施工位置也会改变黏结</h3><p>从约09:50比较浇筑方向与横向钢筋高度；先预测底筋、中部筋和顶筋的拔出表现，不追规范公式。</p><p class="attribution">American Concrete Institute · 约09:50起</p></article>
 </div>
 <p><strong>观看顺序：</strong> 先看本章已有的混凝土梁实体比较，再看钢材自身行为，最后看钢筋—混凝土界面。</p>
 </details>

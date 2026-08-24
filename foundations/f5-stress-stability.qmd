@@ -36,13 +36,13 @@ $KL$ 是有效长度。该式描述稳定分岔，不是材料压碎强度公式
 
 <div class="video-pair">
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/_DH3546mSCM" title="Stress Transformation and Mohr's Circle" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/_DH3546mSCM?start=214" title="Stress Transformation and Mohr's Circle" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=_DH3546mSCM&amp;t=214s">在原平台打开核心时刻 03:34</a></p></noscript></div>
 <h3>中文导看：应力变换</h3>
 <p><strong>00:00–02:30</strong> 区分“换截面”与“换材料点”；<strong>02:30–05:20</strong> 看圆心和半径如何编码平均正应力与应力差；<strong>05:20–结尾</strong> 用圆上极值读主应力和最大切应力。</p>
 <p><strong>总结：</strong> Mohr 圆是应力变换的图形化索引，不是另一个独立物理定律。</p>
 </div>
 <div class="video-lesson">
-<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/21G7LA2DcGQ" title="Understanding Buckling" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/21G7LA2DcGQ?start=382" title="Understanding Buckling" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=21G7LA2DcGQ&amp;t=382s">在原平台打开核心时刻 06:22</a></p></noscript></div>
 <h3>中文导看：压杆失稳</h3>
 <p><strong>00:00–03:20</strong> 区分压碎与屈曲；<strong>03:20–07:20</strong> 观察长度、刚度和端部约束；<strong>07:20–11:20</strong> 连接长细比与临界应力；<strong>11:20–结尾</strong> 注意缺陷、非弹性和其他屈曲模式。</p>
 <p><strong>总结：</strong> 细长构件的承载力可能由保持形状的能力决定，而不是由材料强度直接决定。</p>
@@ -54,7 +54,7 @@ $KL$ 是有效长度。该式描述稳定分岔，不是材料压碎强度公式
 <details class="video-clips">
 <summary>第三段｜从应力状态走到材料失效准则</summary>
 <div class="video-clip-grid one">
-<article class="video-clip"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/xkbQnBAOFEg?start=35" title="Understanding Failure Theories" loading="lazy" allowfullscreen></iframe></div><h3>3｜Rankine、Tresca 与 von Mises</h3><p>不要记三张包络线；先按延性/脆性与应力状态选择机制，再看准则怎样压缩多轴应力。</p><p class="attribution">The Efficient Engineer · 约00:35起</p></article>
+<article class="video-clip"><div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/xkbQnBAOFEg?start=244" title="Understanding Failure Theories" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=xkbQnBAOFEg&amp;t=244s">在原平台打开核心时刻 04:04</a></p></noscript></div><h3>3｜Rankine、Tresca 与 von Mises</h3><p>不要记三张包络线；先按延性/脆性与应力状态选择机制，再看准则怎样压缩多轴应力。</p><p class="attribution">The Efficient Engineer · 约04:04起</p></article>
 </div>
 </details>
 
