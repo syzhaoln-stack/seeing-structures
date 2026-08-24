@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -401,7 +402,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="concept">概念｜先问作用，再问分布</h2>
 <p>轴力通过截面形心、杆件平直且远离加载端时，均匀正应力近似为：</p>
 <p><span class="math display">\[\sigma=\frac{N}{A},\qquad \varepsilon=\frac{\Delta L}{L},\qquad \sigma=E\varepsilon\]</span></p>
-<p>因此等截面线弹性杆的伸长为 <span class="math inline">\(Delta L=NL/(EA)\)</span>。若轴力、面积或材料沿杆长变化，应写成积分，而不是强行套一个平均值。</p>
+<p>因此等截面线弹性杆的伸长为 <span class="math inline">\(\Delta L=NL/(EA)\)</span>。若轴力、面积或材料沿杆长变化，应写成积分，而不是强行套一个平均值。</p>
 <p>圆轴在 Saint-Venant 扭转下：</p>
 <p><span class="math display">\[\tau(r)=\frac{Tr}{J},\qquad \frac{\mathrm d\varphi}{\mathrm dx}=\frac{T}{GJ}\]</span></p>
 <p>切应力从轴心的零线性增长到外缘最大值。这里的 <span class="math inline">\(J\)</span> 是极惯性矩，不是梁弯曲使用的面积惯性矩 <span class="math inline">\(I\)</span>。</p>
@@ -585,6 +586,26 @@ Bilibili · 北京化工大学官成宇
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

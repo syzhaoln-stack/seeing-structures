@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -399,7 +400,32 @@ window.Quarto = {
 <p>梁满足强度并不代表它好用。过大的挠度会损坏隔墙、改变排水、引起不适或让使用者失去信任。位移分析不是“算完强度后的附加题”，而是正常使用设计的主线。</p>
 <section id="concept" class="level2">
 <h2 class="anchored" data-anchor-id="concept">概念｜弯矩先改变曲率</h2>
-<p>Euler–Bernoulli 梁的小挠度关系可写成：</p>
+<p>挠度不是从弯矩“一步跳到”的答案。先沿梁走一遍：每个位置的弯矩先让那一小段产生曲率，许多小转动再累积成整条挠曲线。</p>
+<div class="derive-mount" data-derivation="f4-curvature">
+<figure class="derive-fallback figure" aria-labelledby="fallback-f4-curvature">
+<h3 id="fallback-f4-curvature" class="anchored">
+四步看见：从弯矩走到挠度
+</h3>
+<ol>
+<li>
+<strong>看局部弯矩：</strong>同一位置，弯矩越大，梁越想弯。
+</li>
+<li>
+<strong>除以刚度：</strong>同样弯矩下，EI 越大，曲率越小；这是局部关系。
+</li>
+<li>
+<strong>沿长度累积：</strong>曲率累积一次改变切线方向，再累积一次才形成位移。
+</li>
+<li>
+<strong>让支座落地：</strong>位移和转角边界条件决定积分常数，也决定曲线能以什么姿态连接支承。
+</li>
+</ol>
+<figcaption>
+静态推导链｜“积分两次”不是口令，而是从局部转动逐段累积到整体位置。
+</figcaption>
+</figure>
+</div>
+<p>对满足 Euler–Bernoulli 小挠度假定的梁，这条路径写成：</p>
 <p><span class="math display">\[\kappa\approx\frac{\mathrm d^2v}{\mathrm dx^2}=\frac{M(x)}{EI}\]</span></p>
 <p>弯矩除以抗弯刚度 <span class="math inline">\(EI\)</span> 得到曲率；对曲率积分一次得到转角，再积分一次得到挠度。积分常数由支承和连续条件确定。</p>
 <p>计算方法可以有积分法、叠加法、共轭梁法、单位荷载法或数值法，但都不能绕过四件事：内力、刚度、边界条件、协调条件。</p>
@@ -589,6 +615,26 @@ structurefree · 约10:55起
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

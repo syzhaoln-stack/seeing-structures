@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -403,11 +404,7 @@ window.Quarto = {
 <a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
 </nav>
 <p>宿舍网络平时很快，不代表它永远不会卡顿。服务能力会波动，使用需求也会波动。当某一时刻的需求超过服务，系统就失效了。</p>
-<p>结构也是一样。作用效应 <span class="math inline">\(S\)</span> 不是一个永远固定的数字，材料、尺寸和施工质量决定的抗力 <span class="math inline">\(R\)</span> 也存在离散性。最基本的极限状态可以写成：</p>
-<p><span class="math display">\[
-g(R,S)=R-S
-\]</span></p>
-<p>当 <span class="math inline">\(g&gt;0\)</span>，抗力大于作用效应；当 <span class="math inline">\(g=0\)</span>，到达失效边界；当 <span class="math inline">\(g&lt;0\)</span>，进入失效域。</p>
+<p>结构也是一样。作用效应 <span class="math inline">\(S\)</span> 不是永远固定的数字，材料、尺寸和施工质量决定的抗力 <span class="math inline">\(R\)</span> 也会波动。一次结构状态必须把当时的 <span class="math inline">\(S\)</span> 与当时的 <span class="math inline">\(R\)</span> 配成一对：需求超过能力，才进入我们定义的失效事件。先保留这句话，不急着把它压成公式。</p>
 <div class="question-band">
 <p>两座桥按同一标准设计，其中一座在极端事件中受损，另一座没有。能否仅凭这一次结果断定前者设计错误、后者设计正确？为什么？</p>
 </div>
@@ -415,16 +412,45 @@ g(R,S)=R-S
 <h2 class="anchored" data-anchor-id="concept">概念｜作用、抗力与失效域</h2>
 <p>一种常见但容易误导的画法，是把作用和抗力的两个一维概率密度函数画在同一横轴上，然后把两条曲线的重叠面积称为失效概率。它能提醒我们“作用与抗力会波动”，却没有直接表达同一次状态中 <span class="math inline">\(R\)</span> 和 <span class="math inline">\(S\)</span> 的配对关系；<strong>两条一维曲线的重叠面积也不等于 <span class="math inline">\(P(R\le S)\)</span>。</strong></p>
 <p>更清楚的方式是把每次状态画成平面中的一个点 <span class="math inline">\((S,R)\)</span>。如果进一步假定 <span class="math inline">\(R\)</span> 与 <span class="math inline">\(S\)</span> 联合服从二维正态分布，这些点的概率密度会形成一个可倾斜的椭圆“山丘”。直线 <span class="math inline">\(R=S\)</span> 把平面分成安全域和失效域，<strong>失效概率是二维联合密度在 <span class="math inline">\(R\le S\)</span> 半平面上的积分。</strong></p>
-<p>相关系数 <span class="math inline">\(\rho\)</span> 决定密度椭圆的倾斜。在线性极限状态 <span class="math inline">\(g=R-S\)</span> 下：</p>
+<div class="derive-mount" data-derivation="m1-reliability">
+<figure class="derive-fallback figure" aria-labelledby="fallback-m1-reliability">
+<h3 id="fallback-m1-reliability" class="anchored">
+四步看见：失效概率到底在算什么
+</h3>
+<ol>
+<li>
+<strong>放一个点：</strong>一次可能状态是平面中的一对数——横向读作用 S，竖向读抗力 R。
+</li>
+<li>
+<strong>画一条边界：</strong>直线 R=S 表示能力刚好等于需求；线下方才是 R&lt;S 的失效域。
+</li>
+<li>
+<strong>给各处加权：</strong>二维联合密度告诉我们哪些成对状态更常出现；相关性会让椭圆等密度线旋转。
+</li>
+<li>
+<strong>累计失效域：</strong>把失效半平面上的密度累加，才得到失效概率；红色几何面积本身不是概率。
+</li>
+</ol>
+<figcaption>
+静态推导链｜先理解“点—边界—密度—积分”，再把二维问题压缩为一个可靠指标。
+</figcaption>
+</figure>
+</div>
+<p>现在再把图收成一个代数余量：</p>
+<p><span class="math display">\[
+g(R,S)=R-S
+\]</span></p>
+<p>当 <span class="math inline">\(g&gt;0\)</span>，抗力大于作用效应；当 <span class="math inline">\(g=0\)</span>，点落在失效边界；当 <span class="math inline">\(g&lt;0\)</span>，点进入失效域。</p>
+<p>只有在这里明确采用的模型——线性极限状态 <span class="math inline">\(g=R-S\)</span>，且 <span class="math inline">\(R,S\)</span> <strong>联合正态</strong>——下，二维问题才可继续压缩。相关系数 <span class="math inline">\(\rho\)</span> 决定密度椭圆的倾斜，此时：</p>
 <p><span class="math display">\[
 \mu_g=\mu_R-\mu_S,\qquad
 \sigma_g=\sqrt{\sigma_R^2+\sigma_S^2-2\rho\sigma_R\sigma_S}
 \]</span></p>
-<p>若 <span class="math inline">\(R,S\)</span> 联合正态，则 <span class="math inline">\(g\)</span> 仍为正态变量：</p>
+<p>因为 <span class="math inline">\(R,S\)</span> 联合正态，线性组合 <span class="math inline">\(g\)</span> 仍为正态变量：</p>
 <p><span class="math display">\[
 \beta=\frac{\mu_g}{\sigma_g},\qquad P_f=\Phi(-\beta)
 \]</span></p>
-<p>独立是 <span class="math inline">\(\rho=0\)</span> 的特殊情形；这时才可把组合标准差写成 <span class="math inline">\(\sqrt{\sigma_R^2+\sigma_S^2}\)</span>。注意：分别正态并不自动保证联合正态，本页明确采用联合正态模型。</p>
+<p>独立只是 <span class="math inline">\(\rho=0\)</span> 的特殊情形；这时才可把组合标准差写成 <span class="math inline">\(\sqrt{\sigma_R^2+\sigma_S^2}\)</span>。分别正态并不自动保证联合正态，也不能据此擅自删去相关项。</p>
 <details>
 <summary>
 展开：二维联合正态密度写成什么
@@ -620,6 +646,26 @@ P_f=P(R-S&lt;0)
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

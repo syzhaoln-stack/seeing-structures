@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -399,7 +400,7 @@ window.Quarto = {
 <p>材料可能因为某一点的组合应力达到失效条件而破坏；细长构件也可能在材料远未屈服时突然失去原有平衡形态。把“材料失效”与“结构失稳”分开，是进入柱、钢结构和有限元分析前的关键门槛。</p>
 <section id="concept" class="level2">
 <h2 class="anchored" data-anchor-id="concept">概念｜同一点，不同截面</h2>
-<p>平面应力状态由 <span class="math inline">\(sigma_x\)</span>、<span class="math inline">\(sigma_y\)</span>、$ au_{xy}$ 描述。旋转观察平面后，各分量改变，但主应力与最大切应力可由变换关系或 Mohr 圆得到：</p>
+<p>平面应力状态由 <span class="math inline">\(\sigma_x\)</span>、<span class="math inline">\(\sigma_y\)</span>、<span class="math inline">\(\tau_{xy}\)</span> 描述。旋转观察平面后，各分量改变，但主应力与最大切应力可由变换关系或 Mohr 圆得到：</p>
 <p><span class="math display">\[\sigma_{1,2}=\frac{\sigma_x+\sigma_y}{2}\pm
 \sqrt{\left(\frac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}\]</span></p>
 <p>主平面上切应力为零。延性金属常使用 von Mises 或 Tresca 等屈服准则；脆性材料需要更关注主拉/压应力与不对称强度。准则必须与材料和失效机制匹配。</p>
@@ -557,6 +558,26 @@ The Efficient Engineer · 约04:04起
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

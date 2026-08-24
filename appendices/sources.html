@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -351,7 +352,10 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#本书的内容身份" id="toc-本书的内容身份" class="nav-link active" data-scroll-target="#本书的内容身份">本书的内容身份</a></li>
+  <li><a href="#本书的内容身份" id="toc-本书的内容身份" class="nav-link active" data-scroll-target="#本书的内容身份">本书的内容身份</a>
+  <ul class="collapse">
+  <li><a href="#概念插画和技术图不是同一种证据" id="toc-概念插画和技术图不是同一种证据" class="nav-link" data-scroll-target="#概念插画和技术图不是同一种证据">概念插画和技术图不是同一种证据</a></li>
+  </ul></li>
   <li><a href="#两本教材怎样进入本书" id="toc-两本教材怎样进入本书" class="nav-link" data-scroll-target="#两本教材怎样进入本书">两本教材怎样进入本书</a></li>
   <li><a href="#本地课程材料" id="toc-本地课程材料" class="nav-link" data-scroll-target="#本地课程材料">本地课程材料</a></li>
   <li><a href="#动态讲解样本" id="toc-动态讲解样本" class="nav-link" data-scroll-target="#动态讲解样本">动态讲解样本</a></li>
@@ -404,6 +408,11 @@ window.Quarto = {
 <div class="source-note">
 <p>网页中的“教师补充”“课堂证据”“桥梁迁移窗”“模型边界”和“交互实验”均属于本课程重构内容。来源身份通过版式与标签公开，不把新增观点伪装成原教材原文。</p>
 </div>
+<section id="概念插画和技术图不是同一种证据" class="level3">
+<h3 class="anchored" data-anchor-id="概念插画和技术图不是同一种证据">概念插画和技术图不是同一种证据</h3>
+<p>前言与 F0 的两张“概念隐喻”由 OpenAI ImageGen 辅助生成，只帮助学生进入“观察—切开—解释—验证”的思维路径，页面均明确标注“AI 生成，不是工程证据”。生成工具、完整提示词和用途保存在仓库的<a href="https://github.com/syzhaoln-stack/seeing-structures/blob/main/research/generated-concept-illustrations.md">概念插画生成记录</a>。</p>
+<p>公式、自由体、应变/应力分布、失效边界和可靠指标等技术关系不交给生成式图片决定，而由本地确定性 SVG/HTML 绘制，并在页面旁标明假定与模型边界。真实试验和工程视频承担“现象证据”，可视化推导台承担“关系解释”，二者不能互相冒充。</p>
+</section>
 </section>
 <section id="两本教材怎样进入本书" class="level2">
 <h2 class="anchored" data-anchor-id="两本教材怎样进入本书">两本教材怎样进入本书</h2>
@@ -537,6 +546,26 @@ window.Quarto = {
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

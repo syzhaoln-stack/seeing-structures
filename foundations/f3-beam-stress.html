@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -399,9 +400,34 @@ window.Quarto = {
 <p>内力图告诉我们哪个截面承担多少弯矩和剪力；截面应力分析则回答：这些合力怎样分布到材料中。工字形、T形和箱形不是图纸习惯，而是把材料放到更有效的位置。</p>
 <section id="concept" class="level2">
 <h2 class="anchored" data-anchor-id="concept">概念｜弯曲正应力与横向切应力</h2>
-<p>在小变形、线弹性、平截面假定和对称弯曲条件下：</p>
+<p>先看一根画有纵横网格的软梁：弯曲以后，上侧纤维缩短、下侧纤维伸长，而原本的横线仍近似保持直线。下面的推导只在小变形、线弹性、平截面假定、均质截面和对称弯曲条件下成立。</p>
+<div class="derive-mount" data-derivation="f3-flexure">
+<figure class="derive-fallback figure" aria-labelledby="fallback-f3-flexure">
+<h3 id="fallback-f3-flexure" class="anchored">
+四步看见：为什么应力随高度线性变化
+</h3>
+<ol>
+<li>
+<strong>看变形：</strong>离中性层越远，纵向纤维伸长或缩短得越多。
+</li>
+<li>
+<strong>写几何：</strong>平截面给出线性应变分布，距离 y 与应变大小成正比。
+</li>
+<li>
+<strong>接材料：</strong>在线弹性范围内，应力跟着应变线性变化。
+</li>
+<li>
+<strong>用平衡：</strong>截面正应力的合力满足轴力条件，合力矩必须还原外部弯矩 M，由此确定比例系数。
+</li>
+</ol>
+<figcaption>
+静态推导链｜几何、材料、平衡缺一不可；开裂、塑性或非均质截面会改变其中的步骤。
+</figcaption>
+</figure>
+</div>
+<p>把这四步收成一行，才得到熟悉的弯曲正应力式：</p>
 <p><span class="math display">\[\sigma_x(y)=-\frac{My}{I}\]</span></p>
-<p>中性轴处弯曲正应力为零，离中性轴越远，绝对值越大。边缘最大值可写为 <span class="math inline">\(sigma_{max}=M/W\)</span>，其中 <span class="math inline">\(W=I/c\)</span> 是截面抵抗矩。</p>
+<p>中性轴处弯曲正应力为零，离中性轴越远，绝对值越大。边缘最大值可写为 <span class="math inline">\(\sigma_{\max}=M/W\)</span>，其中 <span class="math inline">\(W=I/c\)</span> 是截面抵抗矩。</p>
 <p>横向剪力产生的切应力常写为：</p>
 <p><span class="math display">\[\tau=\frac{VQ}{Ib}\]</span></p>
 <p><span class="math inline">\(Q\)</span> 是所考察水平线一侧面积对中性轴的一次矩，<span class="math inline">\(b\)</span> 是该处实际宽度。矩形截面的切应力在中性轴最大、上下边缘为零；工字形截面的大部分剪力由腹板传递。</p>
@@ -530,7 +556,7 @@ Michael A. Scott · BYU · 约00:29起
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">实际应用｜用海绵验证平截面假定</h2>
 <p>曼彻斯特大学的 <a href="https://epsassets.manchester.ac.uk/structural-concepts/Statics/bending/bending_con.php">Bending 模型</a> 用画有横纵线的柔软梁展示弯曲：横线弯曲后仍近似保持直线并与纵轴近似垂直，上下纤维分别缩短和伸长。你可以用海绵、橡皮或带网格纸条复现实验。</p>
-<p>观察次序应是：先看线怎么动，再命名中性轴和曲率，最后才写 <span class="math inline">\(sigma=My/I\)</span>。模型支持假定，但不证明钢筋混凝土开裂后所有截面仍完全满足它。</p>
+<p>观察次序应是：先看线怎么动，再命名中性轴和曲率，最后才写 <span class="math inline">\(\sigma_x=-My/I\)</span>。模型支持假定，但不证明钢筋混凝土开裂后所有截面仍完全满足它。</p>
 </section>
 <section id="extension" class="level2">
 <h2 class="anchored" data-anchor-id="extension">拓展｜哪些地方不能再用梁公式</h2>
@@ -591,6 +617,26 @@ Michael A. Scott · BYU · 约00:29起
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

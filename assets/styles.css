@@ -54,6 +54,36 @@ p, li { line-height: 1.9; }
 .question-band::before { content: "你先判断"; display: block; margin-bottom: .4rem; font: 800 .72rem/1.2 "JetBrains Mono", "Cascadia Code", monospace; letter-spacing: .12em; color: var(--tension); }
 .question-band p:last-child { margin-bottom: 0; }
 
+/* ImageGen is used only as a clearly labelled mental-model doorway.  Technical
+   arrows, equations, dimensions and evidence remain deterministic SVG/HTML. */
+.concept-metaphor {
+  margin: 1.75rem 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.concept-metaphor img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.concept-metaphor figcaption {
+  padding: .85rem 1rem 1rem;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.65;
+  border-top: 1px solid var(--line);
+}
+.concept-metaphor figcaption strong {
+  display: block;
+  margin-bottom: .2rem;
+  color: var(--graphite);
+  font: 800 .7rem/1.2 "JetBrains Mono", "Cascadia Code", monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
 .source-note, .student-evidence, .bridge-window, .verify-panel, .model-boundary {
   margin: 1.4rem 0; padding: 1rem 1.1rem 1rem 3.25rem; position: relative; background: var(--paper); border: 1px solid var(--line);
 }

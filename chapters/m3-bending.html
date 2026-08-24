@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -439,11 +440,36 @@ window.Quarto = {
 <section id="insight" class="level2">
 <h2 class="anchored" data-anchor-id="insight">洞察｜为什么要把复杂应力图等效</h2>
 <p>极限状态下，受压混凝土的应力分布是非线性的。若每次设计都完整积分真实本构，手算会非常繁琐。工程计算用等效矩形压应力图替代真实分布，要求等效后的合力大小和作用位置能够代表原来的压区作用。</p>
-<p>对简化矩形截面，可以把受压区混凝土合力写成：</p>
+<p>下面只讨论<strong>单筋矩形截面、正截面受弯、轴力为零</strong>的简化模型，并采用平截面假定、忽略开裂后受拉混凝土、用等效矩形图代表受压混凝土。受拉钢筋是否已经屈服不能预先宣布，要在求得中性轴以后回查应变。</p>
+<div class="derive-mount" data-derivation="m3-rc-bending">
+<figure class="derive-fallback figure" aria-labelledby="fallback-m3-rc-bending">
+<h3 id="fallback-m3-rc-bending" class="anchored">
+四步看见：三个承载力公式其实在做什么
+</h3>
+<ol>
+<li>
+<strong>先画应变：</strong>顶部达到混凝土极限压应变，中性轴处为零；相似三角形给出钢筋位置的拉应变。
+</li>
+<li>
+<strong>再换成力：</strong>受压混凝土用等效矩形应力块表示，受拉一侧主要由钢筋承担。
+</li>
+<li>
+<strong>让合力平衡：</strong>没有轴力时，混凝土压力 C 与钢筋拉力 T 必须大小相等。
+</li>
+<li>
+<strong>读出力臂：</strong>一对相反合力相距 z，截面弯矩就是其中一个合力乘 z。
+</li>
+</ol>
+<figcaption>
+静态推导链｜应变协调决定材料处于什么状态，平衡才把材料响应变成截面承载力。
+</figcaption>
+</figure>
+</div>
+<p>走完四步，对这个简化模型，先区分两个深度：<span class="math inline">\(c\)</span> 是线性应变图中的真实中性轴深度，<span class="math inline">\(x=\beta_1c\)</span> 是规范化等效矩形压区深度。受压混凝土合力可写成：</p>
 <p><span class="math display">\[
 C=\alpha_1 f_{cd} b x
 \]</span></p>
-<p>受拉钢筋达到设计强度时：</p>
+<p>若回查确认受拉钢筋达到设计强度，则：</p>
 <p><span class="math display">\[
 T=f_{sd}A_s
 \]</span></p>
@@ -451,6 +477,7 @@ T=f_{sd}A_s
 <p><span class="math display">\[
 M_u=C\left(h_0-\frac{x}{2}\right)
 \]</span></p>
+<p>这里写出 <span class="math inline">\(T=f_{sd}A_s\)</span> 只是一个需要验证的材料状态。由平截面相似三角形可得 <span class="math inline">\(\varepsilon_s=\varepsilon_{cu}(h_0-c)/c\)</span>；它必须达到相应的设计屈服应变 <span class="math inline">\(\varepsilon_{yd}=f_{sd}/E_s\)</span>。若达不到，就不能强行使用屈服应力，而应回到钢筋本构重新求平衡。<span class="math inline">\(\alpha_1\)</span>、<span class="math inline">\(\beta_1\)</span> 以及强度符号的具体定义须以所采用规范为准。</p>
 <p>这些式子背后的核心不是“记住三个公式”，而是三件事：压区合力、拉区合力、两者力臂。</p>
 </section>
 <section id="example" class="level2">
@@ -618,6 +645,26 @@ Think Up / Materials Lab · 约00:33起
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

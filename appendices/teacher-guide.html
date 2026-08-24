@@ -80,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -324,6 +325,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#一次课的最小结构" id="toc-一次课的最小结构" class="nav-link active" data-scroll-target="#一次课的最小结构">一次课的最小结构</a></li>
   <li><a href="#五层内容怎样使用" id="toc-五层内容怎样使用" class="nav-link" data-scroll-target="#五层内容怎样使用">五层内容怎样使用</a></li>
   <li><a href="#降低认知负荷的具体规则" id="toc-降低认知负荷的具体规则" class="nav-link" data-scroll-target="#降低认知负荷的具体规则">降低认知负荷的具体规则</a></li>
+  <li><a href="#可视化推导台不要变成新的讲义墙" id="toc-可视化推导台不要变成新的讲义墙" class="nav-link" data-scroll-target="#可视化推导台不要变成新的讲义墙">可视化推导台不要变成新的讲义墙</a></li>
   <li><a href="#评价什么" id="toc-评价什么" class="nav-link" data-scroll-target="#评价什么">评价什么</a></li>
   <li><a href="#课堂上如何使用ai" id="toc-课堂上如何使用ai" class="nav-link" data-scroll-target="#课堂上如何使用ai">课堂上如何使用AI</a></li>
   <li><a href="#教师补充与基础正文的区分" id="toc-教师补充与基础正文的区分" class="nav-link" data-scroll-target="#教师补充与基础正文的区分">教师补充与基础正文的区分</a></li>
@@ -389,6 +391,17 @@ ul.task-list li input[type="checkbox"] {
 <li>不把朗读屏幕文字和密集动画同时播放；</li>
 <li>每完成一个局部模型，立刻指出它不能解释什么。</li>
 </ul>
+</section>
+<section id="可视化推导台不要变成新的讲义墙" class="level2">
+<h2 class="anchored" data-anchor-id="可视化推导台不要变成新的讲义墙">可视化推导台不要变成新的讲义墙</h2>
+<p>七个核心主题加入了四步推导台。课堂使用时，教师不要替学生连续点完：</p>
+<ol type="1">
+<li>先停在“先猜”，让每个人选择并写一句理由；“还不确定”也是可接受证据；</li>
+<li>每次只打开一步，请学生指着图说出<strong>刚新增了哪个对象</strong>；</li>
+<li>关系式出现后，先让学生用普通话复述，再处理符号和代数；</li>
+<li>走完后用“换个问题”迁移，最后才进入多变量自由实验或完整算例。</li>
+</ol>
+<p>推导台负责第一次建立因果链，视频负责证明现象真实存在，后续交互负责改变参数验证趋势。三者顺序可以调整，但不要在同一分钟同时播放视频、拖动多个滑块并抄写完整公式。</p>
 </section>
 <section id="评价什么" class="level2">
 <h2 class="anchored" data-anchor-id="评价什么">评价什么</h2>
@@ -493,6 +506,26 @@ ul.task-list li input[type="checkbox"] {
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

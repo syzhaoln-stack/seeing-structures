@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -405,16 +406,40 @@ window.Quarto = {
 <nav class="learning-layers" aria-label="本章学习层次">
 <a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
 </nav>
-<p>轴心受压是一个重要基准，却不是多数真实柱的完整状态。施工偏差、节点弯矩、水平荷载和初始弯曲都会让压力偏离截面形心。偏心距 <span class="math inline">\(e\)</span> 把轴力与弯矩连接起来：</p>
-<p><span class="math display">\[
-M=Ne
-\]</span></p>
-<p>这条式子很短，却打开了受压构件最重要的设计空间。</p>
+<p>轴心受压是一个重要基准，却不是多数真实柱的完整状态。施工偏差、节点弯矩、水平荷载和初始弯曲都会让压力偏离截面形心。偏心距 <span class="math inline">\(e\)</span> 让同一个压力同时产生“压”和“弯”，由此打开受压构件最重要的设计空间。</p>
 <div class="question-band">
 <p>同一根柱承受相同弯矩。若同时施加越来越大的轴向压力，截面一定会更危险吗？先写出你的判断，再去拖动交互图中的轴力。</p>
 </div>
 <section id="concept" class="level2">
 <h2 class="anchored" data-anchor-id="concept">概念｜先看截面有没有拉区</h2>
+<div class="derive-mount" data-derivation="m5-eccentric">
+<figure class="derive-fallback figure" aria-labelledby="fallback-m5-eccentric">
+<h3 id="fallback-m5-eccentric" class="anchored">
+四步看见：压力为什么一偏就会弯
+</h3>
+<ol>
+<li>
+<strong>标出两条线：</strong>一条是压力作用线，一条通过截面形心；两者相距 e。
+</li>
+<li>
+<strong>把力移到形心：</strong>若只平移压力，外部作用会被改变，因此必须补上一对力形成的力偶。
+</li>
+<li>
+<strong>读出力偶：</strong>补上的弯矩等于压力乘偏心距；e 越大，弯曲效应越强。
+</li>
+<li>
+<strong>叠加截面应变：</strong>轴压给出近似均匀压应变，弯矩给出线性梯度；相加后再判断截面是否出现拉区。
+</li>
+</ol>
+<figcaption>
+静态推导链｜这是截面的一阶等效分解；构件发生侧移后，还要另行考虑二阶附加弯矩。
+</figcaption>
+</figure>
+</div>
+<p>把偏心压力等效移到截面形心，必须同时补上一个力偶矩：</p>
+<p><span class="math display">\[
+M=Ne
+\]</span></p>
 <p>在弹性阶段，轴力造成近似均匀应变，弯矩造成线性应变梯度，两者叠加后可能出现三种直观状态：</p>
 <ul>
 <li>全截面受压；</li>
@@ -597,6 +622,26 @@ innotutorial · 约01:45起
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -434,6 +435,12 @@ window.Quarto = {
 <li>看切口上一点：弯矩主要表现为沿高度改变符号的正应力，剪力表现为非均匀切应力。</li>
 </ul>
 <p>这不是三套知识，而是“外部作用—截面合力—局部分布”三个放大倍数。</p>
+<figure class="concept-metaphor figure">
+<img src="../assets/illustrations/beam-four-lenses.webp" alt="同一根简支梁依次从外部荷载、整体变形、截面压拉分区和裂缝四个视角被观察" loading="lazy" decoding="async" class="figure-img">
+<figcaption>
+<strong>概念隐喻 · AI 生成，不是工程证据</strong>不要一次解释四幅图。先遮住右侧，只问“荷载进来后，最先能看见什么”；再逐幅打开，把同一根梁从外部动作追到内部状态。箭头、公式和尺寸以本页确定性图解为准。
+</figcaption>
+</figure>
 <div class="video-lesson">
 <div class="video-embed">
 <iframe data-src="https://www.youtube-nocookie.com/embed/aQf6Q8t1FQE?start=34" title="An Introduction to Stress and Strain" loading="lazy" allowfullscreen="">
@@ -608,6 +615,26 @@ Bilibili · 北京化工大学官成宇
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();

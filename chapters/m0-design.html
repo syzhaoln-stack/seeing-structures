@@ -110,6 +110,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/video-evidence.css">
+<link rel="stylesheet" href="../assets/derivation-workbench.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -498,7 +499,7 @@ window.Quarto = {
 <p>你不需要第一次就记住全部环节。现在只需建立一个习惯：当题目要求你“求某个数”时，多问一句——<strong>这个数算出来以后，我还能改变什么？</strong></p>
 <div class="bridge-window">
 <p><strong>桥梁迁移窗</strong></p>
-<p>整桥分析给构件设计提供 <span class="math inline">\(M、V、N、T\)</span> 和位移等输入；构件设计产生梁高、自重、刚度、配筋和施工要求。这些结果会反过来改变整桥模型。桥梁不是“先分析完，再设计一次”，而是在体系与构件之间反复迭代。</p>
+<p>整桥分析给构件设计提供 <span class="math inline">\(M\)</span>、<span class="math inline">\(V\)</span>、<span class="math inline">\(N\)</span>、<span class="math inline">\(T\)</span> 和位移等输入；构件设计产生梁高、自重、刚度、配筋和施工要求。这些结果会反过来改变整桥模型。桥梁不是“先分析完，再设计一次”，而是在体系与构件之间反复迭代。</p>
 </div>
 <details class="video-clips" open="">
 <summary>
@@ -634,6 +635,26 @@ Blueprint · 约31:50起
     for (const file of files) await load(file);
   })().catch((error) => {
     console.error("视频证据组件载入失败", error);
+    throw error;
+  });
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.DerivationWorkbenchReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const file = "assets/derivation-workbench.js";
+
+  globalThis.DerivationWorkbenchReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.derivationWorkbenchSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  }).catch((error) => {
+    console.error("可视化推导台载入失败；页面保留静态推导链。", error);
     throw error;
   });
 })();
