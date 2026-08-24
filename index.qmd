@@ -64,6 +64,16 @@ AI可以试算和画图，但每一个结论都必须留下公式、单位、趋
 
 你不会先遇到几十个符号。每一章从一个能看见或能想象的结构问题开始：先判断，随后操作模型，观察结果，再建立解释。公式只在它能够解决眼前问题时出现。
 
+每个模块都有五个固定入口。第一次学习按顺序走，复习或备课时可以直接跳到需要的一层：
+
+<nav class="learning-layers" aria-label="五层学习组织">
+  <a href="chapters/m0-design.qmd#concept"><span>01</span><strong>概念</strong><small>只建立当前必需的定义与模型</small></a>
+  <a href="chapters/m0-design.qmd#insight"><span>02</span><strong>洞察</strong><small>揭示一个反直觉关系</small></a>
+  <a href="chapters/m0-design.qmd#example"><span>03</span><strong>样例</strong><small>操作、预测并解释一个具体状态</small></a>
+  <a href="chapters/m0-design.qmd#application"><span>04</span><strong>实际应用</strong><small>迁移到构件、桥梁与施工</small></a>
+  <a href="chapters/m0-design.qmd#extension"><span>05</span><strong>拓展</strong><small>比较方案、找反例并留下证据</small></a>
+</nav>
+
 ::: {.cycle-strip}
 <span class="hot">先判断</span><span>动手改变</span><span>观察响应</span><span>建立模型</span><span>校核证据</span><span>迁移到桥</span>
 :::

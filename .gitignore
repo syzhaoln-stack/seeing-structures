@@ -5,6 +5,8 @@
 /.playwright-cli/
 book-*.png
 interactive-*.png
+layers-*.png
+real-case-*.png
 /.venv/
 __pycache__/
 *.pyc

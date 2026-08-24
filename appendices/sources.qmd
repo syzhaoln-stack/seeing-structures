@@ -31,6 +31,21 @@
 
 这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。
 
+## 组织方式样本
+
+- [Seeing and Touching Structural Concepts — The University of Manchester](https://epsassets.manchester.ac.uk/structural-concepts/)：借鉴同一结构主题下“Definitions and Concepts → Model Demonstrations → Practical Examples → References”的分层入口，以及用可触摸模型先检查梁弯曲假定、再进入工程实例的顺序。本书不复制其文字、图片或旧网页样式，而是在此骨架上增加“洞察”和“拓展”，形成“概念—洞察—样例—实际应用—拓展”五层结构。
+
+## 真实案例媒体
+
+- 米约高架桥照片：FaceMePLS，CC BY 2.0，[Wikimedia Commons文件页](https://commons.wikimedia.org/wiki/File:The_Millau_Viaduct_(2714080736).jpg)。
+- 伦敦千禧桥照片：Arpingstone，公有领域，[Wikimedia Commons文件页](https://commons.wikimedia.org/wiki/File:London.millennium.bridge.arp.750pix.jpg)。
+- 钢筋混凝土实体比较：[Why Concrete Needs Reinforcement](https://www.youtube.com/watch?v=cZINeaDjisY)，Practical Engineering。
+- 千禧桥开桥档案：[2000: 'Wobbly' Millennium Bridge Closed Days After Opening](https://www.youtube.com/watch?v=Hz72lzDxMfc)，Frontline by ITN。
+- 偏心受压柱研究：[CFRP Reinforced Concrete Columns under Eccentric Loading](https://www.youtube.com/watch?v=mA0HXqBz-lY)，American Concrete Institute。
+- 预应力桥梁施工：[Pre-Stressed Concrete in Texas Bridge Construction](https://www.youtube.com/watch?v=rs5eIaRix8I)，Texas Department of Transportation。
+
+外部图片保留原文件页、作者和许可；YouTube仅使用官方嵌入播放器，不下载或重新发布视频。真实画面用于提出观察问题，不把单个试验、新闻片段或工程宣传片当成完整设计证据。
+
 ## 交互模型的共同边界
 
 本书交互首先服务于概念判断，普遍采用简化几何、理想支承、确定性输入、线弹性或概念化材料状态。每个实验都应显示自己的假定与不适用范围。若交互结果与规范设计冲突，以经过确认的规范、项目条件和专业复核为准。

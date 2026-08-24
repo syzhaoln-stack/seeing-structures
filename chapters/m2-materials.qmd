@@ -4,6 +4,14 @@
 <span class="hot">看见弯曲</span><span>寻找中性轴</span><span>材料分工</span><span>变形协调</span><span>内力平衡</span><span>构造落地</span>
 :::
 
+<nav class="learning-layers" aria-label="本章学习层次">
+  <a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a>
+  <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a>
+  <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a>
+  <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a>
+  <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
+
 教室里的梁看起来没有动。正因为变形太小，我们容易产生一种错觉：结构仿佛凭空提供了抗力。
 
 事实上，混凝土受压区必须缩短，钢筋必须伸长，材料内部才会产生应力；这些应力在截面上汇聚成内力，才能与外部弯矩平衡。没有变形，就没有应变；没有应变，就没有材料应力；没有应力，也就没有抗力。
@@ -12,7 +20,7 @@
 拿一块有上下表面的泡沫条，把它弯成下挠形状。上表面和下表面分别发生什么？有没有一层既不伸长也不缩短？如果要放一根只能高效受拉的材料，应放在哪里？
 :::
 
-## 从看得见的泡沫到看不见的混凝土
+## 概念｜从看得见的泡沫到看不见的混凝土 {#concept}
 
 泡沫条弯曲时，上缘缩短、下缘伸长，中间存在纵向应变为零的位置。把沿高度的纵向应变画出来，得到近似线性分布。这就是平截面假定最直观的入口：截面弯曲以后仍近似保持平面。
 
@@ -22,7 +30,7 @@ $$
 
 其中 $\kappa$ 是曲率，$y$ 是到中性轴的距离。这个式子不是说材料应力一定线性，也不是说混凝土永远不开裂；它只描述几何上的应变协调。
 
-## 两种材料为什么能够共同工作
+### 两种材料为什么能够共同工作
 
 混凝土抗压能力较强、抗拉能力较弱；钢筋能够可靠承受拉力。把钢筋放入混凝土，并不自动形成共同工作。至少需要三个条件：
 
@@ -34,7 +42,7 @@ $$
 
 <p class="interaction-caption">移动钢筋位置并改变曲率。比较钢筋应变、力臂与裂缝风险，不要只寻找“越靠下越好”。</p>
 
-## 中性轴不是永远在截面中央
+## 洞察｜中性轴不是永远在截面中央 {#insight}
 
 均质、线弹性矩形截面在纯弯条件下，中性轴位于形心附近。但钢筋混凝土开裂以后，受拉混凝土逐渐退出主要抗拉工作，截面刚度分布改变，中性轴会向受压区移动。
 
@@ -44,7 +52,7 @@ $$
 学生经常把“平截面假定”误读成“应力沿高度线性”。应变能否线性分布取决于几何假定，应力则还要经过材料本构关系。混凝土进入非线性以后，即使应变仍近似线性，应力也可以明显非线性。
 :::
 
-## 从应变图到内力
+## 样例｜从应变图到内力 {#example}
 
 截面分析可以沿三层图前进：
 
@@ -59,7 +67,7 @@ $$
 
 几乎所有受弯、偏压和预应力截面问题，都可以回到这三层图。复杂公式不是独立出现的题型，而是同一个过程在不同材料状态和边界条件下的展开。
 
-## 轴向构件是最简单的起点
+## 实际应用｜从轴向构件迁移到桥梁 {#application}
 
 轴心受拉或受压时，截面上的应变关系比受弯简单。它适合帮助我们确认两个基本动作：材料怎样根据应变产生应力，截面内力怎样与外力平衡。
 
@@ -71,6 +79,19 @@ $$
 
 这条简单关系将把本章与后面的偏心受压连接起来。
 
+<article class="real-case">
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/cZINeaDjisY" title="Practical Engineering：Why Concrete Needs Reinforcement" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="real-case-body"><span class="real-case-kicker">REAL TEST · CONCRETE + REINFORCEMENT</span>
+
+### 先预测破坏，再观看加载
+
+Practical Engineering 用实体试件比较无筋、普通配筋与预应力混凝土。观看前先暂停并画出你预测的第一条裂缝；观看后只记录“裂缝从哪里开始、加入钢筋后破坏路径怎样改变”。
+
+视频展示的是特定小试件，不能直接推出工程梁承载力；它提供的是材料分工的现象证据。
+
+<p class="attribution">视频：<a href="https://www.youtube.com/watch?v=cZINeaDjisY">Why Concrete Needs Reinforcement</a>，Practical Engineering。</p></div>
+</article>
+
 ::: {.model-boundary}
 交互模型采用矩形截面、线性应变和简化材料响应，用来观察变量关系。它没有包含黏结滑移、混凝土拉伸软化、钢筋屈服后强化及三维效应，不能直接用于正式设计。
 :::
@@ -81,7 +102,7 @@ $$
 主梁通常以弯剪为主，墩柱和塔柱常出现压弯组合，吊杆与拉索以受拉为主。不同构件看似外形差异很大，却共享“变形协调—材料本构—内力平衡”这一套语言。
 :::
 
-## 本章留下的证据
+## 拓展｜改变钢筋位置并留下证据 {#extension}
 
 在交互模型中选择三个钢筋位置，记录相同曲率下的钢筋应变和力臂。回答：
 
