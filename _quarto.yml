@@ -94,9 +94,11 @@ format:
     css:
       - assets/styles.css
       - assets/video-evidence.css
+      - assets/derivation-workbench.css
     include-after-body:
       - assets/after-body.html
       - includes/video-evidence-auto-script.html
+      - includes/derivation-workbench-script.html
     toc: true
     toc-depth: 3
     number-sections: false

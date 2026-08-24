@@ -6,6 +6,8 @@
 
 它不复制既有教材，也不把专家名单当作教学有效性的证据。正文来自作者的课程录音、讲稿、课堂活动和持续修订；规范、原教材与AI输出只作为可追溯的外部证据。
 
+核心公式不以“完整推导墙”作为第一次入口。高负荷主题采用同页可视化推导台：学生先作趋势判断，再按“现象—几何—材料—平衡”逐层揭示，最后进入多变量自由实验。禁用 JavaScript 时仍保留完整的静态推导链。
+
 ## 本地预览
 
 ```powershell
@@ -41,6 +43,7 @@ python scripts/build_video_manifest.py
 python scripts/capture_video_frames.py --workers 4
 python scripts/sync_video_times.py
 python scripts/verify_video_evidence.py
+python scripts/verify_derivations.py
 quarto render
 ```
 
@@ -48,4 +51,5 @@ quarto render
 
 每条记录必须说明为什么选择“静态足够、逐步图解、需要运动”之一，并提供中文观察标识、原创导看和一个可检查的学习任务。
 已发现问题、修复与浏览器回归范围记录在 `research/video-evidence-adversarial-audit.md`。
+可视化推导台的力学方向、移动阅读和无脚本降级审查记录在 `research/visual-derivation-adversarial-audit.md`。
 

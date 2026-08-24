@@ -43,6 +43,11 @@
 
 这不是三套知识，而是“外部作用—截面合力—局部分布”三个放大倍数。
 
+<figure class="concept-metaphor">
+  <img src="../assets/illustrations/beam-four-lenses.webp" alt="同一根简支梁依次从外部荷载、整体变形、截面压拉分区和裂缝四个视角被观察" loading="lazy" decoding="async">
+  <figcaption><strong>概念隐喻 · AI 生成，不是工程证据</strong>不要一次解释四幅图。先遮住右侧，只问“荷载进来后，最先能看见什么”；再逐幅打开，把同一根梁从外部动作追到内部状态。箭头、公式和尺寸以本页确定性图解为准。</figcaption>
+</figure>
+
 <div class="video-lesson">
 <div class="video-embed"><iframe data-src="https://www.youtube-nocookie.com/embed/aQf6Q8t1FQE?start=34" title="An Introduction to Stress and Strain" loading="lazy" allowfullscreen></iframe><noscript class="video-fallback"><p><a href="https://www.youtube.com/watch?v=aQf6Q8t1FQE&amp;t=34s">在原平台打开核心时刻 00:34</a></p></noscript></div>
 

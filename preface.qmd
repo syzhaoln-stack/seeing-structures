@@ -11,6 +11,11 @@
 - 对计算、程序和AI结果进行验证；
 - 把一个构件重新放回桥梁与真实环境。
 
+<figure class="concept-metaphor">
+<img src="assets/illustrations/student-derivation-workbench.webp" alt="学生用双手给支承上的泡沫梁加载，旁边的量尺记录变形，透明叠层依次提示观察变形、切开受力和用测量复核" loading="lazy" decoding="async">
+<figcaption><strong>概念隐喻 · AI 生成，不是工程证据</strong>　推导不是看老师把黑板写满，而是你先碰到一个现象，再把它切开、说清关系，最后用测量或反例检查。图像只表达学习路径，不可用于判断真实构件受力。</figcaption>
+</figure>
+
 ## 我们拒绝什么
 
 我们不把作者和专家名单当作教材有效性的证明，不把章节覆盖率当作学习质量，不把学生的沉默当作理解，也不把一次期末考试当作唯一反馈。

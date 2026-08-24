@@ -10,7 +10,7 @@
 
 $$\sigma=\frac{N}{A},\qquad \varepsilon=\frac{\Delta L}{L},\qquad \sigma=E\varepsilon$$
 
-因此等截面线弹性杆的伸长为 $Delta L=NL/(EA)$。若轴力、面积或材料沿杆长变化，应写成积分，而不是强行套一个平均值。
+因此等截面线弹性杆的伸长为 $\Delta L=NL/(EA)$。若轴力、面积或材料沿杆长变化，应写成积分，而不是强行套一个平均值。
 
 圆轴在 Saint-Venant 扭转下：
 

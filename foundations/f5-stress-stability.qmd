@@ -6,7 +6,7 @@
 
 ## 概念｜同一点，不同截面 {#concept}
 
-平面应力状态由 $sigma_x$、$sigma_y$、$	au_{xy}$ 描述。旋转观察平面后，各分量改变，但主应力与最大切应力可由变换关系或 Mohr 圆得到：
+平面应力状态由 $\sigma_x$、$\sigma_y$、$\tau_{xy}$ 描述。旋转观察平面后，各分量改变，但主应力与最大切应力可由变换关系或 Mohr 圆得到：
 
 $$\sigma_{1,2}=\frac{\sigma_x+\sigma_y}{2}\pm
 \sqrt{\left(\frac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}$$

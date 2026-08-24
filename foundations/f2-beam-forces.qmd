@@ -6,11 +6,26 @@
 
 ## 概念｜切一刀，保留一边 {#concept}
 
-对平面受力细长梁，在任意位置切开并保留一侧，切口通常由轴力 $N(x)$、剪力 $V(x)$ 与弯矩 $M(x)$ 保持平衡。采用本书约定的符号后，分布荷载、剪力、弯矩之间满足：
+对平面受力细长梁，在任意位置切开并保留一侧，切口通常由轴力 $N(x)$、剪力 $V(x)$ 与弯矩 $M(x)$ 保持平衡。先别背两条微分式；把切口向右挪一小步，只追踪“相邻两截面差了什么”。
+
+<div class="derive-mount" data-derivation="f2-qvm">
+<figure class="derive-fallback" aria-labelledby="fallback-f2-qvm">
+<h3 id="fallback-f2-qvm">四步看见：荷载怎样一路变成弯矩图</h3>
+<ol>
+<li><strong>画小段：</strong>取长度为 Δx 的梁段，左、右切口的剪力和弯矩只差一个小增量。</li>
+<li><strong>只平衡竖向力：</strong>这段上的分布荷载合力约为 qΔx，它必须由剪力的变化抵消。</li>
+<li><strong>再平衡力矩：</strong>左侧剪力走过 Δx，造成相邻截面弯矩的变化；高阶小量在极限中消失。</li>
+<li><strong>回到图形：</strong>q 决定 V 图的斜率，V 决定 M 图的斜率；突变则来自集中作用。</li>
+</ol>
+<figcaption>静态推导链｜正负号取决于统一的坐标约定，“荷载改变剪力、剪力改变弯矩”的因果关系不变。</figcaption>
+</figure>
+</div>
+
+把两次平衡分别除以 Δx，并让这小段趋近于零，才得到本书符号约定下的结果：
 
 $$\frac{\mathrm dV}{\mathrm dx}=-q(x),\qquad \frac{\mathrm dM}{\mathrm dx}=V(x)$$
 
-因此：
+现在图形规则不再是四条孤立口诀：
 
 - 没有分布荷载的区段，剪力图水平，弯矩图为直线；
 - 均布荷载区段，剪力图为斜线，弯矩图为抛物线；
