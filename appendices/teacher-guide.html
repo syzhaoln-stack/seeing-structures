@@ -38,6 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../appendices/sources.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -105,6 +106,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -245,6 +249,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#一次课的最小结构" id="toc-一次课的最小结构" class="nav-link active" data-scroll-target="#一次课的最小结构">一次课的最小结构</a></li>
+  <li><a href="#五层内容怎样使用" id="toc-五层内容怎样使用" class="nav-link" data-scroll-target="#五层内容怎样使用">五层内容怎样使用</a></li>
   <li><a href="#降低认知负荷的具体规则" id="toc-降低认知负荷的具体规则" class="nav-link" data-scroll-target="#降低认知负荷的具体规则">降低认知负荷的具体规则</a></li>
   <li><a href="#评价什么" id="toc-评价什么" class="nav-link" data-scroll-target="#评价什么">评价什么</a></li>
   <li><a href="#课堂上如何使用ai" id="toc-课堂上如何使用ai" class="nav-link" data-scroll-target="#课堂上如何使用ai">课堂上如何使用AI</a></li>
@@ -275,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -295,6 +300,10 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>后建模</strong>（15—25分钟）：用公式解释刚才的变化，并说清模型边界；</li>
 <li><strong>留证据</strong>（10—20分钟）：提交比较、复核或错误报告，不按速度排名。</li>
 </ol>
+</section>
+<section id="五层内容怎样使用" class="level2">
+<h2 class="anchored" data-anchor-id="五层内容怎样使用">五层内容怎样使用</h2>
+<p>“概念—洞察—样例—实际应用—拓展”不是要求教师连续讲完的五段课件，而是五种可独立进入的认知任务：概念负责预训练，洞察负责重组直觉，样例提供完整示范，实际应用增加情境变化，拓展再逐步撤去支架。新手按顺序进入；已有基础的学生可以从样例或应用开始，避免专家反转效应。</p>
 </section>
 <section id="降低认知负荷的具体规则" class="level2">
 <h2 class="anchored" data-anchor-id="降低认知负荷的具体规则">降低认知负荷的具体规则</h2>
@@ -460,7 +469,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

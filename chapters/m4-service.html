@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m5-eccentric.html" rel="next">
 <link href="../chapters/m3-bending.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,11 +278,14 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#剪力不是一条斜线" id="toc-剪力不是一条斜线" class="nav-link active" data-scroll-target="#剪力不是一条斜线">剪力不是一条斜线</a></li>
-  <li><a href="#从弯矩到挠度要经过三次翻译" id="toc-从弯矩到挠度要经过三次翻译" class="nav-link" data-scroll-target="#从弯矩到挠度要经过三次翻译">从弯矩到挠度，要经过三次翻译</a></li>
-  <li><a href="#裂缝宽度不是材料强度的单变量函数" id="toc-裂缝宽度不是材料强度的单变量函数" class="nav-link" data-scroll-target="#裂缝宽度不是材料强度的单变量函数">裂缝宽度不是材料强度的单变量函数</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜剪力不是一条斜线</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜从弯矩到挠度，要经过三次翻译</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜移动荷载下的四幅同步图</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜裂缝、挠度与耐久共同控制</a>
+  <ul class="collapse">
   <li><a href="#耐久性是时间加入计算" id="toc-耐久性是时间加入计算" class="nav-link" data-scroll-target="#耐久性是时间加入计算">耐久性是时间加入计算</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜解释移动荷载的三个控制位置</a></li>
   </ul>
 </nav>
     </div>
@@ -305,7 +312,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -319,24 +326,30 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">荷载路径</span><span>剪切传递</span><span>裂缝分布</span><span>挠度积累</span><span>耐久暴露</span><span>使用判断</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>承载能力回答“会不会达到危险状态”，正常使用回答“人能不能安心使用、构件能不能长期工作”。一座桥即使暂时不会倒塌，也可能因为挠度过大、裂缝过宽、振动明显或钢筋锈蚀而失去功能。</p>
 <div class="question-band">
 <p>两根梁的极限承载力相同。A梁裂缝少而集中，B梁裂缝多而细密。只凭这句话，哪一根更耐久？你还必须知道哪些环境与构造信息？</p>
 </div>
-<section id="剪力不是一条斜线" class="level2">
-<h2 class="anchored" data-anchor-id="剪力不是一条斜线">剪力不是一条斜线</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜剪力不是一条斜线</h2>
 <p>弯矩使梁产生曲率，剪力则要求截面相邻部分之间持续传递纵向力。无腹筋梁开裂后，剪切可以通过未开裂受压区、骨料咬合、纵筋销栓作用和拱作用等机制共同传递。把抗剪承载力写成一个公式，并不意味着梁里只有一种抗剪机制。</p>
 <p>斜裂缝之所以值得重视，是因为它把“纵向弯曲问题”转化成了“斜向拉压传力问题”。箍筋穿过可能出现的斜裂缝，承担拉力并约束裂缝开展；受压区和混凝土斜压带提供另一条力流。桁架类比的价值，是把看不见的力流变成可追踪的拉杆与压杆。</p>
 <p>但类比不是事实本身。真实构件的裂缝角度、受压带宽度、黏结退化和尺寸效应都不会完全服从一幅固定桁架图。</p>
 </section>
-<section id="从弯矩到挠度要经过三次翻译" class="level2">
-<h2 class="anchored" data-anchor-id="从弯矩到挠度要经过三次翻译">从弯矩到挠度，要经过三次翻译</h2>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜从弯矩到挠度，要经过三次翻译</h2>
 <p>对小变形梁，弯矩与曲率之间近似满足：</p>
 <p><span class="math display">\[
 \kappa(x)=\frac{M(x)}{EI}
 \]</span></p>
 <p>曲率沿长度积分得到转角，转角再积分得到挠度。支座边界条件决定积分常数。因此，弯矩图不是挠曲线，挠曲线也不能通过把弯矩图“上下翻转”直接得到。</p>
 <p>钢筋混凝土梁开裂后，<span class="math inline">\(EI\)</span> 不再是沿梁长不变的常数。裂缝截面刚度较低，裂缝之间受拉混凝土仍通过黏结参与工作。工程计算用等效刚度表示这种连续变化，但模型边界必须说清楚。</p>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜移动荷载下的四幅同步图</h2>
 <iframe class="interaction-frame" src="../interactive/shear-service.html" title="剪力、弯矩、裂缝与挠度同步实验" loading="lazy">
 </iframe>
 <p class="interaction-caption">
@@ -346,14 +359,40 @@ window.Quarto = {
 <p>The Efficient Engineer 的剪力—弯矩讲解采用“外荷载 → 支反力 → 任意截面切口 → 内力图”的连续叙事；其梁挠度讲解把 <span class="math inline">\(M/EI\)</span>、转角与挠度分层。这里借用的是信息展开顺序，并把被动观看改成可暂停、可反向操作的实验。</p>
 </div>
 </section>
-<section id="裂缝宽度不是材料强度的单变量函数" class="level2">
-<h2 class="anchored" data-anchor-id="裂缝宽度不是材料强度的单变量函数">裂缝宽度不是材料强度的单变量函数</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜裂缝、挠度与耐久共同控制</h2>
 <p>裂缝由变形不协调产生。钢筋应变、钢筋直径与间距、保护层厚度、黏结性能、有效受拉混凝土面积和荷载持续时间都会影响裂缝间距与宽度。</p>
 <p>“多放钢筋”并不是无条件正确。总钢筋面积相近时，较多的小直径钢筋往往能改善裂缝分布；但钢筋过密会妨碍混凝土浇筑和振捣，反而制造耐久缺陷。设计必须同时看计算与施工。</p>
-</section>
-<section id="耐久性是时间加入计算" class="level2">
-<h2 class="anchored" data-anchor-id="耐久性是时间加入计算">耐久性是时间加入计算</h2>
+<section id="耐久性是时间加入计算" class="level3">
+<h3 class="anchored" data-anchor-id="耐久性是时间加入计算">耐久性是时间加入计算</h3>
 <p>保护层不是没有受力的“多余混凝土”。它隔离水、氧、氯离子与二氧化碳，为钢筋提供防火保护，也参与黏结锚固。保护层过小会缩短侵蚀路径，过大又可能加剧表面裂缝宽度。耐久性设计永远依赖暴露环境、材料质量、施工偏差与维护条件。</p>
+<article class="real-case">
+<div class="real-case-grid">
+<div class="real-case-media">
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/London.millennium.bridge.arp.750pix.jpg" alt="伦敦千禧桥跨越泰晤士河的真实照片" loading="lazy">
+</div>
+<div class="real-case-body">
+<p><span class="real-case-kicker">REAL CASE · SERVICEABILITY</span></p>
+<section id="伦敦千禧桥没有倒塌也必须关闭" class="level3">
+<h3 class="anchored" data-anchor-id="伦敦千禧桥没有倒塌也必须关闭">伦敦千禧桥：没有倒塌，也必须关闭</h3>
+<p>开桥时出现的明显侧向摆动没有立即造成倒塌，却已经让行人难以接受并迫使桥梁关闭改造。先看照片判断它的体系为何对侧向体验敏感，再观看下方档案影像确认“使用者实际感受到什么”。</p>
+<p>照片和新闻画面不能单独证明振动机理；人群—结构耦合、频率、阻尼与改造效果需要测试和分析。</p>
+<p class="attribution">
+照片：Arpingstone，公有领域，经 <a href="https://commons.wikimedia.org/wiki/File:London.millennium.bridge.arp.750pix.jpg">Wikimedia Commons</a>。
+</p>
+</section>
+</div>
+</div>
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/Hz72lzDxMfc" title="ITN档案：千禧桥开放后因摆动关闭" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+<div class="real-case-body">
+<p class="attribution">
+档案影像：<a href="https://www.youtube.com/watch?v=Hz72lzDxMfc">2000: ‘Wobbly’ Millennium Bridge Closed Days After Opening</a>，Frontline by ITN。
+</p>
+</div>
+</article>
 <div class="model-boundary">
 <p>本章交互只演示线弹性简支梁的 V/M 图与挠曲线趋势；裂缝和配箍显示是概念提示，不是规范承载力计算。真实设计需使用适用规范，考虑开裂刚度、长期效应、重复荷载、尺寸效应与构造要求。</p>
 </div>
@@ -371,8 +410,9 @@ window.Quarto = {
 <p>车辆荷载移动时，控制截面和控制效应会改变；桥面铺装、伸缩缝和轨道平顺性又会放大对挠度与裂缝的敏感性。抗剪、抗弯、疲劳和耐久并不是四张互不相干的验算表。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜解释移动荷载的三个控制位置</h2>
 <p>选择同一根简支梁的两个移动荷载位置，截取交互图中的 V/M 图和挠曲线。用三句话解释：哪里最容易出现弯曲裂缝，哪里更需要关注斜裂缝，为什么最大挠度位置不必与荷载位置完全相同。</p>
 
 
@@ -476,7 +516,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

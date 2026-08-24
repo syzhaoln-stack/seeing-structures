@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m4-service.html" rel="next">
 <link href="../chapters/m2-materials.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,13 +278,16 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#第一阶段看似完整的梁" id="toc-第一阶段看似完整的梁" class="nav-link active" data-scroll-target="#第一阶段看似完整的梁">第一阶段：看似完整的梁</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜梁不是从完好跳到破坏</a>
+  <ul class="collapse">
+  <li><a href="#第一阶段看似完整的梁" id="toc-第一阶段看似完整的梁" class="nav-link" data-scroll-target="#第一阶段看似完整的梁">第一阶段：看似完整的梁</a></li>
   <li><a href="#第二阶段带裂缝工作是正常状态" id="toc-第二阶段带裂缝工作是正常状态" class="nav-link" data-scroll-target="#第二阶段带裂缝工作是正常状态">第二阶段：带裂缝工作是正常状态</a></li>
   <li><a href="#第三阶段延性来自可观察的预警" id="toc-第三阶段延性来自可观察的预警" class="nav-link" data-scroll-target="#第三阶段延性来自可观察的预警">第三阶段：延性来自可观察的预警</a></li>
-  <li><a href="#为什么要把复杂应力图等效" id="toc-为什么要把复杂应力图等效" class="nav-link" data-scroll-target="#为什么要把复杂应力图等效">为什么要把复杂应力图等效</a></li>
-  <li><a href="#设计与复核不是同一道题" id="toc-设计与复核不是同一道题" class="nav-link" data-scroll-target="#设计与复核不是同一道题">设计与复核不是同一道题</a></li>
-  <li><a href="#t形截面与双筋截面不是新世界" id="toc-t形截面与双筋截面不是新世界" class="nav-link" data-scroll-target="#t形截面与双筋截面不是新世界">T形截面与双筋截面不是新世界</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜为什么要把复杂应力图等效</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜设计与复核不是同一道题</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜T形截面与双筋截面</a></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜两种可行梁的方案比较</a></li>
   </ul>
 </nav>
     </div>
@@ -307,7 +314,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -321,6 +328,9 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">未开裂</span><span>开裂</span><span>带裂缝工作</span><span>钢筋屈服</span><span>混凝土压碎</span><span>设计选择</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>钢筋混凝土梁不是在某个瞬间从“完好”跳到“破坏”。随着弯矩增加，它会经历刚度变化、裂缝出现、中性轴移动、钢筋应力增长和受压混凝土非线性发展。理解这条连续路径，比背诵不同阶段的公式更重要。</p>
 <div class="question-band">
 <p>一根配筋适量的简支梁逐渐加载。下面两件事通常谁先发生？</p>
@@ -330,18 +340,20 @@ window.Quarto = {
 </ol>
 <p>如果继续加载，为什么我们希望钢筋屈服发生在混凝土压碎之前？</p>
 </div>
-<section id="第一阶段看似完整的梁" class="level2">
-<h2 class="anchored" data-anchor-id="第一阶段看似完整的梁">第一阶段：看似完整的梁</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜梁不是从完好跳到破坏</h2>
+<section id="第一阶段看似完整的梁" class="level3">
+<h3 class="anchored" data-anchor-id="第一阶段看似完整的梁">第一阶段：看似完整的梁</h3>
 <p>荷载较小时，受拉混凝土尚未达到抗拉极限，整个截面共同工作。应变近似线性，材料响应接近弹性，弯矩—曲率关系斜率较大，表示构件刚度较高。</p>
 <p>但“没有肉眼可见裂缝”不等于没有拉应变。受拉区已经在伸长，只是应力尚未超过混凝土抗拉能力。</p>
 </section>
-<section id="第二阶段带裂缝工作是正常状态" class="level2">
-<h2 class="anchored" data-anchor-id="第二阶段带裂缝工作是正常状态">第二阶段：带裂缝工作是正常状态</h2>
+<section id="第二阶段带裂缝工作是正常状态" class="level3">
+<h3 class="anchored" data-anchor-id="第二阶段带裂缝工作是正常状态">第二阶段：带裂缝工作是正常状态</h3>
 <p>混凝土抗拉强度远低于抗压强度。随着弯矩增加，受拉边缘首先达到抗拉极限并出现裂缝。裂缝截面处，受拉混凝土承担的拉力显著下降，钢筋承担主要拉力；裂缝之间仍可通过黏结参与部分受拉。</p>
 <p>开裂导致有效刚度下降，同样增加一点弯矩，会产生比开裂前更明显的曲率和挠度。普通钢筋混凝土构件在正常使用阶段带裂缝工作并不罕见，真正需要控制的是裂缝宽度、分布和耐久影响。</p>
 </section>
-<section id="第三阶段延性来自可观察的预警" class="level2">
-<h2 class="anchored" data-anchor-id="第三阶段延性来自可观察的预警">第三阶段：延性来自可观察的预警</h2>
+<section id="第三阶段延性来自可观察的预警" class="level3">
+<h3 class="anchored" data-anchor-id="第三阶段延性来自可观察的预警">第三阶段：延性来自可观察的预警</h3>
 <p>继续加载，受拉钢筋达到屈服。屈服以后，变形可以显著增加，而承载力增长有限。最终受压区混凝土达到极限压应变并压碎。</p>
 <p>适筋梁中“钢筋先屈服、混凝土后压碎”的路径能提供较明显的变形和裂缝预警，也为内力重分布留下空间。若钢筋配置过多，受压混凝土可能在钢筋充分屈服前压碎，破坏更突然；若钢筋过少，开裂后钢筋可能迅速屈服甚至断裂。</p>
 <iframe class="interaction-frame" src="../interactive/bending-life.html" title="钢筋混凝土梁全过程交互实验" loading="lazy">
@@ -350,8 +362,9 @@ window.Quarto = {
 缓慢增加弯矩。关注裂缝、刚度、中性轴和材料状态怎样一起变化，而不是只看最终承载指标。
 </p>
 </section>
-<section id="为什么要把复杂应力图等效" class="level2">
-<h2 class="anchored" data-anchor-id="为什么要把复杂应力图等效">为什么要把复杂应力图等效</h2>
+</section>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜为什么要把复杂应力图等效</h2>
 <p>极限状态下，受压混凝土的应力分布是非线性的。若每次设计都完整积分真实本构，手算会非常繁琐。工程计算用等效矩形压应力图替代真实分布，要求等效后的合力大小和作用位置能够代表原来的压区作用。</p>
 <p>对简化矩形截面，可以把受压区混凝土合力写成：</p>
 <p><span class="math display">\[
@@ -367,8 +380,8 @@ M_u=C\left(h_0-\frac{x}{2}\right)
 \]</span></p>
 <p>这些式子背后的核心不是“记住三个公式”，而是三件事：压区合力、拉区合力、两者力臂。</p>
 </section>
-<section id="设计与复核不是同一道题" class="level2">
-<h2 class="anchored" data-anchor-id="设计与复核不是同一道题">设计与复核不是同一道题</h2>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜设计与复核不是同一道题</h2>
 <p><strong>截面设计</strong>通常给出目标弯矩、材料和初步尺寸，求配筋并完成构造校核；<strong>截面复核</strong>则给出已经存在的截面与配筋，求承载能力或判断是否满足。</p>
 <p>设计阶段存在可调变量。若受压区过深、延性条件不满足，可以：</p>
 <ul>
@@ -380,8 +393,8 @@ M_u=C\left(h_0-\frac{x}{2}\right)
 </ul>
 <p>只说“换一个公式继续算”，会遮蔽这些更重要的设计动作。</p>
 </section>
-<section id="t形截面与双筋截面不是新世界" class="level2">
-<h2 class="anchored" data-anchor-id="t形截面与双筋截面不是新世界">T形截面与双筋截面不是新世界</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜T形截面与双筋截面</h2>
 <p>T形截面利用翼缘扩大受压区，腹板维持整体和承担剪力。双筋截面则在受压区配置钢筋，可能用于截面尺寸受限、弯矩较大、承受反向弯矩或构造需要的情况。</p>
 <p>它们都仍然遵循同一套分析：画应变图，确定材料状态，求内力合力，满足平衡，再检查假定是否成立。题型变了，骨架没有变。</p>
 <div class="student-evidence">
@@ -401,8 +414,8 @@ M_u=C\left(h_0-\frac{x}{2}\right)
 <p>预制T梁、现浇箱梁顶板和组合梁桥面板都会出现类似T形受压区。整桥分析提供控制弯矩，截面设计给出梁高与配筋；梁高和自重又会改变桥梁体系选择与施工设备需求。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜两种可行梁的方案比较</h2>
 <p>用同一个目标弯矩构造两种满足承载力的方案：</p>
 <ul>
 <li>方案A梁较浅、钢筋较多；</li>
@@ -511,7 +524,7 @@ M_u=C\left(h_0-\frac{x}{2}\right)
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

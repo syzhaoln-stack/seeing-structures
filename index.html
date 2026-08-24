@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./preface.html" rel="next">
+<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -106,6 +107,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -270,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -322,6 +326,10 @@ STRUCTURE / CHOICE / EVIDENCE
 <section id="这本书怎样工作" class="level2">
 <h2 class="anchored" data-anchor-id="这本书怎样工作">这本书怎样工作</h2>
 <p>你不会先遇到几十个符号。每一章从一个能看见或能想象的结构问题开始：先判断，随后操作模型，观察结果，再建立解释。公式只在它能够解决眼前问题时出现。</p>
+<p>每个模块都有五个固定入口。第一次学习按顺序走，复习或备课时可以直接跳到需要的一层：</p>
+<nav class="learning-layers" aria-label="五层学习组织">
+<a href="./chapters/m0-design.html#concept"><span>01</span><strong>概念</strong><small>只建立当前必需的定义与模型</small></a> <a href="./chapters/m0-design.html#insight"><span>02</span><strong>洞察</strong><small>揭示一个反直觉关系</small></a> <a href="./chapters/m0-design.html#example"><span>03</span><strong>样例</strong><small>操作、预测并解释一个具体状态</small></a> <a href="./chapters/m0-design.html#application"><span>04</span><strong>实际应用</strong><small>迁移到构件、桥梁与施工</small></a> <a href="./chapters/m0-design.html#extension"><span>05</span><strong>拓展</strong><small>比较方案、找反例并留下证据</small></a>
+</nav>
 <div class="cycle-strip">
 <p><span class="hot">先判断</span><span>动手改变</span><span>观察响应</span><span>建立模型</span><span>校核证据</span><span>迁移到桥</span></p>
 </div>
@@ -429,7 +437,7 @@ STRUCTURE / CHOICE / EVIDENCE
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m6-prestress.html" rel="next">
 <link href="../chapters/m4-service.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,12 +278,17 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#先看截面有没有拉区" id="toc-先看截面有没有拉区" class="nav-link active" data-scroll-target="#先看截面有没有拉区">先看截面有没有拉区</a></li>
-  <li><a href="#大偏心和小偏心是连续谱" id="toc-大偏心和小偏心是连续谱" class="nav-link" data-scroll-target="#大偏心和小偏心是连续谱">大偏心和小偏心是连续谱</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜先看截面有没有拉区</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜大偏心和小偏心是连续谱</a>
+  <ul class="collapse">
   <li><a href="#nm相关曲线是一张能力地图" id="toc-nm相关曲线是一张能力地图" class="nav-link" data-scroll-target="#nm相关曲线是一张能力地图">N–M相关曲线是一张能力地图</a></li>
-  <li><a href="#二阶效应变形会反过来增加弯矩" id="toc-二阶效应变形会反过来增加弯矩" class="nav-link" data-scroll-target="#二阶效应变形会反过来增加弯矩">二阶效应：变形会反过来增加弯矩</a></li>
+  </ul></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜把需求点放进N–M地图</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜二阶效应让变形反过来增加弯矩</a>
+  <ul class="collapse">
   <li><a href="#对称配筋不只是为了公式好算" id="toc-对称配筋不只是为了公式好算" class="nav-link" data-scroll-target="#对称配筋不只是为了公式好算">对称配筋不只是为了公式好算</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜比较两类N–M需求点</a></li>
   </ul>
 </nav>
     </div>
@@ -306,7 +315,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -320,6 +329,9 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">作用位置</span><span>应变梯度</span><span>截面分区</span><span>N–M组合</span><span>二阶效应</span><span>构造选择</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>轴心受压是一个重要基准，却不是多数真实柱的完整状态。施工偏差、节点弯矩、水平荷载和初始弯曲都会让压力偏离截面形心。偏心距 <span class="math inline">\(e\)</span> 把轴力与弯矩连接起来：</p>
 <p><span class="math display">\[
 M=Ne
@@ -328,8 +340,8 @@ M=Ne
 <div class="question-band">
 <p>同一根柱承受相同弯矩。若同时施加越来越大的轴向压力，截面一定会更危险吗？先写出你的判断，再去拖动交互图中的轴力。</p>
 </div>
-<section id="先看截面有没有拉区" class="level2">
-<h2 class="anchored" data-anchor-id="先看截面有没有拉区">先看截面有没有拉区</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜先看截面有没有拉区</h2>
 <p>在弹性阶段，轴力造成近似均匀应变，弯矩造成线性应变梯度，两者叠加后可能出现三种直观状态：</p>
 <ul>
 <li>全截面受压；</li>
@@ -338,23 +350,26 @@ M=Ne
 </ul>
 <p>因此，“受压构件”不等于“截面每一点都受压”。判断材料状态的第一步应当是画应变图，而不是先寻找题型名称。</p>
 </section>
-<section id="大偏心和小偏心是连续谱" class="level2">
-<h2 class="anchored" data-anchor-id="大偏心和小偏心是连续谱">大偏心和小偏心是连续谱</h2>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜大偏心和小偏心是连续谱</h2>
 <p>当中性轴较浅，受拉钢筋有机会先达到屈服，截面表现更接近受弯构件；当中性轴较深，受压区占主导，受拉一侧钢筋可能尚未屈服，混凝土压区已经控制破坏。</p>
 <p>“大偏心”“小偏心”是帮助计算分支的语言，不是两种互不相干的构件。真正连续变化的是应变分布、中性轴位置与材料状态。</p>
-</section>
-<section id="nm相关曲线是一张能力地图" class="level2">
-<h2 class="anchored" data-anchor-id="nm相关曲线是一张能力地图">N–M相关曲线是一张能力地图</h2>
+<section id="nm相关曲线是一张能力地图" class="level3">
+<h3 class="anchored" data-anchor-id="nm相关曲线是一张能力地图">N–M相关曲线是一张能力地图</h3>
 <p>对给定截面、材料与配筋，可以改变中性轴位置，逐点满足应变协调与内力平衡，得到一组 <span class="math inline">\((N,M)\)</span> 抗力点。连接这些点，就形成轴力—弯矩相关曲线。</p>
 <p>曲线内部通常表示截面能力尚有余量，曲线外部表示该组合超出截面能力。它比一个单独的“最大轴力”或“最大弯矩”更接近真实设计，因为轴力和弯矩会彼此影响。</p>
+</section>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜把需求点放进N–M地图</h2>
 <iframe class="interaction-frame" src="../interactive/eccentric-nm.html" title="偏心受压与N-M相关图交互实验" loading="lazy">
 </iframe>
 <p class="interaction-caption">
 先改变偏心距，看应变图和合力位置；再把需求点放进 N–M 地图。注意：概念曲线不是规范设计曲线。
 </p>
 </section>
-<section id="二阶效应变形会反过来增加弯矩" class="level2">
-<h2 class="anchored" data-anchor-id="二阶效应变形会反过来增加弯矩">二阶效应：变形会反过来增加弯矩</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜二阶效应让变形反过来增加弯矩</h2>
 <p>柱一旦发生侧向挠曲，轴力会对变形后的几何位置产生附加弯矩，常写成 <span class="math inline">\(P\Delta\)</span> 效应。于是出现反馈链：</p>
 <p><span class="math display">\[
 \text{弯矩}\rightarrow\text{侧移}\rightarrow\text{附加弯矩}\rightarrow\text{更大侧移}
@@ -363,10 +378,26 @@ M=Ne
 <div class="student-evidence">
 <p>“轴力增加一定更不利”是一个值得保留再修正的直觉。在接近纯弯的某些区间，适度压力可能让原本受拉的混凝土进入受压状态，截面抗弯能力可能先增加；再继续增加轴力，压区耗尽，能力才下降。相关曲线正是用来替代单调直觉的证据。</p>
 </div>
-</section>
-<section id="对称配筋不只是为了公式好算" class="level2">
-<h2 class="anchored" data-anchor-id="对称配筋不只是为了公式好算">对称配筋不只是为了公式好算</h2>
+<section id="对称配筋不只是为了公式好算" class="level3">
+<h3 class="anchored" data-anchor-id="对称配筋不只是为了公式好算">对称配筋不只是为了公式好算</h3>
 <p>桥墩和框架柱可能承受弯矩反号、施工阶段变化、地震往复作用。对称配筋可以让截面面对不同弯曲方向时保持较一致的能力，也有利于构造标准化。但它可能不是材料用量最小的方案。</p>
+<article class="real-case">
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/mA0HXqBz-lY" title="ACI：偏心受压混凝土柱研究" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+<div class="real-case-body">
+<p><span class="real-case-kicker">REAL RESEARCH · ECCENTRIC COLUMNS</span></p>
+<section id="偏心距不是题目里的一行小字" class="level3">
+<h3 class="anchored" data-anchor-id="偏心距不是题目里的一行小字">偏心距不是题目里的一行小字</h3>
+<p>American Concrete Institute 发布的渥太华大学研究展示不同偏心加载下的混凝土柱试验。观看时只跟踪三件事：加载线、侧向变形、最终破坏区；然后把观察放回 N–M 图，而不是急着抄试验数字。</p>
+<p>这些试件还包含CFRP等特定加固变量，不能直接代替普通钢筋混凝土柱模型。</p>
+<p class="attribution">
+视频：<a href="https://www.youtube.com/watch?v=mA0HXqBz-lY">CFRP Reinforced Concrete Columns under Eccentric Loading</a>，American Concrete Institute。
+</p>
+</section>
+</div>
+</article>
 <div class="verify-panel">
 <p><strong>四重校核：N–M结果可信吗？</strong></p>
 <ol type="1">
@@ -381,8 +412,9 @@ M=Ne
 <p>桥墩既承受上部结构竖向反力，也承受制动力、风、地震和不均匀温度产生的弯矩。单柱、双柱墩和薄壁墩的选择，会同时改变 N–M需求、长细效应、景观与施工。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜比较两类N–M需求点</h2>
 <p>给定一个矩形柱截面，构造两个落在概念 N–M 曲线内部的需求点：一个高轴力低弯矩，一个低轴力高弯矩。分别画出你预期的应变图，并指出哪一种更依赖混凝土压区、哪一种更依赖受拉钢筋。</p>
 
 
@@ -486,7 +518,7 @@ M=Ne
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

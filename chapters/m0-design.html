@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m1-reliability.html" rel="next">
 <link href="../preface.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,11 +278,14 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#从唯一解回到设计空间" id="toc-从唯一解回到设计空间" class="nav-link active" data-scroll-target="#从唯一解回到设计空间">从唯一解回到设计空间</a></li>
-  <li><a href="#一个结果为什么可能算对但设计错" id="toc-一个结果为什么可能算对但设计错" class="nav-link" data-scroll-target="#一个结果为什么可能算对但设计错">一个结果为什么可能“算对但设计错”</a></li>
-  <li><a href="#ai时代人的工作向哪里移动" id="toc-ai时代人的工作向哪里移动" class="nav-link" data-scroll-target="#ai时代人的工作向哪里移动">AI时代，人的工作向哪里移动</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜从唯一解回到设计空间</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜可行解是一片区域</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜一个结果为什么可能“算对但设计错”</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜AI时代，人的工作向哪里移动</a>
+  <ul class="collapse">
   <li><a href="#本课程的共同设计闭环" id="toc-本课程的共同设计闭环" class="nav-link" data-scroll-target="#本课程的共同设计闭环">本课程的共同设计闭环</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜本章留下的证据</a></li>
   </ul>
 </nav>
     </div>
@@ -305,7 +312,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -319,6 +326,9 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">先判断</span><span>改变变量</span><span>比较方案</span><span>定义问题</span><span>验证边界</span><span>形成决策</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>假设一根梁的截面尺寸、材料强度、计算弯矩和保护层全部已经确定，题目只问需要多少钢筋。你可能会得到一个精确到平方毫米的答案。但严格地说，这更接近<strong>给定条件下的计算</strong>，而不是完整的设计。</p>
 <p>设计发生在条件尚未全部锁死的时候。梁可以高一点，也可以宽一点；可以用更高强度的材料，也可以改变截面形状；可以增加钢筋，也可以先减轻自重；甚至可以增加支点、改变传力路径。答案不再唯一，工程师必须在安全、使用、耐久、空间、施工、经济和外观之间作出选择。</p>
 <div class="question-band">
@@ -333,8 +343,8 @@ window.Quarto = {
 </ul>
 <p>先不要寻找“标准答案”。请判断每个动作会改变哪一段传力过程，又会付出什么代价。</p>
 </div>
-<section id="从唯一解回到设计空间" class="level2">
-<h2 class="anchored" data-anchor-id="从唯一解回到设计空间">从唯一解回到设计空间</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜从唯一解回到设计空间</h2>
 <p>材料力学中的典型分析题，往往给出结构、材料和作用，要求计算应力或变形。输入明确，输出相对唯一。结构设计则从目标和约束出发，反向寻找材料、尺寸、构造和体系。</p>
 <p>可以把两者写成两条方向相反的链：</p>
 <p><span class="math display">\[
@@ -344,14 +354,18 @@ window.Quarto = {
 \text{设计：功能与约束} \longrightarrow \text{寻找并比较结构方案}
 \]</span></p>
 <p>设计当然离不开分析。每提出一个方案，都必须通过分析判断它能否工作。但分析结果只是决策的证据之一，不会自动告诉我们哪个方案最好。</p>
+</section>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜可行解是一片区域</h2>
+<p>分析题把变量锁定以后，答案像一个点；设计把尺寸、材料、构造和体系重新开放，答案就变成一片受约束的区域。真正的判断不是“哪个数字最精确”，而是“哪些方案可行、代价分别落在哪里”。</p>
 <iframe class="interaction-frame" src="../interactive/design-space.html" title="梁的设计空间交互实验" loading="lazy">
 </iframe>
 <p class="interaction-caption">
 先固定荷载，分别改变梁高、梁宽和配筋。观察承载指标、自重和材料用量是否朝同一方向变化。
 </p>
 </section>
-<section id="一个结果为什么可能算对但设计错" class="level2">
-<h2 class="anchored" data-anchor-id="一个结果为什么可能算对但设计错">一个结果为什么可能“算对但设计错”</h2>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜一个结果为什么可能“算对但设计错”</h2>
 <p>假设程序算出所需钢筋面积为 <span class="math inline">\(A_s=2450\text{ mm}^2\)</span>。数字本身可能正确，但工程工作还没有结束：</p>
 <ul>
 <li>钢筋能否在截面中排得下？</li>
@@ -363,8 +377,8 @@ window.Quarto = {
 </ul>
 <p>计算题常常把这些问题放到题目外面，学生于是误以为“得到 <span class="math inline">\(A_s\)</span>”就是设计完成。真实设计更像一个循环：方案改变会改变自重，自重改变会改变内力，内力又会要求重新设计。</p>
 </section>
-<section id="ai时代人的工作向哪里移动" class="level2">
-<h2 class="anchored" data-anchor-id="ai时代人的工作向哪里移动">AI时代，人的工作向哪里移动</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜AI时代，人的工作向哪里移动</h2>
 <p>AI可以迅速列出十组配筋方案，也可以把参数扫描画成漂亮图形。人的工作因此不是消失，而是向更高层移动：</p>
 <ol type="1">
 <li>判断真正的目标是什么；</li>
@@ -377,9 +391,26 @@ window.Quarto = {
 <div class="student-evidence">
 <p>学生的第一反应常常是“钢筋不够就再加一点”。这不是应被嘲笑的错误，而是一个可以继续追问的起点：加在哪里？为什么有效？加到什么时候不再经济？会不会从延性破坏变成脆性破坏？还有没有不增加钢筋的办法？</p>
 </div>
+<article class="real-case">
+<div class="real-case-grid">
+<div class="real-case-media">
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Millau_Viaduct_(2714080736).jpg?width=1200" alt="法国米约高架桥跨越塔恩河谷的真实照片" loading="lazy">
+</div>
+<div class="real-case-body">
+<p><span class="real-case-kicker">REAL CASE · MILLAU VIADUCT</span></p>
+<section id="米约高架桥梁高不是孤立变量" class="level3">
+<h3 class="anchored" data-anchor-id="米约高架桥梁高不是孤立变量">米约高架桥：梁高不是孤立变量</h3>
+<p>这张实桥照片先让我们看到问题尺度：深谷、长引桥、高墩、风环境、施工可达性和景观同时存在。请不要先赞叹“轻巧”，而要指出照片中至少四个会限制方案选择的条件。</p>
+<p>照片能证明结构与场地的关系，却不能证明截面安全或方案最优；后者仍需要荷载、风、施工阶段和维护证据。</p>
+<p class="attribution">
+照片：FaceMePLS，CC BY 2.0，经 <a href="https://commons.wikimedia.org/wiki/File:The_Millau_Viaduct_(2714080736).jpg">Wikimedia Commons</a>。
+</p>
 </section>
-<section id="本课程的共同设计闭环" class="level2">
-<h2 class="anchored" data-anchor-id="本课程的共同设计闭环">本课程的共同设计闭环</h2>
+</div>
+</div>
+</article>
+<section id="本课程的共同设计闭环" class="level3">
+<h3 class="anchored" data-anchor-id="本课程的共同设计闭环">本课程的共同设计闭环</h3>
 <p>本书后面的每一章都回到同一条闭环：</p>
 <p><span class="math display">\[
 \text{功能与约束}
@@ -397,8 +428,9 @@ window.Quarto = {
 <p>整桥分析给构件设计提供 <span class="math inline">\(M、V、N、T\)</span> 和位移等输入；构件设计产生梁高、自重、刚度、配筋和施工要求。这些结果会反过来改变整桥模型。桥梁不是“先分析完，再设计一次”，而是在体系与构件之间反复迭代。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜本章留下的证据</h2>
 <p>选择交互实验中的两组方案，写下：</p>
 <ol type="1">
 <li>两组方案都满足什么基本要求？</li>
@@ -508,7 +540,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

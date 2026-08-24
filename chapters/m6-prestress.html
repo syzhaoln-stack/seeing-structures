@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m7-ai-review.html" rel="next">
 <link href="../chapters/m5-eccentric.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,11 +278,15 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#把预应力拆成轴力与偏心弯矩" id="toc-把预应力拆成轴力与偏心弯矩" class="nav-link active" data-scroll-target="#把预应力拆成轴力与偏心弯矩">把预应力拆成轴力与偏心弯矩</a></li>
-  <li><a href="#先张与后张差别在力怎样进入混凝土" id="toc-先张与后张差别在力怎样进入混凝土" class="nav-link" data-scroll-target="#先张与后张差别在力怎样进入混凝土">先张与后张：差别在力怎样进入混凝土</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜把预应力拆成轴力与偏心弯矩</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜预应力改变的是初始状态</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜沿时间轴叠加四个阶段</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜先张、后张与长期损失</a>
+  <ul class="collapse">
   <li><a href="#预应力损失不是统一打折" id="toc-预应力损失不是统一打折" class="nav-link" data-scroll-target="#预应力损失不是统一打折">预应力损失不是统一打折</a></li>
   <li><a href="#预应力优先改善使用性能" id="toc-预应力优先改善使用性能" class="nav-link" data-scroll-target="#预应力优先改善使用性能">预应力优先改善使用性能</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜设计一条接近平直的状态路径</a></li>
   </ul>
 </nav>
     </div>
@@ -305,7 +313,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -319,32 +327,41 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">张拉</span><span>传力</span><span>上拱</span><span>损失</span><span>使用荷载</span><span>长期状态</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>普通钢筋混凝土是在荷载作用后，让钢筋接管开裂后的拉力。预应力更主动：在使用荷载到来之前，先给混凝土施加压应力，并通过钢束线形制造与外荷载相反的弯矩。</p>
 <p>它不是“更高级的混凝土”，而是一种改变初始状态和力流路径的设计方法。</p>
 <div class="question-band">
 <p>把预应力筋放在梁截面形心并施加张拉，梁会获得轴向压力；把它放到形心以下，还会发生什么？为什么直线钢束也能产生抗弯效果？</p>
 </div>
-<section id="把预应力拆成轴力与偏心弯矩" class="level2">
-<h2 class="anchored" data-anchor-id="把预应力拆成轴力与偏心弯矩">把预应力拆成轴力与偏心弯矩</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜把预应力拆成轴力与偏心弯矩</h2>
 <p>有效预应力 <span class="math inline">\(P_e\)</span> 作用在距截面形心 <span class="math inline">\(e_p\)</span> 的位置时，可以等效为：</p>
 <ul>
 <li>作用在形心的轴向压力 <span class="math inline">\(P_e\)</span>；</li>
 <li>一个偏心弯矩 <span class="math inline">\(P_e e_p\)</span>。</li>
 </ul>
 <p>在弹性应力层面，截面上下缘应力可由轴压、预应力弯矩和外荷载弯矩叠加。符号必须与坐标约定一致，比背诵“上加下减”更可靠。</p>
+</section>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜预应力改变的是初始状态</h2>
+<p>预应力没有等到外荷载产生拉应力以后再“补救”，而是先建立一组反向应力和变形。结构进入运营阶段时，携带着张拉、传力和损失留下的历史。</p>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜沿时间轴叠加四个阶段</h2>
 <iframe class="interaction-frame" src="../interactive/prestress-path.html" title="预应力全过程交互实验" loading="lazy">
 </iframe>
 <p class="interaction-caption">
 依次推进张拉、传力、损失和使用荷载。每一阶段都保留上一阶段的状态，因此你看到的是路径，而不是四张互不关联的验算表。
 </p>
 </section>
-<section id="先张与后张差别在力怎样进入混凝土" class="level2">
-<h2 class="anchored" data-anchor-id="先张与后张差别在力怎样进入混凝土">先张与后张：差别在力怎样进入混凝土</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜先张、后张与长期损失</h2>
 <p>先张法先张拉钢筋，再浇筑混凝土；混凝土达到要求后放张，预应力依靠钢筋与混凝土的黏结沿传递长度逐渐建立。后张法先形成混凝土构件和孔道，再张拉钢束并锚固；有黏结体系还需要压浆。</p>
 <p>两者的施工顺序、锚固区受力、质量控制和适用场景不同。把它们只记成两个名词，会漏掉最关键的“传力机制”。</p>
-</section>
-<section id="预应力损失不是统一打折" class="level2">
-<h2 class="anchored" data-anchor-id="预应力损失不是统一打折">预应力损失不是统一打折</h2>
+<section id="预应力损失不是统一打折" class="level3">
+<h3 class="anchored" data-anchor-id="预应力损失不是统一打折">预应力损失不是统一打折</h3>
 <p>从张拉控制应力到长期有效预应力，可能经历：</p>
 <ul>
 <li>锚具变形和钢筋回缩；</li>
@@ -355,12 +372,29 @@ window.Quarto = {
 </ul>
 <p>这些损失发生的时间、空间分布和相互作用不同。工程模型可以把它们汇总为有效预应力，但设计者必须知道这个汇总掩盖了什么。</p>
 </section>
-<section id="预应力优先改善使用性能" class="level2">
-<h2 class="anchored" data-anchor-id="预应力优先改善使用性能">预应力优先改善使用性能</h2>
+<section id="预应力优先改善使用性能" class="level3">
+<h3 class="anchored" data-anchor-id="预应力优先改善使用性能">预应力优先改善使用性能</h3>
 <p>预应力常能推迟开裂、减小使用阶段挠度、提高抗疲劳与耐久表现，并帮助获得更大跨径或更轻截面。但它并不自动消除极限状态、剪切、锚固区、施工阶段稳定或长期上拱问题。</p>
 <div class="source-note">
 <p>Practical Engineering 的预应力视频用实体构件把“预先压缩”和“抵消使用荷载挠度”联系起来。这里进一步把过程拆成可回退的时间轴，并明确区分初始预应力、各类损失和有效预应力，避免把最终状态当成瞬间生成。</p>
 </div>
+<article class="real-case">
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/rs5eIaRix8I" title="TxDOT：预应力混凝土在桥梁施工中的应用" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+<div class="real-case-body">
+<p><span class="real-case-kicker">REAL CONSTRUCTION · PRESTRESSED BRIDGES</span></p>
+<section id="从台座梁场到桥位" class="level3">
+<h3 class="anchored" data-anchor-id="从台座梁场到桥位">从台座、梁场到桥位</h3>
+<p>TxDOT 的工程视频把“预应力”从截面公式还原为制造与施工过程。观看时建立阶段清单：张拉在哪里发生、力怎样进入混凝土、构件何时起吊、边界条件何时改变。</p>
+<p>施工宣传片可以证明工序真实存在，却不能替代钢束应力、损失和各阶段验算记录。</p>
+<p class="attribution">
+视频：<a href="https://www.youtube.com/watch?v=rs5eIaRix8I">Pre-Stressed Concrete in Texas Bridge Construction</a>，Texas Department of Transportation。
+</p>
+</section>
+</div>
+</article>
 <div class="model-boundary">
 <p>交互采用均匀矩形截面、线弹性叠加和汇总损失率，仅用于建立符号、趋势和阶段意识。真实预应力设计还需考虑钢束曲线、摩阻分布、传递长度、锚固区、徐变收缩耦合、施工顺序及规范限值。</p>
 </div>
@@ -378,8 +412,9 @@ window.Quarto = {
 <p>预制梁在张拉台座、起吊、运输、架设、桥面连续和长期运营阶段拥有不同边界条件。运营阶段成立，不代表起吊阶段安全；长期上拱可接受，也不代表桥面铺装阶段不需要调整。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜设计一条接近平直的状态路径</h2>
 <p>在交互中设计一组参数，使梁在“传力后”出现轻微上拱、在“使用荷载后”接近平直。记录你的 <span class="math inline">\(P\)</span>、<span class="math inline">\(e_p\)</span>、损失率和荷载，并解释为什么这不是唯一方案。</p>
 
 
@@ -483,7 +518,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

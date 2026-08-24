@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../appendices/learning-map.html" rel="next">
 <link href="../chapters/m6-prestress.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -106,6 +107,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -245,18 +249,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#先写模型合同再让ai计算" id="toc-先写模型合同再让ai计算" class="nav-link active" data-scroll-target="#先写模型合同再让ai计算">先写“模型合同”，再让AI计算</a></li>
-  <li><a href="#把求答案改成建立证据链" id="toc-把求答案改成建立证据链" class="nav-link" data-scroll-target="#把求答案改成建立证据链">把“求答案”改成“建立证据链”</a></li>
-  <li><a href="#四重校核不是仪式" id="toc-四重校核不是仪式" class="nav-link" data-scroll-target="#四重校核不是仪式">四重校核不是仪式</a>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜先写“模型合同”，再让AI计算</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜把“求答案”改成“建立证据链”</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜审查一份故意带错的梁计算</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜四重校核不是仪式</a>
   <ul class="collapse">
   <li><a href="#单位校核" id="toc-单位校核" class="nav-link" data-scroll-target="#单位校核">1. 单位校核</a></li>
   <li><a href="#已知算例" id="toc-已知算例" class="nav-link" data-scroll-target="#已知算例">2. 已知算例</a></li>
   <li><a href="#趋势与极限" id="toc-趋势与极限" class="nav-link" data-scroll-target="#趋势与极限">3. 趋势与极限</a></li>
   <li><a href="#独立复核" id="toc-独立复核" class="nav-link" data-scroll-target="#独立复核">4. 独立复核</a></li>
-  </ul></li>
   <li><a href="#视频也需要被审查" id="toc-视频也需要被审查" class="nav-link" data-scroll-target="#视频也需要被审查">视频也需要被审查</a></li>
   <li><a href="#一份可提交的ai使用记录" id="toc-一份可提交的ai使用记录" class="nav-link" data-scroll-target="#一份可提交的ai使用记录">一份可提交的AI使用记录</a></li>
-  <li><a href="#结课证据不是做一道更大的题" id="toc-结课证据不是做一道更大的题" class="nav-link" data-scroll-target="#结课证据不是做一道更大的题">结课证据：不是做一道更大的题</a></li>
+  </ul></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜结课证据不是一道更大的题</a></li>
   </ul>
 </nav>
     </div>
@@ -283,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -297,13 +302,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="cycle-strip">
 <p><span class="hot">定义问题</span><span>建立模型</span><span>生成方案</span><span>寻找反例</span><span>独立复核</span><span>留下证据</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>AI可以快速写计算程序、解释公式、生成参数组合、绘制图形和比较方案。这些能力值得进入结构设计课堂。真正危险的不是使用AI，而是把流畅输出误当成可靠证据。</p>
 <p>工程责任仍然落在提出问题、选择模型、检查边界和签署结论的人身上。</p>
 <div class="question-band">
 <p>AI给出一段程序，结果与教材例题完全一致。现在能否认定程序正确？请至少提出三个仍可能隐藏的错误。</p>
 </div>
-<section id="先写模型合同再让ai计算" class="level2">
-<h2 class="anchored" data-anchor-id="先写模型合同再让ai计算">先写“模型合同”，再让AI计算</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜先写“模型合同”，再让AI计算</h2>
 <p>一个可审查的结构模型至少要说明：</p>
 <table class="caption-top table">
 <thead>
@@ -341,8 +349,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>没有模型合同，AI会主动补齐缺失条件；补齐得越流畅，越不容易被发现。</p>
 </section>
-<section id="把求答案改成建立证据链" class="level2">
-<h2 class="anchored" data-anchor-id="把求答案改成建立证据链">把“求答案”改成“建立证据链”</h2>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜把“求答案”改成“建立证据链”</h2>
 <p>推荐把AI使用分成四个角色：</p>
 <ol type="1">
 <li><strong>生成者</strong>：列出多种截面、配筋或体系方案；</li>
@@ -351,14 +359,17 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>记录者</strong>：保存输入、假定、版本、输出和人工决定。</li>
 </ol>
 <p>同一个对话里的AI不能算真正独立复核。独立意味着改变方法、工具、数据来源或检查者。</p>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜审查一份故意带错的梁计算</h2>
 <iframe class="interaction-frame" src="../interactive/ai-audit.html" title="结构计算AI审查台" loading="lazy">
 </iframe>
 <p class="interaction-caption">
 审查一份故意带错的梁计算。系统不给总分排名，只显示证据链中仍未关闭的缺口。
 </p>
 </section>
-<section id="四重校核不是仪式" class="level2">
-<h2 class="anchored" data-anchor-id="四重校核不是仪式">四重校核不是仪式</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜四重校核不是仪式</h2>
 <section id="单位校核" class="level3">
 <h3 class="anchored" data-anchor-id="单位校核">1. 单位校核</h3>
 <p>单位错误常产生看似精确的巨大偏差。输入层保留单位，内部统一单位，输出再显式标注。不要让“默认单位”只存在于作者脑中。</p>
@@ -375,16 +386,15 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="独立复核">4. 独立复核</h3>
 <p>用手算、电子表格、另一段独立代码或另一个人复核关键结果。若两者不一致，先找输入与假定差异，不要急着多数表决。</p>
 </section>
-</section>
-<section id="视频也需要被审查" class="level2">
-<h2 class="anchored" data-anchor-id="视频也需要被审查">视频也需要被审查</h2>
+<section id="视频也需要被审查" class="level3">
+<h3 class="anchored" data-anchor-id="视频也需要被审查">视频也需要被审查</h3>
 <p>画面精美、频道知名、观看量高都不等于每一帧正确。The Efficient Engineer 在 <em>Understanding Stresses in Beams</em> 的视频说明中主动列出弯矩箭头方向和剪应力图的勘误。这个例子比“权威不会出错”更有教学价值：公开纠错不会削弱知识，反而让知识具备可追踪性。</p>
 <div class="student-evidence">
 <p>学生发现AI或教师的错误，不是课堂秩序被破坏，而是工程判断正在发生。评价应奖励指出矛盾、给出复现步骤和提出修正，而不是奖励最快报出一个数字。</p>
 </div>
 </section>
-<section id="一份可提交的ai使用记录" class="level2">
-<h2 class="anchored" data-anchor-id="一份可提交的ai使用记录">一份可提交的AI使用记录</h2>
+<section id="一份可提交的ai使用记录" class="level3">
+<h3 class="anchored" data-anchor-id="一份可提交的ai使用记录">一份可提交的AI使用记录</h3>
 <p>每次AI辅助作业至少附上：</p>
 <ul>
 <li>原始问题与后来补充的条件；</li>
@@ -407,8 +417,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </div>
 </section>
-<section id="结课证据不是做一道更大的题" class="level2">
-<h2 class="anchored" data-anchor-id="结课证据不是做一道更大的题">结课证据：不是做一道更大的题</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜结课证据不是一道更大的题</h2>
 <p>选择一座小桥或一个典型构件，提交三个满足基本约束但价值取向不同的方案。每个方案都要展示荷载路径、一个控制截面、一个使用性能问题和一个施工约束。使用AI扩大方案搜索，并用四重校核淘汰至少一个看似优秀的方案。</p>
 <p>最终成果不是“唯一正确答案”，而是一条别人可以质疑、复核和继续改进的证据链。</p>
 
@@ -513,7 +524,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

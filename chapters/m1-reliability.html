@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m2-materials.html" rel="next">
 <link href="../chapters/m0-design.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,12 +278,14 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#失效不是两条曲线重叠了多少" id="toc-失效不是两条曲线重叠了多少" class="nav-link active" data-scroll-target="#失效不是两条曲线重叠了多少">失效不是两条曲线“重叠了多少”</a></li>
-  <li><a href="#可靠不是绝对不会失败" id="toc-可靠不是绝对不会失败" class="nav-link" data-scroll-target="#可靠不是绝对不会失败">可靠不是绝对不会失败</a></li>
-  <li><a href="#从随机世界到设计值" id="toc-从随机世界到设计值" class="nav-link" data-scroll-target="#从随机世界到设计值">从随机世界到设计值</a></li>
-  <li><a href="#承载能力与正常使用" id="toc-承载能力与正常使用" class="nav-link" data-scroll-target="#承载能力与正常使用">承载能力与正常使用</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜作用、抗力与失效域</a></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜可靠不是绝对不会失败</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜从随机世界到设计值</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜承载能力与正常使用</a>
+  <ul class="collapse">
   <li><a href="#最不利组合不是所有最大值同时出现" id="toc-最不利组合不是所有最大值同时出现" class="nav-link" data-scroll-target="#最不利组合不是所有最大值同时出现">最不利组合不是“所有最大值同时出现”</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜用不同手段获得相近可靠水平</a></li>
   </ul>
 </nav>
     </div>
@@ -306,7 +312,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -320,6 +326,9 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">需求与服务</span><span>随机波动</span><span>失效边界</span><span>可靠指标</span><span>作用组合</span><span>工程责任</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>宿舍网络平时很快，不代表它永远不会卡顿。服务能力会波动，使用需求也会波动。当某一时刻的需求超过服务，系统就失效了。</p>
 <p>结构也是一样。作用效应 <span class="math inline">\(S\)</span> 不是一个永远固定的数字，材料、尺寸和施工质量决定的抗力 <span class="math inline">\(R\)</span> 也存在离散性。最基本的极限状态可以写成：</p>
 <p><span class="math display">\[
@@ -329,8 +338,8 @@ g(R,S)=R-S
 <div class="question-band">
 <p>两座桥按同一标准设计，其中一座在极端事件中受损，另一座没有。能否仅凭这一次结果断定前者设计错误、后者设计正确？为什么？</p>
 </div>
-<section id="失效不是两条曲线重叠了多少" class="level2">
-<h2 class="anchored" data-anchor-id="失效不是两条曲线重叠了多少">失效不是两条曲线“重叠了多少”</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜作用、抗力与失效域</h2>
 <p>一种常见但容易误导的画法，是把作用和抗力的两个概率密度函数画在同一横轴上，然后把两条曲线的重叠面积称为失效概率。它能提醒我们“作用与抗力会波动”，却没有直接表达同一次状态中 <span class="math inline">\(R\)</span> 和 <span class="math inline">\(S\)</span> 的配对关系。</p>
 <p>更清楚的方式是把每次状态画成平面中的一个点 <span class="math inline">\((S,R)\)</span>。直线 <span class="math inline">\(R=S\)</span> 把平面分成安全域和失效域。现在，提高抗力均值、降低作用均值、减小两者离散程度，分别会怎样改变落入失效域的点数，就可以直接观察。</p>
 <iframe class="interaction-frame" src="../interactive/reliability.html" title="作用与抗力可靠度交互实验" loading="lazy">
@@ -339,8 +348,8 @@ g(R,S)=R-S
 先只改变一个参数。观察“均值更安全”和“波动更稳定”是不是同一件事。
 </p>
 </section>
-<section id="可靠不是绝对不会失败" class="level2">
-<h2 class="anchored" data-anchor-id="可靠不是绝对不会失败">可靠不是绝对不会失败</h2>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜可靠不是绝对不会失败</h2>
 <p>失效概率写作：</p>
 <p><span class="math display">\[
 P_f=P(R-S&lt;0)
@@ -348,8 +357,8 @@ P_f=P(R-S&lt;0)
 <p>它表达的是在所采用模型、统计信息和时间尺度下进入失效域的概率。把可靠度理解成“保证绝对不出事”，会带来两个问题：一是无法解释极端事件，二是容易在一次未失效之后错误地证明某种违规行为安全。</p>
 <p>超载以后桥没有立即垮塌，只能说明这一次状态没有进入观察到的失效结果，不能说明可靠水平没有下降。反过来，一次失效也需要区分作用是否超出设防范围、模型是否遗漏机制、材料施工是否偏离设计，以及维护决策是否失效。</p>
 </section>
-<section id="从随机世界到设计值" class="level2">
-<h2 class="anchored" data-anchor-id="从随机世界到设计值">从随机世界到设计值</h2>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜从随机世界到设计值</h2>
 <p>工程设计不能在每道题中完整求解联合概率分布，因此规范通过标准值、分项系数、组合规则和可靠指标，把概率思想转化为可操作的设计表达。</p>
 <p>这一步必须同时避免两种误解：</p>
 <ul>
@@ -357,16 +366,15 @@ P_f=P(R-S&lt;0)
 <li>设计值也不是自然界真正只会出现的一个数，它是服务于特定极限状态和组合的决策输入。</li>
 </ul>
 </section>
-<section id="承载能力与正常使用" class="level2">
-<h2 class="anchored" data-anchor-id="承载能力与正常使用">承载能力与正常使用</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜承载能力与正常使用</h2>
 <p>同一根梁可以“不倒”却“不好用”。承载能力极限状态关注破坏、倾覆、失稳等安全问题；正常使用极限状态关注裂缝、挠度、振动和耐久等功能问题。</p>
 <div class="question-band">
 <p>一座人行桥承载力充足，但行人经过时振动明显、让人不愿使用。它是否“安全”？是否“设计成功”？请分别从极限状态和公共体验回答。</p>
 </div>
 <p>这两个问题不能被一个“安全系数”全部吞掉。工程师需要先明确当前组合和验算目标，再选择作用代表值、材料指标和分析模型。</p>
-</section>
-<section id="最不利组合不是所有最大值同时出现" class="level2">
-<h2 class="anchored" data-anchor-id="最不利组合不是所有最大值同时出现">最不利组合不是“所有最大值同时出现”</h2>
+<section id="最不利组合不是所有最大值同时出现" class="level3">
+<h3 class="anchored" data-anchor-id="最不利组合不是所有最大值同时出现">最不利组合不是“所有最大值同时出现”</h3>
 <p>作用组合的核心不是把每个作用都取到最大，而是寻找对目标响应最不利、同时具有合理共同出现可能性的状态。对跨中正弯矩最不利的位置，不一定对支点负弯矩最不利；对主梁最不利的车辆布置，也不一定对桥墩轴力最不利。</p>
 <p>因此，组合之前必须先问：<strong>我们正在最大化或控制哪一个响应？</strong></p>
 <div class="verify-panel">
@@ -383,8 +391,9 @@ P_f=P(R-S&lt;0)
 <p>移动荷载让“最不利位置”成为桥梁特有的重要问题；温度、沉降和施工阶段又会改变作用共同出现的方式。结构设计原理提供作用—效应—抗力语言，桥梁工程把它扩展到整桥空间和时间。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜用不同手段获得相近可靠水平</h2>
 <p>在交互实验中分别构造两种失效概率相近的方案：</p>
 <ul>
 <li>方案A主要通过提高抗力均值实现；</li>
@@ -493,7 +502,7 @@ P_f=P(R-S&lt;0)
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/m3-bending.html" rel="next">
 <link href="../chapters/m1-reliability.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -135,6 +136,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">看见结构</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/syzhaoln-stack/seeing-structures" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -274,12 +278,14 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#从看得见的泡沫到看不见的混凝土" id="toc-从看得见的泡沫到看不见的混凝土" class="nav-link active" data-scroll-target="#从看得见的泡沫到看不见的混凝土">从看得见的泡沫到看不见的混凝土</a></li>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">概念｜从看得见的泡沫到看不见的混凝土</a>
+  <ul class="collapse">
   <li><a href="#两种材料为什么能够共同工作" id="toc-两种材料为什么能够共同工作" class="nav-link" data-scroll-target="#两种材料为什么能够共同工作">两种材料为什么能够共同工作</a></li>
-  <li><a href="#中性轴不是永远在截面中央" id="toc-中性轴不是永远在截面中央" class="nav-link" data-scroll-target="#中性轴不是永远在截面中央">中性轴不是永远在截面中央</a></li>
-  <li><a href="#从应变图到内力" id="toc-从应变图到内力" class="nav-link" data-scroll-target="#从应变图到内力">从应变图到内力</a></li>
-  <li><a href="#轴向构件是最简单的起点" id="toc-轴向构件是最简单的起点" class="nav-link" data-scroll-target="#轴向构件是最简单的起点">轴向构件是最简单的起点</a></li>
-  <li><a href="#本章留下的证据" id="toc-本章留下的证据" class="nav-link" data-scroll-target="#本章留下的证据">本章留下的证据</a></li>
+  </ul></li>
+  <li><a href="#insight" id="toc-insight" class="nav-link" data-scroll-target="#insight">洞察｜中性轴不是永远在截面中央</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">样例｜从应变图到内力</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">实际应用｜从轴向构件迁移到桥梁</a></li>
+  <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">拓展｜改变钢筋位置并留下证据</a></li>
   </ul>
 </nav>
     </div>
@@ -306,7 +312,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026年8月23日</p>
+      <p class="date-modified">2026年8月24日</p>
     </div>
   </div>
     
@@ -320,21 +326,23 @@ window.Quarto = {
 <div class="cycle-strip">
 <p><span class="hot">看见弯曲</span><span>寻找中性轴</span><span>材料分工</span><span>变形协调</span><span>内力平衡</span><span>构造落地</span></p>
 </div>
+<nav class="learning-layers" aria-label="本章学习层次">
+<a href="#concept"><span>01</span><strong>概念</strong><small>建立最小模型</small></a> <a href="#insight"><span>02</span><strong>洞察</strong><small>重组关键直觉</small></a> <a href="#example"><span>03</span><strong>样例</strong><small>观察与完整示范</small></a> <a href="#application"><span>04</span><strong>实际应用</strong><small>迁移到真实结构</small></a> <a href="#extension"><span>05</span><strong>拓展</strong><small>比较、反例与证据</small></a>
+</nav>
 <p>教室里的梁看起来没有动。正因为变形太小，我们容易产生一种错觉：结构仿佛凭空提供了抗力。</p>
 <p>事实上，混凝土受压区必须缩短，钢筋必须伸长，材料内部才会产生应力；这些应力在截面上汇聚成内力，才能与外部弯矩平衡。没有变形，就没有应变；没有应变，就没有材料应力；没有应力，也就没有抗力。</p>
 <div class="question-band">
 <p>拿一块有上下表面的泡沫条，把它弯成下挠形状。上表面和下表面分别发生什么？有没有一层既不伸长也不缩短？如果要放一根只能高效受拉的材料，应放在哪里？</p>
 </div>
-<section id="从看得见的泡沫到看不见的混凝土" class="level2">
-<h2 class="anchored" data-anchor-id="从看得见的泡沫到看不见的混凝土">从看得见的泡沫到看不见的混凝土</h2>
+<section id="concept" class="level2">
+<h2 class="anchored" data-anchor-id="concept">概念｜从看得见的泡沫到看不见的混凝土</h2>
 <p>泡沫条弯曲时，上缘缩短、下缘伸长，中间存在纵向应变为零的位置。把沿高度的纵向应变画出来，得到近似线性分布。这就是平截面假定最直观的入口：截面弯曲以后仍近似保持平面。</p>
 <p><span class="math display">\[
 \varepsilon(y)=\kappa y
 \]</span></p>
 <p>其中 <span class="math inline">\(\kappa\)</span> 是曲率，<span class="math inline">\(y\)</span> 是到中性轴的距离。这个式子不是说材料应力一定线性，也不是说混凝土永远不开裂；它只描述几何上的应变协调。</p>
-</section>
-<section id="两种材料为什么能够共同工作" class="level2">
-<h2 class="anchored" data-anchor-id="两种材料为什么能够共同工作">两种材料为什么能够共同工作</h2>
+<section id="两种材料为什么能够共同工作" class="level3">
+<h3 class="anchored" data-anchor-id="两种材料为什么能够共同工作">两种材料为什么能够共同工作</h3>
 <p>混凝土抗压能力较强、抗拉能力较弱；钢筋能够可靠承受拉力。把钢筋放入混凝土，并不自动形成共同工作。至少需要三个条件：</p>
 <ol type="1">
 <li>两种材料之间有足够黏结，能够传递界面剪应力；</li>
@@ -347,16 +355,17 @@ window.Quarto = {
 移动钢筋位置并改变曲率。比较钢筋应变、力臂与裂缝风险，不要只寻找“越靠下越好”。
 </p>
 </section>
-<section id="中性轴不是永远在截面中央" class="level2">
-<h2 class="anchored" data-anchor-id="中性轴不是永远在截面中央">中性轴不是永远在截面中央</h2>
+</section>
+<section id="insight" class="level2">
+<h2 class="anchored" data-anchor-id="insight">洞察｜中性轴不是永远在截面中央</h2>
 <p>均质、线弹性矩形截面在纯弯条件下，中性轴位于形心附近。但钢筋混凝土开裂以后，受拉混凝土逐渐退出主要抗拉工作，截面刚度分布改变，中性轴会向受压区移动。</p>
 <p>这说明材料力学知识没有失效，而是适用对象发生了变化。几何关系和平衡方法仍然有效；应力—应变关系、有效截面和材料参与方式需要重写。</p>
 <div class="student-evidence">
 <p>学生经常把“平截面假定”误读成“应力沿高度线性”。应变能否线性分布取决于几何假定，应力则还要经过材料本构关系。混凝土进入非线性以后，即使应变仍近似线性，应力也可以明显非线性。</p>
 </div>
 </section>
-<section id="从应变图到内力" class="level2">
-<h2 class="anchored" data-anchor-id="从应变图到内力">从应变图到内力</h2>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">样例｜从应变图到内力</h2>
 <p>截面分析可以沿三层图前进：</p>
 <ol type="1">
 <li><strong>应变图：</strong> 由截面几何和变形协调得到；</li>
@@ -369,14 +378,31 @@ M=\int_A \sigma y\,\mathrm dA
 \]</span></p>
 <p>几乎所有受弯、偏压和预应力截面问题，都可以回到这三层图。复杂公式不是独立出现的题型，而是同一个过程在不同材料状态和边界条件下的展开。</p>
 </section>
-<section id="轴向构件是最简单的起点" class="level2">
-<h2 class="anchored" data-anchor-id="轴向构件是最简单的起点">轴向构件是最简单的起点</h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">实际应用｜从轴向构件迁移到桥梁</h2>
 <p>轴心受拉或受压时，截面上的应变关系比受弯简单。它适合帮助我们确认两个基本动作：材料怎样根据应变产生应力，截面内力怎样与外力平衡。</p>
 <p>当力的作用线偏离截面形心，轴力问题会立即携带弯矩：</p>
 <p><span class="math display">\[
 M=Ne
 \]</span></p>
 <p>这条简单关系将把本章与后面的偏心受压连接起来。</p>
+<article class="real-case">
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/cZINeaDjisY" title="Practical Engineering：Why Concrete Needs Reinforcement" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+<div class="real-case-body">
+<p><span class="real-case-kicker">REAL TEST · CONCRETE + REINFORCEMENT</span></p>
+<section id="先预测破坏再观看加载" class="level3">
+<h3 class="anchored" data-anchor-id="先预测破坏再观看加载">先预测破坏，再观看加载</h3>
+<p>Practical Engineering 用实体试件比较无筋、普通配筋与预应力混凝土。观看前先暂停并画出你预测的第一条裂缝；观看后只记录“裂缝从哪里开始、加入钢筋后破坏路径怎样改变”。</p>
+<p>视频展示的是特定小试件，不能直接推出工程梁承载力；它提供的是材料分工的现象证据。</p>
+<p class="attribution">
+视频：<a href="https://www.youtube.com/watch?v=cZINeaDjisY">Why Concrete Needs Reinforcement</a>，Practical Engineering。
+</p>
+</section>
+</div>
+</article>
 <div class="model-boundary">
 <p>交互模型采用矩形截面、线性应变和简化材料响应，用来观察变量关系。它没有包含黏结滑移、混凝土拉伸软化、钢筋屈服后强化及三维效应，不能直接用于正式设计。</p>
 </div>
@@ -385,8 +411,8 @@ M=Ne
 <p>主梁通常以弯剪为主，墩柱和塔柱常出现压弯组合，吊杆与拉索以受拉为主。不同构件看似外形差异很大，却共享“变形协调—材料本构—内力平衡”这一套语言。</p>
 </div>
 </section>
-<section id="本章留下的证据" class="level2">
-<h2 class="anchored" data-anchor-id="本章留下的证据">本章留下的证据</h2>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">拓展｜改变钢筋位置并留下证据</h2>
 <p>在交互模型中选择三个钢筋位置，记录相同曲率下的钢筋应变和力臂。回答：</p>
 <ul>
 <li>为什么钢筋接近受拉边缘通常更有效？</li>
@@ -495,7 +521,7 @@ M=Ne
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/syzhaoln-stack\.github\.io\/seeing-structures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
