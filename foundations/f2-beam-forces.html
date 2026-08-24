@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -426,8 +427,13 @@ window.Quarto = {
 </p>
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/C-FEVzI8oe8" title="Understanding Shear Force and Bending Moment Diagrams" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/C-FEVzI8oe8?start=521" title="Understanding Shear Force and Bending Moment Diagrams" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=C-FEVzI8oe8&amp;t=521s">在原平台打开核心时刻 08:41</a>
+</p>
+</noscript>
 </div>
 <section id="中文分段导看原创意译与概括" class="level3">
 <h3 class="anchored" data-anchor-id="中文分段导看原创意译与概括">中文分段导看（原创意译与概括）</h3>
@@ -485,23 +491,33 @@ window.Quarto = {
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/1425fNnS5SM?start=70" title="Shear and Bending Moment Diagrams" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/1425fNnS5SM?start=705" title="Shear and Bending Moment Diagrams" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=1425fNnS5SM&amp;t=705s">在原平台打开核心时刻 11:45</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜跟完一套分段例题
 </h3>
 <p>
-从约01:10开始，在讲者画图前暂停：先标集中力造成的跳跃，再判每段斜率。
+从约11:45开始，在讲者画图前暂停：先标集中力造成的跳跃，再判每段斜率。
 </p>
 <p class="attribution">
-Dr.&nbsp;Clayton Pettit · 约01:10起
+Dr.&nbsp;Clayton Pettit · 约11:45起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1c8o7YiE5c&amp;autoplay=0" title="工程力学：剪力方程与弯矩图" loading="lazy" allowfullscreen="">
+<iframe data-src="https://player.bilibili.com/player.html?bvid=BV1c8o7YiE5c&amp;autoplay=0&amp;t=1100" title="工程力学：剪力方程与弯矩图" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.bilibili.com/video/BV1c8o7YiE5c/?t=1100">在原平台打开核心时刻 18:20</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜中文系统推导
@@ -559,6 +575,34 @@ Bilibili · 北京化工大学官成宇
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

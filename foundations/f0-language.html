@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -435,8 +436,13 @@ window.Quarto = {
 <p>这不是三套知识，而是“外部作用—截面合力—局部分布”三个放大倍数。</p>
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/aQf6Q8t1FQE" title="An Introduction to Stress and Strain" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/aQf6Q8t1FQE?start=34" title="An Introduction to Stress and Strain" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=aQf6Q8t1FQE&amp;t=34s">在原平台打开核心时刻 00:34</a>
+</p>
+</noscript>
 </div>
 <section id="中文分段导看原创意译与概括" class="level3">
 <h3 class="anchored" data-anchor-id="中文分段导看原创意译与概括">中文分段导看（原创意译与概括）</h3>
@@ -490,23 +496,33 @@ window.Quarto = {
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/qPaqDfRKBI4?start=38" title="Statics Free Body Diagram" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/qPaqDfRKBI4?start=298" title="Statics Free Body Diagram" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=qPaqDfRKBI4&amp;t=298s">在原平台打开核心时刻 04:58</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜先选对象，再列平衡
 </h3>
 <p>
-从约00:38跟随 Purdue 的自由体步骤；每出现一个力，都说出它来自哪个被切掉的接触。
+从约04:58跟随 Purdue 的自由体步骤；每出现一个力，都说出它来自哪个被切掉的接触。
 </p>
 <p class="attribution">
-Purdue MET · 约00:38起
+Purdue MET · 约04:58起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1gdQaYjE81&amp;autoplay=0" title="工程力学：应力" loading="lazy" allowfullscreen="">
+<iframe data-src="https://player.bilibili.com/player.html?bvid=BV1gdQaYjE81&amp;autoplay=0&amp;t=316" title="工程力学：应力" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.bilibili.com/video/BV1gdQaYjE81/?t=316">在原平台打开核心时刻 05:16</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜中文短讲：应力
@@ -566,6 +582,34 @@ Bilibili · 北京化工大学官成宇
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

@@ -80,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -519,6 +520,34 @@ ul.task-list li input[type="checkbox"] {
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

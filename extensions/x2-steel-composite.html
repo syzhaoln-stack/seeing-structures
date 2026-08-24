@@ -80,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -390,8 +391,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="video-pair">
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/cM1mVXSFnq0" title="Local web buckling of a plate girder" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/cM1mVXSFnq0?start=38" title="Local web buckling of a plate girder" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=cM1mVXSFnq0&amp;t=38s">在原平台打开核心时刻 00:38</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 两分钟看腹板局部屈曲
@@ -402,8 +408,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/dhAP3yDD_uo" title="AISC Bolting and Welding Primer" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/dhAP3yDD_uo?start=240" title="AISC Bolting and Welding Primer" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=dhAP3yDD_uo&amp;t=240s">在原平台打开核心时刻 04:00</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 连接导看
@@ -423,8 +434,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="video-clip-grid one">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/FB1TP5YC8Wo?start=42" title="Composite Beam Bending Example" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/FB1TP5YC8Wo?start=132" title="Composite Beam Bending Example" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=FB1TP5YC8Wo&amp;t=132s">在原平台打开核心时刻 02:12</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜组合梁弯曲例题
@@ -433,7 +449,7 @@ ul.task-list li input[type="checkbox"] {
 先确认界面不滑移的协调假定，再看变换截面如何把两种材料放进同一个应变分布。
 </p>
 <p class="attribution">
-Jeff Hanson · 约00:42起
+Jeff Hanson · 约02:12起
 </p>
 </article>
 </div>
@@ -477,6 +493,34 @@ Jeff Hanson · 约00:42起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

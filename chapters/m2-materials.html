@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -460,8 +461,13 @@ M=Ne
 <p>这条简单关系将把本章与后面的偏心受压连接起来。</p>
 <article class="real-case">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/cZINeaDjisY" title="Practical Engineering：Why Concrete Needs Reinforcement" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/cZINeaDjisY?start=154" title="Practical Engineering：Why Concrete Needs Reinforcement" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=cZINeaDjisY&amp;t=154s">在原平台打开核心时刻 02:34</a>
+</p>
+</noscript>
 </div>
 <div class="real-case-body">
 <p><span class="real-case-kicker">REAL TEST · CONCRETE + REINFORCEMENT</span></p>
@@ -489,8 +495,13 @@ M=Ne
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/FpO2KImasNo?start=8" title="Tensile Testing" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/FpO2KImasNo?start=0" title="Tensile Testing" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=FpO2KImasNo&amp;t=0s">在原平台打开核心时刻 00:00</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜把应力—应变曲线放回试验机
@@ -499,22 +510,27 @@ M=Ne
 只看加载、伸长、颈缩与断裂怎样对应曲线事件；区分“强度高”和“延性好”。
 </p>
 <p class="attribution">
-Instron · 约00:08起
+Instron · 从开头
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/UcPm61zRATk?start=120" title="Advances on Bond of Embedded Steel Reinforcement" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/UcPm61zRATk?start=590" title="Advances on Bond of Embedded Steel Reinforcement" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=UcPm61zRATk&amp;t=590s">在原平台打开核心时刻 09:50</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
-3｜没有黏结，截面不能协调变形
+3｜施工位置也会改变黏结
 </h3>
 <p>
-从约02:00观察钢筋肋、滑移与锚固问题；不要求第一次观看规范模型细节。
+从约09:50比较浇筑方向与横向钢筋高度；先预测底筋、中部筋和顶筋的拔出表现，不追规范公式。
 </p>
 <p class="attribution">
-American Concrete Institute · 约02:00起
+American Concrete Institute · 约09:50起
 </p>
 </article>
 </div>
@@ -558,6 +574,34 @@ American Concrete Institute · 约02:00起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

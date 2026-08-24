@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -416,8 +417,13 @@ window.Quarto = {
 <p>这个趋势比一次具体计算更重要：改变尺寸对强度与刚度的影响并不同步，设计不能只盯住一个指标。</p>
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/1YTKedLQOa0" title="Understanding Torsion" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/1YTKedLQOa0?start=248" title="Understanding Torsion" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=1YTKedLQOa0&amp;t=248s">在原平台打开核心时刻 04:08</a>
+</p>
+</noscript>
 </div>
 <section id="中文分段导看原创意译与概括" class="level3">
 <h3 class="anchored" data-anchor-id="中文分段导看原创意译与概括">中文分段导看（原创意译与概括）</h3>
@@ -470,8 +476,13 @@ window.Quarto = {
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/EypXa4lMQhA?start=35" title="Axial Elongation Due to Axial Load" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/EypXa4lMQhA?start=249" title="Axial Elongation Due to Axial Load" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=EypXa4lMQhA&amp;t=249s">在原平台打开核心时刻 04:09</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜从轴力到总伸长
@@ -480,13 +491,18 @@ window.Quarto = {
 追踪 <span class="math inline">\(N\to\sigma\to\varepsilon\to\Delta L\)</span>，并标出面积或材料变化时必须分段的位置。
 </p>
 <p class="attribution">
-Jeff Hanson · 约00:35起
+Jeff Hanson · 约04:09起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1joXWYqEHh&amp;autoplay=0" title="工程力学：轴力与轴力图" loading="lazy" allowfullscreen="">
+<iframe data-src="https://player.bilibili.com/player.html?bvid=BV1joXWYqEHh&amp;autoplay=0&amp;t=737" title="工程力学：轴力与轴力图" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.bilibili.com/video/BV1joXWYqEHh/?t=737">在原平台打开核心时刻 12:17</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜中文例题：轴力图
@@ -543,6 +559,34 @@ Bilibili · 北京化工大学官成宇
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

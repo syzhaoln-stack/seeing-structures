@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -455,8 +456,13 @@ M=Ne
 <p>桥墩和框架柱可能承受弯矩反号、施工阶段变化、地震往复作用。对称配筋可以让截面面对不同弯曲方向时保持较一致的能力，也有利于构造标准化。但它可能不是材料用量最小的方案。</p>
 <article class="real-case">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/mA0HXqBz-lY" title="ACI：偏心受压混凝土柱研究" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/mA0HXqBz-lY?start=732" title="ACI：偏心受压混凝土柱研究" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=mA0HXqBz-lY&amp;t=732s">在原平台打开核心时刻 12:12</a>
+</p>
+</noscript>
 </div>
 <div class="real-case-body">
 <p><span class="real-case-kicker">REAL RESEARCH · ECCENTRIC COLUMNS</span></p>
@@ -490,23 +496,33 @@ M=Ne
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/F3CUiT8w6nE?start=35" title="P-Delta Effect in Structural Engineering" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/F3CUiT8w6nE?start=43" title="P-Delta Effect in Structural Engineering" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=F3CUiT8w6nE&amp;t=43s">在原平台打开核心时刻 00:43</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜轴力为何会放大侧移
 </h3>
 <p>
-从约00:35区分初始弯矩与变形后新增的 <span class="math inline">\(P\Delta\)</span>；暂停后自己画二阶自由体。
+从约00:43区分初始弯矩与变形后新增的 <span class="math inline">\(P\Delta\)</span>；暂停后自己画二阶自由体。
 </p>
 <p class="attribution">
-DrOfEng · 约00:35起
+DrOfEng · 约00:43起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/1N9JVzZkWLY?start=25" title="P-Delta Analysis on Buildings" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/1N9JVzZkWLY?start=105" title="P-Delta Analysis on Buildings" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=1N9JVzZkWLY&amp;t=105s">在原平台打开核心时刻 01:45</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜从单柱迁移到框架层间侧移
@@ -515,7 +531,7 @@ DrOfEng · 约00:35起
 观察整体 <span class="math inline">\(P\)</span>–<span class="math inline">\(\Delta\)</span> 与构件 <span class="math inline">\(P\)</span>–<span class="math inline">\(\delta\)</span> 的尺度差别，避免把两者混成一个系数。
 </p>
 <p class="attribution">
-innotutorial · 约00:25起
+innotutorial · 约01:45起
 </p>
 </article>
 </div>
@@ -555,6 +571,34 @@ innotutorial · 约00:25起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

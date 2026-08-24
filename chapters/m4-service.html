@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -456,8 +457,13 @@ window.Quarto = {
 </div>
 </div>
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/Hz72lzDxMfc" title="ITN档案：千禧桥开放后因摆动关闭" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/Hz72lzDxMfc?start=12" title="ITN档案：千禧桥开放后因摆动关闭" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=Hz72lzDxMfc&amp;t=12s">在原平台打开核心时刻 00:12</a>
+</p>
+</noscript>
 </div>
 <div class="real-case-body">
 <p class="attribution">
@@ -488,8 +494,13 @@ window.Quarto = {
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/2cuXbpXRvJ0?start=5" title="Millennium Bridge Physics Demonstration" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/2cuXbpXRvJ0?start=0" title="Millennium Bridge Physics Demonstration" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=2cuXbpXRvJ0&amp;t=0s">在原平台打开核心时刻 00:00</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜用物理模型看同步
@@ -498,22 +509,27 @@ window.Quarto = {
 关注行人步态怎样被桥面侧向运动组织起来；不要把它简化成“人走得整齐”。
 </p>
 <p class="attribution">
-UNSW Physics · 约00:05起
+UNSW Physics · 从开头
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/t6O43mrc1kA?start=95" title="How Engineers Fixed the Wobbly Millennium Bridge" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/t6O43mrc1kA?start=375" title="How Engineers Fixed the Wobbly Millennium Bridge" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=t6O43mrc1kA&amp;t=375s">在原平台打开核心时刻 06:15</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜修复是在改哪个动力参数
 </h3>
 <p>
-从约01:35观察阻尼器与改造逻辑，区分提高强度、提高刚度和增加耗能。
+从约06:15观察阻尼器与改造逻辑，区分提高强度、提高刚度和增加耗能。
 </p>
 <p class="attribution">
-Quest TV · 约01:35起
+Quest TV · 约06:15起
 </p>
 </article>
 </div>
@@ -553,6 +569,34 @@ Quest TV · 约01:35起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

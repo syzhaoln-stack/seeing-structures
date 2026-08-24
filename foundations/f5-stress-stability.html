@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -422,8 +423,13 @@ window.Quarto = {
 <div class="video-pair">
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/_DH3546mSCM" title="Stress Transformation and Mohr's Circle" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/_DH3546mSCM?start=214" title="Stress Transformation and Mohr's Circle" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=_DH3546mSCM&amp;t=214s">在原平台打开核心时刻 03:34</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 中文导看：应力变换
@@ -437,8 +443,13 @@ window.Quarto = {
 </div>
 <div class="video-lesson">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/21G7LA2DcGQ" title="Understanding Buckling" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/21G7LA2DcGQ?start=382" title="Understanding Buckling" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=21G7LA2DcGQ&amp;t=382s">在原平台打开核心时刻 06:22</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 中文导看：压杆失稳
@@ -461,8 +472,13 @@ window.Quarto = {
 <div class="video-clip-grid one">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/xkbQnBAOFEg?start=35" title="Understanding Failure Theories" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/xkbQnBAOFEg?start=244" title="Understanding Failure Theories" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=xkbQnBAOFEg&amp;t=244s">在原平台打开核心时刻 04:04</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜Rankine、Tresca 与 von Mises
@@ -471,7 +487,7 @@ window.Quarto = {
 不要记三张包络线；先按延性/脆性与应力状态选择机制，再看准则怎样压缩多轴应力。
 </p>
 <p class="attribution">
-The Efficient Engineer · 约00:35起
+The Efficient Engineer · 约04:04起
 </p>
 </article>
 </div>
@@ -515,6 +531,34 @@ The Efficient Engineer · 约00:35起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

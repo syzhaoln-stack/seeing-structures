@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -451,8 +452,13 @@ P_f=\iint_{r\le s} f_{R,S}(r,s)\,\mathrm dr\,\mathrm ds
 <div class="video-clip-grid">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/LT4A3XM1ZU8?start=8" title="Structural Reliability Bivariate Probability Density" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/LT4A3XM1ZU8?start=45" title="Structural Reliability Bivariate Probability Density" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=LT4A3XM1ZU8&amp;t=45s">在原平台打开核心时刻 00:45</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 1｜为什么必须画二维联合密度
@@ -461,13 +467,18 @@ P_f=\iint_{r\le s} f_{R,S}(r,s)\,\mathrm dr\,\mathrm ds
 把一次状态理解为 <span class="math inline">\((S,R)\)</span> 的一对取值，区分联合概率与两条一维边缘分布。
 </p>
 <p class="attribution">
-B. Bhattacharya 结构可靠度课程 · 约00:08起
+B. Bhattacharya 结构可靠度课程 · 约00:45起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/2Yt4o7gAuWw?start=20" title="Structural Reliability Joint Normal Distribution" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/2Yt4o7gAuWw?start=140" title="Structural Reliability Joint Normal Distribution" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=2Yt4o7gAuWw&amp;t=140s">在原平台打开核心时刻 02:20</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜相关性怎样旋转密度椭圆
@@ -476,13 +487,18 @@ B. Bhattacharya 结构可靠度课程 · 约00:08起
 观察 <span class="math inline">\(\rho\)</span> 改变等密度线方向，并连接到 <span class="math inline">\(R-S\)</span> 沿失效边界法向的离散。
 </p>
 <p class="attribution">
-B. Bhattacharya 结构可靠度课程 · 约00:20起
+B. Bhattacharya 结构可靠度课程 · 约02:20起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/VMO1BlZtjlg?start=18" title="Structural Reliability Formulation" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/VMO1BlZtjlg?start=20" title="Structural Reliability Formulation" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=VMO1BlZtjlg&amp;t=20s">在原平台打开核心时刻 00:20</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜概率为什么进入结构设计
@@ -491,7 +507,7 @@ B. Bhattacharya 结构可靠度课程 · 约00:20起
 只看“随机变量—极限状态—失效事件”这条线；公式细节留到交互完成之后。
 </p>
 <p class="attribution">
-Stanford · Jack Baker · 约00:18起
+Stanford · Jack Baker · 约00:20起
 </p>
 </article>
 </div>
@@ -578,6 +594,34 @@ P_f=P(R-S&lt;0)
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

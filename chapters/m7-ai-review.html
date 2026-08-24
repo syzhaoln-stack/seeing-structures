@@ -80,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -495,23 +496,33 @@ ul.task-list li input[type="checkbox"] {
 <div class="video-clip-grid">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/GHjopp47vvQ?start=45" title="Understanding the Finite Element Method" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/GHjopp47vvQ?start=130" title="Understanding the Finite Element Method" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=GHjopp47vvQ&amp;t=130s">在原平台打开核心时刻 02:10</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 1｜有限元到底离散了什么
 </h3>
 <p>
-从约00:45建立单元、节点、形函数的最小图像；不要把彩色云图当作方法本身。
+从约02:10建立单元、节点、形函数的最小图像；不要把彩色云图当作方法本身。
 </p>
 <p class="attribution">
-The Efficient Engineer · 约00:45起
+The Efficient Engineer · 约02:10起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/10Ny96YAbBM?start=38" title="Tips for FEA Analysis" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/10Ny96YAbBM?start=41" title="Tips for FEA Analysis" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=10Ny96YAbBM&amp;t=41s">在原平台打开核心时刻 00:41</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜最常见的建模错误
@@ -520,13 +531,18 @@ The Efficient Engineer · 约00:45起
 逐项记录边界、网格、接触、单位和结果解释中哪一项能被独立复核。
 </p>
 <p class="attribution">
-Brendan Hasty · 约00:38起
+Brendan Hasty · 约00:41起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/kYTmc0645xk?start=35" title="Model Uncertainty Qualification Verification and Validation" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/kYTmc0645xk?start=78" title="Model Uncertainty Qualification Verification and Validation" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=kYTmc0645xk&amp;t=78s">在原平台打开核心时刻 01:18</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜验证、确认与模型不确定性
@@ -535,7 +551,7 @@ Brendan Hasty · 约00:38起
 区分“方程解对了吗”和“这个方程代表真实问题吗”；把区别迁移到 AI 生成计算。
 </p>
 <p class="attribution">
-Vanderbilt University · 约00:35起
+Vanderbilt University · 约01:18起
 </p>
 </article>
 </div>
@@ -576,6 +592,34 @@ Vanderbilt University · 约00:35起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

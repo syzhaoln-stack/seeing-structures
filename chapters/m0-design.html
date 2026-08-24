@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -506,8 +507,13 @@ window.Quarto = {
 <div class="video-clip-grid">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/-scQuGFCGyI?start=20" title="How Load Travels Through a Building" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/-scQuGFCGyI?start=68" title="How Load Travels Through a Building" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=-scQuGFCGyI&amp;t=68s">在原平台打开核心时刻 01:08</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 1｜先追踪建筑中的力
@@ -516,13 +522,18 @@ window.Quarto = {
 从屋面、楼板、梁柱一路指到基础；播放前先用手画一条连续力路。
 </p>
 <p class="attribution">
-Blueprint to Reality · 约00:20起
+Blueprint to Reality · 约01:08起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/DaxCimFy92E?start=35" title="Load Paths and Load Transfer in Structural Engineering" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/DaxCimFy92E?start=256" title="Load Paths and Load Transfer in Structural Engineering" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=DaxCimFy92E&amp;t=256s">在原平台打开核心时刻 04:16</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜连接是力路的动词
@@ -531,22 +542,27 @@ Blueprint to Reality · 约00:20起
 关注荷载怎样从一个构件跨过节点进入下一个构件，而不是只认构件名称。
 </p>
 <p class="attribution">
-Structural Basics · 约00:35起
+Structural Basics · 约04:16起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/0dMf1dBp-b0?start=230" title="How the World's Tallest Bridge Became an Engineering Marvel" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/0dMf1dBp-b0?start=1910" title="How the World's Tallest Bridge Became an Engineering Marvel" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=0dMf1dBp-b0&amp;t=1910s">在原平台打开核心时刻 31:50</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜米约高架桥的方案约束
 </h3>
 <p>
-从约03:50进入河谷、桥墩和施工条件；记录一个“施工反过来改变结构方案”的证据。
+从约31:50进入河谷、桥墩和施工条件；记录一个“施工反过来改变结构方案”的证据。
 </p>
 <p class="attribution">
-Blueprint · 约03:50起
+Blueprint · 约31:50起
 </p>
 </article>
 </div>
@@ -592,6 +608,34 @@ Blueprint · 约03:50起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

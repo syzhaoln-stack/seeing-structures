@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -354,6 +355,7 @@ window.Quarto = {
   <li><a href="#两本教材怎样进入本书" id="toc-两本教材怎样进入本书" class="nav-link" data-scroll-target="#两本教材怎样进入本书">两本教材怎样进入本书</a></li>
   <li><a href="#本地课程材料" id="toc-本地课程材料" class="nav-link" data-scroll-target="#本地课程材料">本地课程材料</a></li>
   <li><a href="#动态讲解样本" id="toc-动态讲解样本" class="nav-link" data-scroll-target="#动态讲解样本">动态讲解样本</a></li>
+  <li><a href="#视频关键帧与片段边界" id="toc-视频关键帧与片段边界" class="nav-link" data-scroll-target="#视频关键帧与片段边界">视频关键帧与片段边界</a></li>
   <li><a href="#组织方式样本" id="toc-组织方式样本" class="nav-link" data-scroll-target="#组织方式样本">组织方式样本</a></li>
   <li><a href="#真实案例媒体" id="toc-真实案例媒体" class="nav-link" data-scroll-target="#真实案例媒体">真实案例媒体</a></li>
   <li><a href="#交互模型的共同边界" id="toc-交互模型的共同边界" class="nav-link" data-scroll-target="#交互模型的共同边界">交互模型的共同边界</a></li>
@@ -439,7 +441,18 @@ window.Quarto = {
 <li><a href="https://www.youtube.com/watch?v=VMO1BlZtjlg">Reliability formulation</a> — Jack Baker / Stanford：用于连接随机变量、极限状态函数与失效事件。</li>
 </ul>
 <p>这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。</p>
-<p>英文视频下的中文分段文字是本书作者基于视频主题重新撰写的学习导航与概括，不是逐句字幕翻译。未经权利人明确许可，本书不下载、重发或整段翻译视频字幕。现在每个核心主题页固定配置三段播放器，分别承担直觉、推导/中文和实验/工程角色；额外两段默认折叠以控制瞬时认知负荷。完整选片、平台与观看任务见<a href="../appendices/video-atlas.html">视频图谱</a>。</p>
+<p>英文视频下的中文分段文字是本书作者基于视频主题重新撰写的学习导航与概括，不是逐句字幕翻译。未经权利人明确许可，本书不下载、重发或整段翻译视频字幕。每个核心主题仍保留三条来源，分别承担直觉、推导/中文和实验/工程角色，但页面初始状态不再加载三个播放器：先给核心关键帧、中文观察标识和时间范围，只有运动本身构成证据时，才由读者主动载入短片段。完整选片、平台与观看任务见<a href="../appendices/video-atlas.html">视频图谱</a>。</p>
+</section>
+<section id="视频关键帧与片段边界" class="level2">
+<h2 class="anchored" data-anchor-id="视频关键帧与片段边界">视频关键帧与片段边界</h2>
+<p>视频材料按“静态足够—逐步图解—需要运动”三种方式处理：</p>
+<ul>
+<li>公式、应力图、自由体、概率分布等空间关系能够在一帧中完整读取时，只保留一张低分辨率关键帧和原创中文标识，完整视频降为拓展链接；</li>
+<li>力路、推导或建模步骤需要按顺序揭示，但连续运动本身没有新增证据时，改为由学生主动展开的中文步骤；</li>
+<li>裂缝扩展、屈曲、振动、加载破坏和施工动作等时间过程不可被静帧替代时，才调用原平台播放器，并给出明确起止时间、观察任务和停止位置。</li>
+</ul>
+<p>关键帧只覆盖当前教学主张所需的最小画面，并始终保留原作者、平台、原链接和截帧时间。视频仍由原平台提供，页面不开启自动播放，也不在本站重新托管片段。权利人如对特定关键帧的使用有异议，可以通过仓库问题页提出并替换为原创示意图。</p>
+<p>为避免浏览器在脚本改写前抢先请求播放器，正文源码不写活动的外站 <code>iframe src</code>，只保存惰性的 <code>data-src</code>。学生主动点击“需要运动”的证据卡后才创建播放器；禁用 JavaScript 时，<code>noscript</code> 仍提供带核心时间的原平台链接。发布者明确限制画面复用的条目不载入外链缩略图，也不保存本站关键帧。</p>
 </section>
 <section id="组织方式样本" class="level2">
 <h2 class="anchored" data-anchor-id="组织方式样本">组织方式样本</h2>
@@ -462,7 +475,7 @@ window.Quarto = {
 <li>钢结构螺栓焊接讲解：<a href="https://www.youtube.com/watch?v=dhAP3yDD_uo">Bolting &amp; Welding Primer</a>，AISC Education。</li>
 <li>无约束砌体墙振动台演示：<a href="https://www.youtube.com/watch?v=ixXYLq_r8zc">Collapse Test of Unconfined Masonry Wall</a>，TDMRC Media。</li>
 </ul>
-<p>外部图片保留原文件页、作者和许可；YouTube仅使用官方嵌入播放器，不下载或重新发布视频。真实画面用于提出观察问题，不把单个试验、新闻片段或工程宣传片当成完整设计证据。</p>
+<p>外部图片保留原文件页、作者和许可；公开视频只保留教学所需的单帧引用与原平台按时间播放，不下载或重新发布完整视频。真实画面用于提出观察问题，不把单个试验、新闻片段或工程宣传片当成完整设计证据。</p>
 </section>
 <section id="交互模型的共同边界" class="level2">
 <h2 class="anchored" data-anchor-id="交互模型的共同边界">交互模型的共同边界</h2>
@@ -498,6 +511,34 @@ window.Quarto = {
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

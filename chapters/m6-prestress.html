@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -452,8 +453,13 @@ window.Quarto = {
 </div>
 <article class="real-case">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/rs5eIaRix8I" title="TxDOT：预应力混凝土在桥梁施工中的应用" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/rs5eIaRix8I?start=7" title="TxDOT：预应力混凝土在桥梁施工中的应用" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=rs5eIaRix8I&amp;t=7s">在原平台打开核心时刻 00:07</a>
+</p>
+</noscript>
 </div>
 <div class="real-case-body">
 <p><span class="real-case-kicker">REAL CONSTRUCTION · PRESTRESSED BRIDGES</span></p>
@@ -490,23 +496,33 @@ window.Quarto = {
 <div class="video-clip-grid two">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/P13Mau2VUWw?start=45" title="What is Prestressed Concrete" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/P13Mau2VUWw?start=186" title="What is Prestressed Concrete" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=P13Mau2VUWw&amp;t=186s">在原平台打开核心时刻 03:06</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜先压后载的时间顺序
 </h3>
 <p>
-从约00:45开始，只追踪“初始压应力＋使用荷载拉应力”的叠加，不先背损失分类。
+从约03:06开始，只追踪“初始压应力＋使用荷载拉应力”的叠加，不先背损失分类。
 </p>
 <p class="attribution">
-Practical Engineering · 约00:45起
+Practical Engineering · 约03:06起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/TrWBxJJ7loY?start=5" title="Bending Failure of a Prestressed Concrete Beam" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/TrWBxJJ7loY?start=30" title="Bending Failure of a Prestressed Concrete Beam" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=TrWBxJJ7loY&amp;t=30s">在原平台打开核心时刻 00:30</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜预应力梁最终怎样失败
@@ -515,7 +531,7 @@ Practical Engineering · 约00:45起
 观察开裂出现得晚不等于不会破坏；区分使用阶段目标与极限承载路径。
 </p>
 <p class="attribution">
-Think Up / Materials Lab · 约00:05起
+Think Up / Materials Lab · 约00:30起
 </p>
 </article>
 </div>
@@ -555,6 +571,34 @@ Think Up / Materials Lab · 约00:05起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

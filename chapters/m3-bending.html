@@ -109,6 +109,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/video-evidence.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -492,8 +493,13 @@ M_u=C\left(h_0-\frac{x}{2}\right)
 <div class="video-clip-grid">
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/SeoBurQejG8?start=5" title="Elastic Bending of an Under Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/SeoBurQejG8?start=30" title="Elastic Bending of an Under Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=SeoBurQejG8&amp;t=30s">在原平台打开核心时刻 00:30</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 1｜低荷载阶段
@@ -502,13 +508,18 @@ M_u=C\left(h_0-\frac{x}{2}\right)
 观察肉眼变化很小并不等于内部没有应变；先找受拉边缘。
 </p>
 <p class="attribution">
-Think Up / Materials Lab · 约00:05起
+Think Up / Materials Lab · 约00:30起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/0NCKo_CTiVw?start=5" title="Bending Failure of an Under Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/0NCKo_CTiVw?start=32" title="Bending Failure of an Under Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=0NCKo_CTiVw&amp;t=32s">在原平台打开核心时刻 00:32</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 2｜适筋/少筋侧的延性路径
@@ -517,13 +528,18 @@ Think Up / Materials Lab · 约00:05起
 记录裂缝增多、挠度增长和受拉钢筋屈服带来的预警。
 </p>
 <p class="attribution">
-Think Up / Materials Lab · 约00:05起
+Think Up / Materials Lab · 约00:32起
 </p>
 </article>
 <article class="video-clip">
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/3xw9_33uNJA?start=5" title="Bending Failure of an Over Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
+<iframe data-src="https://www.youtube-nocookie.com/embed/3xw9_33uNJA?start=33" title="Bending Failure of an Over Reinforced Concrete Beam" loading="lazy" allowfullscreen="">
 </iframe>
+<noscript class="video-fallback">
+<p>
+<a href="https://www.youtube.com/watch?v=3xw9_33uNJA&amp;t=33s">在原平台打开核心时刻 00:33</a>
+</p>
+</noscript>
 </div>
 <h3 class="anchored">
 3｜超筋梁为何危险
@@ -532,7 +548,7 @@ Think Up / Materials Lab · 约00:05起
 与上一段并排比较：混凝土压碎前是否给出了同样明显的变形预警？
 </p>
 <p class="attribution">
-Think Up / Materials Lab · 约00:05起
+Think Up / Materials Lab · 约00:33起
 </p>
 </article>
 </div>
@@ -576,6 +592,34 @@ Think Up / Materials Lab · 约00:05起
   };
   slider.addEventListener('input', update);
   update();
+})();
+</script>
+<script>
+(() => {
+  if (globalThis.VideoEvidenceAutoReady) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "./";
+  const bookRoot = new URL(offset, document.baseURI);
+  const files = [
+    "assets/video-evidence-manifest.js",
+    "assets/video-evidence.js",
+    "assets/video-evidence-auto.js"
+  ];
+
+  const load = (file) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = new URL(file, bookRoot).href;
+    script.dataset.videoEvidenceSrc = file;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`无法载入 ${file}`));
+    document.head.append(script);
+  });
+
+  globalThis.VideoEvidenceAutoReady = (async () => {
+    for (const file of files) await load(file);
+  })().catch((error) => {
+    console.error("视频证据组件载入失败", error);
+    throw error;
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
