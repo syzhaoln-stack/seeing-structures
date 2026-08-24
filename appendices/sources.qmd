@@ -2,13 +2,23 @@
 
 ## 本书的内容身份
 
-本书是基于赵诗宇老师课程规划、课堂录音转写、既有讲稿与交互演示重新组织的原创课程书。正文不是《结构设计原理（第5版）》的逐章改写，也不复刻其表述、例题、图表或版式。
+本书是基于赵诗宇老师课程规划、课堂录音转写、既有讲稿与交互演示重新组织的原创课程书。正文不是《结构设计原理（第5版）》或《材料力学（Ⅰ，第6版）》的逐章改写，也不复刻其表述、例题、图表或版式。
 
 原教材仅作为课程通常覆盖范围的参照。读者如需规范公式、材料参数、设计限值和法定要求，应查阅自己课程指定版本与现行适用规范。
 
 ::: {.source-note}
 网页中的“教师补充”“课堂证据”“桥梁迁移窗”“模型边界”和“交互实验”均属于本课程重构内容。来源身份通过版式与标签公开，不把新增观点伪装成原教材原文。
 :::
+
+## 两本教材怎样进入本书
+
+本地提供的《材料力学（Ⅰ，第6版）》（孙训方等）为扫描版。其目录覆盖绪论、轴向拉压、扭转、弯曲内力、弯曲位移、超静定、应力状态与强度理论、组合变形/连接以及压杆稳定；《结构设计原理（第5版）》覆盖可靠度、钢筋混凝土受弯/剪扭/受压受拉/正常使用、局部承压与深梁、预应力、砌体、钢结构和钢—混凝土组合结构。
+
+本书没有照搬这两个目录，而把必要内容去重后放进一条学习主线：
+
+> 边界与外力 → 截面内力 → 应力/应变 → 变形与稳定 → 材料合作 → 构件失效 → 体系与施工 → 设计选择与验证。
+
+教材中的规范公式、系数表、原例题、原图和原文均不发布。新增的 F0—F5 与 X1—X3 是原创教学重构；若需要完成正式设计，必须回到课程指定教材和现行规范核对参数、构造及适用条件。
 
 ## 本地课程材料
 
@@ -28,8 +38,14 @@
 - [Understanding the Deflection of Beams — The Efficient Engineer](https://www.youtube.com/watch?v=MvBqCeZllpQ)：借鉴曲率、转角、挠度分层显示，避免同时堆叠五种解法。
 - [Why Concrete Needs Reinforcement — Practical Engineering](https://www.youtube.com/watch?v=cZINeaDjisY)：借鉴通过加载与破坏试验建立“混凝土弱于受拉”的体验证据。
 - [What is Prestressed Concrete? — Practical Engineering](https://www.youtube.com/watch?v=P13Mau2VUWw)：借鉴先施加压缩、再叠加使用荷载的时间顺序。
+- [An Introduction to Stress and Strain — The Efficient Engineer](https://www.youtube.com/watch?v=aQf6Q8t1FQE)：用于把外力、内力分布和材料曲线分层出现。
+- [Understanding Torsion — The Efficient Engineer](https://www.youtube.com/watch?v=1YTKedLQOa0)：用于从截面转动、切应变走向切应力与抗扭刚度。
+- [Understanding Stress Transformation and Mohr's Circle — The Efficient Engineer](https://www.youtube.com/watch?v=_DH3546mSCM)：用于把同一点不同截面的应力变化图形化。
+- [Understanding Buckling — The Efficient Engineer](https://www.youtube.com/watch?v=21G7LA2DcGQ)：用于区分材料压碎、弹性屈曲和实际缺陷柱。
 
 这些视频适合建立直觉，不替代适用规范、同行评审资料与完整设计计算。
+
+英文视频下的中文分段文字是本书作者基于视频主题重新撰写的学习导航与概括，不是逐句字幕翻译。未经权利人明确许可，本书不下载、重发或整段翻译视频字幕。完整选片、平台与观看任务见[视频图谱](video-atlas.qmd)。
 
 ## 组织方式样本
 
@@ -43,6 +59,11 @@
 - 千禧桥开桥档案：[2000: 'Wobbly' Millennium Bridge Closed Days After Opening](https://www.youtube.com/watch?v=Hz72lzDxMfc)，Frontline by ITN。
 - 偏心受压柱研究：[CFRP Reinforced Concrete Columns under Eccentric Loading](https://www.youtube.com/watch?v=mA0HXqBz-lY)，American Concrete Institute。
 - 预应力桥梁施工：[Pre-Stressed Concrete in Texas Bridge Construction](https://www.youtube.com/watch?v=rs5eIaRix8I)，Texas Department of Transportation。
+- 无箍筋梁剪切试验：[Shear failure: no shear links](https://www.youtube.com/watch?v=GHMCG4fUUpM)，Think Up / Materials Lab On-line。
+- 梁弯曲破坏：[Bending Failure of Reinforced Concrete Beam](https://www.youtube.com/watch?v=hjeK_ljW9dM)，Tyler Ley。
+- 板梁局部屈曲：[Local web buckling](https://www.youtube.com/watch?v=cM1mVXSFnq0) 与 [Local flange buckling](https://www.youtube.com/watch?v=QimlY0XCa08)，Think Up / Materials Lab On-line。
+- 钢结构螺栓焊接讲解：[Bolting & Welding Primer](https://www.youtube.com/watch?v=dhAP3yDD_uo)，AISC Education。
+- 无约束砌体墙振动台演示：[Collapse Test of Unconfined Masonry Wall](https://www.youtube.com/watch?v=ixXYLq_r8zc)，TDMRC Media。
 
 外部图片保留原文件页、作者和许可；YouTube仅使用官方嵌入播放器，不下载或重新发布视频。真实画面用于提出观察问题，不把单个试验、新闻片段或工程宣传片当成完整设计证据。
 

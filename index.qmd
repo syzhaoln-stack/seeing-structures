@@ -78,7 +78,9 @@ AI可以试算和画图，但每一个结论都必须留下公式、单位、趋
 <span class="hot">先判断</span><span>动手改变</span><span>观察响应</span><span>建立模型</span><span>校核证据</span><span>迁移到桥</span>
 :::
 
-本书有两条同时存在的路径：第一次学习时沿章节前进；需要查用时从附录的知识地图直接进入公式、交互和验证清单。新手不必被参考资料压住，熟练者也不必被迫重复所有引导。
+本书有两条同时存在的路径：材料力学基础不稳时，从 F0 沿“外力—内力—应力—变形—失稳”进入；已经掌握这些语言时，从 M0 直接进入结构设计。需要查用时，可从学习地图或视频图谱按困惑定位。新手不必被参考资料压住，熟练者也不必被迫重复所有引导。
 
-[开始：为什么还需要设计？](chapters/m0-design.qmd){.btn .btn-primary .btn-lg}
+[从材料力学开始](foundations/f0-language.qmd){.btn .btn-primary .btn-lg}
+
+[直接进入结构设计](chapters/m0-design.qmd){.btn .btn-outline-secondary .btn-lg}
 

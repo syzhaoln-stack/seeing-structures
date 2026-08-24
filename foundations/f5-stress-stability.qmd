@@ -1,0 +1,66 @@
+# F5｜应力状态与失稳
+
+{{< include ../includes/learning-layers.html >}}
+
+材料可能因为某一点的组合应力达到失效条件而破坏；细长构件也可能在材料远未屈服时突然失去原有平衡形态。把“材料失效”与“结构失稳”分开，是进入柱、钢结构和有限元分析前的关键门槛。
+
+## 概念｜同一点，不同截面 {#concept}
+
+平面应力状态由 $sigma_x$、$sigma_y$、$	au_{xy}$ 描述。旋转观察平面后，各分量改变，但主应力与最大切应力可由变换关系或 Mohr 圆得到：
+
+$$\sigma_{1,2}=\frac{\sigma_x+\sigma_y}{2}\pm
+\sqrt{\left(\frac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}$$
+
+主平面上切应力为零。延性金属常使用 von Mises 或 Tresca 等屈服准则；脆性材料需要更关注主拉/压应力与不对称强度。准则必须与材料和失效机制匹配。
+
+理想两端铰接、线弹性直杆的 Euler 临界力为：
+
+$$P_{cr}=\frac{\pi^2EI}{(KL)^2}$$
+
+$KL$ 是有效长度。该式描述稳定分岔，不是材料压碎强度公式。
+
+## 洞察｜失稳是刚度与几何的竞争 {#insight}
+
+细长压杆稍有侧向挠曲，轴力就产生附加弯矩 $P\Delta$，附加弯矩又放大挠曲。临界状态附近，这个反馈不再被弯曲刚度压住。长度平方出现在分母，端部约束通过有效长度进入，最弱弯曲轴通常先控制。
+
+真实柱总有初弯曲、残余应力、荷载偏心和材料非线性，因此不能把 Euler 式当成任意柱的设计承载力。它最有价值的用途是建立趋势和识别控制变量。
+
+## 样例｜一根柱该按强度还是稳定控制 {#example}
+
+先计算或估计两个量：
+
+- 材料压缩/屈服尺度 $P_y\sim f_yA$；
+- 弹性屈曲尺度 $P_{cr}=\pi^2EI/(KL)^2$。
+
+短粗柱通常接近材料强度控制；细长柱更可能稳定控制；中等长细比区域则需要规范曲线把初始缺陷、残余应力和非弹性行为纳入。这个比较比盲目选择“压杆公式”可靠。
+
+<div class="video-pair">
+<div class="video-lesson">
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/_DH3546mSCM" title="Stress Transformation and Mohr's Circle" loading="lazy" allowfullscreen></iframe></div>
+<h3>中文导看：应力变换</h3>
+<p><strong>00:00–02:30</strong> 区分“换截面”与“换材料点”；<strong>02:30–05:20</strong> 看圆心和半径如何编码平均正应力与应力差；<strong>05:20–结尾</strong> 用圆上极值读主应力和最大切应力。</p>
+<p><strong>总结：</strong> Mohr 圆是应力变换的图形化索引，不是另一个独立物理定律。</p>
+</div>
+<div class="video-lesson">
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/21G7LA2DcGQ" title="Understanding Buckling" loading="lazy" allowfullscreen></iframe></div>
+<h3>中文导看：压杆失稳</h3>
+<p><strong>00:00–03:20</strong> 区分压碎与屈曲；<strong>03:20–07:20</strong> 观察长度、刚度和端部约束；<strong>07:20–11:20</strong> 连接长细比与临界应力；<strong>11:20–结尾</strong> 注意缺陷、非弹性和其他屈曲模式。</p>
+<p><strong>总结：</strong> 细长构件的承载力可能由保持形状的能力决定，而不是由材料强度直接决定。</p>
+</div>
+</div>
+
+<p class="attribution">两段视频均来自 The Efficient Engineer；中文为原创分段导看，不是逐字字幕。</p>
+
+## 实际应用｜柱、桁架压杆与薄板 {#application}
+
+钢柱会整体弯曲屈曲，工字截面还可能扭转或弯扭屈曲；薄翼缘与腹板会局部屈曲。钢筋混凝土偏心受压柱要考虑二阶效应；桁架中细长压杆的截面常明显大于同轴力拉杆，原因也不是“受压材料更弱”这么简单。
+
+中文长课可按需跳看 [天津大学材料力学：应力状态、强度理论、组合变形、稳定](https://www.bilibili.com/video/BV1K1Pkz4Eev/) 的第45—58段和压杆实验。观看实验时只记录“临界前—临界附近—临界后”三阶段，不必一次抄完整推导。
+
+## 拓展｜有限元结果里最危险的彩虹 {#extension}
+
+有限元云图能同时显示很多应力分量与屈曲模态，但颜色峰值可能来自网格奇异、边界理想化或错误的结果类型。审查顺序应是：平衡与反力 → 变形形态 → 单位与数量级 → 网格/边界敏感性 → 选择与材料相符的失效指标。
+
+::: {.verify-panel}
+看到很大的 von Mises 应力时，先问材料是否适合用该指标；看到特征屈曲系数时，先问模型有没有初始缺陷和几何非线性。软件给出的“第一模态”不是项目自动获得的安全储备。
+:::

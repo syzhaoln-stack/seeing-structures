@@ -11,6 +11,7 @@ real-case-*.png
 __pycache__/
 *.pyc
 *.pdf
+qa-*.png
 sources/raw/
 sources/archive/
 *.log

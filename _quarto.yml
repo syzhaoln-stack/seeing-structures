@@ -27,6 +27,20 @@ book:
       text: "首页｜看见结构"
     - href: preface.qmd
       text: "写在前面｜拒绝知识堆积"
+    - part: "从材料力学搭一座桥"
+      chapters:
+        - href: foundations/f0-language.qmd
+          text: "F0｜把结构切开看"
+        - href: foundations/f1-axial-torsion.qmd
+          text: "F1｜拉、压与扭转"
+        - href: foundations/f2-beam-forces.qmd
+          text: "F2｜梁的内力是一部连续剧"
+        - href: foundations/f3-beam-stress.qmd
+          text: "F3｜截面形状为什么重要"
+        - href: foundations/f4-deflection.qmd
+          text: "F4｜从曲率走到挠度"
+        - href: foundations/f5-stress-stability.qmd
+          text: "F5｜应力状态与失稳"
     - part: "从计算走向设计"
       chapters:
         - href: chapters/m0-design.qmd
@@ -51,10 +65,20 @@ book:
       chapters:
         - href: chapters/m7-ai-review.qmd
           text: "M7｜AI不能替你负责"
+    - part: "把缺失的构件补回来"
+      chapters:
+        - href: extensions/x1-shear-torsion.qmd
+          text: "X1｜剪、扭与力流"
+        - href: extensions/x2-steel-composite.qmd
+          text: "X2｜钢与组合结构"
+        - href: extensions/x3-masonry.qmd
+          text: "X3｜砌体：离散材料的整体"
     - part: "继续使用这本书"
       chapters:
         - href: appendices/learning-map.qmd
           text: "学习地图｜先看见，再计算"
+        - href: appendices/video-atlas.qmd
+          text: "视频图谱｜按困惑找讲解"
         - href: appendices/sources.qmd
           text: "来源与边界｜身份公开"
         - href: appendices/teacher-guide.qmd
